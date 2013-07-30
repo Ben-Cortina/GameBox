@@ -323,7 +323,6 @@
 				41BC70E315BF81A5006A0A6C /* Prefix.pch */,
 			);
 			name = mac;
-			path = ../Resources;
 			sourceTree = "<group>";
 		};
 		41BC70DB15BF81A5006A0A6C /* en.lproj */ = {
@@ -345,7 +344,7 @@
 				E134B88B17A30AE400EBC6B2 /* TheBox */,
 			);
 			name = Resources;
-			path = "../../../../../../Blaeeap/Desktop/projects/cocos2d-x-GameBox/GameBox/Resources";
+			path = "../Resources";
 			sourceTree = "<group>";
 		};
 		E134B88817A30AE400EBC6B2 /* fonts */ = {

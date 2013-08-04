@@ -39,7 +39,6 @@ bool HomeLayer::init()
                                                           "CloseSelected.png",
                                                           g_GameList[0].callback
                                                           );
-    std::cout << g_GameList[0].name;
     
 	pCloseItem->setPosition(Point(origin.x + visibleSize.width - pCloseItem->getContentSize().width/2 ,
                                   origin.y + pCloseItem->getContentSize().height/2
@@ -72,7 +71,6 @@ bool HomeLayer::init()
     // position the sprite on the center of the screen
     pSprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 
-    Director::getInstance()->setDisplayStats(false);
     // add the sprite as a child to this layer
     this->addChild(pSprite, 0);
     

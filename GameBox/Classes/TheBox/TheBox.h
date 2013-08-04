@@ -20,24 +20,51 @@
 #ifndef __GameBox___TheBoxScene__
 #define __GameBox___TheBoxScene__
 
+#define THEBOX_MAX_WIDTH 50
+#define THEBOX_MAX_HEIGHT 50 
+
 
 #include "../Helpers/CustomCC.h"
 
 USING_NS_CC;
 
+
 /**
  @class TheBoxLayer
  @brief This layer holds everythign needed for TheBox game
+        Im not using any TMX feature because they dont allow me
+        its features and my needs dont line up as well as I'd like
  */
 class TheBoxLayer : public LayerColor
 {
 private:
-    Rect texelRect;     // This is the size of each game pixel in terms of window pixels
-    Size visibleSize;   // The size of the window
-    Sprite* pSprite;
+    Size tileSize;     // This is the size of each game pixel in terms of window pixels
+    Size windowSize;   // The size of the window in terms of pixels
+    Size layerSize;   // The size of the screen in terms of tiles
+    Sprite* sTiles[THEBOX_MAX_HEIGHT * THEBOX_MAX_WIDTH]; //array holding all the sprites
+    
+    /**
+     @brief     Creates, sizes, and adds all the sprites
+     */
+    void initTiles();
+    
+    /**
+     @brief Updates the size and position of each Sprite
+     */
+    void updateTiles();
+    
+    /**
+     @brief Updates the screenSize and tileSize then calls updateTiles
+     */
+    void setLayerSize(int width, int height);
+
 public:
-    // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
+    /**
+     @brief     Initialize everything needed for this Layer
+                Once scheduleUpdate() has been called once, update will repeatedly.
+     */
     virtual bool init();
+    
     
     /**
      @brief     the update method, initially defined in Node, this is where the games time based actions are calculated.

@@ -1,8 +1,8 @@
 This is a series of simple games I will be making as I learn cocos2dx. 
 
-
 Feel free to use my work to learn with me, Ill try to keep it commented to explain what
 each of the important cocos2dx classes and functions do!
 
+Currently, I am only updating the Xcode project and VS12 solution.
 
 If you like to use some snippets of my code in your work, that's alright but I ask that you give me credit for my work, just mention it was borrowed from "Ben Cortina"

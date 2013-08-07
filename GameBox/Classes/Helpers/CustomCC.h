@@ -22,7 +22,7 @@ USING_NS_CC;
 // I should eventually expand this to allow for effects to be added for each item
 
 // Custom MenuItemImage that grows a bit when selected
-class MyMenuItemImage: public MenuItemImage
+class MyMenuItemImage : public MenuItemImage
 {
 public:
     /** Creates an MyMenuItemImage. */
@@ -57,7 +57,7 @@ public:
 // Custom blank Scene that adds the passed layer to itself
 // Because currently everything on each scene is run on one layer
 // This allows me to not have to create a custom scene class for each game (each layer)
-class MyScene: public Scene
+class MyScene : public Scene
 {
 public:
     /**

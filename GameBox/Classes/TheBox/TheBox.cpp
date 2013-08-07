@@ -22,11 +22,36 @@ void TheBoxLayer::initTiles()
     }
 }
 
+void TheBoxLayer::initPlayer()
+{
+    player = Player::create("Ball.png");
+    
+    // we want it to be about 1/20th of the grid
+    float winSize = MIN(windowSize.width, windowSize.height);
+    
+    // winSize/20 will be 1/20th of the window in pixels. Divide this by the sprites size to
+    // adjust the scale to match the image
+    float scale = (winSize/40.0)/player->boundingBox().size.height;
+
+    player->setScale(scale);
+    player->setPosition(Point(windowSize.width/2,
+                              windowSize.height/2));
+    player->setColor(Color3B(100,200,0));
+    
+    this->addChild(player, 1);
+}
+
 // on "init" you need to initialize your instance
 bool TheBoxLayer::init()
 {    
+    windowSize = Director::getInstance()->getVisibleSize();
+    
     initTiles();
+    
     setLayerSize(10, 10);
+    
+    initPlayer();
+    
     // add the sprite as a child to this layer
     scheduleUpdate();
     
@@ -44,11 +69,15 @@ void TheBoxLayer::update(float dt)
     if (color.g < 0) color.g = 255;*/
     int rand_x = random() % (int)layerSize.width;
     int rand_y = random() % (int)layerSize.height;
-    Color3B color = sTiles[rand_y * (int)layerSize.width + rand_x]->getColor();
-    if (color.r == 0)
+    int rand_r = random() % 255;
+    int rand_g = random() % 255;
+    int rand_b = random() % 255;
+    //Color3B color = sTiles[rand_y * (int)layerSize.width + rand_x]->getColor();
+    sTiles[rand_y * (int)layerSize.width + rand_x]->setColor(Color3B(rand_r,rand_g,rand_b));
+    /*if (color.r == 0)
         sTiles[rand_y * (int)layerSize.width + rand_x]->setColor(Color3B(255,255,255));
     else
-        sTiles[rand_y * (int)layerSize.width + rand_x]->setColor(Color3B(0,0,0));
+        sTiles[rand_y * (int)layerSize.width + rand_x]->setColor(Color3B(0,0,0));*/
 }
 
 void TheBoxLayer::updateTiles()
@@ -72,7 +101,6 @@ void TheBoxLayer::updateTiles()
 
 void TheBoxLayer::setLayerSize(int width, int height)
 {
-    windowSize = Director::getInstance()->getVisibleSize();
     layerSize = Size(width, height);
     float minSize = MIN(windowSize.width, windowSize.height);
     tileSize = Size(minSize / layerSize.width, minSize / layerSize.height);

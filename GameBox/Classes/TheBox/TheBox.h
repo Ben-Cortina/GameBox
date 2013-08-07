@@ -20,11 +20,12 @@
 #ifndef __GameBox___TheBoxScene__
 #define __GameBox___TheBoxScene__
 
-#define THEBOX_MAX_WIDTH 50
-#define THEBOX_MAX_HEIGHT 50 
+#define THEBOX_MAX_WIDTH 100
+#define THEBOX_MAX_HEIGHT 100 
 
 
 #include "../Helpers/CustomCC.h"
+#include "Player.h"
 
 USING_NS_CC;
 
@@ -42,11 +43,17 @@ private:
     Size windowSize;   // The size of the window in terms of pixels
     Size layerSize;   // The size of the screen in terms of tiles
     Sprite* sTiles[THEBOX_MAX_HEIGHT * THEBOX_MAX_WIDTH]; //array holding all the sprites
+    Player* player;
     
     /**
      @brief     Creates, sizes, and adds all the sprites
      */
     void initTiles();
+    
+    /**
+     @brief     initializes the player
+     */
+    void initPlayer();
     
     /**
      @brief Updates the size and position of each Sprite
@@ -80,6 +87,5 @@ public:
     // implement the "static create()" method
     CREATE_FUNC(TheBoxLayer);
 };
-
 
 #endif /* defined(__GameBox___TheBoxScene__) */

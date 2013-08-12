@@ -64,6 +64,11 @@ private:
      @brief Updates the screenSize and tileSize then calls updateTiles
      */
     void setLayerSize(int width, int height);
+    
+    /**
+     @brief Sets the outer tiles of the layerSize.X by layerSize.y box to black
+     */
+    void updateBorder();
 
 public:
     /**

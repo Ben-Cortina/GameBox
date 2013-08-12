@@ -9,6 +9,9 @@
 #include "TheBox.h"
 #include <iostream>
 
+#define TILE_ON Color3B(0,0,0)
+#define TILE_OFF Color3B(255,255,255)
+
 void TheBoxLayer::initTiles()
 {
     //load the tile texture
@@ -73,7 +76,7 @@ void TheBoxLayer::update(float dt)
     int rand_g = random() % 255;
     int rand_b = random() % 255;
     //Color3B color = sTiles[rand_y * (int)layerSize.width + rand_x]->getColor();
-    sTiles[rand_y * (int)layerSize.width + rand_x]->setColor(Color3B(rand_r,rand_g,rand_b));
+    //sTiles[rand_y * (int)layerSize.width + rand_x]->setColor(Color3B(rand_r,rand_g,rand_b));
     /*if (color.r == 0)
         sTiles[rand_y * (int)layerSize.width + rand_x]->setColor(Color3B(255,255,255));
     else
@@ -90,12 +93,14 @@ void TheBoxLayer::updateTiles()
         for (int x = 0; x < layerSize.width; x++)
         {
             // update the center of the Sprite based on
-            sTiles[y * (int)layerSize.width + x]->setPosition(Point(x * tileSize.width + tileSize.width/2 + margins.width,
+            sTiles[y * THEBOX_MAX_WIDTH + x]->setPosition(Point(x * tileSize.width + tileSize.width/2 + margins.width,
                                                                 y * tileSize.height + tileSize.height/2 + margins.height
                                                                 )
                                                           );
             // update the size of the sprite
-            sTiles[y * (int)layerSize.width + x]->setScale(tileSize.width);
+            sTiles[y * THEBOX_MAX_WIDTH + x]->setScale(tileSize.width);
+            // set each tiles color to white
+            sTiles[y * THEBOX_MAX_WIDTH + x]->setColor(TILE_OFF);
         }
 }
 
@@ -105,6 +110,21 @@ void TheBoxLayer::setLayerSize(int width, int height)
     float minSize = MIN(windowSize.width, windowSize.height);
     tileSize = Size(minSize / layerSize.width, minSize / layerSize.height);
     updateTiles();
+    updateBorder();
+}
+
+void TheBoxLayer::updateBorder()
+{
+    for (int x = 0; x < layerSize.width; x++)
+    {
+        sTiles[x]->setColor(TILE_ON);
+        sTiles[((int)layerSize.height-1) * THEBOX_MAX_WIDTH + x]->setColor(TILE_ON);
+    }
+    for (int y = 0; y < layerSize.height; y++)
+    {
+        sTiles[y * THEBOX_MAX_WIDTH]->setColor(TILE_ON);
+        sTiles[y * THEBOX_MAX_WIDTH + ((int)layerSize.width-1)]->setColor(TILE_ON);
+    }
 }
 
 void TheBoxLayer::runThisGame(Object* pSender)

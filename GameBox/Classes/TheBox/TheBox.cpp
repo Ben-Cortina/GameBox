@@ -15,7 +15,7 @@
 void TheBoxLayer::initTiles()
 {
     //load the tile texture
-    Texture2D* pixelTex = TextureCache::getInstance()->addImage("TheBox/Pixel.png");
+    Texture2D* pixelTex = TextureCache::getInstance()->addImage("Pixel.png");
     
     for (int i = 0; i < THEBOX_MAX_HEIGHT * THEBOX_MAX_WIDTH; i++)
     {
@@ -27,7 +27,7 @@ void TheBoxLayer::initTiles()
 
 void TheBoxLayer::initPlayer()
 {
-    player = Player::create("TheBox/Ball.png");
+    player = Player::create("Ball.png");
     
     // we want it to be about 1/20th of the grid
     float winSize = MIN(windowSize.width, windowSize.height);

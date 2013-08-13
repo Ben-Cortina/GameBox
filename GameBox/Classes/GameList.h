@@ -5,12 +5,12 @@
 //  Created by Ben Cortina on 7/26/13.
 //
 //  This file simply holds all the includes, names
-//  and icons for each of the games. This allows me
-//  to just include this as a header in the HomeScrene.h
+//  and icon paths for each of the games. This allows me
+//  to just include this as a header in the HomeScene.h
 //  rather than have a massive pile of junk before the class is declared.
 
-#ifndef GameBox_GameList_h
-#define GameBox_GameList_h
+#ifndef GameBox_GameRescources_h
+#define GameBox_GameRescources_h
 
 #include "cocos2d.h"
 
@@ -28,14 +28,13 @@
  @attr  image:      the image that is used in the menu
  @attr  callback:   This is the function that will be called on click
  */
-struct {
+static const struct {
 	const char* name;
     const char* image;
 	std::function<void(Object*)> callback;
 } g_GameList[] = {
     {"TheBox", "",TheBoxLayer::runThisGame}
 };
-
 
 
 

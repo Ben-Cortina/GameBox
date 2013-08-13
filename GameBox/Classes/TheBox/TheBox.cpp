@@ -15,7 +15,7 @@
 void TheBoxLayer::initTiles()
 {
     //load the tile texture
-    Texture2D* pixelTex = TextureCache::getInstance()->addImage("Pixel.png");
+    Texture2D* pixelTex = TextureCache::getInstance()->addImage("TheBox/Pixel.png");
     
     for (int i = 0; i < THEBOX_MAX_HEIGHT * THEBOX_MAX_WIDTH; i++)
     {
@@ -27,7 +27,7 @@ void TheBoxLayer::initTiles()
 
 void TheBoxLayer::initPlayer()
 {
-    player = Player::create("Ball.png");
+    player = Player::create("TheBox/Ball.png");
     
     // we want it to be about 1/20th of the grid
     float winSize = MIN(windowSize.width, windowSize.height);
@@ -70,11 +70,11 @@ void TheBoxLayer::update(float dt)
     if (color.r > 255) color.r = 0;
     if (color.b > 255) color.b = 0;
     if (color.g < 0) color.g = 255;*/
-    int rand_x = random() % (int)layerSize.width;
-    int rand_y = random() % (int)layerSize.height;
-    int rand_r = random() % 255;
-    int rand_g = random() % 255;
-    int rand_b = random() % 255;
+    //int rand_x = random() % (int)layerSize.width;
+    //int rand_y = random() % (int)layerSize.height;
+    //int rand_r = random() % 255;
+    //int rand_g = random() % 255;
+    //int rand_b = random() % 255;
     //Color3B color = sTiles[rand_y * (int)layerSize.width + rand_x]->getColor();
     //sTiles[rand_y * (int)layerSize.width + rand_x]->setColor(Color3B(rand_r,rand_g,rand_b));
     /*if (color.r == 0)

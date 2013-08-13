@@ -5,7 +5,13 @@
       <UniqueIdentifier>{84a8ebd7-7cf0-47f6-b75e-d441df67da40}</UniqueIdentifier>
     </Filter>
     <Filter Include="Classes">
-      <UniqueIdentifier>{bb6c862e-70e9-49d9-81b7-3829a6f50471}</UniqueIdentifier>
+      <UniqueIdentifier>{5d0a5b3d-9b50-4a1a-91df-6b44fbbe5057}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\Helpers">
+      <UniqueIdentifier>{c8b94981-cd02-45f0-b2a5-93184af79e14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes\TheBox">
+      <UniqueIdentifier>{0d08ec21-f399-49c5-b3ed-039a615ed4af}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -15,18 +21,39 @@
     <ClCompile Include="..\Classes\AppDelegate.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\HelloWorldScene.cpp">
+    <ClCompile Include="..\Classes\HomeScene.cpp">
       <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\Helpers\CustomCC.cpp">
+      <Filter>Classes\Helpers</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TheBox\Player.cpp">
+      <Filter>Classes\TheBox</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\TheBox\TheBox.cpp">
+      <Filter>Classes\TheBox</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>win32</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\HomeScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
     <ClInclude Include="..\Classes\AppDelegate.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\HelloWorldScene.h">
+    <ClInclude Include="..\Classes\Helpers\CustomCC.h">
+      <Filter>Classes\Helpers</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TheBox\Player.h">
+      <Filter>Classes\TheBox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TheBox\TheBox.h">
+      <Filter>Classes\TheBox</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\GameList.h">
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>

@@ -79,7 +79,7 @@ bool TheBoxLayer::init()
 
 void TheBoxLayer::update(float dt)
 {
-    
+
     //Update Player Position
     keyHandling(dt);
 
@@ -138,11 +138,29 @@ void TheBoxLayer::updateBorder()
     }
 }
 
+float getTime()
+{
+    struct timeval now;
+    float time;
+    
+    if (gettimeofday(&now, NULL) != 0)
+    {
+        CCLOG("error in gettimeofday");
+        time = 0;
+    }
+    else
+    {
+        time = (now.tv_sec) + (now.tv_usec) / 1000000.0f;
+        time = MAX(0, time);
+    }
+    return time;
+};
+
 void TheBoxLayer::keyPressed(int keyCode)
 {
     
-    // Get dt so we can record when this was pressed
-    float dt = Director::getInstance()->getDeltaTime();
+    //get the time of press
+    float time = getTime();
 
 
     switch(keyCode)
@@ -157,7 +175,7 @@ void TheBoxLayer::keyPressed(int keyCode)
       case 13:  // W
           if (commandTime.Up.pressed !=-1)
           {
-              commandTime.Up.pressed = dt;
+              commandTime.Up.pressed = time;
               keyChange = true;
           }
           break;
@@ -167,7 +185,7 @@ void TheBoxLayer::keyPressed(int keyCode)
       case 0:  // A
           if (commandTime.Left.pressed !=-1)
           {
-              commandTime.Left.pressed = dt;
+              commandTime.Left.pressed = time;
               keyChange = true;
           }
           break;
@@ -177,7 +195,7 @@ void TheBoxLayer::keyPressed(int keyCode)
       case 1: // S
           if (commandTime.Down.pressed !=-1)
           {
-              commandTime.Down.pressed = dt;
+              commandTime.Down.pressed = time;
               keyChange = true;
           }
           break;
@@ -187,7 +205,7 @@ void TheBoxLayer::keyPressed(int keyCode)
       case 2: // D
           if (commandTime.Right.pressed !=-1)
           {
-              commandTime.Right.pressed = dt;
+              commandTime.Right.pressed = time;
               keyChange = true;
           }
           break;
@@ -199,8 +217,8 @@ void TheBoxLayer::keyPressed(int keyCode)
 
 void TheBoxLayer::keyReleased(int keyCode)
 {
-    // Get dt so we can record when this was pressed
-    float dt = Director::getInstance()->getDeltaTime();
+    //get the time of release
+    float time = getTime();
 
     /*
      * This sets the times.
@@ -217,25 +235,29 @@ void TheBoxLayer::keyReleased(int keyCode)
       // Player Up
       case 126: // Up Arrow
       case 13:  // W
-          commandTime.Up.released = dt;
+          commandTime.Up.released = time;
+          keyChange = true;
           break;
 
       // Player Left
       case 123: // Left Arrow
       case 0:  // A
-          commandTime.Left.released = dt;
+          commandTime.Left.released = time;
+          keyChange = true;
           break;
 
       // Player Down
       case 125: // Down Arrow
       case 1: // S
-          commandTime.Down.released = dt;
+          commandTime.Down.released = time;
+          keyChange = true;
           break;
 
       // Player Right
       case 124: // Right Arrow
       case 2: // D
-          commandTime.Right.released = dt;
+          commandTime.Right.released = time;
+          keyChange = true;
           break;
 
       default:
@@ -246,12 +268,20 @@ void TheBoxLayer::keyReleased(int keyCode)
 
 void TheBoxLayer::keyHandling(float dt)
 {
+    
+    // if there was a key change since the last call we will need to calculate how long the key
+    // was pressed so we'll get the time and subtract it from the keyevent time
+    float time = dt;
+    float temp;
+    if (keyChange)
+        time = getTime();
+    
     /*
      * now one thing we have to be aware of here is the interaction between opposing keys.
      * The two most common interactions are:
      * A: Opposing keys cancel out 
      * B: The most recently pressed opposing key is used
-     * Im using B because if someone is quickly switching to reverse direction is feasibly
+     * I'm using B because if someone is quickly switching to reverse direction is feasibly
      * they may press the new key before they release the previous one and that slight pause
      * that would occur from A is likely unwanted
      */ 
@@ -266,20 +296,22 @@ void TheBoxLayer::keyHandling(float dt)
      *   applyposition change using time of press
      *   zero press timers
      */
-    float time;
+    
     // Player Up
     // set +y vel
     if (commandTime.Up.pressed !=-1)
     {
+       if (commandTime.Up.pressed !=0)
+           temp = time - commandTime.Up.pressed;
        if (commandTime.Up.released !=-1)
        {
-           time = commandTime.Up.released - commandTime.Up.pressed;
+           temp = commandTime.Up.released - commandTime.Up.pressed;
            commandTime.Up.released = -1;
        }
        else
-           time = dt - commandTime.Up.pressed;
+           temp = dt - commandTime.Up.pressed;
 
-       player->applyVelocityY(windowSize.height/50, time);
+       player->applyVelocityY(windowSize.height/50, temp);
        commandTime.Up.pressed = 0;
     }
 
@@ -330,6 +362,8 @@ void TheBoxLayer::keyHandling(float dt)
        player->applyVelocityY(windowSize.height/50, time);
        commandTime.Right.pressed = 0;
     }
+    
+    keyChange = false;
 }
 
 
@@ -337,16 +371,13 @@ void TheBoxLayer::keyHandling(float dt)
 void TheBoxLayer::runThisGame(Object* pSender)
 {
     //init
-    Scene* scene = new Scene();
+    MyScene* scene = new MyScene();
     TheBoxLayer* layer = new TheBoxLayer();
-    layer->init();
-    
-    //run
-    scene->addChild(layer);
+    layer->initWithColor(Color4B(255,255,255,255));
 
-    //scene->runLayer(layer);
+    scene->runLayer(layer);
 
-    Director::getInstance()->replaceScene(scene);
+    //Director::getInstance()->replaceScene(scene);
     
     //release the sender
     //pSender->release();

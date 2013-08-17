@@ -56,7 +56,7 @@ struct CommandTimes
         Im not using any TMX feature because they dont allow me
         its features and my needs dont line up as well as I'd like
  */
-class TheBoxLayer : public Layer
+class TheBoxLayer : public LayerColor
 {
 private:
     Size tileSize;     // This is the size of each game pixel in terms of window pixels

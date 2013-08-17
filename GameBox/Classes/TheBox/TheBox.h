@@ -30,24 +30,17 @@
 USING_NS_CC;
 
 
-
-struct BoxCommand
-{
-    float pressed,
-          released;
-    BoxCommand();
-};
-
 /**
- @brief This will store the time each command was issued
- *      Each time will be set on keypresses and unset on key releases
+ @brief This will store the state of each command
+ *      Each state will be set on keypresses and unset on key releases
  */
-struct CommandTimes
+struct CommandState
 {
-    BoxCommand Up,
-          Down,
-          Left,
-          Right;
+    bool Up,
+         Down,
+         Left,
+         Right;
+    CommandState();
 };
 
 /**
@@ -64,8 +57,7 @@ private:
     Size layerSize;   // The size of the screen in terms of tiles
     Sprite* sTiles[THEBOX_MAX_HEIGHT * THEBOX_MAX_WIDTH]; //array holding all the sprites
     PlayerSprite* player;   // A sprite class to handle the players sprite
-    CommandTimes commandTime; // A struct containing all the dt's of important key events
-    bool keyChange; // A simple bool that will be set to true every time a key event is triggered
+    CommandState commandStates; // A struct containing all the states of important commands
     
     /**
      @brief     Creates, sizes, and adds all the sprites
@@ -121,12 +113,6 @@ public:
      @param KeyCode     The keycode of the released key
      */
     void keyReleased(int keyCode);
-    
-    /**
-     @brief      This handles the results of key changes that occured since the last update
-     @param dt   The time since last update
-     */
-    void keyHandling(float dt);
 
     /**
      @brief     This method creates a new MyScene and adds a TheBoxLayer to it.

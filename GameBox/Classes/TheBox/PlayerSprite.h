@@ -16,18 +16,25 @@
 USING_NS_CC;
 
 // I could use CCSize for this but a simpler stucture will meet my needs
-struct Velocity
+struct Vector
 {
-    float x;
-    float y;
+    float x; // % max speed
+    float y; // % max speed
 };
 
 class PlayerSprite : public Sprite
 {
+private:
+    timeval lastUpdate;
+    float dtCalculated;
 protected:
     float _weight; //unused
-    Velocity _vel; //unused
+    Vector _vel;
+    Vector _force; //yes, I know "force" isnt technically correct for this, but its close enough
+    float _maxSpeed;
 public:
+    
+    PlayerSprite();
     
     /**
      * Creates a sprite with an image filename.
@@ -60,18 +67,30 @@ public:
     void setWeight(float weight){_weight=weight;};
     
     /**
-     * Get/Set methods for velocity.
-     * Velocity is currently unused
+     * Get/Set methods for maxspeed
+     * Not used.
      */
-    Velocity getVelocity() {return _vel;};
-    void setVelocity(Velocity vel){_vel.x=vel.x; _vel.y=vel.y;};
-    void setVelocityX(float x) {_vel.x=x;};
-    void setVelocityY(float y) {_vel.y=y;};
+    float getMaxSpeed() {return _maxSpeed;};
+    void setMaxSpeed(float maxSpeed){_maxSpeed=maxSpeed;};
+    
+    /**
+     * Get/Set methods for velocity.
+     */
+    Vector getVelocity() {return _vel;};
+    void updateVelocity();
+    
+    /**
+     * Get/Set methods for force.
+     */
+    Vector getForce() {return _force;};
+    void setForce(Vector force){_force.x=force.x; _force.y=force.y; updateVelocity();};
+    void setForceX(float x) {_force.x=x;updateVelocity();};
+    void setForceY(float y) {_force.y=y;updateVelocity();};
     
     /**
      @brief         Updates player velocity based on the applied force and duration
      *              This would be what I would used if I were to incorporate friction
-     *              and momentum. I will not use it here, in its place I will just setVelocity
+     *              and momentum. I will likely  not use it here, in its place I will just setVelocity
      @param x       The X value of the force
      @param y       The Y value of the force
      @param dt      The duration the force was applied for
@@ -79,25 +98,19 @@ public:
     void applyForce(float x, float y, float dt);
     
     /**
-     @brief     Updates the X position of the Sprite based on the time it has held that velocity
-     @param vel_x   The velocity in the X direction
-     @param dt      The time the velocity has been applied
-     */
-    void applyVelocityX(float vel_x, float dt);
-
-    /**
-     @brief     Updates the Y position of the Sprite based on the time it has held that velocity
-     @param vel_y   The velocity in the Y direction
-     @param dt      The time the velocity has been applied
-     */
-    void applyVelocityY(float vel_y, float dt);
-    
-    /**
      @brief     Updates the position of the Sprite based on dt and its current velocity
      * Not Used.
-     @param dt       The time the velocity has been applied
+     @param dt       The time over which the velocity has been applied
      */
-    void updatePos(float dt);
+    void update(float dt);
+    
+    /**
+     @brief     Updates the position of the Sprite based on the currenttime - lastupdate
+     * Ths allows me to call update whenever a keychanges so the movement is calculated based on
+     * the time of the key event rather than the time of each update.
+     * Not Used.
+     */
+    void update();
 };
 
 #endif /* defined(__GameBox__PlayerSprite__) */

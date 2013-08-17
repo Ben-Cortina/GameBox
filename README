@@ -3,6 +3,8 @@ This is a series of simple games I will be making as I learn cocos2dx.
 Feel free to use my work to learn with me, Ill try to keep it commented to explain what
 each of the important cocos2dx classes and functions do!
 
-The Xcode project should always work. I will also update the VS12 solution periodically. 
+The Xcode project should always work. Currently, keyboard input is not supported for the
+windows side of cocos2d-x so until the cocos team or I get around to fixing that there
+I won't be updating the Visual Studio solution. 
 
 If you like to use some snippets of my code in your work, that's alright but I ask that you give me credit for my work, just mention it was borrowed from "Ben Cortina"

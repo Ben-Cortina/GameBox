@@ -12,6 +12,22 @@
 #define TILE_ON Color3B(0,0,0)
 #define TILE_OFF Color3B(255,255,255)
 
+BoxCommand::BoxCommand()
+{
+    // -1 will be the "not set" time
+    pressed = released = -1;
+}
+
+TheBoxLayer::TheBoxLayer()
+{
+    player = PlayerSprite::create("Ball.png");
+    windowSize = Director::getInstance()->getVisibleSize();
+    initTiles();
+    setLayerSize(1, 1);
+
+    keyChange = false;
+}
+
 void TheBoxLayer::initTiles()
 {
     //load the tile texture
@@ -27,7 +43,6 @@ void TheBoxLayer::initTiles()
 
 void TheBoxLayer::initPlayer()
 {
-    player = Player::create("Ball.png");
     
     // we want it to be about 1/20th of the grid
     float winSize = MIN(windowSize.width, windowSize.height);
@@ -47,16 +62,17 @@ void TheBoxLayer::initPlayer()
 // on "init" you need to initialize your instance
 bool TheBoxLayer::init()
 {    
-    windowSize = Director::getInstance()->getVisibleSize();
-    
-    initTiles();
-    
+
     setLayerSize(10, 10);
     
     initPlayer();
     
     // add the sprite as a child to this layer
     scheduleUpdate();
+
+    //turn off touch
+    setTouchEnabled(true);
+    setKeyboardEnabled(true);
     
     return true;
 }
@@ -64,23 +80,13 @@ bool TheBoxLayer::init()
 void TheBoxLayer::update(float dt)
 {
     
-    /*color.b +=100*dt;
-    color.g -=100*dt;
-    color.r +=200*dt;
-    if (color.r > 255) color.r = 0;
-    if (color.b > 255) color.b = 0;
-    if (color.g < 0) color.g = 255;*/
-    //int rand_x = random() % (int)layerSize.width;
-    //int rand_y = random() % (int)layerSize.height;
-    //int rand_r = random() % 255;
-    //int rand_g = random() % 255;
-    //int rand_b = random() % 255;
-    //Color3B color = sTiles[rand_y * (int)layerSize.width + rand_x]->getColor();
-    //sTiles[rand_y * (int)layerSize.width + rand_x]->setColor(Color3B(rand_r,rand_g,rand_b));
-    /*if (color.r == 0)
-        sTiles[rand_y * (int)layerSize.width + rand_x]->setColor(Color3B(255,255,255));
-    else
-        sTiles[rand_y * (int)layerSize.width + rand_x]->setColor(Color3B(0,0,0));*/
+    //Update Player Position
+    keyHandling(dt);
+
+    //Check for collision
+
+    //Check for victory
+
 }
 
 void TheBoxLayer::updateTiles()
@@ -106,9 +112,14 @@ void TheBoxLayer::updateTiles()
 
 void TheBoxLayer::setLayerSize(int width, int height)
 {
+    //set layerSize
     layerSize = Size(width, height);
+
+    //update TileSize
     float minSize = MIN(windowSize.width, windowSize.height);
     tileSize = Size(minSize / layerSize.width, minSize / layerSize.height);
+
+    //Update Tiles and borders
     updateTiles();
     updateBorder();
 }
@@ -127,11 +138,218 @@ void TheBoxLayer::updateBorder()
     }
 }
 
-void TheBoxLayer::runThisGame(Object* pSender)
+void TheBoxLayer::keyPressed(int keyCode)
 {
-    MyScene* scene = new MyScene();
-    TheBoxLayer* layer = new TheBoxLayer();
-    layer->initWithColor(Color4B(255, 255, 255, 255));
-    scene->runLayer(layer);
+    
+    // Get dt so we can record when this was pressed
+    float dt = Director::getInstance()->getDeltaTime();
+
+
+    switch(keyCode)
+    {
+      // Exit 
+      case 53: //Esc
+        //returnHome();
+        break;
+
+      // Player Up
+      case 126: // Up Arrow
+      case 13:  // W
+          if (commandTime.Up.pressed !=-1)
+          {
+              commandTime.Up.pressed = dt;
+              keyChange = true;
+          }
+          break;
+
+      // Player Left
+      case 123: // Left Arrow
+      case 0:  // A
+          if (commandTime.Left.pressed !=-1)
+          {
+              commandTime.Left.pressed = dt;
+              keyChange = true;
+          }
+          break;
+
+      // Player Down
+      case 125: // Down Arrow
+      case 1: // S
+          if (commandTime.Down.pressed !=-1)
+          {
+              commandTime.Down.pressed = dt;
+              keyChange = true;
+          }
+          break;
+
+      // Player Right
+      case 124: // Right Arrow
+      case 2: // D
+          if (commandTime.Right.pressed !=-1)
+          {
+              commandTime.Right.pressed = dt;
+              keyChange = true;
+          }
+          break;
+
+      default:
+          break;
+    }
+}
+
+void TheBoxLayer::keyReleased(int keyCode)
+{
+    // Get dt so we can record when this was pressed
+    float dt = Director::getInstance()->getDeltaTime();
+
+    /*
+     * This sets the times.
+     * to ensure I dont zero a velocity when one opposing key is released
+     * while another is still being pressed, I check the opposing key
+     */ 
+    switch(keyCode)
+    {
+      // Exit 
+      case 53: //Esc
+        //returnHome();
+        break;
+
+      // Player Up
+      case 126: // Up Arrow
+      case 13:  // W
+          commandTime.Up.released = dt;
+          break;
+
+      // Player Left
+      case 123: // Left Arrow
+      case 0:  // A
+          commandTime.Left.released = dt;
+          break;
+
+      // Player Down
+      case 125: // Down Arrow
+      case 1: // S
+          commandTime.Down.released = dt;
+          break;
+
+      // Player Right
+      case 124: // Right Arrow
+      case 2: // D
+          commandTime.Right.released = dt;
+          break;
+
+      default:
+          break;
+    }
 
 }
+
+void TheBoxLayer::keyHandling(float dt)
+{
+    /*
+     * now one thing we have to be aware of here is the interaction between opposing keys.
+     * The two most common interactions are:
+     * A: Opposing keys cancel out 
+     * B: The most recently pressed opposing key is used
+     * Im using B because if someone is quickly switching to reverse direction is feasibly
+     * they may press the new key before they release the previous one and that slight pause
+     * that would occur from A is likely unwanted
+     */ 
+
+    /*
+     * The way this works is:
+     * if (press time == set)
+     *   if (release time == set)
+     *     time of press = released time - pressed time //note these times are relative to the last update
+     *   else
+     *     time of press = dt - pressed time
+     *   applyposition change using time of press
+     *   zero press timers
+     */
+    float time;
+    // Player Up
+    // set +y vel
+    if (commandTime.Up.pressed !=-1)
+    {
+       if (commandTime.Up.released !=-1)
+       {
+           time = commandTime.Up.released - commandTime.Up.pressed;
+           commandTime.Up.released = -1;
+       }
+       else
+           time = dt - commandTime.Up.pressed;
+
+       player->applyVelocityY(windowSize.height/50, time);
+       commandTime.Up.pressed = 0;
+    }
+
+    // Player Left
+    // set -x vel
+    if (commandTime.Left.pressed !=-1)
+    {
+       if (commandTime.Left.released !=-1)
+       {
+           time = commandTime.Left.released - commandTime.Left.pressed;
+           commandTime.Left.released = -1;
+       }
+       else
+           time = dt - commandTime.Left.pressed;
+
+       player->applyVelocityX(-windowSize.height/50, time);
+       commandTime.Left.pressed = 0;
+    }
+
+    // Player Down
+    // set -y vel
+    if (commandTime.Down.pressed !=-1)
+    {
+       if (commandTime.Down.released !=-1)
+       {
+           time = commandTime.Down.released - commandTime.Down.pressed;
+           commandTime.Down.released = -1;
+       }
+       else
+           time = dt - commandTime.Down.pressed;
+
+       player->applyVelocityY(-windowSize.height/50, time);
+       commandTime.Down.pressed = 0;
+    }
+
+    // Player Right
+    // set +x vel
+    if (commandTime.Right.pressed !=-1)
+    {
+       if (commandTime.Right.released !=-1)
+       {
+           time = commandTime.Right.released - commandTime.Right.pressed;
+           commandTime.Right.released = -1;
+       }
+       else
+           time = dt - commandTime.Right.pressed;
+
+       player->applyVelocityY(windowSize.height/50, time);
+       commandTime.Right.pressed = 0;
+    }
+}
+
+
+//This will initialize and add the layer to the scene
+void TheBoxLayer::runThisGame(Object* pSender)
+{
+    //init
+    Scene* scene = new Scene();
+    TheBoxLayer* layer = new TheBoxLayer();
+    layer->init();
+    
+    //run
+    scene->addChild(layer);
+
+    //scene->runLayer(layer);
+
+    Director::getInstance()->replaceScene(scene);
+    
+    //release the sender
+    //pSender->release();
+
+}
+

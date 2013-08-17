@@ -19,6 +19,8 @@
 class HomeLayer : public Layer
 {
 public:
+    HomeLayer();
+    ~HomeLayer();
     // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();  
 
@@ -27,6 +29,8 @@ public:
     
     // a selector callback
     static void menuCloseCallback(Object* pSender);
+
+    void keyPressed(int keyCode);
     
     // implement the "static create()" method
     CREATE_FUNC(HomeLayer);

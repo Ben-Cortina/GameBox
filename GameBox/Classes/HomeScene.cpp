@@ -3,6 +3,17 @@
 
 USING_NS_CC;
 
+HomeLayer::HomeLayer()
+{
+    // This will initialize all the menu sprites when we get around to creating them
+}
+
+HomeLayer::~HomeLayer()
+{
+	// unset this so we unregister with the touch dispatcher
+	//this->setTouchEnabled(false);
+}
+
 Scene* HomeLayer::scene()
 {
     // 'scene' is an autorelease object
@@ -52,7 +63,6 @@ bool HomeLayer::init()
     
     /////////////////////////////
     // 3. add your codes below...
-
     // add a label shows "Hello World"
     // create and initialize a label
     
@@ -63,7 +73,7 @@ bool HomeLayer::init()
                             origin.y + visibleSize.height - pLabel->getContentSize().height));
 
     // add the label as a child to this layer
-    this->addChild(pLabel, 1);
+    addChild(pLabel, 1);
 
     // add "HelloWorld" splash screen"
     Sprite* pSprite = Sprite::create("HelloWorld.png");
@@ -72,9 +82,16 @@ bool HomeLayer::init()
     pSprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 
     // add the sprite as a child to this layer
-    this->addChild(pSprite, 0);
+    addChild(pSprite, 0);
+
+    setKeyboardEnabled(true);
     
     return true;
+}
+
+void HomeLayer::keyPressed(int keyCode)
+{
+    std::cout << "this happend";   
 }
 
 void HomeLayer::menuCloseCallback(Object* pSender)

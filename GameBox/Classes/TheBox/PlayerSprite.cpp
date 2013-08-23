@@ -7,6 +7,7 @@
 //
 
 #include "PlayerSprite.h"
+#include "TheBox.h"
 
 float getTime()
 {
@@ -41,10 +42,10 @@ PlayerSprite::PlayerSprite()
     _force.x = _force.y = 0;
 }
 
-PlayerSprite* PlayerSprite::create(const char *pszFileName)
+PlayerSprite* PlayerSprite::create(const char *pszFileName, Layer* caller)
 {
     PlayerSprite *pobSprite = new PlayerSprite();
-    if (pobSprite && pobSprite->initWithFile(pszFileName))
+    if (pobSprite && pobSprite->initWithFile(pszFileName, caller))
     {
         pobSprite->autorelease();
         return pobSprite;
@@ -53,16 +54,17 @@ PlayerSprite* PlayerSprite::create(const char *pszFileName)
     return NULL;
 }
 
-bool PlayerSprite::initWithFile(const char *pszFilename)
+bool PlayerSprite::initWithFile(const char *pszFilename, Layer* caller)
 {
+    owner = caller;
     CCASSERT(pszFilename != NULL, "Invalid filename for sprite");
     
     Texture2D *pTexture = TextureCache::getInstance()->addImage(pszFilename);
     if (pTexture)
     {
+        scheduleUpdate();
         Rect rect = Rect::ZERO;
         rect.size = pTexture->getContentSize();
-        scheduleUpdate();
         return initWithTexture(pTexture, rect);
     }
     
@@ -81,13 +83,18 @@ void PlayerSprite::updateVelocity()
 {
     if (_force.x != 0 || _force.y !=0)
     {
-        float normal = MAX(abs(_force.y), abs(_force.x));
-        float ny = _force.y/normal;
-        float nx = _force.x/normal;
+        const float normal = MAX(abs(_force.y), abs(_force.x));
+        const float ny = _force.y/normal;
+        const float nx = _force.x/normal;
         float direction = atanf(ny / nx);
         if (nx < 0) direction += M_PI;
         _vel.x = _maxSpeed * cosf(direction);
         _vel.y = _maxSpeed * sinf(direction);
+        //damn floating point numbers *grumble grumble grumble*
+        if (abs(_vel.x) < 0.00001)
+            _vel.x = 0;
+        if (abs(_vel.y) < 0.00001)
+            _vel.y = 0;
     } else
     {
         _vel.x = 0;
@@ -109,10 +116,12 @@ void PlayerSprite::update(float dt)
     
 
     Point currentPos = _position;
-    currentPos.x += _vel.x * dt;
-    currentPos.y += _vel.y * dt;
-    setPosition(currentPos);
     
+    Rect bb = getBoundingBox();
+    
+    ((TheBoxLayer*)owner)->handlePlayerCollisions(currentPos, _vel.x*dt, _vel.y*dt, bb.size.width/2);
+
+    setPosition(currentPos);
 }
 
 
@@ -139,3 +148,4 @@ void PlayerSprite::update()
     //record how much time has already been accounted for
     dtCalculated = dc;
 }
+

@@ -9,8 +9,52 @@
 #include "TheBox.h"
 #include <iostream>
 
-#define TILE_ON Color3B(0,0,0)
-#define TILE_OFF Color3B(255,255,255)
+// returns the index position for the tile at x,y
+int tI(int x, int y) {return y * THEBOX_MAX_WIDTH + x;}
+
+float DistSquared (Point a, Point b){return (b.x-a.x)*(b.x-a.x)+(b.y-a.y)*(b.y-a.y);}
+float Dist(Point a, Point b){return sqrtf(DistSquared(a,b));}
+float Dot(Point a, Point b){return a.x*b.x+a.y*b.y;}
+
+/**
+ @brief Calculates the shortest distance from a point to a line segment
+ @param a   First end point of the line
+ @param b   Second end point of the line
+ @param c   The Point
+ */
+float ptToLine2D(Point a, Point b, Point p, Point &q)
+{
+    const float distSq = DistSquared(a, b); // i.e. (b-a)^2
+ //   std::cout << distSq << " "<<Dist(a,b)<<std::endl;
+    if ( distSq == 0.0 ) // a == b
+    {
+        q = a;
+        return Dist(a,p);
+    }
+    
+    // consider the line extending the segment, parameterized as a + t (b - a)
+    // we find projection of point p onto the line
+    // it falls where t = [(p-a) . (b-a)] / |b-a|^2
+    const float t = Dot((p - a),(b - a)) / distSq;
+    
+    // beyond the a end of the segment
+    if ( t < 0.0 ){
+        q = a;
+        return Dist(a, p);
+    }
+    
+    // beyond the b end of the segment
+    if ( t > 1.0 )
+    {
+        q = b;
+        return Dist(b, p);
+    }
+    
+    // projection falls on the segment
+    const Point proj = a + ((b - a) * t);
+    q = proj;
+    return Dist(p, proj);
+}
 
 CommandState::CommandState()
 {
@@ -19,7 +63,7 @@ CommandState::CommandState()
 
 TheBoxLayer::TheBoxLayer()
 {
-    player = PlayerSprite::create("Ball.png");
+    player = PlayerSprite::create("Ball.png", this);
     windowSize = Director::getInstance()->getVisibleSize();
     initTiles();
     setLayerSize(1, 1);
@@ -78,7 +122,7 @@ void TheBoxLayer::update(float dt)
 {
 
     //Update Player Position
-
+    
     //Check for collision
 
     //Check for victory
@@ -91,18 +135,20 @@ void TheBoxLayer::updateTiles()
                         (windowSize.height - tileSize.height * layerSize.height)/2
                         );
     
-    for (int y = 0; y < layerSize.height; y++)
-        for (int x = 0; x < layerSize.width; x++)
+    for (int y = 0; y < THEBOX_MAX_HEIGHT; y++)
+        for (int x = 0; x < THEBOX_MAX_WIDTH; x++)
         {
-            // update the center of the Sprite based on
-            sTiles[y * THEBOX_MAX_WIDTH + x]->setPosition(Point(x * tileSize.width + tileSize.width/2 + margins.width,
-                                                                y * tileSize.height + tileSize.height/2 + margins.height
-                                                                )
-                                                          );
-            // update the size of the sprite
-            sTiles[y * THEBOX_MAX_WIDTH + x]->setScale(tileSize.width);
-            // set each tiles color to white
-            sTiles[y * THEBOX_MAX_WIDTH + x]->setColor(TILE_OFF);
+            if (y < layerSize.height && x < layerSize.width)
+            {
+                // update the center of the Sprite based on
+                sTiles[tI(x, y)]->setPosition(Point(x * tileSize.width + tileSize.width/2 + margins.width,
+                                                                    y * tileSize.height + tileSize.height/2 + margins.height
+                                                                    )
+                                                              );
+                // update the size of the sprite
+                sTiles[tI(x, y)]->setScale(tileSize.width);
+            }
+            sTiles[tI(x, y)]->setVisible(false);
         }
 }
 
@@ -127,16 +173,20 @@ void TheBoxLayer::updateBorder()
 {
     for (int x = 0; x < layerSize.width; x++)
     {
-        sTiles[x]->setColor(TILE_ON);
-        sTiles[((int)layerSize.height-1) * THEBOX_MAX_WIDTH + x]->setColor(TILE_ON);
+        sTiles[tI(x,0)]->setVisible(true);
+        sTiles[tI(x,(int)(layerSize.height-1))]->setVisible(true);;
     }
     for (int y = 0; y < layerSize.height; y++)
     {
-        sTiles[y * THEBOX_MAX_WIDTH]->setColor(TILE_ON);
-        sTiles[y * THEBOX_MAX_WIDTH + ((int)layerSize.width-1)]->setColor(TILE_ON);
+        sTiles[tI(0, y)]->setVisible(true);;
+        sTiles[tI((int)(layerSize.width-1), y)]->setVisible(true);;
     }
 }
 
+void TheBoxLayer::updatePlayer(float dt)
+{
+ //   player->update(
+}
 
 void TheBoxLayer::keyPressed(int keyCode)
 {
@@ -270,6 +320,455 @@ void TheBoxLayer::keyReleased(int keyCode)
           break;
     }
 
+}
+
+/* returns whether or not a cercle intersects a rectangle
+ */
+bool CircleIntersectTile(Point circleCent, float radius, Sprite* tile)
+{
+    // if the tile is off, we dont need to check for collision
+    if (!tile->isVisible())
+        return false;
+    // we are going to do a simple circle to rectangle intersect check so well use the bounding box
+    // of the tile
+    
+    Rect bb = tile->getBoundingBox();
+    float distX;
+    float distY;
+    
+    // find how far the circle's center is from the tile's center
+    distX = abs(circleCent.x - bb.origin.x + bb.size.width / 2);
+    distY = abs(circleCent.y - bb.origin.y + bb.size.height / 2);
+    
+    // We are now checking one dimension at a time, if the circles is out of range in either x or y then
+    // there is no way there is a collision
+    if (distX > (bb.size.width / 2 + radius) ||
+        distY > (bb.size.height / 2 + radius))
+        return false;
+    
+    // We know the circle is in range. This rules out the possibility that it is in a corner
+    if (distX <= (bb.size.width / 2) ||
+        distY <= (bb.size.height / 2))
+        return true; 
+    
+    // We know its in the corner
+    // This finds the distance from the center of the circle to the corner of the rectangle
+    float distToCorner_sq = (distX - bb.size.width / 2) * (distX - bb.size.width / 2) +
+                            (distY - bb.size.height / 2) * (distY - bb.size.height / 2);
+    
+    return (distToCorner_sq <= (radius * radius));
+}
+
+void TheBoxLayer::handlePlayerCollisions(Point &pos, float x, float y, float radius)
+{
+    /*
+     * The most common collision detection is "hitbox" collision where the dev defines a rectangle
+     * for each element (This is usually the image rectangle but can be any size). Then all that
+     * needs to be checked for is if the two rectangles overlap. If your game sprites (like Terraria's)
+     * dont have any majorly protruding features this is sufficient. Otherwise, collision will need to
+     * be dont on a pixel by pixel basis. There are many many different methods for pixel collision.
+     * essentially you iterate through the two offending image's pixels checking if two "solid" pixels
+     * overlap.
+     * This all gets more complicated as you factor in rotation and velocity. As you will check
+     * incrementely, it is not uncommon for an object moving fast enough to go through another
+     * object if it is moving fast enough. Therefore it is require to check the projection for
+     * any intersect that may have occured.
+     *
+     * I am using a method specific to this game. It looks long but its actually a lot less
+     * taxing than sending a checkCollision for each nearby tile.
+     */
+    
+    // if there is no movement no check needs to occur
+    if (x == 0 && y ==0)
+        return;
+    
+    //if its moving
+    
+    int xside;
+    int yside;
+    
+    
+    //Find the tile the player is on and was on.
+    Size margins = Size((windowSize.width - tileSize.width * layerSize.width)/2,
+                        (windowSize.height - tileSize.height * layerSize.height)/2
+                        );
+    const int tile_x = (int)( (pos.x - margins.width) / tileSize.width );
+    const int tile_y = (int)( (pos.y - margins.height) / tileSize.height );
+    
+    //This would be the new position of the object if it was unObstructed
+    Point newPos;
+    newPos.x = pos.x + x;
+    newPos.y = pos.y + y;
+    
+    const Rect bB = sTiles[tI(tile_x, tile_y)]->getBoundingBox();
+    
+    // I only calcualte the first lines we would cross here because that's all we need unless
+    // this runs on a computer so slow it only updates twice a second or less.
+    
+    //Find the X side direction we are travelling.
+    if (x < 0)
+        xside = (int)(bB.getMinX());
+    else
+        xside = (int)(bB.getMaxX());
+    
+    //Find the y side direction we are travelling.
+    if (y < 0)
+        yside = (int)(bB.getMinY());
+    else
+        yside = (int)(bB.getMaxY());
+
+    //find where the path intersects the grid
+    float vertisect = -1; // this is fraction of x traveled before the vertical line is hit
+    float horzisect = -1; // this is fraction of y traveled before  the horizontal line
+    
+    // ydir and xdir represent the sign of the movement along each axis
+    const int xdir = (x<0)?-1:1;
+    const int ydir = (y<0)?-1:1;
+    
+    //TODO: refine this to be a one time "vertisect = abs((pos.x - xsiderad) / x);"
+    
+    /*=============================Check If/When a Grid line is Crossed=========================*/
+    
+    //if we moved horizontally
+    if (x != 0)
+    {
+        // shift the xside to account for the radius
+        // this essentially finds when the closest x point on the player reaches xside
+        const float xsiderad = xside - ((radius - 0.0001) * xdir);
+        
+        //If crossed the vertical line
+        if((pos.x - xsiderad) * ((pos.x + x) - xsiderad) < 0)
+            vertisect = abs((pos.x - xsiderad) / x);
+    }
+    
+    //if we moved vertically
+    if (y != 0)
+    {
+        // shift the yside to account for the radius
+        const float ysiderad = yside - ((radius - 0.0001) * ydir);
+        
+        //If we get in range of the vertical line
+        if((pos.y - ysiderad) * ((pos.y + y) - ysiderad) < 0)
+            horzisect = abs((pos.y - ysiderad) / y);
+    }
+    
+    /*=============Check If There Were Any Collisions Based on The Grid Lines Crossed=============*/
+    
+    // if it crosses both borders
+    // and both the xdir and ydir tiles are on, then the object is in the corner
+    if (vertisect != -1 &&
+        horzisect != -1 &&
+        sTiles[tI(tile_x, tile_y + ydir)]->isVisible() &&
+        sTiles[tI(tile_x + xdir, tile_y)]->isVisible())
+    {
+            pos.x = xside - (radius * xdir);
+            pos.y = yside - (radius * ydir);
+            return;
+    }
+    
+    // variables for hit calculation
+    Point corner;
+    Point hitCorner;
+    float newx;
+    float newy;
+    
+    /*            Horizontal Collision Detection
+     * Check a collision on the left or right side of a tile
+     * if one occurred, run collision detection again with the x movement as 0 to the edge of
+     * the offending tile then run this with any remaining x or y movement.
+     */
+    
+    //if x intercepts
+    if (vertisect !=-1)
+    {
+        //if xdir, 0 is on
+        if (sTiles[tI(tile_x + xdir, tile_y)]->isVisible())
+        {
+            // set pos.x to be against the wall and cut x dir movement for a bit
+            pos.x = xside - (radius * xdir);
+            //revise x
+            //x = newPos.x - pos.x;
+            newx = 0;
+            newy = y;
+        
+            if (horzisect !=-1)
+                newy = (y * (horzisect)) + ydir * 1;
+        
+            //run check collision vertically to the end of the tile
+            handlePlayerCollisions(pos, newx, newy, radius);
+            
+            //run what is left from this new position
+            if (horzisect != -1)
+                newx = (x * (horzisect));
+
+            handlePlayerCollisions(pos, newx, y - newy, radius);
+            return;
+        }
+    }
+    
+    /*             Vertical Collision Detection
+     * Check a collision on the top or bottom side of a tile
+     * if one occurred, run collision detection again with the x movement as 0 to the edge of
+     * the offending tile then run this with any remaining x or y movement.
+     */
+    //if y intercepts
+    if (horzisect !=-1)
+    {
+        //if 0, ydir is on
+        if (sTiles[tI(tile_x, tile_y + ydir)]->isVisible())
+        {
+            // set pos.y to be against the wall and cut y dir movement for a bit
+            pos.y = yside - (radius * ydir);
+            //revise y
+            //y = newPos.y - pos.y;
+            newx = x;
+            newy = 0;
+            
+            if (vertisect !=-1)
+                newx = (x * (vertisect)) + xdir * 1; // the distance to a little past the edge
+            
+            //run check collision horizontally to a bit past the end of the tile
+            handlePlayerCollisions(pos, newx, newy, radius);
+            
+            //run what is left from this new position
+            if (vertisect != -1)
+                newy = y * (1 - vertisect);
+
+            handlePlayerCollisions(pos, x - newx, newy, radius);
+            return;
+        }
+    }
+    
+    
+    /*// variables for corner collision
+    const float normal = MAX(abs(y), abs(x));
+    const float ny = y/normal;
+    const float nx = x/normal;
+    float direction = atanf(ny / nx);
+    if (nx < 0) direction += M_PI;
+    x = _maxSpeed * cosf(direction);
+    y = _maxSpeed * sinf(direction);
+    //damn floating point numbers *grumble grumble grumble*
+    if (abs(_vel.x) < 0.00001)
+        _vel.x = 0;
+    if (abs(_vel.y) < 0.00001)
+        _vel.y = 0;
+    */
+    //if xdir,ydir is on
+    if (sTiles[tI(tile_x + xdir, tile_y + ydir)]->isVisible())
+    {
+        Point corner;
+        corner.x = xside;
+        corner.y = yside;
+
+        //if it hits the corner
+        if (ptToLine2D(pos, newPos, corner, hitCorner) < radius)
+        {
+            // we'll work on the corner movement later, for now just set position an kill movement
+            std::cout << ptToLine2D(pos, newPos, corner, hitCorner) << " " << radius << std::endl;
+            pos = hitCorner;
+            return;
+        }
+    }
+    //if -xdir,ydir is on
+    if (horzisect != -1 &&
+        sTiles[tI(tile_x - xdir, tile_y + ydir)]->isVisible())
+    {
+        Point corner;
+        corner.x = xside - xdir * tileSize.width;
+        corner.y = yside;
+
+        //if it hits the corner
+        if (ptToLine2D(pos, newPos, corner, hitCorner) < radius)
+        {
+            std::cout << ptToLine2D(pos, newPos, corner, hitCorner) << " " << radius << std::endl;
+            pos = hitCorner;
+            return;
+        }
+    }
+    //if xdir,-ydir is on
+    if (vertisect != -1 &&
+        sTiles[tI(tile_x + xdir, tile_y - ydir)]->isVisible())
+    {
+        Point corner;
+        corner.x = xside;
+        corner.y = yside - ydir * tileSize.height;
+        
+        //if it hits the corner
+        if (ptToLine2D(pos, newPos, corner, hitCorner) < radius)
+        {
+            std::cout << ptToLine2D(pos, newPos, corner, hitCorner) << " " << radius << std::endl;
+            pos = hitCorner;
+            return;
+        }
+    }
+    
+    // if it gets here then it didnt hit anything and we can move it freely
+    pos = newPos;
+    return;
+    
+    /* collision detection with < radius speed
+     * this will allow me to run light collision detection 
+    // get speed
+    float speed_sq = (x*x + y*y);
+    
+    //if its greater than radius
+    if (speed_sq > radius*radius)
+    {
+        /* run it with a speed of radius
+        //get the direction
+        float normal = MAX(abs(y), abs(x));
+        float ny = y/normal;
+        float nx = x/normal;
+        float direction = atanf(ny / nx);
+        if (nx < 0) direction += M_PI;
+        nx = radius * cosf(direction);
+        ny = radius * sinf(direction);
+        //damn floating point numbers *grumble grumble grumble*
+        if (abs(nx) < 0.00001)
+            nx = 0;
+        if (abs(ny) < 0.00001)
+            ny = 0;
+        //run collision detection with < radius speed
+        handleCollisions(pos, nx, ny, radius);
+        // run collision detection again with whats left (position will be updated from the previous call)
+        x -= nx;
+        y -= ny;
+        handleCollisions(pos, x, y, radius);
+    } else
+    {
+        /*check collision
+        //Find the tile the player is on now.
+        Size margins = Size((windowSize.width - tileSize.width * layerSize.width)/2,
+                            (windowSize.height - tileSize.height * layerSize.height)/2
+                            );
+        
+        int tile_x = (int)( ((pos.x) - margins.width) / tileSize.width );
+        int tile_y = (int)( ((pos.y) - margins.height) / tileSize.height );
+        
+        //check all 5 relative tiles (3 corners)
+        int xdir = (x<0)?-1:1;
+        int ydir = (y<0)?-1:1;
+        
+        //xdir, 0
+        if (CircleIntersectTile(pos, radius, sTiles[tI(tile_x + xdir, tile_y)]))
+        {
+            // move it and run this again with vertical movement to the end
+            // of the xdir, 0 tile
+            Rect bb = sTiles[tI(tile_x + xdir, tile_y)]->getBoundingBox();
+            
+            // set the object radius away from the box in the -xdir
+            pos.x = ((xdir<0)?bb.getMaxX():bb.getMinX()) - xdir * radius;
+            
+            //run this again with only vertical movement
+            
+            
+        }
+        
+        //0, ydir
+        if (CircleIntersectTile(pos, radius, sTiles[tI(tile_x, tile_y + ydir)]))
+        {
+            
+        }
+        
+        //xdir, ydir
+        if (CircleIntersectTile(pos, radius, sTiles[tI(tile_x + xdir, tile_y + ydir)]))
+        {
+            
+        }
+        
+        // we only need to check the xdir,-ydir if there has been horizontal movement
+        if (x != 0)
+        {
+            //xdir, -ydir
+            if (CircleIntersectTile(pos, radius, sTiles[tI(tile_x + xdir, tile_y - ydir)]))
+            {
+                
+            }
+        }
+        
+        // we only need to check the -xdir,ydir if there has been vertical movement
+        if (y != 0)
+        {
+            //xdir, -ydir
+            if (CircleIntersectTile(pos, radius, sTiles[tI(tile_x - xdir, tile_y + ydir)]))
+            {
+                
+            }
+        }
+        
+        /* +x dir -x tile means y
+         +y dir -y tile means x 
+        
+        
+        //if so run collision detection with new vertical and horizontal movement (to the end of the blocking tile)
+        
+        //then run collision detection for any remaining movement
+    }
+
+    /*
+         //if the y intercept comes first and the ydir tile is on
+        if (sTiles[tI(tile_x, tile_y + ydir)]->isVisible())
+        {
+            // set pos.x to be against the wall
+            pos.y = yside - (radius * ydir);
+            
+            // if there only tile of the 3 is ydir
+            if (!sTiles[tI(tile_x + xdir, tile_y + ydir)]->isVisible())
+            {
+                //move to the edge of the tile then continue with whats left
+                pos.y += y * (vertisect / x);
+            }
+            // If there was something blocking x it wouldn't reach here
+            pos.x += x;
+            return;
+            
+        //if only the xdir,ydir tile is on
+        } else if (sTiles[tI(tile_x + xdir, tile_y + ydir)]->isVisible())
+        {
+            // because only the xdir,ydir tile is on and we are passing through both
+            // that means we'll pass xdir or ydir before colliding with the tile.
+            // So which ever line we hit first is not the line we will hit the tile on
+            
+            //if we go through the vertical first
+            if (vertisect / x <= horzisect / y)
+            {
+                //we go along the horizontal line
+                pos.y = yside - (radius * ydir);
+                pos.x += x;
+            } else
+            {
+                //we go along the vertical line
+                pos.x = xside - (radius * xdir);
+                pos.y += y;
+            }
+            return;
+        }
+        
+    // if we cross horizontal and xdir is on
+    } else
+        if (vertisect != -1 && sTiles[tI(tile_x + xdir, tile_y)]->isVisible())
+    {
+        pos.x = xside - (radius * xdir);
+        pos.y += y;
+        return;
+        
+    // if we cross horizontal and ydir is on
+    } else if (horzisect != -1 && sTiles[tI(tile_x, tile_y + ydir)]->isVisible())
+    {
+        pos.x += x;
+        pos.y = yside - (radius * ydir);
+        return;
+        
+    //nothing is blocking it or it does not cross any borders
+    } else
+    {
+        //go normally
+        pos.x += x;
+        pos.y += y;
+    }
+    */
+    
 }
 
 //This will initialize and add the layer to the scene

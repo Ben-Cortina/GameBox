@@ -27,6 +27,7 @@ class PlayerSprite : public Sprite
 private:
     timeval lastUpdate;
     float dtCalculated;
+    Layer* owner;
 protected:
     float _weight; //unused
     Vector _vel;
@@ -45,7 +46,7 @@ public:
      * @param   pszFileName The string which indicates a path to image file, e.g., "scene1/monster.png".
      * @return  A valid sprite object that is marked as autoreleased.
      */
-    static PlayerSprite* create(const char *pszFileName);
+    static PlayerSprite* create(const char *pszFileName, Layer* caller);
     
     /**
      * Initializes a sprite with an image filename.
@@ -57,7 +58,8 @@ public:
      * @param   pszFilename The path to an image file in local file system
      * @return  true if the sprite is initialized properly, false otherwise.
      */
-    virtual bool initWithFile(const char *pszFilename);
+    virtual bool initWithFile(const char *pszFilename, Layer* caller);
+    
     
     /**
      * Get/Set methods for weight
@@ -103,6 +105,7 @@ public:
      @param dt       The time over which the velocity has been applied
      */
     void update(float dt);
+    
     
     /**
      @brief     Updates the position of the Sprite based on the currenttime - lastupdate

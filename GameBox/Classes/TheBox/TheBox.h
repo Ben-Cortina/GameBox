@@ -20,8 +20,8 @@
 #ifndef __GameBox___TheBoxScene__
 #define __GameBox___TheBoxScene__
 
-#define THEBOX_MAX_WIDTH 100
-#define THEBOX_MAX_HEIGHT 100 
+#define THEBOX_MAX_WIDTH 20
+#define THEBOX_MAX_HEIGHT 20 
 
 
 #include "../Helpers/CustomCC.h"
@@ -99,21 +99,42 @@ public:
     /**
      @brief     the update method, initially defined in Node, this is where the games time based actions are calculated.
      *          Once scheduleUpdate() has been called once, update will repeatedly.
+     @param dt  The time since update was last called
      */
     void update(float dt);
+    
+    /**
+     @brief     Calls the player update method and handles any collisions.
+     */
+    void updatePlayer(float dt);
 
     /**
-     @brief      This is a functions to catch KeyPress events sent from KeyboardDispatcher
+     @brief     This is a function to catch KeyPress events sent from KeyboardDispatcher
      @param  KeyCode    The keycode of the pressed key
      */
     void keyPressed(int keyCode);
 
     /**
-     @brief      This is a functions to catch KeyRelease events sent from KeyboardDispatcher
+     @brief     This is a function to catch KeyRelease events sent from KeyboardDispatcher
      @param KeyCode     The keycode of the released key
      */
     void keyReleased(int keyCode);
-
+    
+    /**
+     @brief     This checks for and handles collisions and movement for the player. 
+     *          There are an incredible number of ways to handle collision detection and using the most 
+     *          efficient yet accurate method for you game is important for performance. See the TheBox.cpp
+     *          handleCollisions() for more details.
+     *          This collision detection method is specific to checking collisions of a moving circle and 
+     *          stationary rectangles. I went for excessive accuracy in this to give me a good challenge.
+     *          Really all this game needs is a simple bounding box collision detection.
+     @param pos The position of the object
+     @param x   The x change of the object
+     @param y   The y change of the object
+     @return    Whether or not there was a collision
+     */
+    void handlePlayerCollisions(Point &pos, float x, float y, float radius);
+    
     /**
      @brief     This method creates a new MyScene and adds a TheBoxLayer to it.
      */

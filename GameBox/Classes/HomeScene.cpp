@@ -83,15 +83,8 @@ bool HomeLayer::init()
 
     // add the sprite as a child to this layer
     addChild(pSprite, 0);
-
-    setKeyboardEnabled(true);
     
     return true;
-}
-
-void HomeLayer::keyPressed(int keyCode)
-{
-    std::cout << "this happend";   
 }
 
 void HomeLayer::menuCloseCallback(Object* pSender)

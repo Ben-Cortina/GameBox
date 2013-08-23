@@ -30,8 +30,6 @@ public:
     // a selector callback
     static void menuCloseCallback(Object* pSender);
 
-    void keyPressed(int keyCode);
-    
     // implement the "static create()" method
     CREATE_FUNC(HomeLayer);
 

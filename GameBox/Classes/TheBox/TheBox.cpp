@@ -17,43 +17,66 @@ float Dist(Point a, Point b){return sqrtf(DistSquared(a,b));}
 float Dot(Point a, Point b){return a.x*b.x+a.y*b.y;}
 
 /**
- @brief Calculates the shortest distance from a point to a line segment
- @param a   First end point of the line
- @param b   Second end point of the line
- @param c   The Point
+ @brief     A modified version of bobobobo's "Circle line collision detection" answer on stackoverflow.com
+ *          This calculates how far along the ray each intersection occurs.
+ @return    How far along the line segment the first intersection with the circle occurs.
+ *          0.2 is 20% from point v to point w. -1 = no intersect.
  */
-float ptToLine2D(Point a, Point b, Point p, Point &q)
+float RayCircleIntersect(Point v, Point w, Point c, float r)
 {
-    const float distSq = DistSquared(a, b); // i.e. (b-a)^2
- //   std::cout << distSq << " "<<Dist(a,b)<<std::endl;
-    if ( distSq == 0.0 ) // a == b
+    Point a = w - v;
+    Point b = v - c;
+    const float d = Dot(a, a) ;
+    const float e = 2 * Dot(b, a) ;
+    const float f = Dot(b, b) - r * r ;
+    
+    float discriminant = e * e - 4 * d * f;
+    
+    if( discriminant < 0 )
     {
-        q = a;
-        return Dist(a,p);
+        // no intersection
+        return -1;
     }
-    
-    // consider the line extending the segment, parameterized as a + t (b - a)
-    // we find projection of point p onto the line
-    // it falls where t = [(p-a) . (b-a)] / |b-a|^2
-    const float t = Dot((p - a),(b - a)) / distSq;
-    
-    // beyond the a end of the segment
-    if ( t < 0.0 ){
-        q = a;
-        return Dist(a, p);
-    }
-    
-    // beyond the b end of the segment
-    if ( t > 1.0 )
+    else
     {
-        q = b;
-        return Dist(b, p);
+        // ray didn't totally miss sphere,
+        // so there is a solution to
+        // the equation.
+        
+        discriminant = sqrt(discriminant);
+        
+        // either solution may be on or off the ray so need to test both
+        // t is always the first intersect, because BOTH discriminant and
+        // a are nonnegative.
+        float t1 = (-e - discriminant) / (2 * d);
+        // bobobobo's solutions includes a second intersect as well. As
+        // my problem will never need know the exit intersect, I will
+        // only use t1
+        //float t2 = (-e + discriminant) / (2 * d);
+        
+        
+        // 3x HIT cases:
+        //          -o->             --|-->  |            |  --|->
+        // Impale(t1 hit,t2 hit), Poke(t1 hit,t2>1), ExitWound(t1<0, t2 hit),
+        
+        // 3x MISS cases:
+        //       ->  o                     o ->              | -> |
+        // FallShort (t1>1,t2>1), Past (t1<0,t2<0), CompletelyInside(t1<0, t2>1)
+        
+        if( t1 >= 0 && t1 <= 1 )
+        {
+            // t1 is an intersection, and if it hits,
+            // it's closer than t2 would be
+            // Impale, Poke
+            
+            //due to floating point inacuraccy, this would sometimes set the position slightly
+            // further than the intersection, going in half steps should fix this
+            return t1/2;
+        }
+        
+        // no intn: FallShort, Past, CompletelyInside
+        return -1;
     }
-    
-    // projection falls on the segment
-    const Point proj = a + ((b - a) * t);
-    q = proj;
-    return Dist(p, proj);
 }
 
 CommandState::CommandState()
@@ -374,7 +397,7 @@ void TheBoxLayer::handlePlayerCollisions(Point &pos, float x, float y, float rad
      * object if it is moving fast enough. Therefore it is require to check the projection for
      * any intersect that may have occured.
      *
-     * I am using a method specific to this game. It looks long but its actually a lot less
+     * I am using a method specific to this game. It looks long but, in theory, it's a lot less
      * taxing than sending a checkCollision for each nearby tile.
      */
     
@@ -434,10 +457,10 @@ void TheBoxLayer::handlePlayerCollisions(Point &pos, float x, float y, float rad
     {
         // shift the xside to account for the radius
         // this essentially finds when the closest x point on the player reaches xside
-        const float xsiderad = xside - ((radius - 0.0001) * xdir);
+        const float xsiderad = xside - ((radius) * xdir);
         
         //If crossed the vertical line
-        if((pos.x - xsiderad) * ((pos.x + x) - xsiderad) < 0)
+        if((pos.x - xsiderad) * ((pos.x + x) - xsiderad) <= 0)
             vertisect = abs((pos.x - xsiderad) / x);
     }
     
@@ -445,10 +468,10 @@ void TheBoxLayer::handlePlayerCollisions(Point &pos, float x, float y, float rad
     if (y != 0)
     {
         // shift the yside to account for the radius
-        const float ysiderad = yside - ((radius - 0.0001) * ydir);
+        const float ysiderad = yside - ((radius) * ydir);
         
         //If we get in range of the vertical line
-        if((pos.y - ysiderad) * ((pos.y + y) - ysiderad) < 0)
+        if((pos.y - ysiderad) * ((pos.y + y) - ysiderad) <= 0)
             horzisect = abs((pos.y - ysiderad) / y);
     }
     
@@ -539,21 +562,11 @@ void TheBoxLayer::handlePlayerCollisions(Point &pos, float x, float y, float rad
         }
     }
     
+    /*             Corner Collision Detection
+     * For each direction check the two corners to the left and right or it in case
+     * we clipped it.
+     */
     
-    /*// variables for corner collision
-    const float normal = MAX(abs(y), abs(x));
-    const float ny = y/normal;
-    const float nx = x/normal;
-    float direction = atanf(ny / nx);
-    if (nx < 0) direction += M_PI;
-    x = _maxSpeed * cosf(direction);
-    y = _maxSpeed * sinf(direction);
-    //damn floating point numbers *grumble grumble grumble*
-    if (abs(_vel.x) < 0.00001)
-        _vel.x = 0;
-    if (abs(_vel.y) < 0.00001)
-        _vel.y = 0;
-    */
     //if xdir,ydir is on
     if (sTiles[tI(tile_x + xdir, tile_y + ydir)]->isVisible())
     {
@@ -562,16 +575,21 @@ void TheBoxLayer::handlePlayerCollisions(Point &pos, float x, float y, float rad
         corner.y = yside;
 
         //if it hits the corner
-        if (ptToLine2D(pos, newPos, corner, hitCorner) < radius)
+        // essentially, this checks the intersection of the ray made by the center of the object and
+        // a circle or radius 'radius' around the corner.
+        // This will tell me how far along the movement we first come in contact with the corner.
+        const float t1 = RayCircleIntersect(pos, newPos, corner, radius);
+        if (t1 != -1)
         {
             // we'll work on the corner movement later, for now just set position an kill movement
-            std::cout << ptToLine2D(pos, newPos, corner, hitCorner) << " " << radius << std::endl;
-            pos = hitCorner;
+            pos.x += x * t1;
+            pos.y += y * t1;
             return;
         }
     }
     //if -xdir,ydir is on
-    if (horzisect != -1 &&
+    //horzisect != -1 &&
+    if (y != 0 &&
         sTiles[tI(tile_x - xdir, tile_y + ydir)]->isVisible())
     {
         Point corner;
@@ -579,15 +597,17 @@ void TheBoxLayer::handlePlayerCollisions(Point &pos, float x, float y, float rad
         corner.y = yside;
 
         //if it hits the corner
-        if (ptToLine2D(pos, newPos, corner, hitCorner) < radius)
+        const float t1 = RayCircleIntersect(pos, newPos, corner, radius);
+        if (t1 != -1)
         {
-            std::cout << ptToLine2D(pos, newPos, corner, hitCorner) << " " << radius << std::endl;
-            pos = hitCorner;
+            pos.x += x * t1;
+            pos.y += y * t1;
             return;
         }
     }
     //if xdir,-ydir is on
-    if (vertisect != -1 &&
+    //vertisect != -1 &&
+    if (x != 0 &&
         sTiles[tI(tile_x + xdir, tile_y - ydir)]->isVisible())
     {
         Point corner;
@@ -595,10 +615,11 @@ void TheBoxLayer::handlePlayerCollisions(Point &pos, float x, float y, float rad
         corner.y = yside - ydir * tileSize.height;
         
         //if it hits the corner
-        if (ptToLine2D(pos, newPos, corner, hitCorner) < radius)
+        const float t1 = RayCircleIntersect(pos, newPos, corner, radius);
+        if (t1 != -1)
         {
-            std::cout << ptToLine2D(pos, newPos, corner, hitCorner) << " " << radius << std::endl;
-            pos = hitCorner;
+            pos.x += x * t1;
+            pos.y += y * t1;
             return;
         }
     }
@@ -606,168 +627,6 @@ void TheBoxLayer::handlePlayerCollisions(Point &pos, float x, float y, float rad
     // if it gets here then it didnt hit anything and we can move it freely
     pos = newPos;
     return;
-    
-    /* collision detection with < radius speed
-     * this will allow me to run light collision detection 
-    // get speed
-    float speed_sq = (x*x + y*y);
-    
-    //if its greater than radius
-    if (speed_sq > radius*radius)
-    {
-        /* run it with a speed of radius
-        //get the direction
-        float normal = MAX(abs(y), abs(x));
-        float ny = y/normal;
-        float nx = x/normal;
-        float direction = atanf(ny / nx);
-        if (nx < 0) direction += M_PI;
-        nx = radius * cosf(direction);
-        ny = radius * sinf(direction);
-        //damn floating point numbers *grumble grumble grumble*
-        if (abs(nx) < 0.00001)
-            nx = 0;
-        if (abs(ny) < 0.00001)
-            ny = 0;
-        //run collision detection with < radius speed
-        handleCollisions(pos, nx, ny, radius);
-        // run collision detection again with whats left (position will be updated from the previous call)
-        x -= nx;
-        y -= ny;
-        handleCollisions(pos, x, y, radius);
-    } else
-    {
-        /*check collision
-        //Find the tile the player is on now.
-        Size margins = Size((windowSize.width - tileSize.width * layerSize.width)/2,
-                            (windowSize.height - tileSize.height * layerSize.height)/2
-                            );
-        
-        int tile_x = (int)( ((pos.x) - margins.width) / tileSize.width );
-        int tile_y = (int)( ((pos.y) - margins.height) / tileSize.height );
-        
-        //check all 5 relative tiles (3 corners)
-        int xdir = (x<0)?-1:1;
-        int ydir = (y<0)?-1:1;
-        
-        //xdir, 0
-        if (CircleIntersectTile(pos, radius, sTiles[tI(tile_x + xdir, tile_y)]))
-        {
-            // move it and run this again with vertical movement to the end
-            // of the xdir, 0 tile
-            Rect bb = sTiles[tI(tile_x + xdir, tile_y)]->getBoundingBox();
-            
-            // set the object radius away from the box in the -xdir
-            pos.x = ((xdir<0)?bb.getMaxX():bb.getMinX()) - xdir * radius;
-            
-            //run this again with only vertical movement
-            
-            
-        }
-        
-        //0, ydir
-        if (CircleIntersectTile(pos, radius, sTiles[tI(tile_x, tile_y + ydir)]))
-        {
-            
-        }
-        
-        //xdir, ydir
-        if (CircleIntersectTile(pos, radius, sTiles[tI(tile_x + xdir, tile_y + ydir)]))
-        {
-            
-        }
-        
-        // we only need to check the xdir,-ydir if there has been horizontal movement
-        if (x != 0)
-        {
-            //xdir, -ydir
-            if (CircleIntersectTile(pos, radius, sTiles[tI(tile_x + xdir, tile_y - ydir)]))
-            {
-                
-            }
-        }
-        
-        // we only need to check the -xdir,ydir if there has been vertical movement
-        if (y != 0)
-        {
-            //xdir, -ydir
-            if (CircleIntersectTile(pos, radius, sTiles[tI(tile_x - xdir, tile_y + ydir)]))
-            {
-                
-            }
-        }
-        
-        /* +x dir -x tile means y
-         +y dir -y tile means x 
-        
-        
-        //if so run collision detection with new vertical and horizontal movement (to the end of the blocking tile)
-        
-        //then run collision detection for any remaining movement
-    }
-
-    /*
-         //if the y intercept comes first and the ydir tile is on
-        if (sTiles[tI(tile_x, tile_y + ydir)]->isVisible())
-        {
-            // set pos.x to be against the wall
-            pos.y = yside - (radius * ydir);
-            
-            // if there only tile of the 3 is ydir
-            if (!sTiles[tI(tile_x + xdir, tile_y + ydir)]->isVisible())
-            {
-                //move to the edge of the tile then continue with whats left
-                pos.y += y * (vertisect / x);
-            }
-            // If there was something blocking x it wouldn't reach here
-            pos.x += x;
-            return;
-            
-        //if only the xdir,ydir tile is on
-        } else if (sTiles[tI(tile_x + xdir, tile_y + ydir)]->isVisible())
-        {
-            // because only the xdir,ydir tile is on and we are passing through both
-            // that means we'll pass xdir or ydir before colliding with the tile.
-            // So which ever line we hit first is not the line we will hit the tile on
-            
-            //if we go through the vertical first
-            if (vertisect / x <= horzisect / y)
-            {
-                //we go along the horizontal line
-                pos.y = yside - (radius * ydir);
-                pos.x += x;
-            } else
-            {
-                //we go along the vertical line
-                pos.x = xside - (radius * xdir);
-                pos.y += y;
-            }
-            return;
-        }
-        
-    // if we cross horizontal and xdir is on
-    } else
-        if (vertisect != -1 && sTiles[tI(tile_x + xdir, tile_y)]->isVisible())
-    {
-        pos.x = xside - (radius * xdir);
-        pos.y += y;
-        return;
-        
-    // if we cross horizontal and ydir is on
-    } else if (horzisect != -1 && sTiles[tI(tile_x, tile_y + ydir)]->isVisible())
-    {
-        pos.x += x;
-        pos.y = yside - (radius * ydir);
-        return;
-        
-    //nothing is blocking it or it does not cross any borders
-    } else
-    {
-        //go normally
-        pos.x += x;
-        pos.y += y;
-    }
-    */
     
 }
 
@@ -780,11 +639,6 @@ void TheBoxLayer::runThisGame(Object* pSender)
     layer->initWithColor(Color4B(255,255,255,255));
 
     scene->runLayer(layer);
-
-    //Director::getInstance()->replaceScene(scene);
-    
-    //release the sender
-    //pSender->release();
 
 }
 

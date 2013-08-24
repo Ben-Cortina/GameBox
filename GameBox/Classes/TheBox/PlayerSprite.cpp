@@ -119,6 +119,7 @@ void PlayerSprite::update(float dt)
     
     Rect bb = getBoundingBox();
     
+    //TODO: use a different method than casting to TheBoxLayer
     ((TheBoxLayer*)owner)->handlePlayerCollisions(currentPos, _vel.x*dt, _vel.y*dt, bb.size.width/2);
 
     setPosition(currentPos);

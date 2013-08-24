@@ -14,7 +14,7 @@
  * too long to get to an exit, the location of that exit may    *
  * change.                                                      *
  *                                                              *
- * Features: Keyboard movement, BB collision detection.         *
+ * Features: Keyboard movement, collision detection.            *
  *--------------------------------------------------------------*/
 
 #ifndef __GameBox___TheBoxScene__
@@ -22,6 +22,7 @@
 
 #define THEBOX_MAX_WIDTH 20
 #define THEBOX_MAX_HEIGHT 20 
+#define TIME_PER_SPAWN 5
 
 
 #include "../Helpers/CustomCC.h"
@@ -58,6 +59,8 @@ private:
     Sprite* sTiles[THEBOX_MAX_HEIGHT * THEBOX_MAX_WIDTH]; //array holding all the sprites
     PlayerSprite* player;   // A sprite class to handle the players sprite
     CommandState commandStates; // A struct containing all the states of important commands
+    float timeRemaining;
+    float timePerLevel;
     
     /**
      @brief     Creates, sizes, and adds all the sprites

@@ -17,12 +17,16 @@
  * Features: Keyboard movement, collision detection.            *
  *--------------------------------------------------------------*/
 
+// I'm going to be changing the player ball with fluid movement to a pixel that
+// moves once per key press. This will allow the game to have some user control
+
 #ifndef __GameBox___TheBoxScene__
 #define __GameBox___TheBoxScene__
 
 #define THEBOX_MAX_WIDTH 20
 #define THEBOX_MAX_HEIGHT 20 
-#define TIME_PER_SPAWN 5
+#define TIME_PER_SPAWN 2.5
+#define TIME_PER_CHANGE 5
 
 
 #include "../Helpers/CustomCC.h"
@@ -61,6 +65,10 @@ private:
     CommandState commandStates; // A struct containing all the states of important commands
     float timeRemaining;
     float timePerLevel;
+    int nextSpawn;
+    int nextChange;
+    LabelTTF * timeLabel;
+    Point exit;
     
     /**
      @brief     Creates, sizes, and adds all the sprites
@@ -73,9 +81,34 @@ private:
     void initPlayer();
     
     /**
+     @brief     This method sets up the next level of the game.
+     */
+    void nextLevel();
+    
+    /**
      @brief Updates the size and position of each Sprite
      */
     void updateTiles();
+    
+    /**
+     @brief Updates the Timer
+     */
+    void updateTimer(float dt);
+    
+    /**
+     @brief     Check the victory and defeat condition
+     */
+    void checkConditions();
+    
+    /**
+     @brief     Changes the coordinates of the exit
+     */
+    void changeExit();
+    
+    /**
+     @brief     Turns on a tile in a random location
+     */
+    void spawnTile();
     
     /**
      @brief Updates the screenSize and tileSize then calls updateTiles
@@ -98,7 +131,6 @@ public:
      */
     virtual bool init();
     
-    
     /**
      @brief     the update method, initially defined in Node, this is where the games time based actions are calculated.
      *          Once scheduleUpdate() has been called once, update will repeatedly.
@@ -106,10 +138,6 @@ public:
      */
     void update(float dt);
     
-    /**
-     @brief     Calls the player update method and handles any collisions.
-     */
-    void updatePlayer(float dt);
 
     /**
      @brief     This is a function to catch KeyPress events sent from KeyboardDispatcher
@@ -138,10 +166,12 @@ public:
      */
     void handlePlayerCollisions(Point &pos, float x, float y, float radius);
     
+    
     /**
      @brief     This method creates a new MyScene and adds a TheBoxLayer to it.
      */
     static void runThisGame(Object* pSender);
+    
     
     // implement the "static create()" method
     CREATE_FUNC(TheBoxLayer);

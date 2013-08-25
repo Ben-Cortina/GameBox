@@ -8,6 +8,9 @@
 
 #include "TheBox.h"
 #include <iostream>
+#include <string>
+#include <sstream>
+#include <iomanip>
 
 // returns the index position for the tile at x,y
 int tI(int x, int y) {return y * THEBOX_MAX_WIDTH + x;}
@@ -87,9 +90,11 @@ CommandState::CommandState()
 TheBoxLayer::TheBoxLayer()
 {
     player = PlayerSprite::create("Ball.png", this);
+    timeLabel = LabelTTF::create("00.00", "Arial", 24);
     windowSize = Director::getInstance()->getVisibleSize();
+    timePerLevel = 10;
     initTiles();
-    setLayerSize(1, 1);
+    setLayerSize(9, 9);
 }
 
 void TheBoxLayer::initTiles()
@@ -120,16 +125,26 @@ void TheBoxLayer::initPlayer()
                               windowSize.height/2));
     player->setColor(Color3B(100,200,0));
     
+    exit.x = 0;
+    exit.y = 0;
+    
     addChild(player, 1);
 }
 
 // on "init" you need to initialize your instance
 bool TheBoxLayer::init()
 {    
-
-    setLayerSize(10, 10);
+    //init random seed
+    srand (time(NULL));
     
     initPlayer();
+    
+    timeLabel->setPosition(Point(timeLabel->getContentSize().width / 2 + 10,
+                                 windowSize.height - (timeLabel->getContentSize().height / 2 + 5)));
+    timeLabel->setColor(Color3B(0,0,0));
+    addChild(timeLabel);
+    
+    nextLevel();
     
     // add the sprite as a child to this layer
     scheduleUpdate();
@@ -141,20 +156,151 @@ bool TheBoxLayer::init()
     return true;
 }
 
+void TheBoxLayer::nextLevel()
+{
+    //increase time allowed per level
+    timePerLevel += 10;
+    nextChange = timePerLevel;
+    nextSpawn = timePerLevel - TIME_PER_SPAWN;
+    
+    //reset player
+    player->setPosition(Point(windowSize.width/2,
+                              windowSize.height/2));
+    
+    //reset the timer
+    timeRemaining = timePerLevel;
+    setLayerSize(layerSize.width+1, layerSize.height+1);
+    changeExit();
+}
+
 void TheBoxLayer::update(float dt)
 {
-
-    //Update Player Position
+    //Check for Victory or defeat
+    checkConditions();
     
-    //Check for collision
+    //Update timer
+    updateTimer(dt);
+    
+    // Check timer
+    if (timeRemaining < nextChange)
+        changeExit();
+    if (timeRemaining < nextSpawn)
+        spawnTile();
 
-    //Check for victory
+}
 
+void TheBoxLayer::updateTimer(float dt)
+{
+    timeRemaining = timeRemaining - dt;
+    std::stringstream ss;
+    ss << std::fixed << std::setprecision(2) << timeRemaining;
+    timeLabel->setString((ss.str()).c_str());
+}
+
+void TheBoxLayer::spawnTile()
+{
+    //set the time for the next spawn
+    nextSpawn -= TIME_PER_SPAWN;
+    
+    //get the tile the player is on
+    Point pos = player->getPosition();
+    Size margins = Size((windowSize.width - tileSize.width * layerSize.width)/2,
+                        (windowSize.height - tileSize.height * layerSize.height)/2
+                        );
+    const int playerTile_x = (int)( (pos.x - margins.width) / tileSize.width );
+    const int playerTile_y = (int)( (pos.y - margins.height) / tileSize.height );
+    
+    //choose a random tile that is greater than 1 away from the player's current tile
+    int tile_x;
+    int tile_y;
+    do {
+        tile_x = (rand() % (int)(layerSize.width - 2)) + 1;
+        tile_y = (rand() % (int)(layerSize.height - 2)) + 1;
+        std::cout << "r" << std::endl;
+    } while ((abs(tile_x - playerTile_x) <= 1 &&
+             abs(tile_y - playerTile_y) <= 1) ||
+             sTiles[tI(tile_x, tile_y)]->isVisible() );
+    
+    std::cout << tile_x << " " << tile_y << std::endl;
+    
+    sTiles[tI(tile_x, tile_y)]->setVisible(true);
+}
+
+void TheBoxLayer::changeExit()
+{
+    //set the time for the next exit change
+    nextChange -= TIME_PER_CHANGE;
+    
+    //choose the next exit
+    const int tile = (rand() % (int)(layerSize.width - 2)) + 1;
+    const int side = rand() % 4;
+    
+    //close the old exit
+    sTiles[tI(exit.x, exit.y)]->setVisible(true);
+    
+    //choose the new exit
+    switch (side) {
+        case 0: // top
+            exit.x = tile;
+            exit.y = 0;
+            break;
+            
+        case 1: // left
+            exit.x = 0;
+            exit.y = tile;
+            break;
+            
+        case 2: // bot
+            exit.x = tile;
+            exit.y = layerSize.height - 1;
+            break;
+            
+        case 3: // right
+            exit.x = layerSize.width - 1;
+            exit.y = tile;
+            break;
+            
+        default:
+            break;
+    }
+    
+    //open the nex exit
+    sTiles[tI(exit.x, exit.y)]->setVisible(false);
+}
+
+void TheBoxLayer::checkConditions()
+{
+    //check to see if the player has made it into the exit
+    //This should be the case if the player is past the edge of the inner border
+    
+    //get the edges
+    const Size margins = Size((windowSize.width - tileSize.width * layerSize.width)/2,
+                        (windowSize.height - tileSize.height * layerSize.height)/2
+                        );
+    
+    const int left = margins.width + tileSize.width;
+    const int right = windowSize.width - (margins.width + tileSize.width);
+    const int bot = margins.height + tileSize.height;
+    const int top = windowSize.height - (margins.height + tileSize.height);
+    
+    //bounding box of the player
+    Rect bb = player->getBoundingBox();
+    
+    //check to see if the player has won
+    if (bb.getMinX() < left     ||
+        bb.getMaxX() > right    ||
+        bb.getMinY() < bot      ||
+        bb.getMaxY() > top      )
+    {
+        //go to the next level
+        nextLevel();
+    }
+    
 }
 
 void TheBoxLayer::updateTiles()
 {
-    Size margins = Size((windowSize.width - tileSize.width * layerSize.width)/2,
+    const Size margins = Size((windowSize.width - tileSize.width * layerSize.width)/2,
                         (windowSize.height - tileSize.height * layerSize.height)/2
                         );
     
@@ -194,21 +340,19 @@ void TheBoxLayer::setLayerSize(int width, int height)
 
 void TheBoxLayer::updateBorder()
 {
+    //turn on the left and right edges
     for (int x = 0; x < layerSize.width; x++)
     {
         sTiles[tI(x,0)]->setVisible(true);
         sTiles[tI(x,(int)(layerSize.height-1))]->setVisible(true);;
     }
+    
+    //turn on the top and bottom edges
     for (int y = 0; y < layerSize.height; y++)
     {
         sTiles[tI(0, y)]->setVisible(true);;
         sTiles[tI((int)(layerSize.width-1), y)]->setVisible(true);;
     }
-}
-
-void TheBoxLayer::updatePlayer(float dt)
-{
- //   player->update(
 }
 
 void TheBoxLayer::keyPressed(int keyCode)
@@ -412,7 +556,7 @@ void TheBoxLayer::handlePlayerCollisions(Point &pos, float x, float y, float rad
     
     
     //Find the tile the player is on and was on.
-    Size margins = Size((windowSize.width - tileSize.width * layerSize.width)/2,
+    const Size margins = Size((windowSize.width - tileSize.width * layerSize.width)/2,
                         (windowSize.height - tileSize.height * layerSize.height)/2
                         );
     const int tile_x = (int)( (pos.x - margins.width) / tileSize.width );

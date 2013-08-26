@@ -14,19 +14,22 @@
  * too long to get to an exit, the location of that exit may    *
  * change.                                                      *
  *                                                              *
- * Features: Keyboard movement, collision detection.            *
+ * Features: Keyboard movement                                  *
  *--------------------------------------------------------------*/
 
-// I'm going to be changing the player ball with fluid movement to a pixel that
-// moves once per key press. This will allow the game to have some user control
+// Welp, this game used to have a circular player with pixel perfect collision and momentum
+// but I did not find it nearly as fun so I made it a LOT simpler yet more enjoyable.
+// Helpers/CustomCC has some of the removed code.
+
+// Ill come back to this and add a snake like version where you leave a trail
 
 #ifndef __GameBox___TheBoxScene__
 #define __GameBox___TheBoxScene__
 
-#define THEBOX_MAX_WIDTH 20
-#define THEBOX_MAX_HEIGHT 20 
-#define TIME_PER_SPAWN 2.5
-#define TIME_PER_CHANGE 5
+#define THEBOX_MAX_WIDTH 100
+#define THEBOX_MAX_HEIGHT 100 
+#define TIME_PER_SPAWN 1.0f
+#define TIME_INC_PER_LEVEL 0.5f
 
 
 #include "../Helpers/CustomCC.h"
@@ -35,17 +38,19 @@
 USING_NS_CC;
 
 
-/**
- @brief This will store the state of each command
- *      Each state will be set on keypresses and unset on key releases
- */
-struct CommandState
-{
-    bool Up,
-         Down,
-         Left,
-         Right;
-    CommandState();
+
+struct Coords {
+    int x;
+    int y;
+    Coords(){};
+    Coords(int px, int py):x(px),y(py){};
+    
+    inline bool operator== (const Coords r) {return (x == r.x && y == r.y);};
+    inline Coords& operator= (const Coords r) {x = r.x; y = r.y; return *this;};
+    inline Coords& operator+= (const Coords r) {(*this) = (*this) + r; return *this;};
+    Coords operator+ (Coords r) {r.x = x + r.x; r.y = y + r.y; return r;};
+    inline Coords& operator-= (const Coords r) {(*this) = (*this) - r; return *this;};
+    Coords operator- (Coords r) {r.x = x - r.x; r.y = y - r.y; return r;};
 };
 
 /**
@@ -59,16 +64,19 @@ class TheBoxLayer : public LayerColor
 private:
     Size tileSize;     // This is the size of each game pixel in terms of window pixels
     Size windowSize;   // The size of the window in terms of pixels
-    Size layerSize;   // The size of the screen in terms of tiles
+    Coords layerSize;   // The size of the screen in terms of tiles
+    
     Sprite* sTiles[THEBOX_MAX_HEIGHT * THEBOX_MAX_WIDTH]; //array holding all the sprites
-    PlayerSprite* player;   // A sprite class to handle the players sprite
-    CommandState commandStates; // A struct containing all the states of important commands
+    Color3B tileColor; // The defualt color of a tile;
+    
+    Coords player;   // The location of the player
+    Color3B playerColor; // the color of the player
+    
+    Coords exit; // where the exit is
+    
     float timeRemaining;
     float timePerLevel;
-    int nextSpawn;
-    int nextChange;
     LabelTTF * timeLabel;
-    Point exit;
     
     /**
      @brief     Creates, sizes, and adds all the sprites
@@ -91,11 +99,6 @@ private:
     void updateTiles();
     
     /**
-     @brief Updates the Timer
-     */
-    void updateTimer(float dt);
-    
-    /**
      @brief     Check the victory and defeat condition
      */
     void checkConditions();
@@ -103,17 +106,25 @@ private:
     /**
      @brief     Changes the coordinates of the exit
      */
-    void changeExit();
+    void changeExit(float dt);
     
     /**
      @brief     Turns on a tile in a random location
      */
-    void spawnTile();
+    void spawnTile(float dt);
     
     /**
      @brief Updates the screenSize and tileSize then calls updateTiles
      */
-    void setLayerSize(int width, int height);
+    void setLayerSize(int x, int y);
+    
+    /**
+     @brief     Changes the appearence of the passed sprite to represent the players
+     *          presence or lack there of.
+     @param tile    the Sprite in question
+     @param set     if its the player or not
+     */
+    void setPlayer(Sprite * tile, bool set);
     
     /**
      @brief Sets the outer tiles of the layerSize.X by layerSize.y box to black
@@ -144,27 +155,13 @@ public:
      @param  KeyCode    The keycode of the pressed key
      */
     void keyPressed(int keyCode);
-
-    /**
-     @brief     This is a function to catch KeyRelease events sent from KeyboardDispatcher
-     @param KeyCode     The keycode of the released key
-     */
-    void keyReleased(int keyCode);
     
     /**
-     @brief     This checks for and handles collisions and movement for the player. 
-     *          There are an incredible number of ways to handle collision detection and using the most 
-     *          efficient yet accurate method for you game is important for performance. See the TheBox.cpp
-     *          handleCollisions() for more details.
-     *          This collision detection method is specific to checking collisions of a moving circle and 
-     *          stationary rectangles. I went for excessive accuracy in this to give me a good challenge.
-     *          Really all this game needs is a simple bounding box collision detection.
-     @param pos The position of the object
-     @param x   The x change of the object
-     @param y   The y change of the object
-     @return    Whether or not there was a collision
+     @brief     Checks if dx, dy from the player is on. 
+     @param dx  x change from the player
+     @param dy  y change from player
      */
-    void handlePlayerCollisions(Point &pos, float x, float y, float radius);
+    bool checkPlayerCollision(int dx, int dy);
     
     
     /**

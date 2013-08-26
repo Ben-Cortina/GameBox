@@ -27,19 +27,11 @@ class MyMenuItemImage : public MenuItemImage
 public:
     /** Creates an MyMenuItemImage. */
     static MyMenuItemImage* create();
-    /** creates a menu item with a normal and selected image*/
-    static MyMenuItemImage* create(const char *normalImage, const char *selectedImage);
-    /** creates a menu item with a normal,selected  and disabled image*/
-    static MyMenuItemImage* create(const char *normalImage, const char *selectedImage, const char *disabledImage);
-    /** creates a menu item with a normal and selected image with target/selector */
-    CC_DEPRECATED_ATTRIBUTE static MyMenuItemImage* create(const char *normalImage, const char *selectedImage, Object* target, SEL_MenuHandler selector);
-    /** creates a menu item with a normal and selected image with a callable object */
-    static MyMenuItemImage* create(const char *normalImage, const char *selectedImage, const ccMenuCallback& callback);
+    /** creates a menu item with an image with a callable object */
+    static MyMenuItemImage* create(const char *normalImage, const ccMenuCallback& callback);
     
-    /** creates a menu item with a normal,selected  and disabled image with target/selector */
-    CC_DEPRECATED_ATTRIBUTE static MyMenuItemImage* create(const char *normalImage, const char *selectedImage, const char *disabledImage, Object* target, SEL_MenuHandler selector);
-    /** creates a menu item with a normal,selected  and disabled image with a callable object */
-    static MyMenuItemImage* create(const char *normalImage, const char *selectedImage, const char *disabledImage, const ccMenuCallback& callback);
+    /** creates a menu item with a normal and disabled image with a callable object */
+    static MyMenuItemImage* create(const char *normalImage, const char *disabledImage, const ccMenuCallback& callback);
     
     MyMenuItemImage(){}
     virtual ~MyMenuItemImage(){}
@@ -47,9 +39,14 @@ public:
     /**
      @brief  This triggers when the MenuItem(Bounding Box) is touched/clicked
                       This override just adds an enlarge effect
-     @param pLayer    the layer that will be added to the scene
      */
     virtual void selected() override;
+    
+    /**
+     @brief  This triggers when the MenuItem(Bounding Box) is untouched/unclicked
+     This override returns the selected item to its normal size
+     */
+    virtual void unselected() override;
 };
 
 //////////////////////////////////////////////     --MyScene--      //////////////////////////////////////////////

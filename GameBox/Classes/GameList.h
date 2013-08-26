@@ -33,7 +33,7 @@ static const struct {
     const char* image;
 	std::function<void(Object*)> callback;
 } g_GameList[] = {
-    {"TheBox", "",TheBoxLayer::runThisGame}
+    {"TheBox", "BoxMenu.png",TheBoxLayer::runThisGame}
 };
 
 

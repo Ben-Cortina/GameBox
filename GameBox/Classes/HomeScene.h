@@ -18,6 +18,11 @@
 
 class HomeLayer : public Layer
 {
+private:
+    /**
+     @brief     This will add the menu item for each game
+     */
+    void addMenuItems();
 public:
     HomeLayer();
     ~HomeLayer();

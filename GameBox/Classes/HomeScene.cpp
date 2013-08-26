@@ -29,6 +29,57 @@ Scene* HomeLayer::scene()
     return scene;
 }
 
+void HomeLayer::addMenuItems()
+{
+    
+    const Size visibleSize = Director::getInstance()->getVisibleSize();
+    const Point origin = Director::getInstance()->getVisibleOrigin();
+    
+    Point nextLoc;
+    nextLoc.x = visibleSize.width * 0.05;
+    nextLoc.y = visibleSize.height * 0.95;
+    const Point spacing = visibleSize * 0.05;
+    
+    //create the menu
+    Menu* pMenu = Menu::create();
+    MyMenuItemImage *pMenuItem;
+    
+    for (int i = 0; i < GAME_COUNT; i++) {
+        //  Add a menu item with an image, which can be clicked to open a game
+        pMenuItem = MyMenuItemImage::create(g_GameList[i].image,
+                                            g_GameList[i].callback
+                                            );
+        
+        //if the window is too small well need to scale the item down
+        if (pMenuItem->getContentSize().height > (visibleSize.height * 0.9)) 
+            pMenuItem->setScale( (visibleSize.height * 0.9) / pMenuItem->getContentSize().height );
+        
+        // if we have passed the bottom move over to the right
+        if (nextLoc.y - pMenuItem->getBoundingBox().size.height < visibleSize.height * 0.05)
+        {
+            nextLoc.x += spacing.x + pMenuItem->getBoundingBox().size.width;
+            nextLoc.y = visibleSize.height * 0.95;
+        }
+        
+        //set the position
+        pMenuItem->setPosition(Point(origin.x + nextLoc.x + pMenuItem->getBoundingBox().size.width / 2 ,
+                                     origin.y + nextLoc.y - pMenuItem->getBoundingBox().size.height / 2
+                                     )
+                                );
+        
+        // set the next location
+        nextLoc.y -= spacing.y + pMenuItem->getBoundingBox().size.height;
+        
+        //add the item
+        pMenu->addChild(pMenuItem);
+    }
+    
+    //add the menu to the layer
+    pMenu->setPosition(Point::ZERO);
+    addChild(pMenu);
+    
+}
+
 // on "init" you need to initialize your instance
 bool HomeLayer::init()
 {
@@ -42,47 +93,22 @@ bool HomeLayer::init()
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
-    /////////////////////////////
-    // 2. add a menu item with "X" image, which is clicked to quit the program
-    //    you may modify it.
-    // add a "close" icon to exit the progress. it's an autorelease object
-    MyMenuItemImage *pCloseItem = MyMenuItemImage::create("CloseNormal.png",
-                                                          "CloseSelected.png",
-                                                          g_GameList[0].callback
-                                                          );
-    
-	pCloseItem->setPosition(Point(origin.x + visibleSize.width - pCloseItem->getContentSize().width/2 ,
-                                  origin.y + pCloseItem->getContentSize().height/2
-                                  )
-                            );
-    
-    // create menu, it's an autorelease object
-    Menu* pMenu = Menu::create(pCloseItem, NULL);
-    pMenu->setPosition(Point::ZERO);
-    this->addChild(pMenu, 1);
+    //add the buttons
+    addMenuItems();
     
     /////////////////////////////
     // 3. add your codes below...
     // add a label shows "Hello World"
     // create and initialize a label
     
-    LabelTTF* pLabel = LabelTTF::create("Hello World", "Arial", 24);
+    LabelTTF* pLabel = LabelTTF::create("Game Box", "Arial", 24);
     
     // position the label on the center of the screen
     pLabel->setPosition(Point(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - pLabel->getContentSize().height));
-
+                              origin.y + visibleSize.height - pLabel->getContentSize().height/2));
+    
     // add the label as a child to this layer
     addChild(pLabel, 1);
-
-    // add "HelloWorld" splash screen"
-    Sprite* pSprite = Sprite::create("HelloWorld.png");
-
-    // position the sprite on the center of the screen
-    pSprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-    // add the sprite as a child to this layer
-    addChild(pSprite, 0);
     
     return true;
 }

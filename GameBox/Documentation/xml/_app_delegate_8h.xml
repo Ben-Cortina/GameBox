@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_app_delegate_8h" kind="file">
+    <compoundname>AppDelegate.h</compoundname>
+    <includes local="yes">cocos2d.h</includes>
+    <includedby refid="_app_delegate_8cpp" local="yes">GameBox/GameBox/Classes/AppDelegate.cpp</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>cocos2d.h</label>
+      </node>
+      <node id="9">
+        <label>GameBox/GameBox/Classes/AppDelegate.h</label>
+        <link refid="AppDelegate.h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="12">
+        <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
+        <link refid="_app_delegate_8cpp"/>
+      </node>
+      <node id="11">
+        <label>GameBox/GameBox/Classes/AppDelegate.h</label>
+        <link refid="AppDelegate.h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_app_delegate" prot="public">AppDelegate</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/><sp/>_APP_DELEGATE_H_</highlight></codeline>
+<codeline lineno="2"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/><sp/>_APP_DELEGATE_H_</highlight></codeline>
+<codeline lineno="3"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cocos2d.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11" refid="class_app_delegate" refkind="compound"><highlight class="keyword">class<sp/><sp/></highlight><highlight class="normal"><ref refid="class_app_delegate" kindref="compound" tooltip="The cocos2d Application.">AppDelegate</ref><sp/>:<sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal"><sp/>cocos2d::Application</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_app_delegate_1a7d26ade6fbc9d35ecc9185792303f82d" kindref="member">AppDelegate</ref>();</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_app_delegate_1a9f89424b5e296e3668deaa0265fc5ac1" kindref="member">~AppDelegate</ref>();</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_app_delegate_1a68cbaed49edf7581dc59a09d5062fff3" kindref="member" tooltip="Implement Director and Scene init code here.">applicationDidFinishLaunching</ref>();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_app_delegate_1a17cb09777419781698324e0415bffd3a" kindref="member" tooltip="The function be called when the application enter background.">applicationDidEnterBackground</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_app_delegate_1ac4d653e3f74a91efef5f2def58fe3108" kindref="member" tooltip="The function be called when the application enter foreground.">applicationWillEnterForeground</ref>();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>_APP_DELEGATE_H_</highlight></codeline>
+<codeline lineno="38"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.h"/>
+  </compounddef>
+</doxygen>

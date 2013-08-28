@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="dir_62d741f795f6f178229f0443faa68160" kind="dir">
+    <compoundname>GameBox/GameBox/Classes/</compoundname>
+    <innerdir refid="dir_171879561e09838fb62df9b29b114fce">GameBox/GameBox/Classes/Helpers/</innerdir>
+    <innerdir refid="dir_a243e1bba19e527426b9d270f0261be8">GameBox/GameBox/Classes/TheBox/</innerdir>
+    <innerfile refid="_app_delegate_8cpp">AppDelegate.cpp</innerfile>
+    <innerfile refid="_app_delegate_8h">AppDelegate.h</innerfile>
+    <innerfile refid="_game_list_8h">GameList.h</innerfile>
+    <innerfile refid="_home_scene_8cpp">HomeScene.cpp</innerfile>
+    <innerfile refid="_home_scene_8h">HomeScene.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/"/>
+  </compounddef>
+</doxygen>

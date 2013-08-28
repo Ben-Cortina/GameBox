@@ -1,0 +1,191 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_game_list_8h" kind="file">
+    <compoundname>GameList.h</compoundname>
+    <includes local="yes">cocos2d.h</includes>
+    <includes refid="_the_box_8h" local="yes">TheBox/TheBox.h</includes>
+    <includedby refid="_home_scene_8h" local="yes">GameBox/GameBox/Classes/HomeScene.h</includedby>
+    <incdepgraph>
+      <node id="13">
+        <label>GameBox/GameBox/Classes/GameList.h</label>
+        <link refid="GameList.h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>OverLayer.h</label>
+        <link refid="_over_layer_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>cocos2d.h</label>
+      </node>
+      <node id="16">
+        <label>../Helpers/CustomCC.h</label>
+        <link refid="_custom_c_c_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>TheBox/TheBox.h</label>
+        <link refid="_the_box_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="18">
+        <label>GameBox/GameBox/Classes/GameList.h</label>
+        <link refid="GameList.h"/>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>GameBox/GameBox/Classes/HomeScene.h</label>
+        <link refid="_home_scene_8h"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>GameBox/GameBox/Classes/HomeScene.cpp</label>
+        <link refid="_home_scene_8cpp"/>
+      </node>
+      <node id="20">
+        <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
+        <link refid="_app_delegate_8cpp"/>
+      </node>
+      <node id="22">
+        <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
+        <link refid="_the_box_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="_game_list_8h_1a33e1ae2b2d7a18da84ea33c80a7694bf" prot="public" static="no">
+        <name>GAME_COUNT</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/GameList.h" line="18" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/GameList.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_game_list_8h_1a8f8f80d37794cde9472343e4487ba3eb" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/GameList.h" line="32" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/GameList.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_game_list_8h_1ac745ab21f82aa96829863dcfc37ef5a8" prot="public" static="no" mutable="no">
+        <type>const char *</type>
+        <definition>const char* image</definition>
+        <argsstring></argsstring>
+        <name>image</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/GameList.h" line="33" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/GameList.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_game_list_8h_1a5911a49060cb775fd6a306bb797504bb" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void(Object *)</type>
+        <definition>std::function&lt;void(Object*) callback)</definition>
+        <argsstring>)</argsstring>
+        <name>callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/GameList.h" line="34" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/GameList.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="_game_list_8h_1a9f42b067194b8243d16e0b6edcc048a5" prot="public" static="yes" mutable="no">
+        <type>struct @0</type>
+        <definition>struct @0  g_GameList[]</definition>
+        <argsstring>[]</argsstring>
+        <name>g_GameList</name>
+        <briefdescription>
+<para>This will be used to provide a elements for each game&apos;s <ref refid="class_my_menu_item_image" kindref="compound">MyMenuItemImage</ref>. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+<parametername>:</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>name that appears when the image is touched/clicked/selected  image: the image that is used in the menu  callback: This is the function that will be called on click </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/GameList.h" line="37"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>GameList.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>GameBox</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>Ben<sp/>Cortina<sp/>on<sp/>7/26/13.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>This<sp/>file<sp/>simply<sp/>holds<sp/>all<sp/>the<sp/>includes,<sp/>names</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>and<sp/>icon<sp/>paths<sp/>for<sp/>each<sp/>of<sp/>the<sp/>games.<sp/>This<sp/>allows<sp/>me</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>to<sp/>just<sp/>include<sp/>this<sp/>as<sp/>a<sp/>header<sp/>in<sp/>the<sp/>HomeScene.h</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>rather<sp/>than<sp/>have<sp/>a<sp/>massive<sp/>pile<sp/>of<sp/>junk<sp/>before<sp/>the<sp/>class<sp/>is<sp/>declared.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GameBox_GameRescources_h</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>GameBox_GameRescources_h</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cocos2d.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Number<sp/>of<sp/>Games<sp/>in<sp/>the<sp/>GameBox</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="_game_list_8h_1a33e1ae2b2d7a18da84ea33c80a7694bf" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GAME_COUNT<sp/>1</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>The<sp/>main<sp/>headers<sp/>for<sp/>each<sp/>game</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>header<sp/>should<sp/>include<sp/>the<sp/>game&apos;s<sp/>layer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_the_box_8h" kindref="compound">TheBox/TheBox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//<sp/>So<sp/>this<sp/>is<sp/>for<sp/>the<sp/>menu<sp/>on<sp/>the<sp/>HomeScene</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32" refid="_game_list_8h_1a8f8f80d37794cde9472343e4487ba3eb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_game_list_8h_1a8f8f80d37794cde9472343e4487ba3eb" kindref="member">name</ref>;</highlight></codeline>
+<codeline lineno="33" refid="_game_list_8h_1ac745ab21f82aa96829863dcfc37ef5a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_game_list_8h_1ac745ab21f82aa96829863dcfc37ef5a8" kindref="member">image</ref>;</highlight></codeline>
+<codeline lineno="34" refid="_game_list_8h_1a5911a49060cb775fd6a306bb797504bb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::function&lt;void(Object*)&gt;<sp/><ref refid="_game_list_8h_1a5911a49060cb775fd6a306bb797504bb" kindref="member">callback</ref>;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<sp/>g_GameList[]<sp/>=<sp/>{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;TheBox&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;BoxMenu.png&quot;</highlight><highlight class="normal">,<ref refid="class_the_box_layer_1a3acdbe7193e4da946ba01f80daa951ad" kindref="member" tooltip="This method creates a new MyScene and adds a TheBoxLayer to it.">TheBoxLayer::runThisGame</ref>}</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/GameList.h"/>
+  </compounddef>
+</doxygen>

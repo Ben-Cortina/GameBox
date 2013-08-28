@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_home_scene_8h" kind="file">
+    <compoundname>HomeScene.h</compoundname>
+    <includes refid="_custom_c_c_8h" local="yes">CustomCC.h</includes>
+    <includes refid="_game_list_8h" local="yes">GameList.h</includes>
+    <includedby refid="_app_delegate_8cpp" local="yes">GameBox/GameBox/Classes/AppDelegate.cpp</includedby>
+    <includedby refid="_home_scene_8cpp" local="yes">GameBox/GameBox/Classes/HomeScene.cpp</includedby>
+    <includedby refid="_the_box_8cpp" local="yes">GameBox/GameBox/Classes/TheBox/TheBox.cpp</includedby>
+    <incdepgraph>
+      <node id="52">
+        <label>GameList.h</label>
+        <link refid="_game_list_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="53" relation="include">
+        </childnode>
+      </node>
+      <node id="49">
+        <label>GameBox/GameBox/Classes/HomeScene.h</label>
+        <link refid="HomeScene.h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="52" relation="include">
+        </childnode>
+      </node>
+      <node id="54">
+        <label>OverLayer.h</label>
+        <link refid="_over_layer_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+      </node>
+      <node id="51">
+        <label>cocos2d.h</label>
+      </node>
+      <node id="50">
+        <label>CustomCC.h</label>
+        <link refid="_custom_c_c_8h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+      </node>
+      <node id="53">
+        <label>TheBox/TheBox.h</label>
+        <link refid="_the_box_8h"/>
+        <childnode refid="50" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="55">
+        <label>GameBox/GameBox/Classes/HomeScene.h</label>
+        <link refid="HomeScene.h"/>
+        <childnode refid="56" relation="include">
+        </childnode>
+        <childnode refid="57" relation="include">
+        </childnode>
+        <childnode refid="58" relation="include">
+        </childnode>
+      </node>
+      <node id="57">
+        <label>GameBox/GameBox/Classes/HomeScene.cpp</label>
+        <link refid="_home_scene_8cpp"/>
+      </node>
+      <node id="56">
+        <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
+        <link refid="_app_delegate_8cpp"/>
+      </node>
+      <node id="58">
+        <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
+        <link refid="_the_box_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_home_layer" prot="public">HomeLayer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>-------------------------------------------------------------* * <simplesect kind="author"><para>Ben Cortina * </para></simplesect>
+<simplesect kind="date"><para>7/25/13 * * Welcome to GameBox, this will be an ongoing project of mine * These will be a collection of various small games that I * create while learning cocos2dx. * * -------------------------------------------------------------- </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#ifndef<sp/>__HOME_SCENE_H__</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__HOME_SCENE_H__</highlight></codeline>
+<codeline lineno="14"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_custom_c_c_8h" kindref="compound">CustomCC.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_game_list_8h" kindref="compound">GameList.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="class_home_layer" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_home_layer" kindref="compound">HomeLayer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Layer</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>addMenuItems();</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_home_layer_1a70820b0aae19e4cf50d11413db578af6" kindref="member">HomeLayer</ref>();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_home_layer_1a74c4bad7f4d90f02536645886b86529b" kindref="member">~HomeLayer</ref>();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Here&apos;s<sp/>a<sp/>difference.<sp/>Method<sp/>&apos;init&apos;<sp/>in<sp/>cocos2d-x<sp/>returns<sp/>bool,<sp/>instead<sp/>of<sp/>returning<sp/>&apos;id&apos;<sp/>in<sp/>cocos2d-iphone</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_home_layer_1a7b39d554c7e3089a0855b471496ea0b6" kindref="member">init</ref>();<sp/><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>there&apos;s<sp/>no<sp/>&apos;id&apos;<sp/>in<sp/>cpp,<sp/>so<sp/>we<sp/>recommend<sp/>returning<sp/>the<sp/>class<sp/>instance<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Scene*<sp/><ref refid="class_home_layer_1abfa48630fcd7c04d077c92c673d419af" kindref="member">scene</ref>();</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>selector<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_home_layer_1a1fbee493222ccf67c70396025a0af2ec" kindref="member">menuCloseCallback</ref>(Object*<sp/>pSender);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>implement<sp/>the<sp/>&quot;static<sp/>create()&quot;<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_home_layer_1ad72b3afd71127c67721d1d04aea5ffe9" kindref="member">CREATE_FUNC</ref>(<ref refid="class_home_layer" kindref="compound">HomeLayer</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__HOME_SCENE_H__</highlight></codeline>
+    </programlisting>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.h"/>
+  </compounddef>
+</doxygen>

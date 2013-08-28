@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.7.6.1">
+  <compound refid="class_app_delegate" kind="class"><name>AppDelegate</name>
+    <member refid="class_app_delegate_1a7d26ade6fbc9d35ecc9185792303f82d" kind="function"><name>AppDelegate</name></member>
+    <member refid="class_app_delegate_1a9f89424b5e296e3668deaa0265fc5ac1" kind="function"><name>~AppDelegate</name></member>
+    <member refid="class_app_delegate_1a68cbaed49edf7581dc59a09d5062fff3" kind="function"><name>applicationDidFinishLaunching</name></member>
+    <member refid="class_app_delegate_1a17cb09777419781698324e0415bffd3a" kind="function"><name>applicationDidEnterBackground</name></member>
+    <member refid="class_app_delegate_1ac4d653e3f74a91efef5f2def58fe3108" kind="function"><name>applicationWillEnterForeground</name></member>
+  </compound>
+  <compound refid="struct_coords" kind="struct"><name>Coords</name>
+    <member refid="struct_coords_1a59992d986e76375f31828d32c05cd15d" kind="variable"><name>x</name></member>
+    <member refid="struct_coords_1a7ed64d02fb7550f1506a93fcfab7f16f" kind="variable"><name>y</name></member>
+    <member refid="struct_coords_1a5922d1783cefa759950faa50ac347191" kind="function"><name>Coords</name></member>
+    <member refid="struct_coords_1aa268e580151ea70eec212852dd4c5f94" kind="function"><name>Coords</name></member>
+    <member refid="struct_coords_1a7507f92d1feefa3355ae8e9edae34e54" kind="function"><name>operator==</name></member>
+    <member refid="struct_coords_1a25bcb0e2d2f5677a10b7652e90a6f97b" kind="function"><name>operator=</name></member>
+    <member refid="struct_coords_1a2549173108b2479b62fd79b82ec54e01" kind="function"><name>operator+=</name></member>
+    <member refid="struct_coords_1a168a9ed9edbffaf04e67c5b39306ca99" kind="function"><name>operator+</name></member>
+    <member refid="struct_coords_1a9f61875c64b3726afd0bb0d465889bad" kind="function"><name>operator-=</name></member>
+    <member refid="struct_coords_1a7cc7a225781b6bbad3e00a5e9572fee1" kind="function"><name>operator-</name></member>
+  </compound>
+  <compound refid="class_home_layer" kind="class"><name>HomeLayer</name>
+    <member refid="class_home_layer_1a5bd1105e3d31dffcccb13209bbebd7a5" kind="function"><name>addMenuItems</name></member>
+    <member refid="class_home_layer_1a70820b0aae19e4cf50d11413db578af6" kind="function"><name>HomeLayer</name></member>
+    <member refid="class_home_layer_1a74c4bad7f4d90f02536645886b86529b" kind="function"><name>~HomeLayer</name></member>
+    <member refid="class_home_layer_1a7b39d554c7e3089a0855b471496ea0b6" kind="function"><name>init</name></member>
+    <member refid="class_home_layer_1ad72b3afd71127c67721d1d04aea5ffe9" kind="function"><name>CREATE_FUNC</name></member>
+    <member refid="class_home_layer_1abfa48630fcd7c04d077c92c673d419af" kind="function"><name>scene</name></member>
+    <member refid="class_home_layer_1a1fbee493222ccf67c70396025a0af2ec" kind="function"><name>menuCloseCallback</name></member>
+  </compound>
+  <compound refid="class_my_menu_item_image" kind="class"><name>MyMenuItemImage</name>
+    <member refid="class_my_menu_item_image_1a72ec449555c4b514536a85f1b432d95c" kind="function"><name>create</name></member>
+    <member refid="class_my_menu_item_image_1ae2548575d729af45b1bf39237580f984" kind="function"><name>create</name></member>
+    <member refid="class_my_menu_item_image_1ab30eff7cb9a66c450cd7b43f88dd76bc" kind="function"><name>create</name></member>
+    <member refid="class_my_menu_item_image_1ab48e8ecdbca431e518bebbed846ddf1e" kind="function"><name>MyMenuItemImage</name></member>
+    <member refid="class_my_menu_item_image_1aa44719255783a10c961c8220a29de788" kind="function"><name>~MyMenuItemImage</name></member>
+    <member refid="class_my_menu_item_image_1afe0adf7ee40fbfd6443000f6ead06d6b" kind="function"><name>selected</name></member>
+    <member refid="class_my_menu_item_image_1abaf8a603722b33a093ecaa3d36df7c10" kind="function"><name>unselected</name></member>
+  </compound>
+  <compound refid="class_my_scene" kind="class"><name>MyScene</name>
+    <member refid="class_my_scene_1a98a8eef56180480263e8c9298316f47c" kind="function"><name>runLayer</name></member>
+    <member refid="class_my_scene_1ab001d48470a8829da03a21a2941fef36" kind="function"><name>CREATE_FUNC</name></member>
+  </compound>
+  <compound refid="class_over_layer" kind="class"><name>OverLayer</name>
+    <member refid="class_over_layer_1a95d3b5e4f3c462216aea540774eae0aa" kind="function"><name>OverLayer</name></member>
+    <member refid="class_over_layer_1a7f9b5a23c40f204d5ba47166b9d78f6e" kind="function"><name>initWithColorMenu</name></member>
+  </compound>
+  <compound refid="struct_player_data" kind="struct"><name>PlayerData</name>
+    <member refid="struct_player_data_1a6646f159881b83da159eb7410fad7fd5" kind="variable"><name>loc</name></member>
+    <member refid="struct_player_data_1ad1fb36f8e37fa1ee21fece6f6634a3be" kind="variable"><name>color</name></member>
+  </compound>
+  <compound refid="class_player_sprite" kind="class"><name>PlayerSprite</name>
+    <member refid="class_player_sprite_1a07e314ae67a42a4c05aced1b47933b55" kind="variable"><name>lastUpdate</name></member>
+    <member refid="class_player_sprite_1af8cc286e0ecde1ee80005fd3ff9de688" kind="variable"><name>dtCalculated</name></member>
+    <member refid="class_player_sprite_1ad31159234503a0560ee1c37a13c246da" kind="variable"><name>owner</name></member>
+    <member refid="class_player_sprite_1ae2d7c734bea5fd1f590ac33854a2ceed" kind="variable"><name>_weight</name></member>
+    <member refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kind="variable"><name>_vel</name></member>
+    <member refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kind="variable"><name>_force</name></member>
+    <member refid="class_player_sprite_1a5b5a402a9273c0367e51f6e47256d4f3" kind="variable"><name>_maxSpeed</name></member>
+    <member refid="class_player_sprite_1a355b762b077d780021af012027c1aff1" kind="function"><name>PlayerSprite</name></member>
+    <member refid="class_player_sprite_1a44a399fb158ef7a3637d0780f629a035" kind="function"><name>initWithFile</name></member>
+    <member refid="class_player_sprite_1aad883076d38aa90cb76fb85e5d84b42b" kind="function"><name>getWeight</name></member>
+    <member refid="class_player_sprite_1a421ad1ab42de6fad573430640d05b5ea" kind="function"><name>setWeight</name></member>
+    <member refid="class_player_sprite_1ae322a0adbdbc74ddca22e7deb1db9f46" kind="function"><name>getMaxSpeed</name></member>
+    <member refid="class_player_sprite_1a5b6dd058c35ba9bd422c0721f00f5b89" kind="function"><name>setMaxSpeed</name></member>
+    <member refid="class_player_sprite_1a3376b1419374cbdbb7b1bf1605bc8eb0" kind="function"><name>getVelocity</name></member>
+    <member refid="class_player_sprite_1a3c28e6d11a08724aef010bf9bf09a5a4" kind="function"><name>updateVelocity</name></member>
+    <member refid="class_player_sprite_1a261319de832d01b1e64601887cbf2a2c" kind="function"><name>getForce</name></member>
+    <member refid="class_player_sprite_1a376df965770e619cee7c02f56355c8cb" kind="function"><name>setForce</name></member>
+    <member refid="class_player_sprite_1a856c0c8d593bbb855aa2a979286f8ea6" kind="function"><name>setForceX</name></member>
+    <member refid="class_player_sprite_1a5e8593fec3114f426b4346bbf8a12379" kind="function"><name>setForceY</name></member>
+    <member refid="class_player_sprite_1ad5eede6c47652babec88d0c056d50888" kind="function"><name>applyForce</name></member>
+    <member refid="class_player_sprite_1a4ac7a2771c849ab2ca889ab33d9d4aa9" kind="function"><name>update</name></member>
+    <member refid="class_player_sprite_1a6c4cb72fa72b21098eb3241e8b0795e6" kind="function"><name>update</name></member>
+    <member refid="class_player_sprite_1aa3ed62f03be9c93af9f531be066384d1" kind="function"><name>create</name></member>
+  </compound>
+  <compound refid="class_the_box_layer" kind="class"><name>TheBoxLayer</name>
+    <member refid="class_the_box_layer_1a04ea0a701a1b782a67962e1117c0b0a3" kind="variable"><name>tileSize</name></member>
+    <member refid="class_the_box_layer_1a891a97e3461d8c676d72f0433194fc35" kind="variable"><name>windowSize</name></member>
+    <member refid="class_the_box_layer_1ac0301e62cf6fc53ad5ecc880c0ddce5e" kind="variable"><name>layerSize</name></member>
+    <member refid="class_the_box_layer_1ac76984df99d1661ef4caf472f2872deb" kind="variable"><name>sTiles</name></member>
+    <member refid="class_the_box_layer_1a7e95d565561e87bb383260517cebb31c" kind="variable"><name>tileColor</name></member>
+    <member refid="class_the_box_layer_1a77eb482f9ecc6f5d2f318880b07fac98" kind="variable"><name>player</name></member>
+    <member refid="class_the_box_layer_1ac6d88241d6e565a53c39c3fc64c8298b" kind="variable"><name>exitLoc</name></member>
+    <member refid="class_the_box_layer_1a954d018b72ce163b37dd839169981497" kind="variable"><name>timeRemaining</name></member>
+    <member refid="class_the_box_layer_1aa5e625170457ea51b8d9436e97510d82" kind="variable"><name>timePerLevel</name></member>
+    <member refid="class_the_box_layer_1a4f24914bded3d6dea1d35c170516a7fd" kind="variable"><name>timeLabel</name></member>
+    <member refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" kind="variable"><name>isSnake</name></member>
+    <member refid="class_the_box_layer_1adaf4dd92d96c55ff37530115cc43b18c" kind="function"><name>initTiles</name></member>
+    <member refid="class_the_box_layer_1ac18c492485d7040b63cfe4f537d2bed6" kind="function"><name>initPlayer</name></member>
+    <member refid="class_the_box_layer_1a6e903c30bce569bcb9998a00c048f4a0" kind="function"><name>nextLevel</name></member>
+    <member refid="class_the_box_layer_1a01dc9031926317333bdd0efe536f64e0" kind="function"><name>restartGame</name></member>
+    <member refid="class_the_box_layer_1a4a1f85b549b18426675fcc954223d9c2" kind="function"><name>updateTiles</name></member>
+    <member refid="class_the_box_layer_1ad95232efe89c9d70b5abb16584612645" kind="function"><name>checkConditions</name></member>
+    <member refid="class_the_box_layer_1a54554ac300af2c55450602493401af37" kind="function"><name>changeExit</name></member>
+    <member refid="class_the_box_layer_1abf3bdb7e6139f96545aeddb3179e3695" kind="function"><name>spawnTile</name></member>
+    <member refid="class_the_box_layer_1a4aeedd00294db32074018a61fee9451e" kind="function"><name>setLayerSize</name></member>
+    <member refid="class_the_box_layer_1ae90bb92b7c1ddbcc544833a75b8942e8" kind="function"><name>setPlayer</name></member>
+    <member refid="class_the_box_layer_1adcd0efa9f61e1a02f4c5ec112371ac7b" kind="function"><name>updateBorder</name></member>
+    <member refid="class_the_box_layer_1a1c0bba40d3ace73b51eb2db472ef9be0" kind="function"><name>checkPlayerCollision</name></member>
+    <member refid="class_the_box_layer_1ab89dc38698f103a16bcbeedeb1bbf48f" kind="function"><name>openMenu</name></member>
+    <member refid="class_the_box_layer_1a70c264c1a255c1e2773ed7c2bd0e3a2b" kind="function"><name>startMenu</name></member>
+    <member refid="class_the_box_layer_1aa03bfd041ff7d3b64d305c76dcec2a7a" kind="function"><name>TheBoxLayer</name></member>
+    <member refid="class_the_box_layer_1a2a76eca9790faad7097e37d5822d5e3e" kind="function"><name>setSnake</name></member>
+    <member refid="class_the_box_layer_1ac15f63f9808501a2aa7d725259068fd1" kind="function"><name>init</name></member>
+    <member refid="class_the_box_layer_1a26cd4adbaec048f0df01ddb085c2beb7" kind="function"><name>update</name></member>
+    <member refid="class_the_box_layer_1af367b00c0d970f0c5e25a74ad28eb5cf" kind="function"><name>keyPressed</name></member>
+    <member refid="class_the_box_layer_1a2b2a79bf9a1dbb25a702a6a21623c658" kind="function"><name>CREATE_FUNC</name></member>
+    <member refid="class_the_box_layer_1a91e48a9efb07ed70fac3e1880934cf37" kind="function"><name>onSnake</name></member>
+    <member refid="class_the_box_layer_1ae03788f405b053b85e230804d7a88904" kind="function"><name>offSnake</name></member>
+    <member refid="class_the_box_layer_1a3e32611fa82942d00d5e561bc59251e9" kind="function"><name>startStandard</name></member>
+    <member refid="class_the_box_layer_1af670f77242c15a7de84d6658cddb7056" kind="function"><name>restoreHomeLayer</name></member>
+    <member refid="class_the_box_layer_1a3acdbe7193e4da946ba01f80daa951ad" kind="function"><name>runThisGame</name></member>
+  </compound>
+  <compound refid="struct_vector" kind="struct"><name>Vector</name>
+    <member refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kind="variable"><name>x</name></member>
+    <member refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kind="variable"><name>y</name></member>
+  </compound>
+  <compound refid="_app_delegate_8cpp" kind="file"><name>AppDelegate.cpp</name>
+    <member refid="_app_delegate_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
+  <compound refid="_app_delegate_8h" kind="file"><name>AppDelegate.h</name>
+  </compound>
+  <compound refid="_game_list_8h" kind="file"><name>GameList.h</name>
+    <member refid="_game_list_8h_1a33e1ae2b2d7a18da84ea33c80a7694bf" kind="define"><name>GAME_COUNT</name></member>
+    <member refid="_game_list_8h_1a8f8f80d37794cde9472343e4487ba3eb" kind="variable"><name>name</name></member>
+    <member refid="_game_list_8h_1ac745ab21f82aa96829863dcfc37ef5a8" kind="variable"><name>image</name></member>
+    <member refid="_game_list_8h_1a5911a49060cb775fd6a306bb797504bb" kind="variable"><name>callback</name></member>
+    <member refid="_game_list_8h_1a9f42b067194b8243d16e0b6edcc048a5" kind="variable"><name>g_GameList</name></member>
+  </compound>
+  <compound refid="_custom_c_c_8cpp" kind="file"><name>CustomCC.cpp</name>
+  </compound>
+  <compound refid="_custom_c_c_8h" kind="file"><name>CustomCC.h</name>
+    <member refid="_custom_c_c_8h_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
+  <compound refid="_home_scene_8cpp" kind="file"><name>HomeScene.cpp</name>
+    <member refid="_home_scene_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
+  <compound refid="_home_scene_8h" kind="file"><name>HomeScene.h</name>
+  </compound>
+  <compound refid="_over_layer_8cpp" kind="file"><name>OverLayer.cpp</name>
+  </compound>
+  <compound refid="_over_layer_8h" kind="file"><name>OverLayer.h</name>
+  </compound>
+  <compound refid="_player_sprite_8cpp" kind="file"><name>PlayerSprite.cpp</name>
+    <member refid="_player_sprite_8cpp_1a02903a3a418cbb9675a4b928f6f62faf" kind="function"><name>getTime</name></member>
+  </compound>
+  <compound refid="_player_sprite_8h" kind="file"><name>PlayerSprite.h</name>
+    <member refid="_player_sprite_8h_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
+  <compound refid="_the_box_8cpp" kind="file"><name>TheBox.cpp</name>
+    <member refid="_the_box_8cpp_1a881b0818bcc307625d9ea7a231b2562d" kind="function"><name>tI</name></member>
+  </compound>
+  <compound refid="_the_box_8h" kind="file"><name>TheBox.h</name>
+    <member refid="_the_box_8h_1a90e8321ceeff5db2d89ce97800e65bcd" kind="define"><name>THEBOX_MAX_WIDTH</name></member>
+    <member refid="_the_box_8h_1aed20d8e422acc5ffe753a8056de9961b" kind="define"><name>THEBOX_MAX_HEIGHT</name></member>
+    <member refid="_the_box_8h_1a4226efab03d289775f3b691697439052" kind="define"><name>TIME_PER_SPAWN</name></member>
+    <member refid="_the_box_8h_1a7e49d7b89e4cd61d3ebbcb27fd5d4a5c" kind="define"><name>TIME_INC_PER_LEVEL</name></member>
+    <member refid="_the_box_8h_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
+  <compound refid="dir_62d741f795f6f178229f0443faa68160" kind="dir"><name>GameBox/GameBox/Classes/</name>
+  </compound>
+  <compound refid="dir_5950e91c7e38fd33818eb04cd794c1f7" kind="dir"><name>GameBox/GameBox/</name>
+  </compound>
+  <compound refid="dir_e2144ae777660e9ba99300c4839ceaf0" kind="dir"><name>GameBox/</name>
+  </compound>
+  <compound refid="dir_171879561e09838fb62df9b29b114fce" kind="dir"><name>GameBox/GameBox/Classes/Helpers/</name>
+  </compound>
+  <compound refid="dir_a243e1bba19e527426b9d270f0261be8" kind="dir"><name>GameBox/GameBox/Classes/TheBox/</name>
+  </compound>
+</doxygenindex>

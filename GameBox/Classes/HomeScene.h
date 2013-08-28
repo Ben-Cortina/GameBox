@@ -1,8 +1,7 @@
-/*--------------------------------------------------------------*
- *  HomeScene.h                                                 *
- *  GameBox                                                     *
- *                                                              *
- *  Created by Ben Cortina on 7/25/13.                          *
+/**-------------------------------------------------------------*
+ *  @file   HomeScene.h                                         *
+ *  @author Ben Cortina                                         *
+ *  @date   7/25/13                                             *
  *                                                              *
  * Welcome to GameBox, this will be an ongoing project of mine  *
  * These will be a collection of various small games that I     *
@@ -13,7 +12,7 @@
 #ifndef __HOME_SCENE_H__
 #define __HOME_SCENE_H__
 
-#include "Helpers/CustomCC.h"
+#include "CustomCC.h"
 #include "GameList.h"
 
 class HomeLayer : public Layer

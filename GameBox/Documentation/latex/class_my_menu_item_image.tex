@@ -1,0 +1,107 @@
+\hypertarget{class_my_menu_item_image}{\section{\-My\-Menu\-Item\-Image \-Class \-Reference}
+\label{class_my_menu_item_image}\index{\-My\-Menu\-Item\-Image@{\-My\-Menu\-Item\-Image}}
+}
+
+
+\-Custom \-Menu\-Item\-Image that grows a bit when selected.  
+
+
+
+
+{\ttfamily \#include $<$\-Custom\-C\-C.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_my_menu_item_image_ab48e8ecdbca431e518bebbed846ddf1e}{\-My\-Menu\-Item\-Image} ()
+\item 
+virtual \hyperlink{class_my_menu_item_image_aa44719255783a10c961c8220a29de788}{$\sim$\-My\-Menu\-Item\-Image} ()
+\item 
+virtual void \hyperlink{class_my_menu_item_image_afe0adf7ee40fbfd6443000f6ead06d6b}{selected} () override
+\begin{DoxyCompactList}\small\item\em \-This triggers when the \-Menu\-Item(\-Bounding Box) is touched/clicked \-This override just adds an enlarge effect. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_my_menu_item_image_abaf8a603722b33a093ecaa3d36df7c10}{unselected} () override
+\begin{DoxyCompactList}\small\item\em \-This triggers when the \-Menu\-Item(\-Bounding Box) is untouched/unclicked \-This override returns the selected item to its normal size. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_my_menu_item_image}{\-My\-Menu\-Item\-Image} $\ast$ \hyperlink{class_my_menu_item_image_a72ec449555c4b514536a85f1b432d95c}{create} ()
+\item 
+static \hyperlink{class_my_menu_item_image}{\-My\-Menu\-Item\-Image} $\ast$ \hyperlink{class_my_menu_item_image_ae2548575d729af45b1bf39237580f984}{create} (const char $\ast$normal\-Image, const cc\-Menu\-Callback \&\hyperlink{_game_list_8h_a5911a49060cb775fd6a306bb797504bb}{callback})
+\item 
+static \hyperlink{class_my_menu_item_image}{\-My\-Menu\-Item\-Image} $\ast$ \hyperlink{class_my_menu_item_image_ab30eff7cb9a66c450cd7b43f88dd76bc}{create} (const char $\ast$normal\-Image, const char $\ast$disabled\-Image, const cc\-Menu\-Callback \&\hyperlink{_game_list_8h_a5911a49060cb775fd6a306bb797504bb}{callback})
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-Custom \-Menu\-Item\-Image that grows a bit when selected. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_my_menu_item_image_ab48e8ecdbca431e518bebbed846ddf1e}{\index{\-My\-Menu\-Item\-Image@{\-My\-Menu\-Item\-Image}!\-My\-Menu\-Item\-Image@{\-My\-Menu\-Item\-Image}}
+\index{\-My\-Menu\-Item\-Image@{\-My\-Menu\-Item\-Image}!MyMenuItemImage@{\-My\-Menu\-Item\-Image}}
+\subsubsection[{\-My\-Menu\-Item\-Image}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-My\-Menu\-Item\-Image\-::\-My\-Menu\-Item\-Image} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_my_menu_item_image_ab48e8ecdbca431e518bebbed846ddf1e}
+\hypertarget{class_my_menu_item_image_aa44719255783a10c961c8220a29de788}{\index{\-My\-Menu\-Item\-Image@{\-My\-Menu\-Item\-Image}!$\sim$\-My\-Menu\-Item\-Image@{$\sim$\-My\-Menu\-Item\-Image}}
+\index{$\sim$\-My\-Menu\-Item\-Image@{$\sim$\-My\-Menu\-Item\-Image}!MyMenuItemImage@{\-My\-Menu\-Item\-Image}}
+\subsubsection[{$\sim$\-My\-Menu\-Item\-Image}]{\setlength{\rightskip}{0pt plus 5cm}virtual {\bf \-My\-Menu\-Item\-Image\-::$\sim$\-My\-Menu\-Item\-Image} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_my_menu_item_image_aa44719255783a10c961c8220a29de788}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_my_menu_item_image_a72ec449555c4b514536a85f1b432d95c}{\index{\-My\-Menu\-Item\-Image@{\-My\-Menu\-Item\-Image}!create@{create}}
+\index{create@{create}!MyMenuItemImage@{\-My\-Menu\-Item\-Image}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-My\-Menu\-Item\-Image} $\ast$ {\bf \-My\-Menu\-Item\-Image\-::create} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_my_menu_item_image_a72ec449555c4b514536a85f1b432d95c}
+\-Creates an \hyperlink{class_my_menu_item_image}{\-My\-Menu\-Item\-Image}. \hypertarget{class_my_menu_item_image_ae2548575d729af45b1bf39237580f984}{\index{\-My\-Menu\-Item\-Image@{\-My\-Menu\-Item\-Image}!create@{create}}
+\index{create@{create}!MyMenuItemImage@{\-My\-Menu\-Item\-Image}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-My\-Menu\-Item\-Image} $\ast$ {\bf \-My\-Menu\-Item\-Image\-::create} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{normal\-Image, }
+\item[{const cc\-Menu\-Callback \&}]{callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_my_menu_item_image_ae2548575d729af45b1bf39237580f984}
+creates a menu item with an image with a callable object \hypertarget{class_my_menu_item_image_ab30eff7cb9a66c450cd7b43f88dd76bc}{\index{\-My\-Menu\-Item\-Image@{\-My\-Menu\-Item\-Image}!create@{create}}
+\index{create@{create}!MyMenuItemImage@{\-My\-Menu\-Item\-Image}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-My\-Menu\-Item\-Image} $\ast$ {\bf \-My\-Menu\-Item\-Image\-::create} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{normal\-Image, }
+\item[{const char $\ast$}]{disabled\-Image, }
+\item[{const cc\-Menu\-Callback \&}]{callback}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_my_menu_item_image_ab30eff7cb9a66c450cd7b43f88dd76bc}
+creates a menu item with a normal and disabled image with a callable object \hypertarget{class_my_menu_item_image_afe0adf7ee40fbfd6443000f6ead06d6b}{\index{\-My\-Menu\-Item\-Image@{\-My\-Menu\-Item\-Image}!selected@{selected}}
+\index{selected@{selected}!MyMenuItemImage@{\-My\-Menu\-Item\-Image}}
+\subsubsection[{selected}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-My\-Menu\-Item\-Image\-::selected} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}override, virtual\mbox{]}}}}\label{class_my_menu_item_image_afe0adf7ee40fbfd6443000f6ead06d6b}
+
+
+\-This triggers when the \-Menu\-Item(\-Bounding Box) is touched/clicked \-This override just adds an enlarge effect. 
+
+\hypertarget{class_my_menu_item_image_abaf8a603722b33a093ecaa3d36df7c10}{\index{\-My\-Menu\-Item\-Image@{\-My\-Menu\-Item\-Image}!unselected@{unselected}}
+\index{unselected@{unselected}!MyMenuItemImage@{\-My\-Menu\-Item\-Image}}
+\subsubsection[{unselected}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-My\-Menu\-Item\-Image\-::unselected} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}override, virtual\mbox{]}}}}\label{class_my_menu_item_image_abaf8a603722b33a093ecaa3d36df7c10}
+
+
+\-This triggers when the \-Menu\-Item(\-Bounding Box) is untouched/unclicked \-This override returns the selected item to its normal size. 
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-Helpers/\hyperlink{_custom_c_c_8h}{\-Custom\-C\-C.\-h}\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-Helpers/\hyperlink{_custom_c_c_8cpp}{\-Custom\-C\-C.\-cpp}\end{DoxyCompactItemize}

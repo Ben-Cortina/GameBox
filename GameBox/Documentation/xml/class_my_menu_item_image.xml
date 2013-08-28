@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_my_menu_item_image" kind="class" prot="public">
+    <compoundname>MyMenuItemImage</compoundname>
+    <includes refid="_custom_c_c_8h" local="no">CustomCC.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_my_menu_item_image_1a72ec449555c4b514536a85f1b432d95c" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_my_menu_item_image" kindref="compound">MyMenuItemImage</ref> *</type>
+        <definition>MyMenuItemImage * MyMenuItemImage::create</definition>
+        <argsstring>()</argsstring>
+        <name>create</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates an <ref refid="class_my_menu_item_image" kindref="compound">MyMenuItemImage</ref>. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" line="30" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.cpp" bodystart="12" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_menu_item_image_1ae2548575d729af45b1bf39237580f984" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_my_menu_item_image" kindref="compound">MyMenuItemImage</ref> *</type>
+        <definition>MyMenuItemImage * MyMenuItemImage::create</definition>
+        <argsstring>(const char *normalImage, const ccMenuCallback &amp;callback)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const char *</type>
+          <declname>normalImage</declname>
+        </param>
+        <param>
+          <type>const ccMenuCallback &amp;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>creates a menu item with an image with a callable object </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" line="32" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.cpp" bodystart="26" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_menu_item_image_1ab30eff7cb9a66c450cd7b43f88dd76bc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_my_menu_item_image" kindref="compound">MyMenuItemImage</ref> *</type>
+        <definition>MyMenuItemImage * MyMenuItemImage::create</definition>
+        <argsstring>(const char *normalImage, const char *disabledImage, const ccMenuCallback &amp;callback)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const char *</type>
+          <declname>normalImage</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>disabledImage</declname>
+        </param>
+        <param>
+          <type>const ccMenuCallback &amp;</type>
+          <declname>callback</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>creates a menu item with a normal and disabled image with a callable object </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" line="35" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.cpp" bodystart="32" bodyend="42"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_my_menu_item_image_1ab48e8ecdbca431e518bebbed846ddf1e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>MyMenuItemImage::MyMenuItemImage</definition>
+        <argsstring>()</argsstring>
+        <name>MyMenuItemImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" line="37" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" bodystart="37" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_menu_item_image_1aa44719255783a10c961c8220a29de788" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual MyMenuItemImage::~MyMenuItemImage</definition>
+        <argsstring>()</argsstring>
+        <name>~MyMenuItemImage</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" line="38" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_menu_item_image_1afe0adf7ee40fbfd6443000f6ead06d6b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MyMenuItemImage::selected</definition>
+        <argsstring>() override</argsstring>
+        <name>selected</name>
+        <briefdescription>
+<para>This triggers when the MenuItem(Bounding Box) is touched/clicked This override just adds an enlarge effect. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" line="44" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.cpp" bodystart="45" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_menu_item_image_1abaf8a603722b33a093ecaa3d36df7c10" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MyMenuItemImage::unselected</definition>
+        <argsstring>() override</argsstring>
+        <name>unselected</name>
+        <briefdescription>
+<para>This triggers when the MenuItem(Bounding Box) is untouched/unclicked This override returns the selected item to its normal size. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" line="50" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.cpp" bodystart="52" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Custom MenuItemImage that grows a bit when selected. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" line="27" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" bodystart="26" bodyend="51"/>
+    <listofallmembers>
+      <member refid="class_my_menu_item_image_1a72ec449555c4b514536a85f1b432d95c" prot="public" virt="non-virtual"><scope>MyMenuItemImage</scope><name>create</name></member>
+      <member refid="class_my_menu_item_image_1ae2548575d729af45b1bf39237580f984" prot="public" virt="non-virtual"><scope>MyMenuItemImage</scope><name>create</name></member>
+      <member refid="class_my_menu_item_image_1ab30eff7cb9a66c450cd7b43f88dd76bc" prot="public" virt="non-virtual"><scope>MyMenuItemImage</scope><name>create</name></member>
+      <member refid="class_my_menu_item_image_1ab48e8ecdbca431e518bebbed846ddf1e" prot="public" virt="non-virtual"><scope>MyMenuItemImage</scope><name>MyMenuItemImage</name></member>
+      <member refid="class_my_menu_item_image_1afe0adf7ee40fbfd6443000f6ead06d6b" prot="public" virt="virtual"><scope>MyMenuItemImage</scope><name>selected</name></member>
+      <member refid="class_my_menu_item_image_1abaf8a603722b33a093ecaa3d36df7c10" prot="public" virt="virtual"><scope>MyMenuItemImage</scope><name>unselected</name></member>
+      <member refid="class_my_menu_item_image_1aa44719255783a10c961c8220a29de788" prot="public" virt="virtual"><scope>MyMenuItemImage</scope><name>~MyMenuItemImage</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

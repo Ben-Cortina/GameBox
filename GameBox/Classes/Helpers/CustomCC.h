@@ -1,12 +1,10 @@
-/*--------------------------------------------------------------*
- *  CustomCC.h                                                  *
- *  GameBox                                                     *
- *                                                              *
- *  Created by Ben Cortina on 7/25/13.                          *
+/**-------------------------------------------------------------*
+ * @file CustomCC.h                                             *
+ * @author Ben Cortina                                          *
  *                                                              *
  * This file just contains all the minor edits I do to CC       *
  * classes to add features and such that I desire for this      *
- * project.
+ * project.                                                     *
  *--------------------------------------------------------------*/
 
 #ifndef __GameBox__CustomCC__
@@ -21,7 +19,10 @@ USING_NS_CC;
 
 // I should eventually expand this to allow for effects to be added for each item
 
-// Custom MenuItemImage that grows a bit when selected
+/** 
+ * @class   MyMenuItemImage
+ * @brief   Custom MenuItemImage that grows a bit when selected
+ */
 class MyMenuItemImage : public MenuItemImage
 {
 public:
@@ -51,9 +52,12 @@ public:
 
 //////////////////////////////////////////////     --MyScene--      //////////////////////////////////////////////
 
-// Custom blank Scene that adds the passed layer to itself
-// Because currently everything on each scene is run on one layer
-// This allows me to not have to create a custom scene class for each game (each layer)
+/**
+ * @class   MyScene
+ * @brief   Custom blank Scene that adds the passed layer to itself
+ *          Because currently everything on each scene is run on one layer
+ *          This allows me to not have to create a custom scene class for each game (each layer)
+ */
 class MyScene : public Scene
 {
 public:

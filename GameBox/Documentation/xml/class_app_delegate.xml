@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_app_delegate" kind="class" prot="public">
+    <compoundname>AppDelegate</compoundname>
+    <includes refid="_app_delegate_8h" local="no">AppDelegate.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_app_delegate_1a7d26ade6fbc9d35ecc9185792303f82d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AppDelegate::AppDelegate</definition>
+        <argsstring>()</argsstring>
+        <name>AppDelegate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.h" line="14" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.cpp" bodystart="6" bodyend="8"/>
+      </memberdef>
+      <memberdef kind="function" id="class_app_delegate_1a9f89424b5e296e3668deaa0265fc5ac1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>AppDelegate::~AppDelegate</definition>
+        <argsstring>()</argsstring>
+        <name>~AppDelegate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.h" line="15" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.cpp" bodystart="10" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_app_delegate_1a68cbaed49edf7581dc59a09d5062fff3" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool AppDelegate::applicationDidFinishLaunching</definition>
+        <argsstring>()</argsstring>
+        <name>applicationDidFinishLaunching</name>
+        <briefdescription>
+<para>Implement Director and Scene init code here. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true Initialize success, app continue. </para><simplesectsep/><para>false Initialize failed, app terminate. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.h" line="22" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.cpp" bodystart="14" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="class_app_delegate_1a17cb09777419781698324e0415bffd3a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AppDelegate::applicationDidEnterBackground</definition>
+        <argsstring>()</argsstring>
+        <name>applicationDidEnterBackground</name>
+        <briefdescription>
+<para>The function be called when the application enter background. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>the</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the application </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.h" line="28" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.cpp" bodystart="37" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_app_delegate_1ac4d653e3f74a91efef5f2def58fe3108" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AppDelegate::applicationWillEnterForeground</definition>
+        <argsstring>()</argsstring>
+        <name>applicationWillEnterForeground</name>
+        <briefdescription>
+<para>The function be called when the application enter foreground. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>the</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>pointer of the application </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.h" line="34" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.cpp" bodystart="45" bodyend="50"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>The cocos2d Application. </para>    </briefdescription>
+    <detaileddescription>
+<para>The reason for implement as private inheritance is to hide some interface call by Director. </para>    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.h" line="12" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.h" bodystart="11" bodyend="35"/>
+    <listofallmembers>
+      <member refid="class_app_delegate_1a7d26ade6fbc9d35ecc9185792303f82d" prot="public" virt="non-virtual"><scope>AppDelegate</scope><name>AppDelegate</name></member>
+      <member refid="class_app_delegate_1a17cb09777419781698324e0415bffd3a" prot="public" virt="virtual"><scope>AppDelegate</scope><name>applicationDidEnterBackground</name></member>
+      <member refid="class_app_delegate_1a68cbaed49edf7581dc59a09d5062fff3" prot="public" virt="virtual"><scope>AppDelegate</scope><name>applicationDidFinishLaunching</name></member>
+      <member refid="class_app_delegate_1ac4d653e3f74a91efef5f2def58fe3108" prot="public" virt="virtual"><scope>AppDelegate</scope><name>applicationWillEnterForeground</name></member>
+      <member refid="class_app_delegate_1a9f89424b5e296e3668deaa0265fc5ac1" prot="public" virt="virtual"><scope>AppDelegate</scope><name>~AppDelegate</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

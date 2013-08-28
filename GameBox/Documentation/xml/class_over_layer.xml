@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_over_layer" kind="class" prot="public">
+    <compoundname>OverLayer</compoundname>
+    <includes refid="_over_layer_8h" local="no">OverLayer.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_over_layer_1a95d3b5e4f3c462216aea540774eae0aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>OverLayer::OverLayer</definition>
+        <argsstring>()</argsstring>
+        <name>OverLayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" line="21" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_over_layer_1a7f9b5a23c40f204d5ba47166b9d78f6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OverLayer::initWithColorMenu</definition>
+        <argsstring>(const Color4B color, Menu *pMenu)</argsstring>
+        <name>initWithColorMenu</name>
+        <param>
+          <type>const Color4B</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>Menu *</type>
+          <declname>pMenu</declname>
+        </param>
+        <briefdescription>
+<para>Initializes the layer with a menu and background color. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color of the background </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pMenu</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The menu to display on this layer </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" line="28" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.cpp" bodystart="10" bodyend="16"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Provides a transparent overlay with a menu on it. Releases on menu selection. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" line="18" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" bodystart="17" bodyend="29"/>
+    <listofallmembers>
+      <member refid="class_over_layer_1a7f9b5a23c40f204d5ba47166b9d78f6e" prot="public" virt="non-virtual"><scope>OverLayer</scope><name>initWithColorMenu</name></member>
+      <member refid="class_over_layer_1a95d3b5e4f3c462216aea540774eae0aa" prot="public" virt="non-virtual"><scope>OverLayer</scope><name>OverLayer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

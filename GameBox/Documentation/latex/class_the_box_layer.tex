@@ -1,0 +1,192 @@
+\hypertarget{class_the_box_layer}{\section{\-The\-Box\-Layer \-Class \-Reference}
+\label{class_the_box_layer}\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}}
+}
+
+
+\-This layer holds everythign needed for \-The\-Box game \-Im not using any \-T\-M\-X feature because they dont allow me its features and my needs dont line up as well as \-I'd like.  
+
+
+
+
+{\ttfamily \#include $<$\-The\-Box.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_the_box_layer_aa03bfd041ff7d3b64d305c76dcec2a7a}{\-The\-Box\-Layer} ()
+\item 
+void \hyperlink{class_the_box_layer_a2a76eca9790faad7097e37d5822d5e3e}{set\-Snake} (int snake)
+\begin{DoxyCompactList}\small\item\em \-Sets whether or not the game is in snake mode. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_the_box_layer_ac15f63f9808501a2aa7d725259068fd1}{init} ()
+\begin{DoxyCompactList}\small\item\em \-Initialize everything needed for this \-Layer \-Once schedule\-Update() has been called once, update will repeatedly. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_box_layer_a26cd4adbaec048f0df01ddb085c2beb7}{update} (float dt)
+\begin{DoxyCompactList}\small\item\em the update method, initially defined in \-Node, this is where the games time based actions are calculated. \-Once schedule\-Update() has been called once, update will repeatedly. \end{DoxyCompactList}\item 
+void \hyperlink{class_the_box_layer_af367b00c0d970f0c5e25a74ad28eb5cf}{key\-Pressed} (int key\-Code)
+\begin{DoxyCompactList}\small\item\em \-This is a function to catch \-Key\-Press events sent from \-Keyboard\-Dispatcher. \end{DoxyCompactList}\item 
+\hyperlink{class_the_box_layer_a2b2a79bf9a1dbb25a702a6a21623c658}{\-C\-R\-E\-A\-T\-E\-\_\-\-F\-U\-N\-C} (\hyperlink{class_the_box_layer}{\-The\-Box\-Layer})
+\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_the_box_layer_a91e48a9efb07ed70fac3e1880934cf37}{on\-Snake} (\-Object $\ast$p\-Sender)
+\begin{DoxyCompactList}\small\item\em \-This is a callback that will change the gamemode to \-Snake. \end{DoxyCompactList}\item 
+static void \hyperlink{class_the_box_layer_ae03788f405b053b85e230804d7a88904}{off\-Snake} (\-Object $\ast$p\-Sender)
+\begin{DoxyCompactList}\small\item\em \-This is a callback that will change the gamemode to \-Normal. \end{DoxyCompactList}\item 
+static void \hyperlink{class_the_box_layer_a3e32611fa82942d00d5e561bc59251e9}{start\-Standard} (\-Object $\ast$p\-Sender)
+\begin{DoxyCompactList}\small\item\em \-This is a callback that will change the gamemode to \-Standard. \end{DoxyCompactList}\item 
+static void \hyperlink{class_the_box_layer_af670f77242c15a7de84d6658cddb7056}{restore\-Home\-Layer} (\-Object $\ast$p\-Sender)
+\begin{DoxyCompactList}\small\item\em \-Restores the \-Home \-Screen. \end{DoxyCompactList}\item 
+static void \hyperlink{class_the_box_layer_a3acdbe7193e4da946ba01f80daa951ad}{run\-This\-Game} (\-Object $\ast$p\-Sender)
+\begin{DoxyCompactList}\small\item\em \-This method creates a new \hyperlink{class_my_scene}{\-My\-Scene} and adds a \hyperlink{class_the_box_layer}{\-The\-Box\-Layer} to it. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_the_box_layer_ad8d6cd2fd5690312bfdbd4049a43f2f5}{is\-Snake}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This layer holds everythign needed for \-The\-Box game \-Im not using any \-T\-M\-X feature because they dont allow me its features and my needs dont line up as well as \-I'd like. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_the_box_layer_aa03bfd041ff7d3b64d305c76dcec2a7a}{\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!\-The\-Box\-Layer@{\-The\-Box\-Layer}}
+\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!TheBoxLayer@{\-The\-Box\-Layer}}
+\subsubsection[{\-The\-Box\-Layer}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-The\-Box\-Layer\-::\-The\-Box\-Layer} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_the_box_layer_aa03bfd041ff7d3b64d305c76dcec2a7a}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_the_box_layer_a2b2a79bf9a1dbb25a702a6a21623c658}{\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!\-C\-R\-E\-A\-T\-E\-\_\-\-F\-U\-N\-C@{\-C\-R\-E\-A\-T\-E\-\_\-\-F\-U\-N\-C}}
+\index{\-C\-R\-E\-A\-T\-E\-\_\-\-F\-U\-N\-C@{\-C\-R\-E\-A\-T\-E\-\_\-\-F\-U\-N\-C}!TheBoxLayer@{\-The\-Box\-Layer}}
+\subsubsection[{\-C\-R\-E\-A\-T\-E\-\_\-\-F\-U\-N\-C}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-The\-Box\-Layer\-::\-C\-R\-E\-A\-T\-E\-\_\-\-F\-U\-N\-C} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-The\-Box\-Layer}}]{}
+\end{DoxyParamCaption}
+)}}\label{class_the_box_layer_a2b2a79bf9a1dbb25a702a6a21623c658}
+\hypertarget{class_the_box_layer_ac15f63f9808501a2aa7d725259068fd1}{\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!init@{init}}
+\index{init@{init}!TheBoxLayer@{\-The\-Box\-Layer}}
+\subsubsection[{init}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-The\-Box\-Layer\-::init} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_the_box_layer_ac15f63f9808501a2aa7d725259068fd1}
+
+
+\-Initialize everything needed for this \-Layer \-Once schedule\-Update() has been called once, update will repeatedly. 
+
+\begin{DoxyReturn}{\-Returns}
+success 
+\end{DoxyReturn}
+\hypertarget{class_the_box_layer_af367b00c0d970f0c5e25a74ad28eb5cf}{\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!key\-Pressed@{key\-Pressed}}
+\index{key\-Pressed@{key\-Pressed}!TheBoxLayer@{\-The\-Box\-Layer}}
+\subsubsection[{key\-Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-The\-Box\-Layer\-::key\-Pressed} (
+\begin{DoxyParamCaption}
+\item[{int}]{key\-Code}
+\end{DoxyParamCaption}
+)}}\label{class_the_box_layer_af367b00c0d970f0c5e25a74ad28eb5cf}
+
+
+\-This is a function to catch \-Key\-Press events sent from \-Keyboard\-Dispatcher. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em \-Key\-Code} & \-The keycode of the pressed key \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_the_box_layer_ae03788f405b053b85e230804d7a88904}{\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!off\-Snake@{off\-Snake}}
+\index{off\-Snake@{off\-Snake}!TheBoxLayer@{\-The\-Box\-Layer}}
+\subsubsection[{off\-Snake}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-The\-Box\-Layer\-::off\-Snake} (
+\begin{DoxyParamCaption}
+\item[{\-Object $\ast$}]{p\-Sender}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_the_box_layer_ae03788f405b053b85e230804d7a88904}
+
+
+\-This is a callback that will change the gamemode to \-Normal. 
+
+\hypertarget{class_the_box_layer_a91e48a9efb07ed70fac3e1880934cf37}{\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!on\-Snake@{on\-Snake}}
+\index{on\-Snake@{on\-Snake}!TheBoxLayer@{\-The\-Box\-Layer}}
+\subsubsection[{on\-Snake}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-The\-Box\-Layer\-::on\-Snake} (
+\begin{DoxyParamCaption}
+\item[{\-Object $\ast$}]{p\-Sender}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_the_box_layer_a91e48a9efb07ed70fac3e1880934cf37}
+
+
+\-This is a callback that will change the gamemode to \-Snake. 
+
+\hypertarget{class_the_box_layer_af670f77242c15a7de84d6658cddb7056}{\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!restore\-Home\-Layer@{restore\-Home\-Layer}}
+\index{restore\-Home\-Layer@{restore\-Home\-Layer}!TheBoxLayer@{\-The\-Box\-Layer}}
+\subsubsection[{restore\-Home\-Layer}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-The\-Box\-Layer\-::restore\-Home\-Layer} (
+\begin{DoxyParamCaption}
+\item[{\-Object $\ast$}]{p\-Sender}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_the_box_layer_af670f77242c15a7de84d6658cddb7056}
+
+
+\-Restores the \-Home \-Screen. 
+
+\hypertarget{class_the_box_layer_a3acdbe7193e4da946ba01f80daa951ad}{\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!run\-This\-Game@{run\-This\-Game}}
+\index{run\-This\-Game@{run\-This\-Game}!TheBoxLayer@{\-The\-Box\-Layer}}
+\subsubsection[{run\-This\-Game}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-The\-Box\-Layer\-::run\-This\-Game} (
+\begin{DoxyParamCaption}
+\item[{\-Object $\ast$}]{p\-Sender}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_the_box_layer_a3acdbe7193e4da946ba01f80daa951ad}
+
+
+\-This method creates a new \hyperlink{class_my_scene}{\-My\-Scene} and adds a \hyperlink{class_the_box_layer}{\-The\-Box\-Layer} to it. 
+
+\hypertarget{class_the_box_layer_a2a76eca9790faad7097e37d5822d5e3e}{\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!set\-Snake@{set\-Snake}}
+\index{set\-Snake@{set\-Snake}!TheBoxLayer@{\-The\-Box\-Layer}}
+\subsubsection[{set\-Snake}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-The\-Box\-Layer\-::set\-Snake} (
+\begin{DoxyParamCaption}
+\item[{int}]{snake}
+\end{DoxyParamCaption}
+)}}\label{class_the_box_layer_a2a76eca9790faad7097e37d5822d5e3e}
+
+
+\-Sets whether or not the game is in snake mode. 
+
+\hypertarget{class_the_box_layer_a3e32611fa82942d00d5e561bc59251e9}{\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!start\-Standard@{start\-Standard}}
+\index{start\-Standard@{start\-Standard}!TheBoxLayer@{\-The\-Box\-Layer}}
+\subsubsection[{start\-Standard}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-The\-Box\-Layer\-::start\-Standard} (
+\begin{DoxyParamCaption}
+\item[{\-Object $\ast$}]{p\-Sender}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_the_box_layer_a3e32611fa82942d00d5e561bc59251e9}
+
+
+\-This is a callback that will change the gamemode to \-Standard. 
+
+\hypertarget{class_the_box_layer_a26cd4adbaec048f0df01ddb085c2beb7}{\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!update@{update}}
+\index{update@{update}!TheBoxLayer@{\-The\-Box\-Layer}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-The\-Box\-Layer\-::update} (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)}}\label{class_the_box_layer_a26cd4adbaec048f0df01ddb085c2beb7}
+
+
+the update method, initially defined in \-Node, this is where the games time based actions are calculated. \-Once schedule\-Update() has been called once, update will repeatedly. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em dt} & \-The time since update was last called \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_the_box_layer_ad8d6cd2fd5690312bfdbd4049a43f2f5}{\index{\-The\-Box\-Layer@{\-The\-Box\-Layer}!is\-Snake@{is\-Snake}}
+\index{is\-Snake@{is\-Snake}!TheBoxLayer@{\-The\-Box\-Layer}}
+\subsubsection[{is\-Snake}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-The\-Box\-Layer\-::is\-Snake}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_the_box_layer_ad8d6cd2fd5690312bfdbd4049a43f2f5}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-The\-Box/\hyperlink{_the_box_8h}{\-The\-Box.\-h}\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-The\-Box/\hyperlink{_the_box_8cpp}{\-The\-Box.\-cpp}\end{DoxyCompactItemize}

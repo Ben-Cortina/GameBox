@@ -1,0 +1,122 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_player_sprite_8h" kind="file">
+    <compoundname>PlayerSprite.h</compoundname>
+    <includes local="yes">cocos2d.h</includes>
+    <includedby refid="_player_sprite_8cpp" local="yes">GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp</includedby>
+    <incdepgraph>
+      <node id="83">
+        <label>GameBox/GameBox/Classes/TheBox/PlayerSprite.h</label>
+        <link refid="PlayerSprite.h"/>
+        <childnode refid="84" relation="include">
+        </childnode>
+      </node>
+      <node id="84">
+        <label>cocos2d.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="85">
+        <label>GameBox/GameBox/Classes/TheBox/PlayerSprite.h</label>
+        <link refid="PlayerSprite.h"/>
+        <childnode refid="86" relation="include">
+        </childnode>
+      </node>
+      <node id="86">
+        <label>GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp</label>
+        <link refid="_player_sprite_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_vector" prot="public">Vector</innerclass>
+    <innerclass refid="class_player_sprite" prot="public">PlayerSprite</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_player_sprite_8h_1ac10da2fd6444e5c9f74c64c543c0d747" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>USING_NS_CC</definition>
+        <argsstring></argsstring>
+        <name>USING_NS_CC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="16" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*--------------------------------------------------------------*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/><sp/>Player.h<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*<sp/><sp/>GameBox<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>by<sp/>Ben<sp/>Cortina<sp/>on<sp/>8/6/13.<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="7"><highlight class="comment"><sp/>*<sp/>This<sp/>is<sp/>the<sp/>class<sp/>that<sp/>handle<sp/>the<sp/>Sprite<sp/>the<sp/>player<sp/>controls<sp/>*</highlight></codeline>
+<codeline lineno="8"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*</highlight></codeline>
+<codeline lineno="9"><highlight class="comment"><sp/>*--------------------------------------------------------------*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>__GameBox__PlayerSprite__</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__GameBox__PlayerSprite__</highlight></codeline>
+<codeline lineno="13"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cocos2d.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="_player_sprite_8h_1ac10da2fd6444e5c9f74c64c543c0d747" refkind="member"><highlight class="normal"><ref refid="_app_delegate_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kindref="member">USING_NS_CC</ref>;</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/>I<sp/>could<sp/>use<sp/>CCSize<sp/>for<sp/>this<sp/>but<sp/>a<sp/>simpler<sp/>stucture<sp/>will<sp/>meet<sp/>my<sp/>needs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="struct_vector" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_vector" kindref="compound">Vector</ref></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21" refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref>;<sp/></highlight><highlight class="comment">//<sp/>%<sp/>max<sp/>speed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref>;<sp/></highlight><highlight class="comment">//<sp/>%<sp/>max<sp/>speed</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25" refid="class_player_sprite" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_player_sprite" kindref="compound">PlayerSprite</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Sprite</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>timeval<sp/>lastUpdate;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dtCalculated;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>Layer*<sp/>owner;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="32" refid="class_player_sprite_1ae2d7c734bea5fd1f590ac33854a2ceed" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1ae2d7c734bea5fd1f590ac33854a2ceed" kindref="member">_weight</ref>;<sp/></highlight><highlight class="comment">//unused</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vector" kindref="compound">Vector</ref><sp/><ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>;</highlight></codeline>
+<codeline lineno="34" refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vector" kindref="compound">Vector</ref><sp/><ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>;<sp/></highlight><highlight class="comment">//yes,<sp/>I<sp/>know<sp/>&quot;force&quot;<sp/>isnt<sp/>technically<sp/>correct<sp/>for<sp/>this,<sp/>but<sp/>its<sp/>close<sp/>enough</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35" refid="class_player_sprite_1a5b5a402a9273c0367e51f6e47256d4f3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a5b5a402a9273c0367e51f6e47256d4f3" kindref="member">_maxSpeed</ref>;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1a355b762b077d780021af012027c1aff1" kindref="member">PlayerSprite</ref>();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite" kindref="compound">PlayerSprite</ref>*<sp/><ref refid="class_player_sprite_1aa3ed62f03be9c93af9f531be066384d1" kindref="member">create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pszFileName,<sp/>Layer*<sp/>caller);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a44a399fb158ef7a3637d0780f629a035" kindref="member">initWithFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pszFilename,<sp/>Layer*<sp/>caller);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68" refid="class_player_sprite_1aad883076d38aa90cb76fb85e5d84b42b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1aad883076d38aa90cb76fb85e5d84b42b" kindref="member">getWeight</ref>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1ae2d7c734bea5fd1f590ac33854a2ceed" kindref="member">_weight</ref>;};</highlight></codeline>
+<codeline lineno="69" refid="class_player_sprite_1a421ad1ab42de6fad573430640d05b5ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a421ad1ab42de6fad573430640d05b5ea" kindref="member">setWeight</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>weight){<ref refid="class_player_sprite_1ae2d7c734bea5fd1f590ac33854a2ceed" kindref="member">_weight</ref>=weight;};</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="class_player_sprite_1ae322a0adbdbc74ddca22e7deb1db9f46" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1ae322a0adbdbc74ddca22e7deb1db9f46" kindref="member">getMaxSpeed</ref>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a5b5a402a9273c0367e51f6e47256d4f3" kindref="member">_maxSpeed</ref>;};</highlight></codeline>
+<codeline lineno="76" refid="class_player_sprite_1a5b6dd058c35ba9bd422c0721f00f5b89" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a5b6dd058c35ba9bd422c0721f00f5b89" kindref="member">setMaxSpeed</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>maxSpeed){<ref refid="class_player_sprite_1a5b5a402a9273c0367e51f6e47256d4f3" kindref="member">_maxSpeed</ref>=maxSpeed;};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81" refid="class_player_sprite_1a3376b1419374cbdbb7b1bf1605bc8eb0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vector" kindref="compound">Vector</ref><sp/><ref refid="class_player_sprite_1a3376b1419374cbdbb7b1bf1605bc8eb0" kindref="member">getVelocity</ref>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>;};</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a3c28e6d11a08724aef010bf9bf09a5a4" kindref="member">updateVelocity</ref>();</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87" refid="class_player_sprite_1a261319de832d01b1e64601887cbf2a2c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_vector" kindref="compound">Vector</ref><sp/><ref refid="class_player_sprite_1a261319de832d01b1e64601887cbf2a2c" kindref="member">getForce</ref>()<sp/>{</highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>;};</highlight></codeline>
+<codeline lineno="88" refid="class_player_sprite_1a376df965770e619cee7c02f56355c8cb" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a376df965770e619cee7c02f56355c8cb" kindref="member">setForce</ref>(<ref refid="struct_vector" kindref="compound">Vector</ref><sp/>force){<ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref>=force.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref>;<sp/><ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref>=force.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref>;<sp/><ref refid="class_player_sprite_1a3c28e6d11a08724aef010bf9bf09a5a4" kindref="member">updateVelocity</ref>();};</highlight></codeline>
+<codeline lineno="89" refid="class_player_sprite_1a856c0c8d593bbb855aa2a979286f8ea6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a856c0c8d593bbb855aa2a979286f8ea6" kindref="member">setForceX</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x)<sp/>{<ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref>=x;<ref refid="class_player_sprite_1a3c28e6d11a08724aef010bf9bf09a5a4" kindref="member">updateVelocity</ref>();};</highlight></codeline>
+<codeline lineno="90" refid="class_player_sprite_1a5e8593fec3114f426b4346bbf8a12379" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a5e8593fec3114f426b4346bbf8a12379" kindref="member">setForceY</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y)<sp/>{<ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref>=y;<ref refid="class_player_sprite_1a3c28e6d11a08724aef010bf9bf09a5a4" kindref="member">updateVelocity</ref>();};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1ad5eede6c47652babec88d0c056d50888" kindref="member" tooltip="Updates player velocity based on the applied force and duration This would be what I would used if I ...">applyForce</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a6c4cb72fa72b21098eb3241e8b0795e6" kindref="member" tooltip="Updates the position of the Sprite based on the currenttime - lastupdate Ths allows me to call update...">update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a6c4cb72fa72b21098eb3241e8b0795e6" kindref="member" tooltip="Updates the position of the Sprite based on the currenttime - lastupdate Ths allows me to call update...">update</ref>();</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__PlayerSprite__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h"/>
+  </compounddef>
+</doxygen>

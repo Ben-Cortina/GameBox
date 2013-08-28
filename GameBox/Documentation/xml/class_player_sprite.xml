@@ -1,0 +1,458 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_player_sprite" kind="class" prot="public">
+    <compoundname>PlayerSprite</compoundname>
+    <includes refid="_player_sprite_8h" local="no">PlayerSprite.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_player_sprite_1a07e314ae67a42a4c05aced1b47933b55" prot="private" static="no" mutable="no">
+        <type>timeval</type>
+        <definition>timeval PlayerSprite::lastUpdate</definition>
+        <argsstring></argsstring>
+        <name>lastUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="28" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_sprite_1af8cc286e0ecde1ee80005fd3ff9de688" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerSprite::dtCalculated</definition>
+        <argsstring></argsstring>
+        <name>dtCalculated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="29" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_sprite_1ad31159234503a0560ee1c37a13c246da" prot="private" static="no" mutable="no">
+        <type>Layer *</type>
+        <definition>Layer* PlayerSprite::owner</definition>
+        <argsstring></argsstring>
+        <name>owner</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="30" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="30" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_player_sprite_1ae2d7c734bea5fd1f590ac33854a2ceed" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerSprite::_weight</definition>
+        <argsstring></argsstring>
+        <name>_weight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="32" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_vector" kindref="compound">Vector</ref></type>
+        <definition>Vector PlayerSprite::_vel</definition>
+        <argsstring></argsstring>
+        <name>_vel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="33" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_vector" kindref="compound">Vector</ref></type>
+        <definition>Vector PlayerSprite::_force</definition>
+        <argsstring></argsstring>
+        <name>_force</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="34" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_player_sprite_1a5b5a402a9273c0367e51f6e47256d4f3" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float PlayerSprite::_maxSpeed</definition>
+        <argsstring></argsstring>
+        <name>_maxSpeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="35" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_player_sprite_1a355b762b077d780021af012027c1aff1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>PlayerSprite::PlayerSprite</definition>
+        <argsstring>()</argsstring>
+        <name>PlayerSprite</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="38" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp" bodystart="30" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a44a399fb158ef7a3637d0780f629a035" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool PlayerSprite::initWithFile</definition>
+        <argsstring>(const char *pszFilename, Layer *caller)</argsstring>
+        <name>initWithFile</name>
+        <param>
+          <type>const char *</type>
+          <declname>pszFilename</declname>
+        </param>
+        <param>
+          <type>Layer *</type>
+          <declname>caller</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes a sprite with an image filename.</para><para>This method will find pszFilename from local file system, load its content to Texture2D, then use Texture2D to create a sprite. After initialization, the rect used will be the size of the image. The offset will be (0,0).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pszFilename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The path to an image file in local file system </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the sprite is initialized properly, false otherwise. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="61" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp" bodystart="57" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1aad883076d38aa90cb76fb85e5d84b42b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float PlayerSprite::getWeight</definition>
+        <argsstring>()</argsstring>
+        <name>getWeight</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get/Set methods for weight Not used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="68" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="68" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a421ad1ab42de6fad573430640d05b5ea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerSprite::setWeight</definition>
+        <argsstring>(float weight)</argsstring>
+        <name>setWeight</name>
+        <param>
+          <type>float</type>
+          <declname>weight</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="69" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1ae322a0adbdbc74ddca22e7deb1db9f46" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float PlayerSprite::getMaxSpeed</definition>
+        <argsstring>()</argsstring>
+        <name>getMaxSpeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get/Set methods for maxspeed Not used. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="75" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a5b6dd058c35ba9bd422c0721f00f5b89" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerSprite::setMaxSpeed</definition>
+        <argsstring>(float maxSpeed)</argsstring>
+        <name>setMaxSpeed</name>
+        <param>
+          <type>float</type>
+          <declname>maxSpeed</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="76" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a3376b1419374cbdbb7b1bf1605bc8eb0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_vector" kindref="compound">Vector</ref></type>
+        <definition>Vector PlayerSprite::getVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>getVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get/Set methods for velocity. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="81" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="81" bodyend="81"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a3c28e6d11a08724aef010bf9bf09a5a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerSprite::updateVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>updateVelocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="82" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp" bodystart="82" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a261319de832d01b1e64601887cbf2a2c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_vector" kindref="compound">Vector</ref></type>
+        <definition>Vector PlayerSprite::getForce</definition>
+        <argsstring>()</argsstring>
+        <name>getForce</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Get/Set methods for force. </para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="87" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a376df965770e619cee7c02f56355c8cb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerSprite::setForce</definition>
+        <argsstring>(Vector force)</argsstring>
+        <name>setForce</name>
+        <param>
+          <type><ref refid="struct_vector" kindref="compound">Vector</ref></type>
+          <declname>force</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="88" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="88" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a856c0c8d593bbb855aa2a979286f8ea6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerSprite::setForceX</definition>
+        <argsstring>(float x)</argsstring>
+        <name>setForceX</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="89" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="89" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a5e8593fec3114f426b4346bbf8a12379" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerSprite::setForceY</definition>
+        <argsstring>(float y)</argsstring>
+        <name>setForceY</name>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="90" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="90" bodyend="90"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1ad5eede6c47652babec88d0c056d50888" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerSprite::applyForce</definition>
+        <argsstring>(float x, float y, float dt)</argsstring>
+        <name>applyForce</name>
+        <param>
+          <type>float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Updates player velocity based on the applied force and duration This would be what I would used if I were to incorporate friction and momentum. I will likely not use it here, in its place I will just setVelocity. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The X value of the force </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The Y value of the force </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The duration the force was applied for </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="100"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a4ac7a2771c849ab2ca889ab33d9d4aa9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerSprite::update</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>update</name>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Updates the position of the Sprite based on dt and its current velocity Not Used. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time over which the velocity has been applied </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="107" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp" bodystart="105" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_player_sprite_1a6c4cb72fa72b21098eb3241e8b0795e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void PlayerSprite::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+<para>Updates the position of the Sprite based on the currenttime - lastupdate Ths allows me to call update whenever a keychanges so the movement is calculated based on the time of the key event rather than the time of each update. Not Used. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="116" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp" bodystart="129" bodyend="151"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_player_sprite_1aa3ed62f03be9c93af9f531be066384d1" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_player_sprite" kindref="compound">PlayerSprite</ref> *</type>
+        <definition>PlayerSprite * PlayerSprite::create</definition>
+        <argsstring>(const char *pszFileName, Layer *caller)</argsstring>
+        <name>create</name>
+        <param>
+          <type>const char *</type>
+          <declname>pszFileName</declname>
+        </param>
+        <param>
+          <type>Layer *</type>
+          <declname>caller</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Creates a sprite with an image filename.</para><para>After creation, the rect of sprite will be the size of the image, and the offset will be (0,0).</para><para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pszFileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The string which indicates a path to image file, e.g., &quot;scene1/monster.png&quot;. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>A valid sprite object that is marked as autoreleased. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="49" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp" bodystart="45" bodyend="55"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="17">
+        <label>Vector</label>
+        <link refid="struct_vector"/>
+      </node>
+      <node id="16">
+        <label>PlayerSprite</label>
+        <link refid="class_player_sprite"/>
+        <childnode refid="17" relation="usage">
+          <edgelabel>_force</edgelabel>
+          <edgelabel>_vel</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" line="26" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.h" bodystart="25" bodyend="117"/>
+    <listofallmembers>
+      <member refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" prot="protected" virt="non-virtual"><scope>PlayerSprite</scope><name>_force</name></member>
+      <member refid="class_player_sprite_1a5b5a402a9273c0367e51f6e47256d4f3" prot="protected" virt="non-virtual"><scope>PlayerSprite</scope><name>_maxSpeed</name></member>
+      <member refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" prot="protected" virt="non-virtual"><scope>PlayerSprite</scope><name>_vel</name></member>
+      <member refid="class_player_sprite_1ae2d7c734bea5fd1f590ac33854a2ceed" prot="protected" virt="non-virtual"><scope>PlayerSprite</scope><name>_weight</name></member>
+      <member refid="class_player_sprite_1ad5eede6c47652babec88d0c056d50888" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>applyForce</name></member>
+      <member refid="class_player_sprite_1aa3ed62f03be9c93af9f531be066384d1" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>create</name></member>
+      <member refid="class_player_sprite_1af8cc286e0ecde1ee80005fd3ff9de688" prot="private" virt="non-virtual"><scope>PlayerSprite</scope><name>dtCalculated</name></member>
+      <member refid="class_player_sprite_1a261319de832d01b1e64601887cbf2a2c" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>getForce</name></member>
+      <member refid="class_player_sprite_1ae322a0adbdbc74ddca22e7deb1db9f46" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>getMaxSpeed</name></member>
+      <member refid="class_player_sprite_1a3376b1419374cbdbb7b1bf1605bc8eb0" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>getVelocity</name></member>
+      <member refid="class_player_sprite_1aad883076d38aa90cb76fb85e5d84b42b" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>getWeight</name></member>
+      <member refid="class_player_sprite_1a44a399fb158ef7a3637d0780f629a035" prot="public" virt="virtual"><scope>PlayerSprite</scope><name>initWithFile</name></member>
+      <member refid="class_player_sprite_1a07e314ae67a42a4c05aced1b47933b55" prot="private" virt="non-virtual"><scope>PlayerSprite</scope><name>lastUpdate</name></member>
+      <member refid="class_player_sprite_1ad31159234503a0560ee1c37a13c246da" prot="private" virt="non-virtual"><scope>PlayerSprite</scope><name>owner</name></member>
+      <member refid="class_player_sprite_1a355b762b077d780021af012027c1aff1" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>PlayerSprite</name></member>
+      <member refid="class_player_sprite_1a376df965770e619cee7c02f56355c8cb" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>setForce</name></member>
+      <member refid="class_player_sprite_1a856c0c8d593bbb855aa2a979286f8ea6" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>setForceX</name></member>
+      <member refid="class_player_sprite_1a5e8593fec3114f426b4346bbf8a12379" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>setForceY</name></member>
+      <member refid="class_player_sprite_1a5b6dd058c35ba9bd422c0721f00f5b89" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>setMaxSpeed</name></member>
+      <member refid="class_player_sprite_1a421ad1ab42de6fad573430640d05b5ea" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>setWeight</name></member>
+      <member refid="class_player_sprite_1a4ac7a2771c849ab2ca889ab33d9d4aa9" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>update</name></member>
+      <member refid="class_player_sprite_1a6c4cb72fa72b21098eb3241e8b0795e6" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>update</name></member>
+      <member refid="class_player_sprite_1a3c28e6d11a08724aef010bf9bf09a5a4" prot="public" virt="non-virtual"><scope>PlayerSprite</scope><name>updateVelocity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

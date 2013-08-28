@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_my_scene" kind="class" prot="public">
+    <compoundname>MyScene</compoundname>
+    <includes refid="_custom_c_c_8h" local="no">CustomCC.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_my_scene_1a98a8eef56180480263e8c9298316f47c" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void MyScene::runLayer</definition>
+        <argsstring>(Layer *pLayer)</argsstring>
+        <name>runLayer</name>
+        <param>
+          <type>Layer *</type>
+          <declname>pLayer</declname>
+        </param>
+        <briefdescription>
+<para>adds a layer to this scene then replaces the current scene with this one </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>pLayer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the layer that will be added to the scene </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" line="68" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.cpp" bodystart="62" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_my_scene_1ab001d48470a8829da03a21a2941fef36" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MyScene::CREATE_FUNC</definition>
+        <argsstring>(MyScene)</argsstring>
+        <name>CREATE_FUNC</name>
+        <param>
+          <type><ref refid="class_my_scene" kindref="compound">MyScene</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" line="71"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Custom blank Scene that adds the passed layer to itself Because currently everything on each scene is run on one layer This allows me to not have to create a custom scene class for each game (each layer) </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" line="62" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" bodystart="61" bodyend="72"/>
+    <listofallmembers>
+      <member refid="class_my_scene_1ab001d48470a8829da03a21a2941fef36" prot="public" virt="non-virtual"><scope>MyScene</scope><name>CREATE_FUNC</name></member>
+      <member refid="class_my_scene_1a98a8eef56180480263e8c9298316f47c" prot="public" virt="virtual"><scope>MyScene</scope><name>runLayer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

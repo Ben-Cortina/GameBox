@@ -1,0 +1,190 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="struct_coords" kind="struct" prot="public">
+    <compoundname>Coords</compoundname>
+    <includes refid="_the_box_8h" local="no">TheBox.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_coords_1a59992d986e76375f31828d32c05cd15d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Coords::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="56" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="56" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_coords_1a7ed64d02fb7550f1506a93fcfab7f16f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Coords::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="57" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="57" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_coords_1a5922d1783cefa759950faa50ac347191" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Coords::Coords</definition>
+        <argsstring>()</argsstring>
+        <name>Coords</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="58" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_coords_1aa268e580151ea70eec212852dd4c5f94" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Coords::Coords</definition>
+        <argsstring>(int px, int py)</argsstring>
+        <name>Coords</name>
+        <param>
+          <type>int</type>
+          <declname>px</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>py</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="59" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_coords_1a7507f92d1feefa3355ae8e9edae34e54" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Coords::operator==</definition>
+        <argsstring>(const Coords r)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="struct_coords" kindref="compound">Coords</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="61" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_coords_1a25bcb0e2d2f5677a10b7652e90a6f97b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_coords" kindref="compound">Coords</ref> &amp;</type>
+        <definition>Coords&amp; Coords::operator=</definition>
+        <argsstring>(const Coords r)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="struct_coords" kindref="compound">Coords</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="62" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_coords_1a2549173108b2479b62fd79b82ec54e01" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_coords" kindref="compound">Coords</ref> &amp;</type>
+        <definition>Coords&amp; Coords::operator+=</definition>
+        <argsstring>(const Coords r)</argsstring>
+        <name>operator+=</name>
+        <param>
+          <type>const <ref refid="struct_coords" kindref="compound">Coords</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="63" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_coords_1a168a9ed9edbffaf04e67c5b39306ca99" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
+        <definition>Coords Coords::operator+</definition>
+        <argsstring>(Coords r)</argsstring>
+        <name>operator+</name>
+        <param>
+          <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="64" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="64" bodyend="64"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_coords_1a9f61875c64b3726afd0bb0d465889bad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_coords" kindref="compound">Coords</ref> &amp;</type>
+        <definition>Coords&amp; Coords::operator-=</definition>
+        <argsstring>(const Coords r)</argsstring>
+        <name>operator-=</name>
+        <param>
+          <type>const <ref refid="struct_coords" kindref="compound">Coords</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="65" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="struct_coords_1a7cc7a225781b6bbad3e00a5e9572fee1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
+        <definition>Coords Coords::operator-</definition>
+        <argsstring>(Coords r)</argsstring>
+        <name>operator-</name>
+        <param>
+          <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="66" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="66" bodyend="66"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>simple structure with two ints to represent 2D coordinates </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="55" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="54" bodyend="67"/>
+    <listofallmembers>
+      <member refid="struct_coords_1a5922d1783cefa759950faa50ac347191" prot="public" virt="non-virtual"><scope>Coords</scope><name>Coords</name></member>
+      <member refid="struct_coords_1aa268e580151ea70eec212852dd4c5f94" prot="public" virt="non-virtual"><scope>Coords</scope><name>Coords</name></member>
+      <member refid="struct_coords_1a168a9ed9edbffaf04e67c5b39306ca99" prot="public" virt="non-virtual"><scope>Coords</scope><name>operator+</name></member>
+      <member refid="struct_coords_1a2549173108b2479b62fd79b82ec54e01" prot="public" virt="non-virtual"><scope>Coords</scope><name>operator+=</name></member>
+      <member refid="struct_coords_1a7cc7a225781b6bbad3e00a5e9572fee1" prot="public" virt="non-virtual"><scope>Coords</scope><name>operator-</name></member>
+      <member refid="struct_coords_1a9f61875c64b3726afd0bb0d465889bad" prot="public" virt="non-virtual"><scope>Coords</scope><name>operator-=</name></member>
+      <member refid="struct_coords_1a25bcb0e2d2f5677a10b7652e90a6f97b" prot="public" virt="non-virtual"><scope>Coords</scope><name>operator=</name></member>
+      <member refid="struct_coords_1a7507f92d1feefa3355ae8e9edae34e54" prot="public" virt="non-virtual"><scope>Coords</scope><name>operator==</name></member>
+      <member refid="struct_coords_1a59992d986e76375f31828d32c05cd15d" prot="public" virt="non-virtual"><scope>Coords</scope><name>x</name></member>
+      <member refid="struct_coords_1a7ed64d02fb7550f1506a93fcfab7f16f" prot="public" virt="non-virtual"><scope>Coords</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

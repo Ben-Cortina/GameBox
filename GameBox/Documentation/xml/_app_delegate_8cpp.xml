@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_app_delegate_8cpp" kind="file">
+    <compoundname>AppDelegate.cpp</compoundname>
+    <includes refid="_app_delegate_8h" local="yes">AppDelegate.h</includes>
+    <includes refid="_home_scene_8h" local="yes">HomeScene.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>GameList.h</label>
+        <link refid="_game_list_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>HomeScene.h</label>
+        <link refid="_home_scene_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="0">
+        <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
+        <link refid="AppDelegate.cpp"/>
+        <childnode refid="1" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>OverLayer.h</label>
+        <link refid="_over_layer_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>cocos2d.h</label>
+      </node>
+      <node id="4">
+        <label>CustomCC.h</label>
+        <link refid="_custom_c_c_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>AppDelegate.h</label>
+        <link refid="_app_delegate_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>TheBox/TheBox.h</label>
+        <link refid="_the_box_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_app_delegate_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>USING_NS_CC</definition>
+        <argsstring></argsstring>
+        <name>USING_NS_CC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.cpp" line="4" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.cpp" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_app_delegate_8h" kindref="compound">AppDelegate.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_home_scene_8h" kindref="compound">HomeScene.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><ref refid="_app_delegate_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kindref="member">USING_NS_CC</ref>;</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><ref refid="class_app_delegate_1a7d26ade6fbc9d35ecc9185792303f82d" kindref="member">AppDelegate::AppDelegate</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="class_app_delegate_1a9f89424b5e296e3668deaa0265fc5ac1" kindref="member">AppDelegate::~AppDelegate</ref>()<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_app_delegate_1a68cbaed49edf7581dc59a09d5062fff3" kindref="member" tooltip="Implement Director and Scene init code here.">AppDelegate::applicationDidFinishLaunching</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>initialize<sp/>director</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>Director*<sp/>pDirector<sp/>=<sp/>Director::getInstance();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>EGLView*<sp/>pEGLView<sp/>=<sp/>EGLView::getInstance();</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>pDirector-&gt;setOpenGLView(pEGLView);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>turn<sp/>on<sp/>display<sp/>FPS</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//pDirector-&gt;setDisplayStats(true);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>set<sp/>FPS.<sp/>the<sp/>default<sp/>value<sp/>is<sp/>1.0/60<sp/>if<sp/>you<sp/>don&apos;t<sp/>call<sp/>this</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>pDirector-&gt;setAnimationInterval(1.0<sp/>/<sp/>60);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>a<sp/>scene.<sp/>it&apos;s<sp/>an<sp/>autorelease<sp/>object</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>Scene<sp/>*pScene<sp/>=<sp/><ref refid="class_home_layer_1abfa48630fcd7c04d077c92c673d419af" kindref="member">HomeLayer::scene</ref>();</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>run</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>pDirector-&gt;runWithScene(pScene);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight><highlight class="comment">//<sp/>This<sp/>function<sp/>will<sp/>be<sp/>called<sp/>when<sp/>the<sp/>app<sp/>is<sp/>inactive.<sp/>When<sp/>comes<sp/>a<sp/>phone<sp/>call,it&apos;s<sp/>be<sp/>invoked<sp/>too</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_app_delegate_1a17cb09777419781698324e0415bffd3a" kindref="member" tooltip="The function be called when the application enter background.">AppDelegate::applicationDidEnterBackground</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>Director::getInstance()-&gt;stopAnimation();</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>you<sp/>use<sp/>SimpleAudioEngine,<sp/>it<sp/>must<sp/>be<sp/>pause</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SimpleAudioEngine::sharedEngine()-&gt;pauseBackgroundMusic();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="comment">//<sp/>this<sp/>function<sp/>will<sp/>be<sp/>called<sp/>when<sp/>the<sp/>app<sp/>is<sp/>active<sp/>again</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_app_delegate_1ac4d653e3f74a91efef5f2def58fe3108" kindref="member" tooltip="The function be called when the application enter foreground.">AppDelegate::applicationWillEnterForeground</ref>()<sp/>{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>Director::getInstance()-&gt;startAnimation();</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>you<sp/>use<sp/>SimpleAudioEngine,<sp/>it<sp/>must<sp/>resume<sp/>here</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>SimpleAudioEngine::sharedEngine()-&gt;resumeBackgroundMusic();</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/AppDelegate.cpp"/>
+  </compounddef>
+</doxygen>

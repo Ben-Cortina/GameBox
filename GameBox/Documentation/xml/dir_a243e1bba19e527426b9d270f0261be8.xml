@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="dir_a243e1bba19e527426b9d270f0261be8" kind="dir">
+    <compoundname>GameBox/GameBox/Classes/TheBox/</compoundname>
+    <innerfile refid="_over_layer_8cpp">OverLayer.cpp</innerfile>
+    <innerfile refid="_over_layer_8h">OverLayer.h</innerfile>
+    <innerfile refid="_player_sprite_8cpp">PlayerSprite.cpp</innerfile>
+    <innerfile refid="_player_sprite_8h">PlayerSprite.h</innerfile>
+    <innerfile refid="_the_box_8cpp">TheBox.cpp</innerfile>
+    <innerfile refid="_the_box_8h">TheBox.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/"/>
+  </compounddef>
+</doxygen>

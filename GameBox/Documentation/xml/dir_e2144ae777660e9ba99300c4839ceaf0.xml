@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="dir_e2144ae777660e9ba99300c4839ceaf0" kind="dir">
+    <compoundname>GameBox/</compoundname>
+    <innerdir refid="dir_5950e91c7e38fd33818eb04cd794c1f7">GameBox/GameBox/</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/"/>
+  </compounddef>
+</doxygen>

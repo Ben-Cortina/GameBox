@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_custom_c_c_8h" kind="file">
+    <compoundname>CustomCC.h</compoundname>
+    <includes local="yes">cocos2d.h</includes>
+    <includedby refid="_home_scene_8h" local="yes">GameBox/GameBox/Classes/HomeScene.h</includedby>
+    <includedby refid="_the_box_8h" local="yes">GameBox/GameBox/Classes/TheBox/TheBox.h</includedby>
+    <includedby refid="_over_layer_8h" local="yes">GameBox/GameBox/Classes/TheBox/OverLayer.h</includedby>
+    <includedby refid="_custom_c_c_8cpp" local="yes">GameBox/GameBox/Classes/Helpers/CustomCC.cpp</includedby>
+    <incdepgraph>
+      <node id="28">
+        <label>cocos2d.h</label>
+      </node>
+      <node id="27">
+        <label>GameBox/GameBox/Classes/Helpers/CustomCC.h</label>
+        <link refid="CustomCC.h"/>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="39">
+        <label>GameBox/GameBox/Classes/Helpers/CustomCC.cpp</label>
+        <link refid="_custom_c_c_8cpp"/>
+      </node>
+      <node id="35">
+        <label>GameBox/GameBox/Classes/GameList.h</label>
+        <link refid="_game_list_8h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>GameBox/GameBox/Classes/HomeScene.h</label>
+        <link refid="_home_scene_8h"/>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>GameBox/GameBox/Classes/HomeScene.cpp</label>
+        <link refid="_home_scene_8cpp"/>
+      </node>
+      <node id="38">
+        <label>GameBox/GameBox/Classes/TheBox/OverLayer.cpp</label>
+        <link refid="_over_layer_8cpp"/>
+      </node>
+      <node id="36">
+        <label>GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp</label>
+        <link refid="_player_sprite_8cpp"/>
+      </node>
+      <node id="31">
+        <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
+        <link refid="_app_delegate_8cpp"/>
+      </node>
+      <node id="33">
+        <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
+        <link refid="_the_box_8cpp"/>
+      </node>
+      <node id="37">
+        <label>GameBox/GameBox/Classes/TheBox/OverLayer.h</label>
+        <link refid="_over_layer_8h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>GameBox/GameBox/Classes/Helpers/CustomCC.h</label>
+        <link refid="CustomCC.h"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>GameBox/GameBox/Classes/TheBox/TheBox.h</label>
+        <link refid="_the_box_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_my_menu_item_image" prot="public">MyMenuItemImage</innerclass>
+    <innerclass refid="class_my_scene" prot="public">MyScene</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_custom_c_c_8h_1ac10da2fd6444e5c9f74c64c543c0d747" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>USING_NS_CC</definition>
+        <argsstring></argsstring>
+        <name>USING_NS_CC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" line="15" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>-------------------------------------------------------------* * <simplesect kind="author"><para>Ben Cortina * * This file just contains all the minor edits I do to CC * classes to add features and such that I desire for this * project. * -------------------------------------------------------------- </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="10"><highlight class="preprocessor">#ifndef<sp/>__GameBox__CustomCC__</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__GameBox__CustomCC__</highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cocos2d.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15" refid="_custom_c_c_8h_1ac10da2fd6444e5c9f74c64c543c0d747" refkind="member"><highlight class="normal"><ref refid="_app_delegate_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kindref="member">USING_NS_CC</ref>;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="comment">//<sp/>I<sp/>should<sp/>eventually<sp/>expand<sp/>this<sp/>to<sp/>allow<sp/>for<sp/>effects<sp/>to<sp/>be<sp/>added<sp/>for<sp/>each<sp/>item</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="class_my_menu_item_image" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_my_menu_item_image" kindref="compound" tooltip="Custom MenuItemImage that grows a bit when selected.">MyMenuItemImage</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>MenuItemImage</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_my_menu_item_image" kindref="compound" tooltip="Custom MenuItemImage that grows a bit when selected.">MyMenuItemImage</ref>*<sp/><ref refid="class_my_menu_item_image_1a72ec449555c4b514536a85f1b432d95c" kindref="member">create</ref>();</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_my_menu_item_image" kindref="compound" tooltip="Custom MenuItemImage that grows a bit when selected.">MyMenuItemImage</ref>*<sp/><ref refid="class_my_menu_item_image_1a72ec449555c4b514536a85f1b432d95c" kindref="member">create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*normalImage,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ccMenuCallback&amp;<sp/><ref refid="_game_list_8h_1a5911a49060cb775fd6a306bb797504bb" kindref="member">callback</ref>);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="class_my_menu_item_image" kindref="compound" tooltip="Custom MenuItemImage that grows a bit when selected.">MyMenuItemImage</ref>*<sp/><ref refid="class_my_menu_item_image_1a72ec449555c4b514536a85f1b432d95c" kindref="member">create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*normalImage,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*disabledImage,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>ccMenuCallback&amp;<sp/>callback);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="class_my_menu_item_image_1ab48e8ecdbca431e518bebbed846ddf1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_my_menu_item_image_1ab48e8ecdbca431e518bebbed846ddf1e" kindref="member">MyMenuItemImage</ref>(){}</highlight></codeline>
+<codeline lineno="38" refid="class_my_menu_item_image_1aa44719255783a10c961c8220a29de788" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="class_my_menu_item_image_1aa44719255783a10c961c8220a29de788" kindref="member">~MyMenuItemImage</ref>(){}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_menu_item_image_1afe0adf7ee40fbfd6443000f6ead06d6b" kindref="member" tooltip="This triggers when the MenuItem(Bounding Box) is touched/clicked This override just adds an enlarge e...">selected</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_menu_item_image_1abaf8a603722b33a093ecaa3d36df7c10" kindref="member" tooltip="This triggers when the MenuItem(Bounding Box) is untouched/unclicked This override returns the select...">unselected</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"></codeline>
+<codeline lineno="61" refid="class_my_scene" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_my_scene" kindref="compound" tooltip="Custom blank Scene that adds the passed layer to itself Because currently everything on each scene is...">MyScene</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Scene</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_my_scene_1a98a8eef56180480263e8c9298316f47c" kindref="member" tooltip="adds a layer to this scene then replaces the current scene with this one">runLayer</ref>(Layer*<sp/>pLayer);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>implement<sp/>the<sp/>&quot;static<sp/>create()&quot;<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_my_scene_1ab001d48470a8829da03a21a2941fef36" kindref="member">CREATE_FUNC</ref>(<ref refid="class_my_scene" kindref="compound" tooltip="Custom blank Scene that adds the passed layer to itself Because currently everything on each scene is...">MyScene</ref>);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__CustomCC__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomCC.h"/>
+  </compounddef>
+</doxygen>

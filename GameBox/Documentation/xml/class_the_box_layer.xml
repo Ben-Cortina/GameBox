@@ -1,0 +1,643 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_the_box_layer" kind="class" prot="public">
+    <compoundname>TheBoxLayer</compoundname>
+    <includes refid="_the_box_8h" local="no">TheBox.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_the_box_layer_1a04ea0a701a1b782a67962e1117c0b0a3" prot="private" static="no" mutable="no">
+        <type>Size</type>
+        <definition>Size TheBoxLayer::tileSize</definition>
+        <argsstring></argsstring>
+        <name>tileSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="88" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_the_box_layer_1a891a97e3461d8c676d72f0433194fc35" prot="private" static="no" mutable="no">
+        <type>Size</type>
+        <definition>Size TheBoxLayer::windowSize</definition>
+        <argsstring></argsstring>
+        <name>windowSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="89" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="89" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_the_box_layer_1ac0301e62cf6fc53ad5ecc880c0ddce5e" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
+        <definition>Coords TheBoxLayer::layerSize</definition>
+        <argsstring></argsstring>
+        <name>layerSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="90" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_the_box_layer_1ac76984df99d1661ef4caf472f2872deb" prot="private" static="no" mutable="no">
+        <type>Sprite *</type>
+        <definition>Sprite* TheBoxLayer::sTiles[THEBOX_MAX_HEIGHT *THEBOX_MAX_WIDTH]</definition>
+        <argsstring>[THEBOX_MAX_HEIGHT *THEBOX_MAX_WIDTH]</argsstring>
+        <name>sTiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="92" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="92" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_the_box_layer_1a7e95d565561e87bb383260517cebb31c" prot="private" static="no" mutable="no">
+        <type>Color3B</type>
+        <definition>Color3B TheBoxLayer::tileColor</definition>
+        <argsstring></argsstring>
+        <name>tileColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="93" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_the_box_layer_1a77eb482f9ecc6f5d2f318880b07fac98" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_player_data" kindref="compound">PlayerData</ref></type>
+        <definition>PlayerData TheBoxLayer::player</definition>
+        <argsstring></argsstring>
+        <name>player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="95" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_the_box_layer_1ac6d88241d6e565a53c39c3fc64c8298b" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
+        <definition>Coords TheBoxLayer::exitLoc</definition>
+        <argsstring></argsstring>
+        <name>exitLoc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="97" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_the_box_layer_1a954d018b72ce163b37dd839169981497" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TheBoxLayer::timeRemaining</definition>
+        <argsstring></argsstring>
+        <name>timeRemaining</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="99" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_the_box_layer_1aa5e625170457ea51b8d9436e97510d82" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float TheBoxLayer::timePerLevel</definition>
+        <argsstring></argsstring>
+        <name>timePerLevel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="100" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="100" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_the_box_layer_1a4f24914bded3d6dea1d35c170516a7fd" prot="private" static="no" mutable="no">
+        <type>LabelTTF *</type>
+        <definition>LabelTTF* TheBoxLayer::timeLabel</definition>
+        <argsstring></argsstring>
+        <name>timeLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="101" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int TheBoxLayer::isSnake</definition>
+        <argsstring></argsstring>
+        <name>isSnake</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="179" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="179" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="class_the_box_layer_1adaf4dd92d96c55ff37530115cc43b18c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::initTiles</definition>
+        <argsstring>()</argsstring>
+        <name>initTiles</name>
+        <briefdescription>
+<para>Creates, sizes, and adds all the sprites. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="105" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="48" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1ac18c492485d7040b63cfe4f537d2bed6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::initPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>initPlayer</name>
+        <briefdescription>
+<para>initializes the player </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="110" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="62" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1a6e903c30bce569bcb9998a00c048f4a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::nextLevel</definition>
+        <argsstring>()</argsstring>
+        <name>nextLevel</name>
+        <briefdescription>
+<para>This method sets up the next level of the game. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="115" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="105" bodyend="140"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1a01dc9031926317333bdd0efe536f64e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::restartGame</definition>
+        <argsstring>()</argsstring>
+        <name>restartGame</name>
+        <briefdescription>
+<para>Starts or Restarts the game. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="120" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="89" bodyend="103"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1a4a1f85b549b18426675fcc954223d9c2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::updateTiles</definition>
+        <argsstring>()</argsstring>
+        <name>updateTiles</name>
+        <briefdescription>
+<para>Updates the size and position of each Sprite. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="125" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="224" bodyend="245"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1ad95232efe89c9d70b5abb16584612645" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::checkConditions</definition>
+        <argsstring>()</argsstring>
+        <name>checkConditions</name>
+        <briefdescription>
+<para>Check the victory and defeat condition. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="130" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="216" bodyend="222"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1a54554ac300af2c55450602493401af37" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::changeExit</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>changeExit</name>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Changes the coordinates of the exit. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="135" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="175" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1abf3bdb7e6139f96545aeddb3179e3695" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::spawnTile</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>spawnTile</name>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Turns on a tile in a random location. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="140" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="160" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1a4aeedd00294db32074018a61fee9451e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::setLayerSize</definition>
+        <argsstring>(int x, int y)</argsstring>
+        <name>setLayerSize</name>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Updates the screenSize and tileSize then calls updateTiles. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="145" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="247" bodyend="259"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1ae90bb92b7c1ddbcc544833a75b8942e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::setPlayer</definition>
+        <argsstring>(Sprite *tile, bool set)</argsstring>
+        <name>setPlayer</name>
+        <param>
+          <type>Sprite *</type>
+          <declname>tile</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>set</declname>
+        </param>
+        <briefdescription>
+<para>Changes the appearence of the passed sprite to represent the players presence or lack there of. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tile</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the Sprite in question </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>set</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>if its the player or not </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="153" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="37" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1adcd0efa9f61e1a02f4c5ec112371ac7b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::updateBorder</definition>
+        <argsstring>()</argsstring>
+        <name>updateBorder</name>
+        <briefdescription>
+<para>Sets the outer tiles of the layerSize.X by layerSize.y box to black. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="158" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="261" bodyend="276"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1a1c0bba40d3ace73b51eb2db472ef9be0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool TheBoxLayer::checkPlayerCollision</definition>
+        <argsstring>(int dx, int dy)</argsstring>
+        <name>checkPlayerCollision</name>
+        <param>
+          <type>int</type>
+          <declname>dx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>dy</declname>
+        </param>
+        <briefdescription>
+<para>Checks if dx, dy from the player is on. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>x change from the player </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dy</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>y change from player </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if it is on </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="166" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="278" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1ab89dc38698f103a16bcbeedeb1bbf48f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::openMenu</definition>
+        <argsstring>()</argsstring>
+        <name>openMenu</name>
+        <briefdescription>
+<para>Opens the menu for the game. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="171" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="411" bodyend="460"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1a70c264c1a255c1e2773ed7c2bd0e3a2b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::startMenu</definition>
+        <argsstring>()</argsstring>
+        <name>startMenu</name>
+        <briefdescription>
+<para>Opens the initial menu for the game where the player decides what mode to play. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="176" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="357" bodyend="409"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_the_box_layer_1aa03bfd041ff7d3b64d305c76dcec2a7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TheBoxLayer::TheBoxLayer</definition>
+        <argsstring>()</argsstring>
+        <name>TheBoxLayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="183" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="19" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1a2a76eca9790faad7097e37d5822d5e3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::setSnake</definition>
+        <argsstring>(int snake)</argsstring>
+        <name>setSnake</name>
+        <param>
+          <type>int</type>
+          <declname>snake</declname>
+        </param>
+        <briefdescription>
+<para>Sets whether or not the game is in snake mode. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="189" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="341" bodyend="355"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1ac15f63f9808501a2aa7d725259068fd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>bool</type>
+        <definition>bool TheBoxLayer::init</definition>
+        <argsstring>()</argsstring>
+        <name>init</name>
+        <briefdescription>
+<para>Initialize everything needed for this Layer Once scheduleUpdate() has been called once, update will repeatedly. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>success </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="196" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="71" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1a26cd4adbaec048f0df01ddb085c2beb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::update</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>update</name>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>the update method, initially defined in Node, this is where the games time based actions are calculated. Once scheduleUpdate() has been called once, update will repeatedly. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time since update was last called </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="203" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="142" bodyend="157"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1af367b00c0d970f0c5e25a74ad28eb5cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::keyPressed</definition>
+        <argsstring>(int keyCode)</argsstring>
+        <name>keyPressed</name>
+        <param>
+          <type>int</type>
+          <declname>keyCode</declname>
+        </param>
+        <briefdescription>
+<para>This is a function to catch KeyPress events sent from KeyboardDispatcher. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>KeyCode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The keycode of the pressed key </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="210" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="283" bodyend="339"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1a2b2a79bf9a1dbb25a702a6a21623c658" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TheBoxLayer::CREATE_FUNC</definition>
+        <argsstring>(TheBoxLayer)</argsstring>
+        <name>CREATE_FUNC</name>
+        <param>
+          <type><ref refid="class_the_box_layer" kindref="compound">TheBoxLayer</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="241"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_the_box_layer_1a91e48a9efb07ed70fac3e1880934cf37" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::onSnake</definition>
+        <argsstring>(Object *pSender)</argsstring>
+        <name>onSnake</name>
+        <param>
+          <type>Object *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>This is a callback that will change the gamemode to Snake. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="215" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="479" bodyend="494"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1ae03788f405b053b85e230804d7a88904" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::offSnake</definition>
+        <argsstring>(Object *pSender)</argsstring>
+        <name>offSnake</name>
+        <param>
+          <type>Object *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>This is a callback that will change the gamemode to Normal. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="220" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="462" bodyend="477"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1a3e32611fa82942d00d5e561bc59251e9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void TheBoxLayer::startStandard</definition>
+        <argsstring>(Object *pSender)</argsstring>
+        <name>startStandard</name>
+        <param>
+          <type>Object *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>This is a callback that will change the gamemode to Standard. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="225"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1af670f77242c15a7de84d6658cddb7056" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::restoreHomeLayer</definition>
+        <argsstring>(Object *pSender)</argsstring>
+        <name>restoreHomeLayer</name>
+        <param>
+          <type>Object *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>Restores the Home Screen. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="230" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="496" bodyend="503"/>
+      </memberdef>
+      <memberdef kind="function" id="class_the_box_layer_1a3acdbe7193e4da946ba01f80daa951ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void TheBoxLayer::runThisGame</definition>
+        <argsstring>(Object *pSender)</argsstring>
+        <name>runThisGame</name>
+        <param>
+          <type>Object *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>This method creates a new <ref refid="class_my_scene" kindref="compound">MyScene</ref> and adds a <ref refid="class_the_box_layer" kindref="compound">TheBoxLayer</ref> to it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="235" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="507" bodyend="521"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This layer holds everythign needed for TheBox game Im not using any TMX feature because they dont allow me its features and my needs dont line up as well as I&apos;d like. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="86" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="85" bodyend="242"/>
+    <listofallmembers>
+      <member refid="class_the_box_layer_1a54554ac300af2c55450602493401af37" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>changeExit</name></member>
+      <member refid="class_the_box_layer_1ad95232efe89c9d70b5abb16584612645" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>checkConditions</name></member>
+      <member refid="class_the_box_layer_1a1c0bba40d3ace73b51eb2db472ef9be0" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>checkPlayerCollision</name></member>
+      <member refid="class_the_box_layer_1a2b2a79bf9a1dbb25a702a6a21623c658" prot="public" virt="non-virtual"><scope>TheBoxLayer</scope><name>CREATE_FUNC</name></member>
+      <member refid="class_the_box_layer_1ac6d88241d6e565a53c39c3fc64c8298b" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>exitLoc</name></member>
+      <member refid="class_the_box_layer_1ac15f63f9808501a2aa7d725259068fd1" prot="public" virt="virtual"><scope>TheBoxLayer</scope><name>init</name></member>
+      <member refid="class_the_box_layer_1ac18c492485d7040b63cfe4f537d2bed6" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>initPlayer</name></member>
+      <member refid="class_the_box_layer_1adaf4dd92d96c55ff37530115cc43b18c" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>initTiles</name></member>
+      <member refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" prot="protected" virt="non-virtual"><scope>TheBoxLayer</scope><name>isSnake</name></member>
+      <member refid="class_the_box_layer_1af367b00c0d970f0c5e25a74ad28eb5cf" prot="public" virt="non-virtual"><scope>TheBoxLayer</scope><name>keyPressed</name></member>
+      <member refid="class_the_box_layer_1ac0301e62cf6fc53ad5ecc880c0ddce5e" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>layerSize</name></member>
+      <member refid="class_the_box_layer_1a6e903c30bce569bcb9998a00c048f4a0" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>nextLevel</name></member>
+      <member refid="class_the_box_layer_1ae03788f405b053b85e230804d7a88904" prot="public" virt="non-virtual"><scope>TheBoxLayer</scope><name>offSnake</name></member>
+      <member refid="class_the_box_layer_1a91e48a9efb07ed70fac3e1880934cf37" prot="public" virt="non-virtual"><scope>TheBoxLayer</scope><name>onSnake</name></member>
+      <member refid="class_the_box_layer_1ab89dc38698f103a16bcbeedeb1bbf48f" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>openMenu</name></member>
+      <member refid="class_the_box_layer_1a77eb482f9ecc6f5d2f318880b07fac98" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>player</name></member>
+      <member refid="class_the_box_layer_1a01dc9031926317333bdd0efe536f64e0" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>restartGame</name></member>
+      <member refid="class_the_box_layer_1af670f77242c15a7de84d6658cddb7056" prot="public" virt="non-virtual"><scope>TheBoxLayer</scope><name>restoreHomeLayer</name></member>
+      <member refid="class_the_box_layer_1a3acdbe7193e4da946ba01f80daa951ad" prot="public" virt="non-virtual"><scope>TheBoxLayer</scope><name>runThisGame</name></member>
+      <member refid="class_the_box_layer_1a4aeedd00294db32074018a61fee9451e" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>setLayerSize</name></member>
+      <member refid="class_the_box_layer_1ae90bb92b7c1ddbcc544833a75b8942e8" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>setPlayer</name></member>
+      <member refid="class_the_box_layer_1a2a76eca9790faad7097e37d5822d5e3e" prot="public" virt="non-virtual"><scope>TheBoxLayer</scope><name>setSnake</name></member>
+      <member refid="class_the_box_layer_1abf3bdb7e6139f96545aeddb3179e3695" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>spawnTile</name></member>
+      <member refid="class_the_box_layer_1a70c264c1a255c1e2773ed7c2bd0e3a2b" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>startMenu</name></member>
+      <member refid="class_the_box_layer_1a3e32611fa82942d00d5e561bc59251e9" prot="public" virt="non-virtual"><scope>TheBoxLayer</scope><name>startStandard</name></member>
+      <member refid="class_the_box_layer_1ac76984df99d1661ef4caf472f2872deb" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>sTiles</name></member>
+      <member refid="class_the_box_layer_1aa03bfd041ff7d3b64d305c76dcec2a7a" prot="public" virt="non-virtual"><scope>TheBoxLayer</scope><name>TheBoxLayer</name></member>
+      <member refid="class_the_box_layer_1a7e95d565561e87bb383260517cebb31c" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>tileColor</name></member>
+      <member refid="class_the_box_layer_1a04ea0a701a1b782a67962e1117c0b0a3" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>tileSize</name></member>
+      <member refid="class_the_box_layer_1a4f24914bded3d6dea1d35c170516a7fd" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>timeLabel</name></member>
+      <member refid="class_the_box_layer_1aa5e625170457ea51b8d9436e97510d82" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>timePerLevel</name></member>
+      <member refid="class_the_box_layer_1a954d018b72ce163b37dd839169981497" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>timeRemaining</name></member>
+      <member refid="class_the_box_layer_1a26cd4adbaec048f0df01ddb085c2beb7" prot="public" virt="non-virtual"><scope>TheBoxLayer</scope><name>update</name></member>
+      <member refid="class_the_box_layer_1adcd0efa9f61e1a02f4c5ec112371ac7b" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>updateBorder</name></member>
+      <member refid="class_the_box_layer_1a4a1f85b549b18426675fcc954223d9c2" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>updateTiles</name></member>
+      <member refid="class_the_box_layer_1a891a97e3461d8c676d72f0433194fc35" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>windowSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

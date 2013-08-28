@@ -1,0 +1,249 @@
+\hypertarget{class_player_sprite}{\section{\-Player\-Sprite \-Class \-Reference}
+\label{class_player_sprite}\index{\-Player\-Sprite@{\-Player\-Sprite}}
+}
+
+
+{\ttfamily \#include $<$\-Player\-Sprite.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_player_sprite_a355b762b077d780021af012027c1aff1}{\-Player\-Sprite} ()
+\item 
+virtual bool \hyperlink{class_player_sprite_a44a399fb158ef7a3637d0780f629a035}{init\-With\-File} (const char $\ast$psz\-Filename, \-Layer $\ast$caller)
+\item 
+float \hyperlink{class_player_sprite_aad883076d38aa90cb76fb85e5d84b42b}{get\-Weight} ()
+\item 
+void \hyperlink{class_player_sprite_a421ad1ab42de6fad573430640d05b5ea}{set\-Weight} (float weight)
+\item 
+float \hyperlink{class_player_sprite_ae322a0adbdbc74ddca22e7deb1db9f46}{get\-Max\-Speed} ()
+\item 
+void \hyperlink{class_player_sprite_a5b6dd058c35ba9bd422c0721f00f5b89}{set\-Max\-Speed} (float max\-Speed)
+\item 
+\hyperlink{struct_vector}{\-Vector} \hyperlink{class_player_sprite_a3376b1419374cbdbb7b1bf1605bc8eb0}{get\-Velocity} ()
+\item 
+void \hyperlink{class_player_sprite_a3c28e6d11a08724aef010bf9bf09a5a4}{update\-Velocity} ()
+\item 
+\hyperlink{struct_vector}{\-Vector} \hyperlink{class_player_sprite_a261319de832d01b1e64601887cbf2a2c}{get\-Force} ()
+\item 
+void \hyperlink{class_player_sprite_a376df965770e619cee7c02f56355c8cb}{set\-Force} (\hyperlink{struct_vector}{\-Vector} force)
+\item 
+void \hyperlink{class_player_sprite_a856c0c8d593bbb855aa2a979286f8ea6}{set\-Force\-X} (float x)
+\item 
+void \hyperlink{class_player_sprite_a5e8593fec3114f426b4346bbf8a12379}{set\-Force\-Y} (float y)
+\item 
+void \hyperlink{class_player_sprite_ad5eede6c47652babec88d0c056d50888}{apply\-Force} (float x, float y, float dt)
+\begin{DoxyCompactList}\small\item\em \-Updates player velocity based on the applied force and duration \-This would be what \-I would used if \-I were to incorporate friction and momentum. \-I will likely not use it here, in its place \-I will just set\-Velocity. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_sprite_a4ac7a2771c849ab2ca889ab33d9d4aa9}{update} (float dt)
+\begin{DoxyCompactList}\small\item\em \-Updates the position of the \-Sprite based on dt and its current velocity \-Not \-Used. \end{DoxyCompactList}\item 
+void \hyperlink{class_player_sprite_a6c4cb72fa72b21098eb3241e8b0795e6}{update} ()
+\begin{DoxyCompactList}\small\item\em \-Updates the position of the \-Sprite based on the currenttime -\/ lastupdate \-Ths allows me to call update whenever a keychanges so the movement is calculated based on the time of the key event rather than the time of each update. \-Not \-Used. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_player_sprite}{\-Player\-Sprite} $\ast$ \hyperlink{class_player_sprite_aa3ed62f03be9c93af9f531be066384d1}{create} (const char $\ast$psz\-File\-Name, \-Layer $\ast$caller)
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_player_sprite_ae2d7c734bea5fd1f590ac33854a2ceed}{\-\_\-weight}
+\item 
+\hyperlink{struct_vector}{\-Vector} \hyperlink{class_player_sprite_afe7c3cf489f98746ee798ea4e6d18f0d}{\-\_\-vel}
+\item 
+\hyperlink{struct_vector}{\-Vector} \hyperlink{class_player_sprite_a757b1bae929885dad7d92c53bcd2e9b1}{\-\_\-force}
+\item 
+float \hyperlink{class_player_sprite_a5b5a402a9273c0367e51f6e47256d4f3}{\-\_\-max\-Speed}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_player_sprite_a355b762b077d780021af012027c1aff1}{\index{\-Player\-Sprite@{\-Player\-Sprite}!\-Player\-Sprite@{\-Player\-Sprite}}
+\index{\-Player\-Sprite@{\-Player\-Sprite}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{\-Player\-Sprite}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Player\-Sprite\-::\-Player\-Sprite} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_sprite_a355b762b077d780021af012027c1aff1}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_player_sprite_ad5eede6c47652babec88d0c056d50888}{\index{\-Player\-Sprite@{\-Player\-Sprite}!apply\-Force@{apply\-Force}}
+\index{apply\-Force@{apply\-Force}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{apply\-Force}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Player\-Sprite\-::apply\-Force} (
+\begin{DoxyParamCaption}
+\item[{float}]{x, }
+\item[{float}]{y, }
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)}}\label{class_player_sprite_ad5eede6c47652babec88d0c056d50888}
+
+
+\-Updates player velocity based on the applied force and duration \-This would be what \-I would used if \-I were to incorporate friction and momentum. \-I will likely not use it here, in its place \-I will just set\-Velocity. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em x} & \-The \-X value of the force \\
+\hline
+{\em y} & \-The \-Y value of the force \\
+\hline
+{\em dt} & \-The duration the force was applied for \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_sprite_aa3ed62f03be9c93af9f531be066384d1}{\index{\-Player\-Sprite@{\-Player\-Sprite}!create@{create}}
+\index{create@{create}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{create}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Player\-Sprite} $\ast$ {\bf \-Player\-Sprite\-::create} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{psz\-File\-Name, }
+\item[{\-Layer $\ast$}]{caller}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_player_sprite_aa3ed62f03be9c93af9f531be066384d1}
+\-Creates a sprite with an image filename.
+
+\-After creation, the rect of sprite will be the size of the image, and the offset will be (0,0).
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em psz\-File\-Name} & \-The string which indicates a path to image file, e.\-g., \char`\"{}scene1/monster.\-png\char`\"{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+\-A valid sprite object that is marked as autoreleased. 
+\end{DoxyReturn}
+\hypertarget{class_player_sprite_a261319de832d01b1e64601887cbf2a2c}{\index{\-Player\-Sprite@{\-Player\-Sprite}!get\-Force@{get\-Force}}
+\index{get\-Force@{get\-Force}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{get\-Force}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vector} {\bf \-Player\-Sprite\-::get\-Force} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_player_sprite_a261319de832d01b1e64601887cbf2a2c}
+\-Get/\-Set methods for force. \hypertarget{class_player_sprite_ae322a0adbdbc74ddca22e7deb1db9f46}{\index{\-Player\-Sprite@{\-Player\-Sprite}!get\-Max\-Speed@{get\-Max\-Speed}}
+\index{get\-Max\-Speed@{get\-Max\-Speed}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{get\-Max\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Player\-Sprite\-::get\-Max\-Speed} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_player_sprite_ae322a0adbdbc74ddca22e7deb1db9f46}
+\-Get/\-Set methods for maxspeed \-Not used. \hypertarget{class_player_sprite_a3376b1419374cbdbb7b1bf1605bc8eb0}{\index{\-Player\-Sprite@{\-Player\-Sprite}!get\-Velocity@{get\-Velocity}}
+\index{get\-Velocity@{get\-Velocity}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{get\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vector} {\bf \-Player\-Sprite\-::get\-Velocity} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_player_sprite_a3376b1419374cbdbb7b1bf1605bc8eb0}
+\-Get/\-Set methods for velocity. \hypertarget{class_player_sprite_aad883076d38aa90cb76fb85e5d84b42b}{\index{\-Player\-Sprite@{\-Player\-Sprite}!get\-Weight@{get\-Weight}}
+\index{get\-Weight@{get\-Weight}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{get\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Player\-Sprite\-::get\-Weight} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_player_sprite_aad883076d38aa90cb76fb85e5d84b42b}
+\-Get/\-Set methods for weight \-Not used. \hypertarget{class_player_sprite_a44a399fb158ef7a3637d0780f629a035}{\index{\-Player\-Sprite@{\-Player\-Sprite}!init\-With\-File@{init\-With\-File}}
+\index{init\-With\-File@{init\-With\-File}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{init\-With\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Player\-Sprite\-::init\-With\-File} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{psz\-Filename, }
+\item[{\-Layer $\ast$}]{caller}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}virtual\mbox{]}}}}\label{class_player_sprite_a44a399fb158ef7a3637d0780f629a035}
+\-Initializes a sprite with an image filename.
+
+\-This method will find psz\-Filename from local file system, load its content to \-Texture2\-D, then use \-Texture2\-D to create a sprite. \-After initialization, the rect used will be the size of the image. \-The offset will be (0,0).
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em psz\-Filename} & \-The path to an image file in local file system \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{\-Returns}
+true if the sprite is initialized properly, false otherwise. 
+\end{DoxyReturn}
+\hypertarget{class_player_sprite_a376df965770e619cee7c02f56355c8cb}{\index{\-Player\-Sprite@{\-Player\-Sprite}!set\-Force@{set\-Force}}
+\index{set\-Force@{set\-Force}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{set\-Force}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Player\-Sprite\-::set\-Force} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Vector}}]{force}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_player_sprite_a376df965770e619cee7c02f56355c8cb}
+\hypertarget{class_player_sprite_a856c0c8d593bbb855aa2a979286f8ea6}{\index{\-Player\-Sprite@{\-Player\-Sprite}!set\-Force\-X@{set\-Force\-X}}
+\index{set\-Force\-X@{set\-Force\-X}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{set\-Force\-X}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Player\-Sprite\-::set\-Force\-X} (
+\begin{DoxyParamCaption}
+\item[{float}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_player_sprite_a856c0c8d593bbb855aa2a979286f8ea6}
+\hypertarget{class_player_sprite_a5e8593fec3114f426b4346bbf8a12379}{\index{\-Player\-Sprite@{\-Player\-Sprite}!set\-Force\-Y@{set\-Force\-Y}}
+\index{set\-Force\-Y@{set\-Force\-Y}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{set\-Force\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Player\-Sprite\-::set\-Force\-Y} (
+\begin{DoxyParamCaption}
+\item[{float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_player_sprite_a5e8593fec3114f426b4346bbf8a12379}
+\hypertarget{class_player_sprite_a5b6dd058c35ba9bd422c0721f00f5b89}{\index{\-Player\-Sprite@{\-Player\-Sprite}!set\-Max\-Speed@{set\-Max\-Speed}}
+\index{set\-Max\-Speed@{set\-Max\-Speed}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{set\-Max\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Player\-Sprite\-::set\-Max\-Speed} (
+\begin{DoxyParamCaption}
+\item[{float}]{max\-Speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_player_sprite_a5b6dd058c35ba9bd422c0721f00f5b89}
+\hypertarget{class_player_sprite_a421ad1ab42de6fad573430640d05b5ea}{\index{\-Player\-Sprite@{\-Player\-Sprite}!set\-Weight@{set\-Weight}}
+\index{set\-Weight@{set\-Weight}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{set\-Weight}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Player\-Sprite\-::set\-Weight} (
+\begin{DoxyParamCaption}
+\item[{float}]{weight}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_player_sprite_a421ad1ab42de6fad573430640d05b5ea}
+\hypertarget{class_player_sprite_a4ac7a2771c849ab2ca889ab33d9d4aa9}{\index{\-Player\-Sprite@{\-Player\-Sprite}!update@{update}}
+\index{update@{update}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Player\-Sprite\-::update} (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)}}\label{class_player_sprite_a4ac7a2771c849ab2ca889ab33d9d4aa9}
+
+
+\-Updates the position of the \-Sprite based on dt and its current velocity \-Not \-Used. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em dt} & \-The time over which the velocity has been applied \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_player_sprite_a6c4cb72fa72b21098eb3241e8b0795e6}{\index{\-Player\-Sprite@{\-Player\-Sprite}!update@{update}}
+\index{update@{update}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Player\-Sprite\-::update} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_sprite_a6c4cb72fa72b21098eb3241e8b0795e6}
+
+
+\-Updates the position of the \-Sprite based on the currenttime -\/ lastupdate \-Ths allows me to call update whenever a keychanges so the movement is calculated based on the time of the key event rather than the time of each update. \-Not \-Used. 
+
+\hypertarget{class_player_sprite_a3c28e6d11a08724aef010bf9bf09a5a4}{\index{\-Player\-Sprite@{\-Player\-Sprite}!update\-Velocity@{update\-Velocity}}
+\index{update\-Velocity@{update\-Velocity}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{update\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Player\-Sprite\-::update\-Velocity} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_player_sprite_a3c28e6d11a08724aef010bf9bf09a5a4}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_player_sprite_a757b1bae929885dad7d92c53bcd2e9b1}{\index{\-Player\-Sprite@{\-Player\-Sprite}!\-\_\-force@{\-\_\-force}}
+\index{\-\_\-force@{\-\_\-force}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{\-\_\-force}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vector} {\bf \-Player\-Sprite\-::\-\_\-force}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_player_sprite_a757b1bae929885dad7d92c53bcd2e9b1}
+\hypertarget{class_player_sprite_a5b5a402a9273c0367e51f6e47256d4f3}{\index{\-Player\-Sprite@{\-Player\-Sprite}!\-\_\-max\-Speed@{\-\_\-max\-Speed}}
+\index{\-\_\-max\-Speed@{\-\_\-max\-Speed}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{\-\_\-max\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Player\-Sprite\-::\-\_\-max\-Speed}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_player_sprite_a5b5a402a9273c0367e51f6e47256d4f3}
+\hypertarget{class_player_sprite_afe7c3cf489f98746ee798ea4e6d18f0d}{\index{\-Player\-Sprite@{\-Player\-Sprite}!\-\_\-vel@{\-\_\-vel}}
+\index{\-\_\-vel@{\-\_\-vel}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{\-\_\-vel}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vector} {\bf \-Player\-Sprite\-::\-\_\-vel}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_player_sprite_afe7c3cf489f98746ee798ea4e6d18f0d}
+\hypertarget{class_player_sprite_ae2d7c734bea5fd1f590ac33854a2ceed}{\index{\-Player\-Sprite@{\-Player\-Sprite}!\-\_\-weight@{\-\_\-weight}}
+\index{\-\_\-weight@{\-\_\-weight}!PlayerSprite@{\-Player\-Sprite}}
+\subsubsection[{\-\_\-weight}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-Player\-Sprite\-::\-\_\-weight}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_player_sprite_ae2d7c734bea5fd1f590ac33854a2ceed}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-The\-Box/\hyperlink{_player_sprite_8h}{\-Player\-Sprite.\-h}\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-The\-Box/\hyperlink{_player_sprite_8cpp}{\-Player\-Sprite.\-cpp}\end{DoxyCompactItemize}

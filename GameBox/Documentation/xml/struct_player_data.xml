@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="struct_player_data" kind="struct" prot="public">
+    <compoundname>PlayerData</compoundname>
+    <includes refid="_the_box_8h" local="no">TheBox.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_player_data_1a6646f159881b83da159eb7410fad7fd5" prot="public" static="no" mutable="no">
+        <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
+        <definition>Coords PlayerData::loc</definition>
+        <argsstring></argsstring>
+        <name>loc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="75" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_player_data_1ad1fb36f8e37fa1ee21fece6f6634a3be" prot="public" static="no" mutable="no">
+        <type>Color3B</type>
+        <definition>Color3B PlayerData::color</definition>
+        <argsstring></argsstring>
+        <name>color</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="76" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="76" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A struct to hold data prevelent to the player. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="13">
+        <label>PlayerData</label>
+        <link refid="struct_player_data"/>
+        <childnode refid="14" relation="usage">
+          <edgelabel>loc</edgelabel>
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Coords</label>
+        <link refid="struct_coords"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="74" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="73" bodyend="77"/>
+    <listofallmembers>
+      <member refid="struct_player_data_1ad1fb36f8e37fa1ee21fece6f6634a3be" prot="public" virt="non-virtual"><scope>PlayerData</scope><name>color</name></member>
+      <member refid="struct_player_data_1a6646f159881b83da159eb7410fad7fd5" prot="public" virt="non-virtual"><scope>PlayerData</scope><name>loc</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

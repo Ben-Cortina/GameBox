@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="dir_171879561e09838fb62df9b29b114fce" kind="dir">
+    <compoundname>GameBox/GameBox/Classes/Helpers/</compoundname>
+    <innerfile refid="_custom_c_c_8cpp">CustomCC.cpp</innerfile>
+    <innerfile refid="_custom_c_c_8h">CustomCC.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/"/>
+  </compounddef>
+</doxygen>

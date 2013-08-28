@@ -1,10 +1,8 @@
-//
-//  CustomCC.cpp
-//  GameBox
-//
-//  Created by Blaeeap on 7/25/13.
-//
-//
+/**
+ *  @file   CustomCC.cpp
+ *  @author Ben Cortina
+ *  @date   7/25/13.
+ */
 
 #include "CustomCC.h"
 

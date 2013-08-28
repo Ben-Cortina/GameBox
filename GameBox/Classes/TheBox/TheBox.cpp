@@ -1,12 +1,11 @@
-//
-//  TheBox.cpp
-//  GameBox
-//
-//  Created by Ben Cortina on 7/25/13.
-//
-//
+/**
+ *  @file   TheBox.cpp
+ *  @author Ben Cortina
+ *  @date   7/25/13.
+ */
 
 #include "TheBox.h"
+#include "HomeScene.h"
 //debugging
 #include <iostream>
 //I need these for the timer
@@ -19,10 +18,10 @@ int tI(int x, int y) {return y * THEBOX_MAX_WIDTH + x;}
 
 TheBoxLayer::TheBoxLayer()
 {
-    player = Coords(0,0);
-    playerColor = Color3B(100, 200, 125);
+    player.loc = Coords(0,0);
+    player.color = Color3B(100, 200, 125);
     
-    exit = Coords(0,0);
+    exitLoc = Coords(0,0);
     
     timePerLevel = 5;
     
@@ -31,13 +30,18 @@ TheBoxLayer::TheBoxLayer()
     
     tileColor = Color3B(0,0,0);
     initTiles();
-    setLayerSize(9, 9);
+    setLayerSize(11, 11);
+    isSnake = 3;
 }
 
 void TheBoxLayer::setPlayer(Sprite* tile, bool set)
 {
-    tile->setVisible( set );
-    tile->setColor( (set)? playerColor : tileColor );
+    if(isSnake == 0)
+        tile->setVisible( set );
+    else
+        tile->setVisible(true);
+    
+    tile->setColor( (set)? player.color : tileColor );
     
 }
 
@@ -57,9 +61,9 @@ void TheBoxLayer::initTiles()
 
 void TheBoxLayer::initPlayer()
 {
-    player.x = (layerSize.x + 0.5) / 2;
-    player.y = (layerSize.y + 0.5) / 2;
-    setPlayer(sTiles[tI(player.x, player.y)], true);
+    player.loc.x = (layerSize.x + 0.5) / 2;
+    player.loc.y = (layerSize.y + 0.5) / 2;
+    setPlayer(sTiles[tI(player.loc.x, player.loc.y)], true);
     
 }
 
@@ -76,32 +80,38 @@ bool TheBoxLayer::init()
     timeLabel->setColor(Color3B(0,0,0));
     
     addChild(timeLabel);
-    
-    nextLevel();
 
-    //turn off touch
-    setTouchEnabled(true);
-    setKeyboardEnabled(true);
+    startMenu();
     
     return true;
 }
 
-void TheBoxLayer::nextLevel()
+void TheBoxLayer::restartGame()
 {
     //this will reset my timers
     unscheduleAllSelectors();
     
-    //this will start the constant calls to update
-    scheduleUpdate();
+    //reset size
+    setLayerSize(9, 9);
     
-    // using schedule allows me to have cocos2d call a function exery X seconds
-    this->schedule( schedule_selector(TheBoxLayer::spawnTile), TIME_PER_SPAWN );
-    this->schedule( schedule_selector(TheBoxLayer::changeExit), 1.5+((float)layerSize.y+2.0)/20.0 );
+    setTouchEnabled(true);
+    setKeyboardEnabled(true);
     
+    //reset game
+    nextLevel();
+    
+}
+
+void TheBoxLayer::nextLevel()
+{
     std::cout << 2+((float)layerSize.y+2.0)/20.0 << std::endl;
+    //this will reset my timers
+    unscheduleAllSelectors();
     
     //turn off player
-    setPlayer(sTiles[tI(player.x, player.y)], false);
+    setPlayer(sTiles[tI(player.loc.x, player.loc.y)], false);
+    if (isSnake == 1) //we'll need to manually turn off the old player if its snakemode
+        sTiles[tI(player.loc.x, player.loc.y)]->setVisible(false);
     
     //increase time allowed per level
     timePerLevel += TIME_INC_PER_LEVEL;
@@ -109,22 +119,38 @@ void TheBoxLayer::nextLevel()
     //reset the timer
     timeRemaining = timePerLevel;
     
-    //increase board size
+    //increase board size and clear tiles
     setLayerSize(layerSize.x+2, layerSize.y+2);
     
-    //get a new exit
-    changeExit(0);
+    //get a new exitLoc
+    changeExit(-1);
     
     //turn on player
-    player.x = (layerSize.x + 0.5) / 2;
-    player.y = (layerSize.y + 0.5) / 2;
-    setPlayer(sTiles[tI(player.x, player.y)], true);
+    player.loc.x = (layerSize.x + 0.5) / 2;
+    player.loc.y = (layerSize.y + 0.5) / 2;
+    setPlayer(sTiles[tI(player.loc.x, player.loc.y)], true);
+    
+    //this will start the constant calls to update
+    scheduleUpdate();
+    
+    // using schedule allows me to have cocos2d call a function exery X seconds
+    if (isSnake == 0)
+        this->schedule( schedule_selector(TheBoxLayer::spawnTile), TIME_PER_SPAWN );
+    this->schedule( schedule_selector(TheBoxLayer::changeExit), 1.5+((float)layerSize.y+2.0)/20.0 );
 }
 
 void TheBoxLayer::update(float dt)
 {
-    //Update timer
+    //Update time remaining
     timeRemaining = timeRemaining - dt;
+    
+    //out of time
+    if (timeRemaining <= 0)
+    {
+        timeRemaining = 0;
+        startMenu();
+        isSnake = 3;
+    }
     std::stringstream ss;
     ss << std::fixed << std::setprecision(2) << timeRemaining;
     timeLabel->setString((ss.str()).c_str());
@@ -133,6 +159,7 @@ void TheBoxLayer::update(float dt)
 
 void TheBoxLayer::spawnTile(float dt)
 {
+    std::cout << "tile " << dt << std::endl;
     //choose a random tile that is not on
     Coords tile;
     do {
@@ -148,47 +175,48 @@ void TheBoxLayer::spawnTile(float dt)
 void TheBoxLayer::changeExit(float dt)
 {
     
-    //choose the next exit
+    //choose the next exitLoc
     const int tile = (rand() % (int)(layerSize.x - 2)) + 1;
     const int side = rand() % 4;
     
-    //close the old exit
-    sTiles[tI(exit.x, exit.y)]->setVisible(true);
+    //close the old exitLoc if its not a new level
+    if (dt !=-1)
+        sTiles[tI(exitLoc.x, exitLoc.y)]->setVisible(true);
     
-    //choose the new exit
+    //choose the new exitLoc
     switch (side) {
         case 0: // top
-            exit.x = tile;
-            exit.y = 0;
+            exitLoc.x = tile;
+            exitLoc.y = 0;
             break;
             
         case 1: // left
-            exit.x = 0;
-            exit.y = tile;
+            exitLoc.x = 0;
+            exitLoc.y = tile;
             break;
             
         case 2: // bot
-            exit.x = tile;
-            exit.y = layerSize.y - 1;
+            exitLoc.x = tile;
+            exitLoc.y = layerSize.y - 1;
             break;
             
         case 3: // right
-            exit.x = layerSize.x - 1;
-            exit.y = tile;
+            exitLoc.x = layerSize.x - 1;
+            exitLoc.y = tile;
             break;
             
         default:
             break;
     }
     
-    //open the next exit
-    sTiles[tI(exit.x, exit.y)]->setVisible(false);
+    //open the next exitLoc
+    sTiles[tI(exitLoc.x, exitLoc.y)]->setVisible(false);
 }
 
 void TheBoxLayer::checkConditions()
 {
-    //check to see if the player has made it into the exit
-    if (player == exit)
+    //check to see if the player has made it into the exitLoc
+    if (player.loc== exitLoc)
         nextLevel();
     
 }
@@ -249,21 +277,20 @@ void TheBoxLayer::updateBorder()
 
 bool TheBoxLayer::checkPlayerCollision(int dx, int dy)
 {
-    return (sTiles[tI(player.x + dx, player.y + dy)]->isVisible());
+    return (sTiles[tI(player.loc.x + dx, player.loc.y + dy)]->isVisible());
 }
 
 void TheBoxLayer::keyPressed(int keyCode)
 {
-    
     //the change as a result of the keypress
     int x = 0;
     int y = 0;
     
     switch(keyCode)
     {
-      // Exit 
+      // exitLoc 
       case 53: //Esc
-        //returnHome();
+            openMenu();
         break;
 
       // Player Up
@@ -298,29 +325,198 @@ void TheBoxLayer::keyPressed(int keyCode)
     if(!checkPlayerCollision(x, y))
     {
         //turn off old player tile
-        setPlayer(sTiles[tI(player.x, player.y)], false);
+        setPlayer(sTiles[tI(player.loc.x, player.loc.y)], false);
         
         //update player position
-        player += Coords(x,y);
+        player.loc+= Coords(x,y);
         
         //turn on new player tile
-        setPlayer(sTiles[tI(player.x, player.y)], true);
+        setPlayer(sTiles[tI(player.loc.x, player.loc.y)], true);
         
         //Check for Victory or defeat
         checkConditions();
     }
 }
 
+void TheBoxLayer::setSnake(int b)
+{
+    //if there was a change we will restart with snake change
+    if(isSnake != b)
+    {
+        isSnake = b;
+        restartGame();
+    }
+    
+    std::cout << "snakey" << std::endl;
+    //resume game
+    Director::getInstance()->resume();
+    setTouchEnabled(true);
+    setKeyboardEnabled(true);
+}
+
+void TheBoxLayer::startMenu()
+{
+    //pause game and input
+    Director::getInstance()->pause();
+    setTouchEnabled(false);
+    setKeyboardEnabled(false);
+    
+    OverLayer* overlay = new OverLayer();
+    
+    //create menu
+    Menu* pMenu = Menu::create();
+    
+    //create menu items
+    const Point origin = Director::getInstance()->getVisibleOrigin();
+
+    MenuItemLabel* title;
+    MenuItemLabel* snake;
+    MenuItemLabel* standard;
+    MenuItemLabel* mainMenu;
+    
+    //set up Main menu item
+    mainMenu = MenuItemLabel::create(LabelTTF::create("Return to Main Menu", "Arial", 20),
+                                  TheBoxLayer::restoreHomeLayer);
+    mainMenu->setPosition(0,0);
+    pMenu->addChild(mainMenu);
+    
+    //set up Snake Mode item
+    snake = MenuItemLabel::create(LabelTTF::create("Snake Mode", "Arial", 20),
+                                  TheBoxLayer::onSnake);
+    snake->setPosition(0,mainMenu->getPosition().y + mainMenu->getContentSize().height+10);
+    pMenu->addChild(snake);
+    
+    //set up Standard Mode item
+    standard = MenuItemLabel::create(LabelTTF::create("Standard Mode", "Arial", 20),
+                                     TheBoxLayer::offSnake);
+    standard->setPosition(0,snake->getPosition().y + snake->getContentSize().height+10);
+    pMenu->addChild(standard);
+    
+    //set up Title item
+    title = MenuItemLabel::create(LabelTTF::create("Start Menu", "Arial", 30));
+    title->setPosition(0,standard->getPosition().y + standard->getContentSize().height+20);
+    pMenu->addChild(title);
+    
+    //center the menu
+    float heightofitems = standard->getBoundingBox().getMaxY() - mainMenu->getBoundingBox().getMinY();
+    pMenu->setPosition(origin.x + windowSize.width/2,
+                       origin.y + windowSize.height/2 - heightofitems/2);
+    
+    overlay->initWithColorMenu( Color4B(0,0,0,150), pMenu);
+    addChild(overlay);
+    
+    
+}
+
+void TheBoxLayer::openMenu()
+{
+    //pause game and input
+    Director::getInstance()->pause();
+    setTouchEnabled(false);
+    setKeyboardEnabled(false);
+    
+    OverLayer* overlay = new OverLayer();
+    
+    //create menu
+    Menu* pMenu = Menu::create();
+    
+    //create menu items
+    const Point origin = Director::getInstance()->getVisibleOrigin();
+    std::string toggleSnake;
+    MenuItemLabel* title;
+    MenuItemLabel* snake;
+    MenuItemLabel* mainMenu;
+    
+    //set up Main menu item
+    mainMenu = MenuItemLabel::create(LabelTTF::create("Return to Main Menu", "Arial", 20),
+                                     TheBoxLayer::restoreHomeLayer);
+    mainMenu->setPosition(0,0);
+    pMenu->addChild(mainMenu);
+    
+    if (isSnake == 1)
+        snake = MenuItemLabel::create(LabelTTF::create("Turn Snake Mode OFF", "Arial", 20),
+                                                         TheBoxLayer::offSnake);
+    else
+        snake = MenuItemLabel::create(LabelTTF::create("Turn Snake Mode ON", "Arial", 20),
+                                         TheBoxLayer::onSnake);
+        
+    snake->setPosition(0, mainMenu->getPosition().y + mainMenu->getContentSize().height+10);
+    pMenu->addChild(snake);
+    
+    //set up Title item
+    title = MenuItemLabel::create(LabelTTF::create("Pause Menu", "Arial", 30));
+    title->setPosition(0,snake->getPosition().y + snake->getContentSize().height+20);
+    pMenu->addChild(title);
+    
+    //center the menu
+    float heightofitems = snake->getBoundingBox().getMaxY() - mainMenu->getBoundingBox().getMinY();
+    pMenu->setPosition(origin.x + windowSize.width/2,
+                       origin.y + windowSize.height/2 - heightofitems/2);
+    
+    overlay->initWithColorMenu( Color4B(0,0,0,150), pMenu);
+    addChild(overlay);
+    
+    
+}
+
+void TheBoxLayer::offSnake(Object* pSender)
+{
+    
+    //trace back to get this
+    OverLayer* overlay = (OverLayer*)((Node*)((Node*)pSender )->getParent() //MenuItemLabel->getParent()
+                                      )->getParent(); //Menu->getParent()
+    
+    TheBoxLayer* thisLayer =(TheBoxLayer*)(overlay)->getParent();
+    
+    //kill overlay
+    thisLayer->removeChild(overlay);
+    
+    thisLayer->setSnake(false);
+    
+    
+}
+
+void TheBoxLayer::onSnake(Object* pSender)
+{
+
+    //trace back to get this
+    OverLayer* overlay = (OverLayer*)((Node*)((Node*)pSender )->getParent() //MenuItemLabel->getParent()
+                                      )->getParent(); //Menu->getParent()
+
+    TheBoxLayer* thisLayer =(TheBoxLayer*)(overlay)->getParent();
+    
+    //kill overlay
+    thisLayer->removeChild(overlay);
+    
+    thisLayer->setSnake(true);
+    
+    
+}
+
+void TheBoxLayer::restoreHomeLayer(Object* pSender)
+{
+    HomeLayer* layer = HomeLayer::create();
+    
+    Director::getInstance()->replaceScene(layer->scene());
+    layer->release();
+    
+}
+
 
 //This will initialize and add the layer to the scene
 void TheBoxLayer::runThisGame(Object* pSender)
 {
+    
     //init
     MyScene* scene = new MyScene();
     TheBoxLayer* layer = new TheBoxLayer();
     layer->initWithColor(Color4B(255,255,255,255));
 
     scene->runLayer(layer);
+    
+    //release
+    scene->release();
+
 
 }
 

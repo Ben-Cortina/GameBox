@@ -1,0 +1,221 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_player_sprite_8cpp" kind="file">
+    <compoundname>PlayerSprite.cpp</compoundname>
+    <includes refid="_player_sprite_8h" local="yes">PlayerSprite.h</includes>
+    <includes refid="_the_box_8h" local="yes">TheBox.h</includes>
+    <incdepgraph>
+      <node id="77">
+        <label>PlayerSprite.h</label>
+        <link refid="_player_sprite_8h"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp</label>
+        <link refid="PlayerSprite.cpp"/>
+        <childnode refid="77" relation="include">
+        </childnode>
+        <childnode refid="79" relation="include">
+        </childnode>
+      </node>
+      <node id="81">
+        <label>OverLayer.h</label>
+        <link refid="_over_layer_8h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+      </node>
+      <node id="78">
+        <label>cocos2d.h</label>
+      </node>
+      <node id="80">
+        <label>../Helpers/CustomCC.h</label>
+        <link refid="_custom_c_c_8h"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+      <node id="79">
+        <label>TheBox.h</label>
+        <link refid="_the_box_8h"/>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_player_sprite_8cpp_1a02903a3a418cbb9675a4b928f6f62faf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>float</type>
+        <definition>float getTime</definition>
+        <argsstring>()</argsstring>
+        <name>getTime</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp" line="13" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp" bodystart="12" bodyend="28"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Player.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>GameBox</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Created<sp/>by<sp/>Ben<sp/>Cortina<sp/>on<sp/>8/6/13.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_player_sprite_8h" kindref="compound">PlayerSprite.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_the_box_8h" kindref="compound">TheBox.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="_player_sprite_8cpp_1a02903a3a418cbb9675a4b928f6f62faf" kindref="member">getTime</ref>()</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">timeval<sp/>now;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>time;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gettimeofday(&amp;now,<sp/>NULL)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CCLOG(</highlight><highlight class="stringliteral">&quot;error<sp/>in<sp/>gettimeofday&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/>=<sp/>(now.tv_sec)<sp/>+<sp/>(now.tv_usec)<sp/>/<sp/>1000000.0f;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>time<sp/>=<sp/>MAX(0,<sp/>time);</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>time;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="class_player_sprite_1a355b762b077d780021af012027c1aff1" kindref="member">PlayerSprite::PlayerSprite</ref>()</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>dtCalculated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gettimeofday(&amp;lastUpdate,<sp/>NULL)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CCLOG(</highlight><highlight class="stringliteral">&quot;error<sp/>in<sp/>gettimeofday&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lastUpdate.tv_sec<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lastUpdate.tv_usec<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1a5b5a402a9273c0367e51f6e47256d4f3" kindref="member">_maxSpeed</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref><sp/>=<sp/><ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref><sp/>=<sp/><ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><ref refid="class_player_sprite" kindref="compound">PlayerSprite</ref>*<sp/><ref refid="class_player_sprite_1aa3ed62f03be9c93af9f531be066384d1" kindref="member">PlayerSprite::create</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pszFileName,<sp/>Layer*<sp/>caller)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_sprite" kindref="compound">PlayerSprite</ref><sp/>*pobSprite<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a355b762b077d780021af012027c1aff1" kindref="member">PlayerSprite</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pobSprite<sp/>&amp;&amp;<sp/>pobSprite-&gt;<ref refid="class_player_sprite_1a44a399fb158ef7a3637d0780f629a035" kindref="member">initWithFile</ref>(pszFileName,<sp/>caller))</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pobSprite-&gt;autorelease();</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pobSprite;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>CC_SAFE_DELETE(pobSprite);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a44a399fb158ef7a3637d0780f629a035" kindref="member">PlayerSprite::initWithFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>*pszFilename,<sp/>Layer*<sp/>caller)</highlight></codeline>
+<codeline lineno="58"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>owner<sp/>=<sp/>caller;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>CCASSERT(pszFilename<sp/>!=<sp/>NULL,<sp/></highlight><highlight class="stringliteral">&quot;Invalid<sp/>filename<sp/>for<sp/>sprite&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>Texture2D<sp/>*pTexture<sp/>=<sp/>TextureCache::getInstance()-&gt;addImage(pszFilename);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pTexture)</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scheduleUpdate();</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Rect<sp/>rect<sp/>=<sp/>Rect::ZERO;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rect.size<sp/>=<sp/>pTexture-&gt;getContentSize();</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>initWithTexture(pTexture,<sp/>rect);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight><highlight class="comment">/*<sp/>Currently<sp/>Unused</highlight></codeline>
+<codeline lineno="75"><highlight class="comment">void<sp/>PlayerSprite::applyForce(float<sp/>x,<sp/>float<sp/>y,<sp/>float<sp/>dt)</highlight></codeline>
+<codeline lineno="76"><highlight class="comment">{</highlight></codeline>
+<codeline lineno="77"><highlight class="comment"><sp/><sp/><sp/><sp/>//V=F*t/m</highlight></codeline>
+<codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/>_vel.x<sp/>+=<sp/>x*dt/_weight;</highlight></codeline>
+<codeline lineno="79"><highlight class="comment"><sp/><sp/><sp/><sp/>_vel.y<sp/>+=<sp/>y*dt/_weight;</highlight></codeline>
+<codeline lineno="80"><highlight class="comment">}*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a3c28e6d11a08724aef010bf9bf09a5a4" kindref="member">PlayerSprite::updateVelocity</ref>()</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref><sp/>!=<sp/>0<sp/>||<sp/><ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref><sp/>!=0)</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>normal<sp/>=<sp/>MAX(abs(<ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref>),<sp/>abs(<ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref>));</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ny<sp/>=<sp/><ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref>/normal;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>nx<sp/>=<sp/><ref refid="class_player_sprite_1a757b1bae929885dad7d92c53bcd2e9b1" kindref="member">_force</ref>.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref>/normal;</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>direction<sp/>=<sp/>atanf(ny<sp/>/<sp/>nx);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(nx<sp/>&lt;<sp/>0)<sp/>direction<sp/>+=<sp/>M_PI;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref><sp/>=<sp/><ref refid="class_player_sprite_1a5b5a402a9273c0367e51f6e47256d4f3" kindref="member">_maxSpeed</ref><sp/>*<sp/>cosf(direction);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref><sp/>=<sp/><ref refid="class_player_sprite_1a5b5a402a9273c0367e51f6e47256d4f3" kindref="member">_maxSpeed</ref><sp/>*<sp/>sinf(direction);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//damn<sp/>floating<sp/>point<sp/>numbers<sp/>*grumble<sp/>grumble<sp/>grumble*</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(abs(<ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref>)<sp/>&lt;<sp/>0.00001)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(abs(<ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref>)<sp/>&lt;<sp/>0.00001)</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a6c4cb72fa72b21098eb3241e8b0795e6" kindref="member" tooltip="Updates the position of the Sprite based on the currenttime - lastupdate Ths allows me to call update...">PlayerSprite::update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>
+<codeline lineno="106"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gettimeofday(&amp;lastUpdate,<sp/>NULL)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CCLOG(</highlight><highlight class="stringliteral">&quot;error<sp/>in<sp/>gettimeofday&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lastUpdate.tv_sec<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>lastUpdate.tv_usec<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//adjust<sp/>for<sp/>how<sp/>much<sp/>has<sp/>already<sp/>been<sp/>calcualted</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>dt<sp/>-=<sp/>dtCalculated;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/>dtCalculated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>Point<sp/>currentPos<sp/>=<sp/>_position;</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/>Rect<sp/>bb<sp/>=<sp/>getBoundingBox();</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//TODO:<sp/>use<sp/>a<sp/>different<sp/>method<sp/>than<sp/>casting<sp/>to<sp/>TheBoxLayer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>((<ref refid="class_the_box_layer" kindref="compound" tooltip="This layer holds everythign needed for TheBox game Im not using any TMX feature because they dont all...">TheBoxLayer</ref>*)owner)-&gt;handlePlayerCollisions(currentPos,<sp/><ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>.<ref refid="struct_vector_1aca49165049a1e21ae47afcfc078819ed" kindref="member">x</ref>*dt,<sp/><ref refid="class_player_sprite_1afe7c3cf489f98746ee798ea4e6d18f0d" kindref="member">_vel</ref>.<ref refid="struct_vector_1a81be9102fca6d9beea3efef522c4c09d" kindref="member">y</ref>*dt,<sp/>bb.size.width/2);</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/>setPosition(currentPos);</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_player_sprite_1a6c4cb72fa72b21098eb3241e8b0795e6" kindref="member" tooltip="Updates the position of the Sprite based on the currenttime - lastupdate Ths allows me to call update...">PlayerSprite::update</ref>()</highlight></codeline>
+<codeline lineno="130"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//get<sp/>current<sp/>time</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>timeval<sp/>now;</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(gettimeofday(&amp;now,<sp/>NULL)<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CCLOG(</highlight><highlight class="stringliteral">&quot;error<sp/>in<sp/>gettimeofday&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcualte<sp/>the<sp/>time<sp/>difference<sp/>from<sp/>now<sp/>and<sp/>the<sp/>last<sp/>update</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt<sp/>=<sp/>(now.tv_sec<sp/>-<sp/>lastUpdate.tv_sec)<sp/>+<sp/>(now.tv_usec<sp/>-<sp/>lastUpdate.tv_usec)<sp/>/<sp/>1000000.0f;</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//incase<sp/>this<sp/>has<sp/>been<sp/>called<sp/>twice<sp/>before<sp/>one<sp/>update<sp/>has<sp/>occured</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dc<sp/>=<sp/>dt;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(dtCalculated<sp/>!=<sp/>0)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dc<sp/>=<sp/>dtCalculated<sp/>+<sp/>dt;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>dtCalculated<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_player_sprite_1a6c4cb72fa72b21098eb3241e8b0795e6" kindref="member" tooltip="Updates the position of the Sprite based on the currenttime - lastupdate Ths allows me to call update...">update</ref>(dt);</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//record<sp/>how<sp/>much<sp/>time<sp/>has<sp/>already<sp/>been<sp/>accounted<sp/>for</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>dtCalculated<sp/>=<sp/>dc;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_over_layer_8h" kind="file">
+    <compoundname>OverLayer.h</compoundname>
+    <includes refid="_custom_c_c_8h" local="yes">../Helpers/CustomCC.h</includes>
+    <includedby refid="_the_box_8h" local="yes">GameBox/GameBox/Classes/TheBox/TheBox.h</includedby>
+    <includedby refid="_over_layer_8cpp" local="yes">GameBox/GameBox/Classes/TheBox/OverLayer.cpp</includedby>
+    <incdepgraph>
+      <node id="64">
+        <label>GameBox/GameBox/Classes/TheBox/OverLayer.h</label>
+        <link refid="OverLayer.h"/>
+        <childnode refid="65" relation="include">
+        </childnode>
+      </node>
+      <node id="66">
+        <label>cocos2d.h</label>
+      </node>
+      <node id="65">
+        <label>../Helpers/CustomCC.h</label>
+        <link refid="_custom_c_c_8h"/>
+        <childnode refid="66" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="69">
+        <label>GameBox/GameBox/Classes/GameList.h</label>
+        <link refid="_game_list_8h"/>
+        <childnode refid="70" relation="include">
+        </childnode>
+      </node>
+      <node id="70">
+        <label>GameBox/GameBox/Classes/HomeScene.h</label>
+        <link refid="_home_scene_8h"/>
+        <childnode refid="71" relation="include">
+        </childnode>
+        <childnode refid="72" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="72">
+        <label>GameBox/GameBox/Classes/HomeScene.cpp</label>
+        <link refid="_home_scene_8cpp"/>
+      </node>
+      <node id="75">
+        <label>GameBox/GameBox/Classes/TheBox/OverLayer.cpp</label>
+        <link refid="_over_layer_8cpp"/>
+      </node>
+      <node id="74">
+        <label>GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp</label>
+        <link refid="_player_sprite_8cpp"/>
+      </node>
+      <node id="71">
+        <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
+        <link refid="_app_delegate_8cpp"/>
+      </node>
+      <node id="73">
+        <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
+        <link refid="_the_box_8cpp"/>
+      </node>
+      <node id="67">
+        <label>GameBox/GameBox/Classes/TheBox/OverLayer.h</label>
+        <link refid="OverLayer.h"/>
+        <childnode refid="68" relation="include">
+        </childnode>
+        <childnode refid="75" relation="include">
+        </childnode>
+      </node>
+      <node id="68">
+        <label>GameBox/GameBox/Classes/TheBox/TheBox.h</label>
+        <link refid="_the_box_8h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="74" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_over_layer" prot="public">OverLayer</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ben Cortina </para></simplesect>
+<simplesect kind="date"><para>8/28/13. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>__GameBox__OverLayer__</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__GameBox__OverLayer__</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../Helpers/CustomCC.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17" refid="class_over_layer" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_over_layer" kindref="compound" tooltip="Provides a transparent overlay with a menu on it. Releases on menu selection.">OverLayer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>LayerColor</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="21" refid="class_over_layer_1a95d3b5e4f3c462216aea540774eae0aa" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_over_layer_1a95d3b5e4f3c462216aea540774eae0aa" kindref="member">OverLayer</ref>(){};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_over_layer_1a7f9b5a23c40f204d5ba47166b9d78f6e" kindref="member" tooltip="Initializes the layer with a menu and background color.">initWithColorMenu</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Color4B<sp/>color,<sp/>Menu*<sp/>pMenu);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__OverLayer__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h"/>
+  </compounddef>
+</doxygen>

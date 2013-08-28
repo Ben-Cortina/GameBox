@@ -37,6 +37,7 @@
 		E1865A2A17A1E1E8008530D2 /* TheBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1865A2817A1E1E8008530D2 /* TheBox.cpp */; };
 		E1871E9717BAE07200753932 /* Ball.png in Resources */ = {isa = PBXBuildFile; fileRef = E1871E9517BAE07200753932 /* Ball.png */; };
 		E1871E9817BAE07200753932 /* Pixel.png in Resources */ = {isa = PBXBuildFile; fileRef = E1871E9617BAE07200753932 /* Pixel.png */; };
+		E18B11D917CE520B00A54C8C /* OverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E18B11D717CE520B00A54C8C /* OverLayer.cpp */; };
 		E1B911E017CBD447009CF148 /* BoxMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B911DF17CBD447009CF148 /* BoxMenu.png */; };
 /* End PBXBuildFile section */
 
@@ -210,9 +211,11 @@
 		E1865A1517A1B19B008530D2 /* CustomCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCC.h; sourceTree = "<group>"; };
 		E1865A2817A1E1E8008530D2 /* TheBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TheBox.cpp; sourceTree = "<group>"; };
 		E1865A2917A1E1E8008530D2 /* TheBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheBox.h; sourceTree = "<group>"; };
-		E1871E9517BAE07200753932 /* Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ball.png; path = Ball.png; sourceTree = "<group>"; };
-		E1871E9617BAE07200753932 /* Pixel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Pixel.png; path = Pixel.png; sourceTree = "<group>"; };
-		E1B911DF17CBD447009CF148 /* BoxMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = BoxMenu.png; path = BoxMenu.png; sourceTree = "<group>"; };
+		E1871E9517BAE07200753932 /* Ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ball.png; sourceTree = "<group>"; };
+		E1871E9617BAE07200753932 /* Pixel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pixel.png; sourceTree = "<group>"; };
+		E18B11D717CE520B00A54C8C /* OverLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OverLayer.cpp; path = OverLayer.cpp; sourceTree = "<group>"; };
+		E18B11D817CE520B00A54C8C /* OverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverLayer.h; path = OverLayer.h; sourceTree = "<group>"; };
+		E1B911DF17CBD447009CF148 /* BoxMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoxMenu.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +378,8 @@
 			children = (
 				E1865A2817A1E1E8008530D2 /* TheBox.cpp */,
 				E1865A2917A1E1E8008530D2 /* TheBox.h */,
+				E18B11D717CE520B00A54C8C /* OverLayer.cpp */,
+				E18B11D817CE520B00A54C8C /* OverLayer.h */,
 			);
 			path = TheBox;
 			sourceTree = "<group>";
@@ -570,6 +575,7 @@
 				1AFAF8CB16D3886000DB1158 /* HomeScene.cpp in Sources */,
 				E1865A1617A1B19B008530D2 /* CustomCC.cpp in Sources */,
 				E1865A2A17A1E1E8008530D2 /* TheBox.cpp in Sources */,
+				E18B11D917CE520B00A54C8C /* OverLayer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

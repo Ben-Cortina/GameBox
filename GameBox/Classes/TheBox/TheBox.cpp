@@ -14,7 +14,7 @@
 #include <iomanip>
 
 // returns the index position for the tile at x,y
-int tI(int x, int y) {return y * THEBOX_MAX_WIDTH + x;}
+inline int tI(int x, int y) {return y * THEBOX_MAX_WIDTH + x;}
 
 TheBoxLayer::TheBoxLayer()
 {
@@ -23,7 +23,7 @@ TheBoxLayer::TheBoxLayer()
     
     exitLoc = Coords(0,0);
     
-    timePerLevel = 5;
+    timePerLevel = 8;
     
     timeLabel = LabelTTF::create("00.00", "Arial", 24);
     windowSize = Director::getInstance()->getVisibleSize();
@@ -136,7 +136,7 @@ void TheBoxLayer::nextLevel()
     // using schedule allows me to have cocos2d call a function exery X seconds
     if (isSnake == 0)
         this->schedule( schedule_selector(TheBoxLayer::spawnTile), TIME_PER_SPAWN );
-    this->schedule( schedule_selector(TheBoxLayer::changeExit), 1.5+((float)layerSize.y+2.0)/20.0 );
+    this->schedule( schedule_selector(TheBoxLayer::changeExit), 2.0+((float)layerSize.y+2.0)/15.0 );
 }
 
 void TheBoxLayer::update(float dt)

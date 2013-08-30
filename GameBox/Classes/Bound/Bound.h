@@ -1,20 +1,22 @@
 /**-------------------------------------------------------------*
- * @file TheBox.h                                               *
+ * @file Bound.h                                                *
  * @author Ben Cortina                                          *
- * @date  7/25/13.                                              *
+ * @date  8/29/13.                                              *
  *                                                              *
- * This is a game that tests a players speed and reactions.     *
- * There is no win condition, the goal is to see how many boxs  *
- * the player can get out of.                                   *
+ * This is a cocos2d-x rendition of a popular Starcraft: Brood  *
+ * War game mode. The objective is to get to the end of the     *
+ * level without being caught in an "explosion." For accuracy   *
+ * and simplicity, these explosions with be represented by a    *
+ * flash in the tile.                                           *
  *                                                              *
- * The player controls a dot stuck in a box with one exit. As   *
- * time progresses, squares will randomly appear. These blocks  *
- * may block the players path. Additionally, if a player takes  *
- * too long to get to an exit, the location of that exit may    *
- * change.                                                      *
+ * Eventually I hope to add procedural generation and/or a      *
+ * level creator to this game                                   *
  *                                                              *
- * Features: Keyboard movement                                  *
+ * Features: Keyboard movement, BB collision detection          *
  *--------------------------------------------------------------*/
+
+#ifndef __GameBox__Bound__
+#define __GameBox__Bound__
 
 // Welp, this game used to have a circular player with pixel perfect collision and momentum
 // but I did not find it nearly as fun so I made it a LOT simpler yet more enjoyable.
@@ -26,9 +28,6 @@
 //        Add keyboard control to the OverLayer
 //        Add mouse hover effects to OverLayer
 
-#ifndef __GameBox___TheBoxScene__
-#define __GameBox___TheBoxScene__
-
 /**
  * @def THEBOX_MAX_WIDTH 100    maximum width of tile grid in TheBox (used in init)
  * @def THEBOX_MAX_HEIGHT 100   maximum height of tile grid in TheBox (used in init)
@@ -36,15 +35,15 @@
  * @def TIME_INC_PER_LEVEL 0.5f The increase in the timer between each level
  */
 #define THEBOX_MAX_WIDTH 100
-#define THEBOX_MAX_HEIGHT 100 
+#define THEBOX_MAX_HEIGHT 100
 #define TIME_PER_SPAWN 1.0f
-#define TIME_INC_PER_LEVEL 1.0f
+#define TIME_INC_PER_LEVEL 0.5f
 
 
 #include "../Helpers/CustomCC.h"
 #include "OverLayer.h"
 
-USING_NS_CC;
+//USING_NS_CC;
 
 
 /**
@@ -177,12 +176,12 @@ private:
     
 protected:
     int isSnake;   //if this is with Snake rules
-
+    
 public:
-
+    
     TheBoxLayer();
     //~TheBoxLayer();
-
+    
     /**
      * @brief   Sets whether or not the game is in snake mode
      */
@@ -202,7 +201,7 @@ public:
      */
     void update(float dt);
     
-
+    
     /**
      * @brief   This is a function to catch KeyPress events sent from KeyboardDispatcher
      * @param   KeyCode     The keycode of the pressed key
@@ -241,4 +240,5 @@ public:
     CREATE_FUNC(TheBoxLayer);
 };
 
-#endif /* defined(__GameBox___TheBoxScene__) */
+
+#endif /* defined(__GameBox__Bound__) */

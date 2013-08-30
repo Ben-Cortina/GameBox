@@ -1,0 +1,92 @@
+# A level file should be a plain text file ending in .bdl
+
+# First we define the floor and wall tile for the level as such
+# <Letter> <Red 0-255> <Green 0-255> <Blue 0-255>
+# Where letter is what you will use to describe the tile later
+
+# Floor
+O 255 255 255
+
+# Wall
+W 0 0 0
+
+# Next we will define the level using the tiles defined above
+# S will represent the start (there can only be one)
+# E will represent the location that must be reached (there can be multiple)
+# Spaces will be empty tiles
+# If the end of a line is left blank, empty space is assumed
+
+# Level
+Name: Level 1
+   WWWWWWWWW   
+WWWWOOOWOOOWWWW 
+WSOOOWOOOWOOOEW 
+WWWWWWWWWWWWWWW 
+
+# Lastly, we will define the explosion timers 
+# coordinates X Y (1 1 is bottom left) open bracket
+# 5 2 would be where X is
+#    WWWWWWWWW   
+# WWWWOOOWOOOWWWW 
+# WSOOXWOOOWOOOEW 
+# WWWWWWWWWWWWWWW 
+
+# Multiple coordinates can be designated definition
+#so the following will define all the tiles marked as X
+#    WWWWWWWWW   
+# WWWWOXOWOXOWWWW 
+# WSOOXWXOXWXOOEW 
+# WWWWWWWWWWWWWWW 
+
+# coords 
+5 2
+6 3
+7 2
+9 2
+10 3
+11 2 
+# begin
+{
+
+# first explosion time 
+0.0
+
+# time between explosions 
+1.0
+
+# kill duration
+0.0
+
+# color of explosion
+255 100 100
+
+# end
+}
+
+# This means there will be a explosion orangered explosion
+# at each of those coords that will go off immediately and will only kill 
+# players currently on it (if the explosion duration was non-zero
+# it would kill anyone crossing into it during the duration.
+# Then, 1 second after it has ended it 
+# will go off again.
+
+# Multiple explosions can be placed on the same tile.
+
+#    WWWWWWWWW   
+# WWWWXOXWXOXWWWW 
+# WSOOOWOXOWOOOEW 
+# WWWWWWWWWWWWWWW 
+5 3
+7 3
+8 2
+9 3
+11 3
+11 2
+{
+0.0
+1.0
+0.0
+255 100 100
+}
+
+

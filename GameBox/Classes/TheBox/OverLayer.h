@@ -8,7 +8,9 @@
 #ifndef __GameBox__OverLayer__
 #define __GameBox__OverLayer__
 
-#include "../Helpers/CustomCC.h"
+#include "cocos2d.h"
+
+USING_NS_CC;
 
 /**
  * @class   OverLayer

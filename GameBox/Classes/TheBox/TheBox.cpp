@@ -14,7 +14,7 @@
 #include <iomanip>
 
 // returns the index position for the tile at x,y
-inline int tI(int x, int y) {return y * THEBOX_MAX_WIDTH + x;}
+int tI(int x, int y) {return y * THEBOX_MAX_WIDTH + x;}
 
 TheBoxLayer::TheBoxLayer()
 {

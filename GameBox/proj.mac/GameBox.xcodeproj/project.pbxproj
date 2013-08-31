@@ -30,12 +30,13 @@
 		41BC70E715BF81A5006A0A6C /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 41BC70E015BF81A5006A0A6C /* Icon.icns */; };
 		41BC70E815BF81A5006A0A6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BC70E115BF81A5006A0A6C /* main.m */; };
 		E134B88F17A30AE400EBC6B2 /* Marker Felt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E134B88917A30AE400EBC6B2 /* Marker Felt.ttf */; };
+		E16EBC6917D1266500514A01 /* BoundLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16EBC6717D1266500514A01 /* BoundLevel.cpp */; };
+		E16EBC7717D1320300514A01 /* BoundTiles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16EBC7517D1320300514A01 /* BoundTiles.cpp */; };
 		E1865A1617A1B19B008530D2 /* CustomCC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1865A1417A1B19B008530D2 /* CustomCC.cpp */; };
 		E1865A2A17A1E1E8008530D2 /* TheBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1865A2817A1E1E8008530D2 /* TheBox.cpp */; };
 		E1871E9817BAE07200753932 /* Pixel.png in Resources */ = {isa = PBXBuildFile; fileRef = E1871E9617BAE07200753932 /* Pixel.png */; };
 		E18B11D917CE520B00A54C8C /* OverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E18B11D717CE520B00A54C8C /* OverLayer.cpp */; };
 		E1B371A617CFD6F9002F1401 /* Bound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B371A417CFD6F9002F1401 /* Bound.cpp */; };
-		E1B371AA17CFDAE6002F1401 /* BoundTileGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B371A817CFDAE6002F1401 /* BoundTileGrid.cpp */; };
 		E1B911E017CBD447009CF148 /* BoxMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B911DF17CBD447009CF148 /* BoxMenu.png */; };
 /* End PBXBuildFile section */
 
@@ -201,6 +202,10 @@
 		41BC70E215BF81A5006A0A6C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		41BC70E315BF81A5006A0A6C /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = SOURCE_ROOT; };
 		E134B88917A30AE400EBC6B2 /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
+		E16EBC6717D1266500514A01 /* BoundLevel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BoundLevel.cpp; path = ../../../../../../../Blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp; sourceTree = "<group>"; };
+		E16EBC6817D1266500514A01 /* BoundLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoundLevel.h; path = ../../../../../../../Blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h; sourceTree = "<group>"; };
+		E16EBC7517D1320300514A01 /* BoundTiles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BoundTiles.cpp; path = ../../../../../../../Blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp; sourceTree = "<group>"; };
+		E16EBC7617D1320300514A01 /* BoundTiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoundTiles.h; path = ../../../../../../../Blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h; sourceTree = "<group>"; };
 		E17372C617A2F44100ABF075 /* GameList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameList.h; sourceTree = "<group>"; };
 		E1865A1417A1B19B008530D2 /* CustomCC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomCC.cpp; sourceTree = "<group>"; };
 		E1865A1517A1B19B008530D2 /* CustomCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCC.h; sourceTree = "<group>"; };
@@ -211,8 +216,6 @@
 		E18B11D817CE520B00A54C8C /* OverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverLayer.h; sourceTree = "<group>"; };
 		E1B371A417CFD6F9002F1401 /* Bound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bound.cpp; sourceTree = "<group>"; };
 		E1B371A517CFD6F9002F1401 /* Bound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bound.h; sourceTree = "<group>"; };
-		E1B371A817CFDAE6002F1401 /* BoundTileGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BoundTileGrid.cpp; path = BoundTileGrid.cpp; sourceTree = "<group>"; };
-		E1B371A917CFDAE6002F1401 /* BoundTileGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BoundTileGrid.h; path = BoundTileGrid.h; sourceTree = "<group>"; };
 		E1B911DF17CBD447009CF148 /* BoxMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoxMenu.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -365,7 +368,6 @@
 			children = (
 				E1B911DF17CBD447009CF148 /* BoxMenu.png */,
 			);
-			name = TheBox;
 			path = TheBox;
 			sourceTree = "<group>";
 		};
@@ -373,7 +375,6 @@
 			isa = PBXGroup;
 			children = (
 			);
-			name = Bound;
 			path = Bound;
 			sourceTree = "<group>";
 		};
@@ -402,8 +403,10 @@
 			children = (
 				E1B371A417CFD6F9002F1401 /* Bound.cpp */,
 				E1B371A517CFD6F9002F1401 /* Bound.h */,
-				E1B371A817CFDAE6002F1401 /* BoundTileGrid.cpp */,
-				E1B371A917CFDAE6002F1401 /* BoundTileGrid.h */,
+				E16EBC6717D1266500514A01 /* BoundLevel.cpp */,
+				E16EBC6817D1266500514A01 /* BoundLevel.h */,
+				E16EBC7517D1320300514A01 /* BoundTiles.cpp */,
+				E16EBC7617D1320300514A01 /* BoundTiles.h */,
 			);
 			path = Bound;
 			sourceTree = "<group>";
@@ -597,7 +600,8 @@
 				E1865A2A17A1E1E8008530D2 /* TheBox.cpp in Sources */,
 				E18B11D917CE520B00A54C8C /* OverLayer.cpp in Sources */,
 				E1B371A617CFD6F9002F1401 /* Bound.cpp in Sources */,
-				E1B371AA17CFDAE6002F1401 /* BoundTileGrid.cpp in Sources */,
+				E16EBC6917D1266500514A01 /* BoundLevel.cpp in Sources */,
+				E16EBC7717D1320300514A01 /* BoundTiles.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

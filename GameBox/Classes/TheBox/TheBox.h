@@ -22,9 +22,10 @@
 
 // ill come back to this after I finish Bound
 
-// TODO:  Add a count down after the menu is closed
-//        Add keyboard control to the OverLayer
-//        Add mouse hover effects to OverLayer
+// TODO:    Add Difficulties
+//          Add a count down after the menu is closed
+//          Add keyboard control to the OverLayer
+//          Add mouse hover effects to OverLayer
 
 #ifndef __GameBox___TheBoxScene__
 #define __GameBox___TheBoxScene__
@@ -58,9 +59,9 @@ struct Coords
     Coords(){};
     Coords(int px, int py):x(px),y(py){};
     
-    inline bool operator== (const Coords r) {return (x == r.x && y == r.y);};
-    inline Coords& operator= (const Coords r) {x = r.x; y = r.y; return *this;};
-    inline Coords& operator+= (const Coords r) {(*this) = (*this) + r; return *this;};
+    bool operator== (const Coords r) {return (x == r.x && y == r.y);};
+    Coords& operator= (const Coords r) {x = r.x; y = r.y; return *this;};
+    Coords& operator+= (const Coords r) {(*this) = (*this) + r; return *this;};
     Coords operator+ (Coords r) {r.x = x + r.x; r.y = y + r.y; return r;};
     inline Coords& operator-= (const Coords r) {(*this) = (*this) - r; return *this;};
     Coords operator- (Coords r) {r.x = x - r.x; r.y = y - r.y; return r;};

@@ -9,71 +9,71 @@
     <includes local="no">sstream</includes>
     <includes local="no">iomanip</includes>
     <incdepgraph>
-      <node id="97">
+      <node id="142">
         <label>iomanip</label>
       </node>
-      <node id="95">
+      <node id="140">
         <label>string</label>
       </node>
-      <node id="93">
+      <node id="138">
         <label>GameList.h</label>
         <link refid="_game_list_8h"/>
-        <childnode refid="90" relation="include">
+        <childnode refid="135" relation="include">
         </childnode>
-        <childnode refid="88" relation="include">
+        <childnode refid="133" relation="include">
         </childnode>
       </node>
-      <node id="92">
+      <node id="137">
         <label>HomeScene.h</label>
         <link refid="_home_scene_8h"/>
-        <childnode refid="89" relation="include">
+        <childnode refid="134" relation="include">
         </childnode>
-        <childnode refid="93" relation="include">
+        <childnode refid="138" relation="include">
         </childnode>
       </node>
-      <node id="87">
+      <node id="132">
         <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
         <link refid="TheBox.cpp"/>
-        <childnode refid="88" relation="include">
+        <childnode refid="133" relation="include">
         </childnode>
-        <childnode refid="92" relation="include">
+        <childnode refid="137" relation="include">
         </childnode>
-        <childnode refid="94" relation="include">
+        <childnode refid="139" relation="include">
         </childnode>
-        <childnode refid="95" relation="include">
+        <childnode refid="140" relation="include">
         </childnode>
-        <childnode refid="96" relation="include">
+        <childnode refid="141" relation="include">
         </childnode>
-        <childnode refid="97" relation="include">
+        <childnode refid="142" relation="include">
         </childnode>
       </node>
-      <node id="96">
+      <node id="141">
         <label>sstream</label>
       </node>
-      <node id="94">
+      <node id="139">
         <label>iostream</label>
       </node>
-      <node id="91">
+      <node id="136">
         <label>OverLayer.h</label>
         <link refid="_over_layer_8h"/>
-        <childnode refid="89" relation="include">
+        <childnode refid="135" relation="include">
         </childnode>
       </node>
-      <node id="90">
+      <node id="135">
         <label>cocos2d.h</label>
       </node>
-      <node id="89">
+      <node id="134">
         <label>../Helpers/CustomCC.h</label>
         <link refid="_custom_c_c_8h"/>
-        <childnode refid="90" relation="include">
+        <childnode refid="135" relation="include">
         </childnode>
       </node>
-      <node id="88">
+      <node id="133">
         <label>TheBox.h</label>
         <link refid="_the_box_8h"/>
-        <childnode refid="89" relation="include">
+        <childnode refid="134" relation="include">
         </childnode>
-        <childnode refid="91" relation="include">
+        <childnode refid="136" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -127,7 +127,7 @@
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>exitLoc<sp/>=<sp/><ref refid="struct_coords" kindref="compound" tooltip="simple structure with two ints to represent 2D coordinates">Coords</ref>(0,0);</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>timePerLevel<sp/>=<sp/>5;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>timePerLevel<sp/>=<sp/>8;</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>timeLabel<sp/>=<sp/>LabelTTF::create(</highlight><highlight class="stringliteral">&quot;00.00&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Arial&quot;</highlight><highlight class="normal">,<sp/>24);</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>windowSize<sp/>=<sp/>Director::getInstance()-&gt;getVisibleSize();</highlight></codeline>
@@ -240,7 +240,7 @@
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>using<sp/>schedule<sp/>allows<sp/>me<sp/>to<sp/>have<sp/>cocos2d<sp/>call<sp/>a<sp/>function<sp/>exery<sp/>X<sp/>seconds</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" kindref="member">isSnake</ref><sp/>==<sp/>0)</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;schedule(<sp/>schedule_selector(TheBoxLayer::spawnTile),<sp/><ref refid="_the_box_8h_1a4226efab03d289775f3b691697439052" kindref="member">TIME_PER_SPAWN</ref><sp/>);</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;schedule(<sp/>schedule_selector(TheBoxLayer::changeExit),<sp/>1.5+((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)layerSize.<ref refid="struct_coords_1a7ed64d02fb7550f1506a93fcfab7f16f" kindref="member">y</ref>+2.0)/20.0<sp/>);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;schedule(<sp/>schedule_selector(TheBoxLayer::changeExit),<sp/>2.0+((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)layerSize.<ref refid="struct_coords_1a7ed64d02fb7550f1506a93fcfab7f16f" kindref="member">y</ref>+2.0)/15.0<sp/>);</highlight></codeline>
 <codeline lineno="140"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"></highlight></codeline>
 <codeline lineno="142"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_the_box_layer_1a26cd4adbaec048f0df01ddb085c2beb7" kindref="member" tooltip="the update method, initially defined in Node, this is where the games time based actions are calculat...">TheBoxLayer::update</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>

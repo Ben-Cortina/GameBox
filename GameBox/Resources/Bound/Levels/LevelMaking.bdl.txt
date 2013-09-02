@@ -4,8 +4,8 @@
 # <Letter> <Red 0-255> <Green 0-255> <Blue 0-255>
 # Where letter is what you will use to describe the tile later
 
-# Floor
-O 255 255 255
+# Floor (should be tiled so it needs two colors)
+O 255 255 255 240 240 240
 
 # Wall
 W 0 0 0

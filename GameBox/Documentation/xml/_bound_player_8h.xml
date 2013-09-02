@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_bound_player_8h" kind="file">
+    <compoundname>BoundPlayer.h</compoundname>
+    <includes local="yes">cocos2d.h</includes>
+    <includedby refid="_bound_8h" local="yes">GameBox/GameBox/Classes/Bound/Bound.h</includedby>
+    <includedby refid="_bound_player_8cpp" local="yes">GameBox/GameBox/Classes/Bound/BoundPlayer.cpp</includedby>
+    <incdepgraph>
+      <node id="44">
+        <label>GameBox/GameBox/Classes/Bound/BoundPlayer.h</label>
+        <link refid="BoundPlayer.h"/>
+        <childnode refid="45" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>cocos2d.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="46">
+        <label>GameBox/GameBox/Classes/Bound/BoundPlayer.h</label>
+        <link refid="BoundPlayer.h"/>
+        <childnode refid="47" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
+        </childnode>
+      </node>
+      <node id="48">
+        <label>GameBox/GameBox/Classes/Bound/Bound.cpp</label>
+        <link refid="_bound_8cpp"/>
+      </node>
+      <node id="49">
+        <label>GameBox/GameBox/Classes/Bound/BoundPlayer.cpp</label>
+        <link refid="_bound_player_8cpp"/>
+      </node>
+      <node id="47">
+        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
+        <link refid="_bound_8h"/>
+        <childnode refid="48" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_b_player" prot="public">BPlayer</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_bound_player_8h_1ac10da2fd6444e5c9f74c64c543c0d747" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>USING_NS_CC</definition>
+        <argsstring></argsstring>
+        <name>USING_NS_CC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="13" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ben Cortina </para></simplesect>
+<simplesect kind="date"><para>9/2/13. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="8"><highlight class="preprocessor">#ifndef<sp/>__GameBox__BoundPlayer__</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__GameBox__BoundPlayer__</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cocos2d.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_bound_player_8h_1ac10da2fd6444e5c9f74c64c543c0d747" refkind="member"><highlight class="normal"><ref refid="_app_delegate_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kindref="member">USING_NS_CC</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19" refid="class_b_player" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_b_player" kindref="compound" tooltip="This will hold and draw the data for a Player. It will also handle player movement.">BPlayer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Layer</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__BoundPlayer__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h"/>
+  </compounddef>
+</doxygen>

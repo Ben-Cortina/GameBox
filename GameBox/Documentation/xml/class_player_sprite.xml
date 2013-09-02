@@ -415,14 +415,14 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="17">
+      <node id="46">
         <label>Vector</label>
         <link refid="struct_vector"/>
       </node>
-      <node id="16">
+      <node id="45">
         <label>PlayerSprite</label>
         <link refid="class_player_sprite"/>
-        <childnode refid="17" relation="usage">
+        <childnode refid="46" relation="usage">
           <edgelabel>_force</edgelabel>
           <edgelabel>_vel</edgelabel>
         </childnode>

@@ -1,10 +1,10 @@
-//
-//  BoundLevel.h
-//  GameBox
-//
-//  Created by Blaeeap on 8/30/13.
-//
-//
+/**
+ *  @file   BoundLevel.h
+ *  @author Ben Cortina
+ *  @date   8/30/13.
+ */
+
+
 
 #ifndef __GameBox__BoundLevel__
 #define __GameBox__BoundLevel__
@@ -33,7 +33,7 @@ class BLevel : public Layer
 {
 private:
     BFloorTile** fTiles;
-    BWallTile** wTile;
+    BWallTile** wTiles;
     BExplosionTile** eTiles;
     int width;
     int height;
@@ -43,10 +43,23 @@ private:
     int eTileCount;
     
 public:
+    
     /**
      *  @brief  This will load in a level. Level formatting can be found in LevelMaking.bdl
      */
     BLevel* creatWithFile(char* level);
+    
+    /**
+     *  @brief  Checks if the provided location is a wall
+     */
+    bool isWall(const Coords loc);
+    bool isWall(const int x, const int y) { return isWall( Coords(x, y) ); };
+    
+    /**
+     *  @brief  Checks to see if there is an active explosion there
+     */
+    bool isExplosion(const Coords loc);
+    bool isExplosion(const int x, const int y) { return isExplosion( Coords(x, y) ); };
     
     
 };

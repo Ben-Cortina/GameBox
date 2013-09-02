@@ -1,0 +1,224 @@
+\hypertarget{class_b_tile}{\section{\-B\-Tile \-Class \-Reference}
+\label{class_b_tile}\index{\-B\-Tile@{\-B\-Tile}}
+}
+
+
+\-This is the base class for tiles in the bound game.  
+
+
+
+
+{\ttfamily \#include $<$\-Bound\-Tiles.\-h$>$}
+
+\-Inheritance diagram for \-B\-Tile\-:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_b_tile}
+\end{center}
+\end{figure}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_b_tile_a7646b89b701a776494e16405b9d90871}{\-B\-Tile} ()
+\item 
+\hyperlink{class_b_tile_a3bf473aada31f2a76de8ea244d889d16}{\-B\-Tile} (const \-Color3\-B on\-C, const \-Color3\-B off\-C)
+\item 
+\hyperlink{class_b_tile}{\-B\-Tile} $\ast$ \hyperlink{class_b_tile_a238d813159a2c767471ad12e3ada7421}{create\-With\-File\-Colors} (const char $\ast$\hyperlink{_game_list_8h_ac745ab21f82aa96829863dcfc37ef5a8}{image}, const \-Color3\-B on\-C, const \-Color3\-B off\-C)
+\item 
+void \hyperlink{class_b_tile_abb4e47d337854e27649b6505536a8d4a}{set\-On\-Color} (const \-Color3\-B color)
+\begin{DoxyCompactList}\small\item\em \-Change the \char`\"{}\-On\char`\"{} color of the tile. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_tile_a992da9e2ba93dfffb623af6905d5d4ae}{set\-Off\-Color} (const \-Color3\-B color)
+\begin{DoxyCompactList}\small\item\em \-Change the \char`\"{}\-Off\char`\"{} color of the tile. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_b_tile_add471df28a98f6fcb4a3ca7409092fad}{set\-On} (bool state)
+\begin{DoxyCompactList}\small\item\em \-Sets the state of the \-Tile. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b_tile_ab59bb83ecf56ec30d95c98ab3090d532}{is\-On} ()
+\begin{DoxyCompactList}\small\item\em \-Reutrns the on start. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_tile_a64dfa0b2841ab4fc5a1e465f1389cb10}{set\-Location} (\hyperlink{struct_coords}{\-Coords} location)
+\begin{DoxyCompactList}\small\item\em \-Sets the location of the tile. \end{DoxyCompactList}\item 
+\hyperlink{struct_coords}{\-Coords} \hyperlink{class_b_tile_af0e20c14792be231f3b490eb1ec10a73}{get\-Location} ()
+\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_b_tile_af9d81dcd02de972c1d451af63c0a48e5}{update\-Color} ()
+\begin{DoxyCompactList}\small\item\em \-Updates the current color based on the state of 'on'. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_tile_ae6faeef28449999ac4f1b2938fd2e89c}{update\-Position} ()
+\begin{DoxyCompactList}\small\item\em \-Updates the current position of the tile. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Protected \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \hyperlink{class_b_tile_a0c85a54373837c9bbe0fa2f83475234b}{tile\-Size}
+\item 
+\hyperlink{struct_coords}{\-Coords} \hyperlink{class_b_tile_a9a106634c3890eaa7a69cddc9680d822}{loc}
+\item 
+bool \hyperlink{class_b_tile_a793fe978c4d34fc611dbe7d21079610d}{on}
+\item 
+\-Color3\-B \hyperlink{class_b_tile_adf1af86d1ae9fdc122007381d4bf0a94}{on\-Color}
+\item 
+\-Color3\-B \hyperlink{class_b_tile_a06ca0d5b7b5c17a3d8c53395c2614a87}{off\-Color}
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This is the base class for tiles in the bound game. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_b_tile_a7646b89b701a776494e16405b9d90871}{\index{\-B\-Tile@{\-B\-Tile}!\-B\-Tile@{\-B\-Tile}}
+\index{\-B\-Tile@{\-B\-Tile}!BTile@{\-B\-Tile}}
+\subsubsection[{\-B\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-B\-Tile\-::\-B\-Tile} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_b_tile_a7646b89b701a776494e16405b9d90871}
+\hypertarget{class_b_tile_a3bf473aada31f2a76de8ea244d889d16}{\index{\-B\-Tile@{\-B\-Tile}!\-B\-Tile@{\-B\-Tile}}
+\index{\-B\-Tile@{\-B\-Tile}!BTile@{\-B\-Tile}}
+\subsubsection[{\-B\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-B\-Tile\-::\-B\-Tile} (
+\begin{DoxyParamCaption}
+\item[{const \-Color3\-B}]{on\-C, }
+\item[{const \-Color3\-B}]{off\-C}
+\end{DoxyParamCaption}
+)}}\label{class_b_tile_a3bf473aada31f2a76de8ea244d889d16}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_b_tile_a238d813159a2c767471ad12e3ada7421}{\index{\-B\-Tile@{\-B\-Tile}!create\-With\-File\-Colors@{create\-With\-File\-Colors}}
+\index{create\-With\-File\-Colors@{create\-With\-File\-Colors}!BTile@{\-B\-Tile}}
+\subsubsection[{create\-With\-File\-Colors}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-B\-Tile} $\ast$ {\bf \-B\-Tile\-::create\-With\-File\-Colors} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{image, }
+\item[{const \-Color3\-B}]{on\-C, }
+\item[{const \-Color3\-B}]{off\-C}
+\end{DoxyParamCaption}
+)}}\label{class_b_tile_a238d813159a2c767471ad12e3ada7421}
+\hypertarget{class_b_tile_af0e20c14792be231f3b490eb1ec10a73}{\index{\-B\-Tile@{\-B\-Tile}!get\-Location@{get\-Location}}
+\index{get\-Location@{get\-Location}!BTile@{\-B\-Tile}}
+\subsubsection[{get\-Location}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords} {\bf \-B\-Tile\-::get\-Location} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_tile_af0e20c14792be231f3b490eb1ec10a73}
+\hypertarget{class_b_tile_ab59bb83ecf56ec30d95c98ab3090d532}{\index{\-B\-Tile@{\-B\-Tile}!is\-On@{is\-On}}
+\index{is\-On@{is\-On}!BTile@{\-B\-Tile}}
+\subsubsection[{is\-On}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Tile\-::is\-On} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_tile_ab59bb83ecf56ec30d95c98ab3090d532}
+
+
+\-Reutrns the on start. 
+
+\hypertarget{class_b_tile_a64dfa0b2841ab4fc5a1e465f1389cb10}{\index{\-B\-Tile@{\-B\-Tile}!set\-Location@{set\-Location}}
+\index{set\-Location@{set\-Location}!BTile@{\-B\-Tile}}
+\subsubsection[{set\-Location}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Tile\-::set\-Location} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Coords}}]{location}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_tile_a64dfa0b2841ab4fc5a1e465f1389cb10}
+
+
+\-Sets the location of the tile. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em location} & the x y coordinate of the tile \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_b_tile_a992da9e2ba93dfffb623af6905d5d4ae}{\index{\-B\-Tile@{\-B\-Tile}!set\-Off\-Color@{set\-Off\-Color}}
+\index{set\-Off\-Color@{set\-Off\-Color}!BTile@{\-B\-Tile}}
+\subsubsection[{set\-Off\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Tile\-::set\-Off\-Color} (
+\begin{DoxyParamCaption}
+\item[{const \-Color3\-B}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_tile_a992da9e2ba93dfffb623af6905d5d4ae}
+
+
+\-Change the \char`\"{}\-Off\char`\"{} color of the tile. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em color} & \-The color to set as the off\-Color \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_b_tile_add471df28a98f6fcb4a3ca7409092fad}{\index{\-B\-Tile@{\-B\-Tile}!set\-On@{set\-On}}
+\index{set\-On@{set\-On}!BTile@{\-B\-Tile}}
+\subsubsection[{set\-On}]{\setlength{\rightskip}{0pt plus 5cm}virtual void {\bf \-B\-Tile\-::set\-On} (
+\begin{DoxyParamCaption}
+\item[{bool}]{state}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_b_tile_add471df28a98f6fcb4a3ca7409092fad}
+
+
+\-Sets the state of the \-Tile. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em state} & \-True will set this to \char`\"{}\-On\char`\"{} \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_b_tile_abb4e47d337854e27649b6505536a8d4a}{\index{\-B\-Tile@{\-B\-Tile}!set\-On\-Color@{set\-On\-Color}}
+\index{set\-On\-Color@{set\-On\-Color}!BTile@{\-B\-Tile}}
+\subsubsection[{set\-On\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Tile\-::set\-On\-Color} (
+\begin{DoxyParamCaption}
+\item[{const \-Color3\-B}]{color}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_tile_abb4e47d337854e27649b6505536a8d4a}
+
+
+\-Change the \char`\"{}\-On\char`\"{} color of the tile. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em color} & \-The color to set as the on\-Color \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_b_tile_af9d81dcd02de972c1d451af63c0a48e5}{\index{\-B\-Tile@{\-B\-Tile}!update\-Color@{update\-Color}}
+\index{update\-Color@{update\-Color}!BTile@{\-B\-Tile}}
+\subsubsection[{update\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Tile\-::update\-Color} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}\label{class_b_tile_af9d81dcd02de972c1d451af63c0a48e5}
+
+
+\-Updates the current color based on the state of 'on'. 
+
+
+
+\-Reimplemented in \hyperlink{class_b_explosion_tile_a993eb687f4f595994747cc0f8534f78f}{\-B\-Explosion\-Tile}.
+
+\hypertarget{class_b_tile_ae6faeef28449999ac4f1b2938fd2e89c}{\index{\-B\-Tile@{\-B\-Tile}!update\-Position@{update\-Position}}
+\index{update\-Position@{update\-Position}!BTile@{\-B\-Tile}}
+\subsubsection[{update\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Tile\-::update\-Position} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, protected\mbox{]}}}}\label{class_b_tile_ae6faeef28449999ac4f1b2938fd2e89c}
+
+
+\-Updates the current position of the tile. 
+
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{class_b_tile_a9a106634c3890eaa7a69cddc9680d822}{\index{\-B\-Tile@{\-B\-Tile}!loc@{loc}}
+\index{loc@{loc}!BTile@{\-B\-Tile}}
+\subsubsection[{loc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords} {\bf \-B\-Tile\-::loc}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_b_tile_a9a106634c3890eaa7a69cddc9680d822}
+\hypertarget{class_b_tile_a06ca0d5b7b5c17a3d8c53395c2614a87}{\index{\-B\-Tile@{\-B\-Tile}!off\-Color@{off\-Color}}
+\index{off\-Color@{off\-Color}!BTile@{\-B\-Tile}}
+\subsubsection[{off\-Color}]{\setlength{\rightskip}{0pt plus 5cm}\-Color3\-B {\bf \-B\-Tile\-::off\-Color}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_b_tile_a06ca0d5b7b5c17a3d8c53395c2614a87}
+\hypertarget{class_b_tile_a793fe978c4d34fc611dbe7d21079610d}{\index{\-B\-Tile@{\-B\-Tile}!on@{on}}
+\index{on@{on}!BTile@{\-B\-Tile}}
+\subsubsection[{on}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Tile\-::on}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_b_tile_a793fe978c4d34fc611dbe7d21079610d}
+\hypertarget{class_b_tile_adf1af86d1ae9fdc122007381d4bf0a94}{\index{\-B\-Tile@{\-B\-Tile}!on\-Color@{on\-Color}}
+\index{on\-Color@{on\-Color}!BTile@{\-B\-Tile}}
+\subsubsection[{on\-Color}]{\setlength{\rightskip}{0pt plus 5cm}\-Color3\-B {\bf \-B\-Tile\-::on\-Color}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_b_tile_adf1af86d1ae9fdc122007381d4bf0a94}
+\hypertarget{class_b_tile_a0c85a54373837c9bbe0fa2f83475234b}{\index{\-B\-Tile@{\-B\-Tile}!tile\-Size@{tile\-Size}}
+\index{tile\-Size@{tile\-Size}!BTile@{\-B\-Tile}}
+\subsubsection[{tile\-Size}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-B\-Tile\-::tile\-Size}\hspace{0.3cm}{\ttfamily  \mbox{[}protected\mbox{]}}}}\label{class_b_tile_a0c85a54373837c9bbe0fa2f83475234b}
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-Bound/\hyperlink{_bound_tiles_8h}{\-Bound\-Tiles.\-h}\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-Bound/\hyperlink{_bound_tiles_8cpp}{\-Bound\-Tiles.\-cpp}\end{DoxyCompactItemize}

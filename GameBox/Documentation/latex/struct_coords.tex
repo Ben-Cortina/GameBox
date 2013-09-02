@@ -8,10 +8,26 @@ simple structure with two ints to represent 2\-D coordinates
 
 
 
-{\ttfamily \#include $<$\-The\-Box.\-h$>$}
+{\ttfamily \#include $<$\-Bound\-Tiles.\-h$>$}
 
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_coords_a5922d1783cefa759950faa50ac347191}{\-Coords} ()
+\item 
+\hyperlink{struct_coords_aa268e580151ea70eec212852dd4c5f94}{\-Coords} (int px, int py)
+\item 
+bool \hyperlink{struct_coords_a7507f92d1feefa3355ae8e9edae34e54}{operator==} (const \hyperlink{struct_coords}{\-Coords} r)
+\item 
+\hyperlink{struct_coords}{\-Coords} \& \hyperlink{struct_coords_a25bcb0e2d2f5677a10b7652e90a6f97b}{operator=} (const \hyperlink{struct_coords}{\-Coords} r)
+\item 
+\hyperlink{struct_coords}{\-Coords} \& \hyperlink{struct_coords_a2549173108b2479b62fd79b82ec54e01}{operator+=} (const \hyperlink{struct_coords}{\-Coords} r)
+\item 
+\hyperlink{struct_coords}{\-Coords} \hyperlink{struct_coords_a168a9ed9edbffaf04e67c5b39306ca99}{operator+} (\hyperlink{struct_coords}{\-Coords} r)
+\item 
+\hyperlink{struct_coords}{\-Coords} \& \hyperlink{struct_coords_a9f61875c64b3726afd0bb0d465889bad}{operator-\/=} (const \hyperlink{struct_coords}{\-Coords} r)
+\item 
+\hyperlink{struct_coords}{\-Coords} \hyperlink{struct_coords_a7cc7a225781b6bbad3e00a5e9572fee1}{operator-\/} (\hyperlink{struct_coords}{\-Coords} r)
 \item 
 \hyperlink{struct_coords_a5922d1783cefa759950faa50ac347191}{\-Coords} ()
 \item 
@@ -57,9 +73,31 @@ simple structure with two ints to represent 2\-D coordinates
 \item[{int}]{py}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_coords_aa268e580151ea70eec212852dd4c5f94}
+\hypertarget{struct_coords_a5922d1783cefa759950faa50ac347191}{\index{\-Coords@{\-Coords}!\-Coords@{\-Coords}}
+\index{\-Coords@{\-Coords}!Coords@{\-Coords}}
+\subsubsection[{\-Coords}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords\-::\-Coords} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_coords_a5922d1783cefa759950faa50ac347191}
+\hypertarget{struct_coords_aa268e580151ea70eec212852dd4c5f94}{\index{\-Coords@{\-Coords}!\-Coords@{\-Coords}}
+\index{\-Coords@{\-Coords}!Coords@{\-Coords}}
+\subsubsection[{\-Coords}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords\-::\-Coords} (
+\begin{DoxyParamCaption}
+\item[{int}]{px, }
+\item[{int}]{py}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_coords_aa268e580151ea70eec212852dd4c5f94}
 
 
 \subsection{\-Member \-Function \-Documentation}
+\hypertarget{struct_coords_a168a9ed9edbffaf04e67c5b39306ca99}{\index{\-Coords@{\-Coords}!operator+@{operator+}}
+\index{operator+@{operator+}!Coords@{\-Coords}}
+\subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords} \-Coords\-::operator+ (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Coords}}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_coords_a168a9ed9edbffaf04e67c5b39306ca99}
 \hypertarget{struct_coords_a168a9ed9edbffaf04e67c5b39306ca99}{\index{\-Coords@{\-Coords}!operator+@{operator+}}
 \index{operator+@{operator+}!Coords@{\-Coords}}
 \subsubsection[{operator+}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords} \-Coords\-::operator+ (
@@ -74,6 +112,20 @@ simple structure with two ints to represent 2\-D coordinates
 \item[{const {\bf \-Coords}}]{r}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_coords_a2549173108b2479b62fd79b82ec54e01}
+\hypertarget{struct_coords_a2549173108b2479b62fd79b82ec54e01}{\index{\-Coords@{\-Coords}!operator+=@{operator+=}}
+\index{operator+=@{operator+=}!Coords@{\-Coords}}
+\subsubsection[{operator+=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords}\& \-Coords\-::operator+= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Coords}}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_coords_a2549173108b2479b62fd79b82ec54e01}
+\hypertarget{struct_coords_a7cc7a225781b6bbad3e00a5e9572fee1}{\index{\-Coords@{\-Coords}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!Coords@{\-Coords}}
+\subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords} \-Coords\-::operator-\/ (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Coords}}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_coords_a7cc7a225781b6bbad3e00a5e9572fee1}
 \hypertarget{struct_coords_a7cc7a225781b6bbad3e00a5e9572fee1}{\index{\-Coords@{\-Coords}!operator-\/@{operator-\/}}
 \index{operator-\/@{operator-\/}!Coords@{\-Coords}}
 \subsubsection[{operator-\/}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords} \-Coords\-::operator-\/ (
@@ -88,6 +140,13 @@ simple structure with two ints to represent 2\-D coordinates
 \item[{const {\bf \-Coords}}]{r}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_coords_a9f61875c64b3726afd0bb0d465889bad}
+\hypertarget{struct_coords_a9f61875c64b3726afd0bb0d465889bad}{\index{\-Coords@{\-Coords}!operator-\/=@{operator-\/=}}
+\index{operator-\/=@{operator-\/=}!Coords@{\-Coords}}
+\subsubsection[{operator-\/=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords}\& \-Coords\-::operator-\/= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Coords}}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_coords_a9f61875c64b3726afd0bb0d465889bad}
 \hypertarget{struct_coords_a25bcb0e2d2f5677a10b7652e90a6f97b}{\index{\-Coords@{\-Coords}!operator=@{operator=}}
 \index{operator=@{operator=}!Coords@{\-Coords}}
 \subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords}\& \-Coords\-::operator= (
@@ -95,6 +154,20 @@ simple structure with two ints to represent 2\-D coordinates
 \item[{const {\bf \-Coords}}]{r}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_coords_a25bcb0e2d2f5677a10b7652e90a6f97b}
+\hypertarget{struct_coords_a25bcb0e2d2f5677a10b7652e90a6f97b}{\index{\-Coords@{\-Coords}!operator=@{operator=}}
+\index{operator=@{operator=}!Coords@{\-Coords}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords}\& \-Coords\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Coords}}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_coords_a25bcb0e2d2f5677a10b7652e90a6f97b}
+\hypertarget{struct_coords_a7507f92d1feefa3355ae8e9edae34e54}{\index{\-Coords@{\-Coords}!operator==@{operator==}}
+\index{operator==@{operator==}!Coords@{\-Coords}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Coords\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Coords}}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_coords_a7507f92d1feefa3355ae8e9edae34e54}
 \hypertarget{struct_coords_a7507f92d1feefa3355ae8e9edae34e54}{\index{\-Coords@{\-Coords}!operator==@{operator==}}
 \index{operator==@{operator==}!Coords@{\-Coords}}
 \subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool \-Coords\-::operator== (
@@ -113,6 +186,7 @@ simple structure with two ints to represent 2\-D coordinates
 \subsubsection[{y}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Coords\-::y}}}\label{struct_coords_a7ed64d02fb7550f1506a93fcfab7f16f}
 
 
-\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\-The documentation for this struct was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-Bound/\hyperlink{_bound_tiles_8h}{\-Bound\-Tiles.\-h}\item 
 \-Game\-Box/\-Game\-Box/\-Classes/\-The\-Box/\hyperlink{_the_box_8h}{\-The\-Box.\-h}\end{DoxyCompactItemize}

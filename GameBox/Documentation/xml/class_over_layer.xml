@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" line="21" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" bodystart="21" bodyend="21"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" line="23" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" bodystart="23" bodyend="23"/>
       </memberdef>
       <memberdef kind="function" id="class_over_layer_1a7f9b5a23c40f204d5ba47166b9d78f6e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -51,14 +51,14 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" line="28" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.cpp" bodystart="10" bodyend="16"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" line="30" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.cpp" bodystart="10" bodyend="16"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>Provides a transparent overlay with a menu on it. Releases on menu selection. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" line="18" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" bodystart="17" bodyend="29"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" line="20" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" bodystart="19" bodyend="31"/>
     <listofallmembers>
       <member refid="class_over_layer_1a7f9b5a23c40f204d5ba47166b9d78f6e" prot="public" virt="non-virtual"><scope>OverLayer</scope><name>initWithColorMenu</name></member>
       <member refid="class_over_layer_1a95d3b5e4f3c462216aea540774eae0aa" prot="public" virt="non-virtual"><scope>OverLayer</scope><name>OverLayer</name></member>

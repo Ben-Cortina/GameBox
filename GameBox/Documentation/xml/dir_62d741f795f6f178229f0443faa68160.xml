@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
   <compounddef id="dir_62d741f795f6f178229f0443faa68160" kind="dir">
     <compoundname>GameBox/GameBox/Classes/</compoundname>
+    <innerdir refid="dir_7830ad40c0982c0cb200c140da3ab6a7">GameBox/GameBox/Classes/Bound/</innerdir>
     <innerdir refid="dir_171879561e09838fb62df9b29b114fce">GameBox/GameBox/Classes/Helpers/</innerdir>
     <innerdir refid="dir_a243e1bba19e527426b9d270f0261be8">GameBox/GameBox/Classes/TheBox/</innerdir>
     <innerfile refid="_app_delegate_8cpp">AppDelegate.cpp</innerfile>

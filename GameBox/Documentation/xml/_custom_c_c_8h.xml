@@ -5,88 +5,73 @@
     <includes local="yes">cocos2d.h</includes>
     <includedby refid="_home_scene_8h" local="yes">GameBox/GameBox/Classes/HomeScene.h</includedby>
     <includedby refid="_the_box_8h" local="yes">GameBox/GameBox/Classes/TheBox/TheBox.h</includedby>
-    <includedby refid="_over_layer_8h" local="yes">GameBox/GameBox/Classes/TheBox/OverLayer.h</includedby>
     <includedby refid="_custom_c_c_8cpp" local="yes">GameBox/GameBox/Classes/Helpers/CustomCC.cpp</includedby>
     <incdepgraph>
-      <node id="28">
+      <node id="77">
         <label>cocos2d.h</label>
       </node>
-      <node id="27">
+      <node id="76">
         <label>GameBox/GameBox/Classes/Helpers/CustomCC.h</label>
         <link refid="CustomCC.h"/>
-        <childnode refid="28" relation="include">
+        <childnode refid="77" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="39">
+      <node id="86">
         <label>GameBox/GameBox/Classes/Helpers/CustomCC.cpp</label>
         <link refid="_custom_c_c_8cpp"/>
       </node>
-      <node id="35">
+      <node id="84">
         <label>GameBox/GameBox/Classes/GameList.h</label>
         <link refid="_game_list_8h"/>
-        <childnode refid="30" relation="include">
+        <childnode refid="79" relation="include">
         </childnode>
       </node>
-      <node id="30">
+      <node id="79">
         <label>GameBox/GameBox/Classes/HomeScene.h</label>
         <link refid="_home_scene_8h"/>
-        <childnode refid="31" relation="include">
+        <childnode refid="80" relation="include">
         </childnode>
-        <childnode refid="32" relation="include">
+        <childnode refid="81" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
+        <childnode refid="82" relation="include">
         </childnode>
       </node>
-      <node id="32">
+      <node id="81">
         <label>GameBox/GameBox/Classes/HomeScene.cpp</label>
         <link refid="_home_scene_8cpp"/>
       </node>
-      <node id="38">
-        <label>GameBox/GameBox/Classes/TheBox/OverLayer.cpp</label>
-        <link refid="_over_layer_8cpp"/>
-      </node>
-      <node id="36">
+      <node id="85">
         <label>GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp</label>
         <link refid="_player_sprite_8cpp"/>
       </node>
-      <node id="31">
+      <node id="80">
         <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
         <link refid="_app_delegate_8cpp"/>
       </node>
-      <node id="33">
+      <node id="82">
         <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
         <link refid="_the_box_8cpp"/>
       </node>
-      <node id="37">
-        <label>GameBox/GameBox/Classes/TheBox/OverLayer.h</label>
-        <link refid="_over_layer_8h"/>
-        <childnode refid="34" relation="include">
-        </childnode>
-        <childnode refid="38" relation="include">
-        </childnode>
-      </node>
-      <node id="29">
+      <node id="78">
         <label>GameBox/GameBox/Classes/Helpers/CustomCC.h</label>
         <link refid="CustomCC.h"/>
-        <childnode refid="30" relation="include">
+        <childnode refid="79" relation="include">
         </childnode>
-        <childnode refid="34" relation="include">
+        <childnode refid="83" relation="include">
         </childnode>
-        <childnode refid="37" relation="include">
-        </childnode>
-        <childnode refid="39" relation="include">
+        <childnode refid="86" relation="include">
         </childnode>
       </node>
-      <node id="34">
+      <node id="83">
         <label>GameBox/GameBox/Classes/TheBox/TheBox.h</label>
         <link refid="_the_box_8h"/>
-        <childnode refid="35" relation="include">
+        <childnode refid="84" relation="include">
         </childnode>
-        <childnode refid="36" relation="include">
+        <childnode refid="85" relation="include">
         </childnode>
-        <childnode refid="33" relation="include">
+        <childnode refid="82" relation="include">
         </childnode>
       </node>
     </invincdepgraph>

@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_bound_level_8h" kind="file">
+    <compoundname>BoundLevel.h</compoundname>
+    <includes refid="_bound_tiles_8h" local="yes">BoundTiles.h</includes>
+    <includedby refid="_bound_8h" local="yes">GameBox/GameBox/Classes/Bound/Bound.h</includedby>
+    <includedby refid="_bound_level_8cpp" local="yes">GameBox/GameBox/Classes/Bound/BoundLevel.cpp</includedby>
+    <incdepgraph>
+      <node id="34">
+        <label>BoundTiles.h</label>
+        <link refid="_bound_tiles_8h"/>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>GameBox/GameBox/Classes/Bound/BoundLevel.h</label>
+        <link refid="BoundLevel.h"/>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>cocos2d.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="38">
+        <label>GameBox/GameBox/Classes/Bound/Bound.cpp</label>
+        <link refid="_bound_8cpp"/>
+      </node>
+      <node id="37">
+        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
+        <link refid="_bound_8h"/>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="39">
+        <label>GameBox/GameBox/Classes/Bound/BoundLevel.cpp</label>
+        <link refid="_bound_level_8cpp"/>
+      </node>
+      <node id="36">
+        <label>GameBox/GameBox/Classes/Bound/BoundLevel.h</label>
+        <link refid="BoundLevel.h"/>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_explosion_schedule" prot="public">ExplosionSchedule</innerclass>
+    <innerclass refid="class_b_level" prot="public">BLevel</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_bound_level_8h_1ac10da2fd6444e5c9f74c64c543c0d747" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>USING_NS_CC</definition>
+        <argsstring></argsstring>
+        <name>USING_NS_CC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="14" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ben Cortina </para></simplesect>
+<simplesect kind="date"><para>8/30/13. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="9"><highlight class="preprocessor">#ifndef<sp/>__GameBox__BoundLevel__</highlight></codeline>
+<codeline lineno="10"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__GameBox__BoundLevel__</highlight></codeline>
+<codeline lineno="11"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bound_tiles_8h" kindref="compound">BoundTiles.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="_bound_level_8h_1ac10da2fd6444e5c9f74c64c543c0d747" refkind="member"><highlight class="normal"><ref refid="_app_delegate_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kindref="member">USING_NS_CC</ref>;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20" refid="struct_explosion_schedule" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_explosion_schedule" kindref="compound" tooltip="This holds the information needed for representing one explosion.">ExplosionSchedule</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22" refid="struct_explosion_schedule_1a40229a03d0070fa6d8028cac8b7490e0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_explosion_schedule_1a40229a03d0070fa6d8028cac8b7490e0" kindref="member">start</ref>;</highlight></codeline>
+<codeline lineno="23" refid="struct_explosion_schedule_1a522eba73a372d30f86e5dfa608329ed6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_explosion_schedule_1a522eba73a372d30f86e5dfa608329ed6" kindref="member">interval</ref>;</highlight></codeline>
+<codeline lineno="24" refid="struct_explosion_schedule_1a53661dc35b3c59c679ebe5ef1cebc29d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="struct_explosion_schedule_1a53661dc35b3c59c679ebe5ef1cebc29d" kindref="member">duration</ref>;</highlight></codeline>
+<codeline lineno="25" refid="struct_explosion_schedule_1ab3b56c84ed3937a294738e7c4b97b1da" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Color3B<sp/><ref refid="struct_explosion_schedule_1ab3b56c84ed3937a294738e7c4b97b1da" kindref="member">Color</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="class_b_level" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_b_level" kindref="compound" tooltip="This will hold and draw the data for a level.">BLevel</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Layer</highlight></codeline>
+<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_floor_tile" kindref="compound" tooltip="This is a floor tile, the player can move throught this freely.">BFloorTile</ref>**<sp/>fTiles;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_wall_tile" kindref="compound" tooltip="This is a wall tile, the player can not pass through this.">BWallTile</ref>**<sp/>wTiles;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_explosion_tile" kindref="compound" tooltip="This is an explosion tile, the player will die if they touch this while its on.">BExplosionTile</ref>**<sp/>eTiles;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>tileSize;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fTileCount;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wTileCount;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>eTileCount;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_level" kindref="compound" tooltip="This will hold and draw the data for a level.">BLevel</ref>*<sp/><ref refid="class_b_level_1aa15bc1515221e23a3fc8e5063b69a3d2" kindref="member" tooltip="This will load in a level. Level formatting can be found in LevelMaking.bdl.">creatWithFile</ref>(</highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>level);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1abb407d85aebcc0d6cded1ad13c2e2eed" kindref="member" tooltip="Checks if the provided location is a wall.">isWall</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_coords" kindref="compound" tooltip="simple structure with two ints to represent 2D coordinates">Coords</ref><sp/>loc);</highlight></codeline>
+<codeline lineno="56" refid="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" kindref="member">isWall</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" kindref="member">isWall</ref>(<sp/><ref refid="struct_coords" kindref="compound" tooltip="simple structure with two ints to represent 2D coordinates">Coords</ref>(x,<sp/>y)<sp/>);<sp/>};</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1adf39bb6a72e7780031a0806df92f9fc5" kindref="member" tooltip="Checks to see if there is an active explosion there.">isExplosion</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_coords" kindref="compound" tooltip="simple structure with two ints to represent 2D coordinates">Coords</ref><sp/>loc);</highlight></codeline>
+<codeline lineno="62" refid="class_b_level_1acf89db789ceb7f083221fab3fead042e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1acf89db789ceb7f083221fab3fead042e" kindref="member">isExplosion</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1acf89db789ceb7f083221fab3fead042e" kindref="member">isExplosion</ref>(<sp/><ref refid="struct_coords" kindref="compound" tooltip="simple structure with two ints to represent 2D coordinates">Coords</ref>(x,<sp/>y)<sp/>);<sp/>};</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__BoundLevel__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h"/>
+  </compounddef>
+</doxygen>

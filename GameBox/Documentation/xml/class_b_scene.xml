@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_b_scene" kind="class" prot="public">
+    <compoundname>BScene</compoundname>
+    <includes refid="_bound_8h" local="no">Bound.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_b_scene_1a6869d39e608c87ec85c6260d9ca25d81" prot="private" static="no" mutable="no">
+        <type><ref refid="class_b_level" kindref="compound">BLevel</ref> *</type>
+        <definition>BLevel* BScene::levelLayer</definition>
+        <argsstring></argsstring>
+        <name>levelLayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="31" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_scene_1a9351cec96b21e50a7d1132feb4cb4e65" prot="private" static="no" mutable="no">
+        <type><ref refid="class_b_player" kindref="compound">BPlayer</ref> *</type>
+        <definition>BPlayer* BScene::playerLayer</definition>
+        <argsstring></argsstring>
+        <name>playerLayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="32" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_scene_1a1dc8e3413c7d47423269274e18615278" prot="private" static="no" mutable="no">
+        <type>LayerColor *</type>
+        <definition>LayerColor* BScene::backgroundLayer</definition>
+        <argsstring></argsstring>
+        <name>backgroundLayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="33" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_scene_1a814659a27cecfe7e5aefc32081d0f3a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BScene::BScene</definition>
+        <argsstring>()</argsstring>
+        <name>BScene</name>
+        <briefdescription>
+<para>This will create and init a <ref refid="class_b_scene" kindref="compound">BScene</ref>. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="39" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="10" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_scene_1a354c06937ec9f0170e89a118bb9368b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BScene::newLevel</definition>
+        <argsstring>()</argsstring>
+        <name>newLevel</name>
+        <briefdescription>
+<para>This will load a new level. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="44"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_b_scene_1a90db09771569a058108341368724efc9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BScene::runThisGame</definition>
+        <argsstring>(Object *pSender)</argsstring>
+        <name>runThisGame</name>
+        <param>
+          <type>Object *</type>
+          <declname>pSender</declname>
+        </param>
+        <briefdescription>
+<para>This method creates a new <ref refid="class_b_scene" kindref="compound">BScene</ref> and runs it. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="49" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="18" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the Scene for Bound. It wll hold the layers that make up the Bound game. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="29" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="28" bodyend="50"/>
+    <listofallmembers>
+      <member refid="class_b_scene_1a1dc8e3413c7d47423269274e18615278" prot="private" virt="non-virtual"><scope>BScene</scope><name>backgroundLayer</name></member>
+      <member refid="class_b_scene_1a814659a27cecfe7e5aefc32081d0f3a5" prot="public" virt="non-virtual"><scope>BScene</scope><name>BScene</name></member>
+      <member refid="class_b_scene_1a6869d39e608c87ec85c6260d9ca25d81" prot="private" virt="non-virtual"><scope>BScene</scope><name>levelLayer</name></member>
+      <member refid="class_b_scene_1a354c06937ec9f0170e89a118bb9368b7" prot="public" virt="non-virtual"><scope>BScene</scope><name>newLevel</name></member>
+      <member refid="class_b_scene_1a9351cec96b21e50a7d1132feb4cb4e65" prot="private" virt="non-virtual"><scope>BScene</scope><name>playerLayer</name></member>
+      <member refid="class_b_scene_1a90db09771569a058108341368724efc9" prot="public" virt="non-virtual"><scope>BScene</scope><name>runThisGame</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

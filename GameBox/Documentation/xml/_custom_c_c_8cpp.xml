@@ -4,19 +4,19 @@
     <compoundname>CustomCC.cpp</compoundname>
     <includes refid="_custom_c_c_8h" local="yes">CustomCC.h</includes>
     <incdepgraph>
-      <node id="23">
+      <node id="72">
         <label>GameBox/GameBox/Classes/Helpers/CustomCC.cpp</label>
         <link refid="CustomCC.cpp"/>
-        <childnode refid="24" relation="include">
+        <childnode refid="73" relation="include">
         </childnode>
       </node>
-      <node id="25">
+      <node id="74">
         <label>cocos2d.h</label>
       </node>
-      <node id="24">
+      <node id="73">
         <label>CustomCC.h</label>
         <link refid="_custom_c_c_8h"/>
-        <childnode refid="25" relation="include">
+        <childnode refid="74" relation="include">
         </childnode>
       </node>
     </incdepgraph>

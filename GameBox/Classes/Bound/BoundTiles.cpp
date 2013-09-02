@@ -1,10 +1,9 @@
-//
-//  BoundTiles.cpp
-//  GameBox
-//
-//  Created by Blaeeap on 8/30/13.
-//
-//
+/**
+ *  @file   BoundTiles.cpp
+ *  @author Ben Cortina
+ *  @date   8/30/13.
+ */
+
 
 #include "BoundTiles.h"
 
@@ -32,3 +31,4 @@ BTile* BTile::createWithFileColors(const char* image, const Color3B onC, const C
     CC_SAFE_DELETE(pobBTile);
     return NULL;
 }
+

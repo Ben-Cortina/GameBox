@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_bound_8h" kind="file">
+    <compoundname>Bound.h</compoundname>
+    <includes refid="_bound_level_8h" local="yes">BoundLevel.h</includes>
+    <includes refid="_bound_player_8h" local="yes">BoundPlayer.h</includes>
+    <includedby refid="_bound_8cpp" local="yes">GameBox/GameBox/Classes/Bound/Bound.cpp</includedby>
+    <incdepgraph>
+      <node id="24">
+        <label>BoundPlayer.h</label>
+        <link refid="_bound_player_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
+        <link refid="Bound.h"/>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>BoundTiles.h</label>
+        <link refid="_bound_tiles_8h"/>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>BoundLevel.h</label>
+        <link refid="_bound_level_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>cocos2d.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="26">
+        <label>GameBox/GameBox/Classes/Bound/Bound.cpp</label>
+        <link refid="_bound_8cpp"/>
+      </node>
+      <node id="25">
+        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
+        <link refid="Bound.h"/>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_b_scene" prot="public">BScene</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>-------------------------------------------------------------* * <simplesect kind="author"><para>Ben Cortina * </para></simplesect>
+<simplesect kind="date"><para>8/29/13. * * This is a cocos2d-x rendition of a popular Starcraft: Brood * War game mode. The objective is to get to the end of the * level without being caught in an &quot;explosion.&quot; For accuracy * and simplicity, these explosions with be represented by a * flash in the tile. * * Eventually I hope to add procedural generation and/or a * level creator to this game * * Features: Keyboard movement, BB collision detection * --------------------------------------------------------------</para></simplesect>
+-------------------------------------------------------------* * <simplesect kind="author"><para>Ben Cortina * </para></simplesect>
+<simplesect kind="date"><para>8/30/13. * * This holds the various types of Tiles that will be used in * The Bound Game. * * Currently: Wall, Floor, Explosion Tiles * -------------------------------------------------------------- </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="18"><highlight class="preprocessor">#ifndef<sp/>__GameBox__Bound__</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__GameBox__Bound__</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bound_level_8h" kindref="compound">BoundLevel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bound_player_8h" kindref="compound">BoundPlayer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="class_b_scene" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_b_scene" kindref="compound" tooltip="This is the Scene for Bound. It wll hold the layers that make up the Bound game.">BScene</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Scene</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_level" kindref="compound" tooltip="This will hold and draw the data for a level.">BLevel</ref>*<sp/>levelLayer;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_player" kindref="compound" tooltip="This will hold and draw the data for a Player. It will also handle player movement.">BPlayer</ref>*<sp/>playerLayer;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>LayerColor*<sp/>backgroundLayer;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_scene_1a814659a27cecfe7e5aefc32081d0f3a5" kindref="member" tooltip="This will create and init a BScene.">BScene</ref>();</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a354c06937ec9f0170e89a118bb9368b7" kindref="member" tooltip="This will load a new level.">newLevel</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a90db09771569a058108341368724efc9" kindref="member" tooltip="This method creates a new BScene and runs it.">runThisGame</ref>(Object*<sp/>pSender);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__Bound__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h"/>
+  </compounddef>
+</doxygen>

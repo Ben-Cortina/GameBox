@@ -1,0 +1,353 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_b_tile" kind="class" prot="public">
+    <compoundname>BTile</compoundname>
+    <derivedcompoundref refid="class_b_explosion_tile" prot="public" virt="non-virtual">BExplosionTile</derivedcompoundref>
+    <derivedcompoundref refid="class_b_floor_tile" prot="public" virt="non-virtual">BFloorTile</derivedcompoundref>
+    <derivedcompoundref refid="class_b_wall_tile" prot="public" virt="non-virtual">BWallTile</derivedcompoundref>
+    <includes refid="_bound_tiles_8h" local="no">BoundTiles.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="class_b_tile_1a0c85a54373837c9bbe0fa2f83475234b" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BTile::tileSize</definition>
+        <argsstring></argsstring>
+        <name>tileSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="44" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_tile_1a9a106634c3890eaa7a69cddc9680d822" prot="protected" static="no" mutable="no">
+        <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
+        <definition>Coords BTile::loc</definition>
+        <argsstring></argsstring>
+        <name>loc</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="45" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_tile_1a793fe978c4d34fc611dbe7d21079610d" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BTile::on</definition>
+        <argsstring></argsstring>
+        <name>on</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="46" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_tile_1adf1af86d1ae9fdc122007381d4bf0a94" prot="protected" static="no" mutable="no">
+        <type>Color3B</type>
+        <definition>Color3B BTile::onColor</definition>
+        <argsstring></argsstring>
+        <name>onColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="47" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_tile_1a06ca0d5b7b5c17a3d8c53395c2614a87" prot="protected" static="no" mutable="no">
+        <type>Color3B</type>
+        <definition>Color3B BTile::offColor</definition>
+        <argsstring></argsstring>
+        <name>offColor</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="48" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="class_b_tile_1af9d81dcd02de972c1d451af63c0a48e5" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BTile::updateColor</definition>
+        <argsstring>()</argsstring>
+        <name>updateColor</name>
+        <reimplementedby refid="class_b_explosion_tile_1a993eb687f4f595994747cc0f8534f78f">updateColor</reimplementedby>
+        <briefdescription>
+<para>Updates the current color based on the state of &apos;on&apos;. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="53" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_tile_1ae6faeef28449999ac4f1b2938fd2e89c" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BTile::updatePosition</definition>
+        <argsstring>()</argsstring>
+        <name>updatePosition</name>
+        <briefdescription>
+<para>Updates the current position of the tile. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="58" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="58" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_tile_1a7646b89b701a776494e16405b9d90871" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BTile::BTile</definition>
+        <argsstring>()</argsstring>
+        <name>BTile</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="61" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp" bodystart="12" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_tile_1a3bf473aada31f2a76de8ea244d889d16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BTile::BTile</definition>
+        <argsstring>(const Color3B onC, const Color3B offC)</argsstring>
+        <name>BTile</name>
+        <param>
+          <type>const Color3B</type>
+          <declname>onC</declname>
+        </param>
+        <param>
+          <type>const Color3B</type>
+          <declname>offC</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="62" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_tile_1a238d813159a2c767471ad12e3ada7421" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_b_tile" kindref="compound">BTile</ref> *</type>
+        <definition>BTile * BTile::createWithFileColors</definition>
+        <argsstring>(const char *image, const Color3B onC, const Color3B offC)</argsstring>
+        <name>createWithFileColors</name>
+        <param>
+          <type>const char *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>const Color3B</type>
+          <declname>onC</declname>
+        </param>
+        <param>
+          <type>const Color3B</type>
+          <declname>offC</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="64" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp" bodystart="23" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_tile_1abb4e47d337854e27649b6505536a8d4a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BTile::setOnColor</definition>
+        <argsstring>(const Color3B color)</argsstring>
+        <name>setOnColor</name>
+        <param>
+          <type>const Color3B</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Change the &quot;On&quot; color of the tile. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color to set as the onColor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="70" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="70" bodyend="70"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_tile_1a992da9e2ba93dfffb623af6905d5d4ae" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BTile::setOffColor</definition>
+        <argsstring>(const Color3B color)</argsstring>
+        <name>setOffColor</name>
+        <param>
+          <type>const Color3B</type>
+          <declname>color</declname>
+        </param>
+        <briefdescription>
+<para>Change the &quot;Off&quot; color of the tile. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The color to set as the offColor </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="76" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="76" bodyend="76"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_tile_1add471df28a98f6fcb4a3ca7409092fad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void BTile::setOn</definition>
+        <argsstring>(bool state)</argsstring>
+        <name>setOn</name>
+        <param>
+          <type>bool</type>
+          <declname>state</declname>
+        </param>
+        <briefdescription>
+<para>Sets the state of the Tile. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>True will set this to &quot;On&quot; </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="82" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="82" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_tile_1ab59bb83ecf56ec30d95c98ab3090d532" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BTile::isOn</definition>
+        <argsstring>()</argsstring>
+        <name>isOn</name>
+        <briefdescription>
+<para>Reutrns the on start. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="87" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="87" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_tile_1a64dfa0b2841ab4fc5a1e465f1389cb10" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BTile::setLocation</definition>
+        <argsstring>(Coords location)</argsstring>
+        <name>setLocation</name>
+        <param>
+          <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
+          <declname>location</declname>
+        </param>
+        <briefdescription>
+<para>Sets the location of the tile. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>location</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the x y coordinate of the tile </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="93" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="93" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_tile_1af0e20c14792be231f3b490eb1ec10a73" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
+        <definition>Coords BTile::getLocation</definition>
+        <argsstring>()</argsstring>
+        <name>getLocation</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="94" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="94" bodyend="94"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is the base class for tiles in the bound game. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="20">
+        <label>BFloorTile</label>
+        <link refid="class_b_floor_tile"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>BTile</label>
+        <link refid="class_b_tile"/>
+      </node>
+      <node id="21">
+        <label>BWallTile</label>
+        <link refid="class_b_wall_tile"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>BExplosionTile</label>
+        <link refid="class_b_explosion_tile"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="22">
+        <label>BTile</label>
+        <link refid="class_b_tile"/>
+        <childnode refid="23" relation="usage">
+          <edgelabel>loc</edgelabel>
+        </childnode>
+      </node>
+      <node id="23">
+        <label>Coords</label>
+        <link refid="struct_coords"/>
+      </node>
+    </collaborationgraph>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="42" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="41" bodyend="96"/>
+    <listofallmembers>
+      <member refid="class_b_tile_1a7646b89b701a776494e16405b9d90871" prot="public" virt="non-virtual"><scope>BTile</scope><name>BTile</name></member>
+      <member refid="class_b_tile_1a3bf473aada31f2a76de8ea244d889d16" prot="public" virt="non-virtual"><scope>BTile</scope><name>BTile</name></member>
+      <member refid="class_b_tile_1a238d813159a2c767471ad12e3ada7421" prot="public" virt="non-virtual"><scope>BTile</scope><name>createWithFileColors</name></member>
+      <member refid="class_b_tile_1af0e20c14792be231f3b490eb1ec10a73" prot="public" virt="non-virtual"><scope>BTile</scope><name>getLocation</name></member>
+      <member refid="class_b_tile_1ab59bb83ecf56ec30d95c98ab3090d532" prot="public" virt="non-virtual"><scope>BTile</scope><name>isOn</name></member>
+      <member refid="class_b_tile_1a9a106634c3890eaa7a69cddc9680d822" prot="protected" virt="non-virtual"><scope>BTile</scope><name>loc</name></member>
+      <member refid="class_b_tile_1a06ca0d5b7b5c17a3d8c53395c2614a87" prot="protected" virt="non-virtual"><scope>BTile</scope><name>offColor</name></member>
+      <member refid="class_b_tile_1a793fe978c4d34fc611dbe7d21079610d" prot="protected" virt="non-virtual"><scope>BTile</scope><name>on</name></member>
+      <member refid="class_b_tile_1adf1af86d1ae9fdc122007381d4bf0a94" prot="protected" virt="non-virtual"><scope>BTile</scope><name>onColor</name></member>
+      <member refid="class_b_tile_1a64dfa0b2841ab4fc5a1e465f1389cb10" prot="public" virt="non-virtual"><scope>BTile</scope><name>setLocation</name></member>
+      <member refid="class_b_tile_1a992da9e2ba93dfffb623af6905d5d4ae" prot="public" virt="non-virtual"><scope>BTile</scope><name>setOffColor</name></member>
+      <member refid="class_b_tile_1add471df28a98f6fcb4a3ca7409092fad" prot="public" virt="virtual"><scope>BTile</scope><name>setOn</name></member>
+      <member refid="class_b_tile_1abb4e47d337854e27649b6505536a8d4a" prot="public" virt="non-virtual"><scope>BTile</scope><name>setOnColor</name></member>
+      <member refid="class_b_tile_1a0c85a54373837c9bbe0fa2f83475234b" prot="protected" virt="non-virtual"><scope>BTile</scope><name>tileSize</name></member>
+      <member refid="class_b_tile_1af9d81dcd02de972c1d451af63c0a48e5" prot="protected" virt="non-virtual"><scope>BTile</scope><name>updateColor</name></member>
+      <member refid="class_b_tile_1ae6faeef28449999ac4f1b2938fd2e89c" prot="protected" virt="non-virtual"><scope>BTile</scope><name>updatePosition</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

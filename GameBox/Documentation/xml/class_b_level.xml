@@ -1,0 +1,242 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_b_level" kind="class" prot="public">
+    <compoundname>BLevel</compoundname>
+    <includes refid="_bound_level_8h" local="no">BoundLevel.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_b_level_1a2ba03921421fff1c7261fda079b6ba75" prot="private" static="no" mutable="no">
+        <type><ref refid="class_b_floor_tile" kindref="compound">BFloorTile</ref> **</type>
+        <definition>BFloorTile** BLevel::fTiles</definition>
+        <argsstring></argsstring>
+        <name>fTiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="35" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_1af1885c1ae9b86c0a80db643acbbe50d4" prot="private" static="no" mutable="no">
+        <type><ref refid="class_b_wall_tile" kindref="compound">BWallTile</ref> **</type>
+        <definition>BWallTile** BLevel::wTiles</definition>
+        <argsstring></argsstring>
+        <name>wTiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="36" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_1adf3d46368cfe19ed1e73a0b7d5539fba" prot="private" static="no" mutable="no">
+        <type><ref refid="class_b_explosion_tile" kindref="compound">BExplosionTile</ref> **</type>
+        <definition>BExplosionTile** BLevel::eTiles</definition>
+        <argsstring></argsstring>
+        <name>eTiles</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="37" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_1a4f1cdbc4216de46f7f766a4f0c5a51b7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BLevel::width</definition>
+        <argsstring></argsstring>
+        <name>width</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="38" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_1abb0c14ba020af30d1d1f1bfa69dfea00" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BLevel::height</definition>
+        <argsstring></argsstring>
+        <name>height</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="39" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_1adde75adfdfbbddd7846a65569d53d5d0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BLevel::tileSize</definition>
+        <argsstring></argsstring>
+        <name>tileSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="40" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_1ac2110699926d964ca1dac8d79217e5a8" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BLevel::fTileCount</definition>
+        <argsstring></argsstring>
+        <name>fTileCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="41" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_1aa95d39b724327298f6669280a36a7f64" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BLevel::wTileCount</definition>
+        <argsstring></argsstring>
+        <name>wTileCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="42" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_1a11c0243e34fa173fbcee54f338faa136" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BLevel::eTileCount</definition>
+        <argsstring></argsstring>
+        <name>eTileCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="43" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_level_1aa15bc1515221e23a3fc8e5063b69a3d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_b_level" kindref="compound">BLevel</ref> *</type>
+        <definition>BLevel* BLevel::creatWithFile</definition>
+        <argsstring>(char *level)</argsstring>
+        <name>creatWithFile</name>
+        <param>
+          <type>char *</type>
+          <declname>level</declname>
+        </param>
+        <briefdescription>
+<para>This will load in a level. Level formatting can be found in LevelMaking.bdl. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="50"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_level_1abb407d85aebcc0d6cded1ad13c2e2eed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BLevel::isWall</definition>
+        <argsstring>(const Coords loc)</argsstring>
+        <name>isWall</name>
+        <param>
+          <type>const <ref refid="struct_coords" kindref="compound">Coords</ref></type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Checks if the provided location is a wall. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="55" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="11" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BLevel::isWall</definition>
+        <argsstring>(const int x, const int y)</argsstring>
+        <name>isWall</name>
+        <param>
+          <type>const int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="56" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_level_1adf39bb6a72e7780031a0806df92f9fc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BLevel::isExplosion</definition>
+        <argsstring>(const Coords loc)</argsstring>
+        <name>isExplosion</name>
+        <param>
+          <type>const <ref refid="struct_coords" kindref="compound">Coords</ref></type>
+          <declname>loc</declname>
+        </param>
+        <briefdescription>
+<para>Checks to see if there is an active explosion there. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="61" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="23" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_level_1acf89db789ceb7f083221fab3fead042e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BLevel::isExplosion</definition>
+        <argsstring>(const int x, const int y)</argsstring>
+        <name>isExplosion</name>
+        <param>
+          <type>const int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="62" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This will hold and draw the data for a level. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="33" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="32" bodyend="65"/>
+    <listofallmembers>
+      <member refid="class_b_level_1aa15bc1515221e23a3fc8e5063b69a3d2" prot="public" virt="non-virtual"><scope>BLevel</scope><name>creatWithFile</name></member>
+      <member refid="class_b_level_1a11c0243e34fa173fbcee54f338faa136" prot="private" virt="non-virtual"><scope>BLevel</scope><name>eTileCount</name></member>
+      <member refid="class_b_level_1adf3d46368cfe19ed1e73a0b7d5539fba" prot="private" virt="non-virtual"><scope>BLevel</scope><name>eTiles</name></member>
+      <member refid="class_b_level_1ac2110699926d964ca1dac8d79217e5a8" prot="private" virt="non-virtual"><scope>BLevel</scope><name>fTileCount</name></member>
+      <member refid="class_b_level_1a2ba03921421fff1c7261fda079b6ba75" prot="private" virt="non-virtual"><scope>BLevel</scope><name>fTiles</name></member>
+      <member refid="class_b_level_1abb0c14ba020af30d1d1f1bfa69dfea00" prot="private" virt="non-virtual"><scope>BLevel</scope><name>height</name></member>
+      <member refid="class_b_level_1adf39bb6a72e7780031a0806df92f9fc5" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isExplosion</name></member>
+      <member refid="class_b_level_1acf89db789ceb7f083221fab3fead042e" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isExplosion</name></member>
+      <member refid="class_b_level_1abb407d85aebcc0d6cded1ad13c2e2eed" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isWall</name></member>
+      <member refid="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isWall</name></member>
+      <member refid="class_b_level_1adde75adfdfbbddd7846a65569d53d5d0" prot="private" virt="non-virtual"><scope>BLevel</scope><name>tileSize</name></member>
+      <member refid="class_b_level_1a4f1cdbc4216de46f7f766a4f0c5a51b7" prot="private" virt="non-virtual"><scope>BLevel</scope><name>width</name></member>
+      <member refid="class_b_level_1aa95d39b724327298f6669280a36a7f64" prot="private" virt="non-virtual"><scope>BLevel</scope><name>wTileCount</name></member>
+      <member refid="class_b_level_1af1885c1ae9b86c0a80db643acbbe50d4" prot="private" virt="non-virtual"><scope>BLevel</scope><name>wTiles</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -4,26 +4,20 @@
     <compoundname>OverLayer.cpp</compoundname>
     <includes refid="_over_layer_8h" local="yes">OverLayer.h</includes>
     <incdepgraph>
-      <node id="59">
+      <node id="106">
         <label>GameBox/GameBox/Classes/TheBox/OverLayer.cpp</label>
         <link refid="OverLayer.cpp"/>
-        <childnode refid="60" relation="include">
+        <childnode refid="107" relation="include">
         </childnode>
       </node>
-      <node id="60">
+      <node id="107">
         <label>OverLayer.h</label>
         <link refid="_over_layer_8h"/>
-        <childnode refid="61" relation="include">
+        <childnode refid="108" relation="include">
         </childnode>
       </node>
-      <node id="62">
+      <node id="108">
         <label>cocos2d.h</label>
-      </node>
-      <node id="61">
-        <label>../Helpers/CustomCC.h</label>
-        <link refid="_custom_c_c_8h"/>
-        <childnode refid="62" relation="include">
-        </childnode>
       </node>
     </incdepgraph>
     <briefdescription>

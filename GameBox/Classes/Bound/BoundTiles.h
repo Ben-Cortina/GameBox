@@ -1,10 +1,13 @@
-//
-//  BoundTiles.h
-//  GameBox
-//
-//  Created by Blaeeap on 8/30/13.
-//
-//
+/**-------------------------------------------------------------*
+ * @file    Bound.h                                             *
+ * @author  Ben Cortina                                         *
+ * @date    8/30/13.                                            *
+ *                                                              *
+ * This holds the various types of Tiles that will be used in   *
+ * The Bound Game.                                              *
+ *                                                              *
+ * Currently: Wall, Floor, Explosion Tiles                      *
+ *--------------------------------------------------------------*/
 
 #ifndef __GameBox__BoundTiles__
 #define __GameBox__BoundTiles__
@@ -28,6 +31,9 @@ struct Coords
     Coords operator- (Coords r) {r.x = x - r.x; r.y = y - r.y; return r;};
 };
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/*=======================================      BTile      =======================================*/
+
 /**
  *  @class  BTile
  *  @brief  This is the base class for tiles in the bound game.
@@ -45,6 +51,11 @@ protected:
      *  @brief  Updates the current color based on the state of 'on'
      */
     void updateColor() { (on) ? setColor(onColor) : setColor(offColor); };
+    
+    /**
+     *  @brief  Updates the current position of the tile
+     */
+    void updatePosition() { setPosition( Point(loc.x * tileSize + tileSize/2, loc.y * tileSize + tileSize/2) ); };
     
 public:
     BTile();
@@ -75,15 +86,17 @@ public:
      */
     bool isOn() {return on;};
     
-    void updatePosition() {};
-//    /**
-//     *  @brief  Sets the location of the tile
-//     *  @param  location    the x y coordinate of the tile
-//     */
-//    void setOn(bool location) { on = location; updatePosition(); };
-//    bool isOn() {return on;};
+    /**
+     *  @brief  Sets the location of the tile
+     *  @param  location    the x y coordinate of the tile
+     */
+    void setLocation(Coords location) { loc = location; updatePosition(); };
+    Coords getLocation() {return loc;};
     
 };
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/*=====================================      BFloorTile      ====================================*/
 
 /**
  *  @class  BFloorTile
@@ -94,6 +107,9 @@ class BFloorTile : public BTile
 
 };
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/*=====================================      BWallTile      =====================================*/
+
 /**
  *  @class  BWallTile
  *  @brief  This is a wall tile, the player can not pass through this.
@@ -102,6 +118,9 @@ class BWallTile : public BTile
 {
     
 };
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/*===================================      BExplosionTile      ==================================*/
 
 /**
  *  @class  BExplosionTile
@@ -119,7 +138,7 @@ public:
      *  @brief  Special updateColor will fade to off rather than just instantly turn off
      */
     void updateColor() { if(on) setColor(onColor);
-                        else runAction(Sequence::create(
+                        else runAction( Sequence::create(
                         TintTo::create(interval / 2, offColor.r, offColor.g, offColor.b), NULL));};
 
 };

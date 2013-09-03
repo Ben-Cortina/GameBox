@@ -111,24 +111,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_b_level.html">BLevel</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#aa15bc1515221e23a3fc8e5063b69a3d2">creatWithFile</a> (char *level)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will load in a level. Level formatting can be found in LevelMaking.bdl.  <a href="#aa15bc1515221e23a3fc8e5063b69a3d2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a8500d99ab55b7c80f69a38f25b597216">BLevel</a> (char *level)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will load in a level. Level formatting can be found in LevelMaking.bdl.  <a href="#a8500d99ab55b7c80f69a38f25b597216"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#abb407d85aebcc0d6cded1ad13c2e2eed">isWall</a> (const <a class="el" href="struct_coords.html">Coords</a> loc)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided location is a wall.  <a href="#abb407d85aebcc0d6cded1ad13c2e2eed"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a7520cdd30191a75a7811c42ee1758e65">isWall</a> (const int x, const int y)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#adf39bb6a72e7780031a0806df92f9fc5">isExplosion</a> (const <a class="el" href="struct_coords.html">Coords</a> loc)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if there is an active explosion there.  <a href="#adf39bb6a72e7780031a0806df92f9fc5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#acf89db789ceb7f083221fab3fead042e">isExplosion</a> (const int x, const int y)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#af9220ff2364b269c82079792c657a46d">checkCollision</a> (const Rect)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a rectangle collides with any tiles.  <a href="#af9220ff2364b269c82079792c657a46d"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a4ea652af9cecf1cb4f19f9038d6fd047">getTileBB</a> (Point pt)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This will hold and draw the data for a level. </p>
-</div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="aa15bc1515221e23a3fc8e5063b69a3d2"></a><!-- doxytag: member="BLevel::creatWithFile" ref="aa15bc1515221e23a3fc8e5063b69a3d2" args="(char *level)" -->
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a8500d99ab55b7c80f69a38f25b597216"></a><!-- doxytag: member="BLevel::BLevel" ref="a8500d99ab55b7c80f69a38f25b597216" args="(char *level)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_b_level.html">BLevel</a>* <a class="el" href="class_b_level.html#aa15bc1515221e23a3fc8e5063b69a3d2">BLevel::creatWithFile</a> </td>
+          <td class="memname"><a class="el" href="class_b_level.html#a8500d99ab55b7c80f69a38f25b597216">BLevel::BLevel</a> </td>
           <td>(</td>
           <td class="paramtype">char *&#160;</td>
           <td class="paramname"><em>level</em></td><td>)</td>
@@ -139,6 +142,44 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>This will load in a level. Level formatting can be found in LevelMaking.bdl. </p>
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="af9220ff2364b269c82079792c657a46d"></a><!-- doxytag: member="BLevel::checkCollision" ref="af9220ff2364b269c82079792c657a46d" args="(const Rect)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int <a class="el" href="class_b_level.html#af9220ff2364b269c82079792c657a46d">BLevel::checkCollision</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Rect&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Checks if a rectangle collides with any tiles. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>0 if none, 1 if wall, 2 if explosion </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a4ea652af9cecf1cb4f19f9038d6fd047"></a><!-- doxytag: member="BLevel::getTileBB" ref="a4ea652af9cecf1cb4f19f9038d6fd047" args="(Point pt)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect <a class="el" href="class_b_level.html#a4ea652af9cecf1cb4f19f9038d6fd047">BLevel::getTileBB</a> </td>
+          <td>(</td>
+          <td class="paramtype">Point&#160;</td>
+          <td class="paramname"><em>pt</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
 
 </div>
 </div>
@@ -258,7 +299,7 @@ Public Member Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="class_b_level.html">BLevel</a>      </li>
 
-    <li class="footer">Generated on Mon Sep 2 2013 17:27:21 for GameBox by
+    <li class="footer">Generated on Tue Sep 3 2013 17:45:33 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

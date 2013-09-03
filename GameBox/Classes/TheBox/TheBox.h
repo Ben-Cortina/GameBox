@@ -100,6 +100,9 @@ private:
     float timeRemaining;  //time remaining in the current level
     float timePerLevel;   //time alloted per level
     LabelTTF * timeLabel; //the label that displayes the timer
+    
+    int isSnake;   //if this is with Snake rules
+    
     /**
      * @brief   Creates, sizes, and adds all the sprites
      */
@@ -175,9 +178,6 @@ private:
      *  @brief  Opens the initial menu for the game where the player decides what mode to play
      */
     void startMenu();
-    
-protected:
-    int isSnake;   //if this is with Snake rules
 
 public:
 

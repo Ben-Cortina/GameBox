@@ -10,6 +10,5 @@ var class_the_box_layer =
     [ "runThisGame", "class_the_box_layer.html#a3acdbe7193e4da946ba01f80daa951ad", null ],
     [ "setSnake", "class_the_box_layer.html#a2a76eca9790faad7097e37d5822d5e3e", null ],
     [ "startStandard", "class_the_box_layer.html#a3e32611fa82942d00d5e561bc59251e9", null ],
-    [ "update", "class_the_box_layer.html#a26cd4adbaec048f0df01ddb085c2beb7", null ],
-    [ "isSnake", "class_the_box_layer.html#ad8d6cd2fd5690312bfdbd4049a43f2f5", null ]
+    [ "update", "class_the_box_layer.html#a26cd4adbaec048f0df01ddb085c2beb7", null ]
 ];

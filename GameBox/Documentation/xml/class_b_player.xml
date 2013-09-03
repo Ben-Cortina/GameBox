@@ -3,12 +3,395 @@
   <compounddef id="class_b_player" kind="class" prot="public">
     <compoundname>BPlayer</compoundname>
     <includes refid="_bound_player_8h" local="no">BoundPlayer.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_b_player_1adcf843153230f6c3a842d14613d6ded3" prot="private" static="no" mutable="no">
+        <type>timeval</type>
+        <definition>timeval BPlayer::lastUpdate</definition>
+        <argsstring></argsstring>
+        <name>lastUpdate</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="38" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_player_1a5e78beca6caeadb8339b977ee58f1d4c" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BPlayer::dtCalculated</definition>
+        <argsstring></argsstring>
+        <name>dtCalculated</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="39" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_player_1aec08ca49744ee6bc33747389013ad47c" prot="private" static="no" mutable="no">
+        <type><ref refid="class_b_level" kindref="compound">BLevel</ref> *</type>
+        <definition>BLevel* BPlayer::level</definition>
+        <argsstring></argsstring>
+        <name>level</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="41" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_player_1aa0f0d3bcfd8060da02e2c67d0b549504" prot="private" static="no" mutable="no">
+        <type>Sprite *</type>
+        <definition>Sprite* BPlayer::player</definition>
+        <argsstring></argsstring>
+        <name>player</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="42" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="42" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_player_1a836682452c7380a303792daff1bf75e0" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float BPlayer::maxSpeed</definition>
+        <argsstring></argsstring>
+        <name>maxSpeed</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="44" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="44" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_player_1ac03a57b66f6d846b2fed0142470587a5" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_vector" kindref="compound">Vector</ref></type>
+        <definition>Vector BPlayer::force</definition>
+        <argsstring></argsstring>
+        <name>force</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="45" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_player_1aeba7acd97b65228677bd9fe2d0ca1e86" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_vector" kindref="compound">Vector</ref></type>
+        <definition>Vector BPlayer::velocity</definition>
+        <argsstring></argsstring>
+        <name>velocity</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="46" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_player_1a3152beb08679dfa9538bca632cde3624" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_key_state_struct" kindref="compound">KeyStateStruct</ref></type>
+        <definition>KeyStateStruct BPlayer::keyState</definition>
+        <argsstring></argsstring>
+        <name>keyState</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="48" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="48" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_player_1a81ff25cbd1dc216784b14547f8e92bcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BPlayer::BPlayer</definition>
+        <argsstring>()</argsstring>
+        <name>BPlayer</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="51" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="10" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1adf6478c51df592730b02d0174f91351a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BPlayer::BPlayer</definition>
+        <argsstring>(const char *image)</argsstring>
+        <name>BPlayer</name>
+        <param>
+          <type>const char *</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="52" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="17" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1a03add0a9a55d81912897518d94daf52f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BPlayer::setLevel</definition>
+        <argsstring>(BLevel *newLevel)</argsstring>
+        <name>setLevel</name>
+        <param>
+          <type><ref refid="class_b_level" kindref="compound">BLevel</ref> *</type>
+          <declname>newLevel</declname>
+        </param>
+        <briefdescription>
+<para>Set the level to check collision on. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="57" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1a3772d37e802a5fcad52a753450853441" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BPlayer::setPlayerPosition</definition>
+        <argsstring>(const Point pos)</argsstring>
+        <name>setPlayerPosition</name>
+        <param>
+          <type>const Point</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Set the position of the player&apos;s sprite. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="62" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="62" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1ace0ec1b13a62c932950a86a469d0263f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BPlayer::setMaxSpeed</definition>
+        <argsstring>(const float speed)</argsstring>
+        <name>setMaxSpeed</name>
+        <param>
+          <type>const float</type>
+          <declname>speed</declname>
+        </param>
+        <briefdescription>
+<para>Set the max speed of the player. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="67" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="67" bodyend="67"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1a33b7d635e3aa3c7a4796eabc4205cc58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="struct_vector" kindref="compound">Vector</ref></type>
+        <definition>Vector BPlayer::getForce</definition>
+        <argsstring>()</argsstring>
+        <name>getForce</name>
+        <briefdescription>
+<para>Get/Set methods for force. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="72" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1ae97ab8470903f7c595939f2331b6c6f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BPlayer::setForce</definition>
+        <argsstring>(const Vector pforce)</argsstring>
+        <name>setForce</name>
+        <param>
+          <type>const <ref refid="struct_vector" kindref="compound">Vector</ref></type>
+          <declname>pforce</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="73" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="73" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1af7ae69e5c1d7880a5ebf4bd38c1adabb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BPlayer::setForceX</definition>
+        <argsstring>(const float x)</argsstring>
+        <name>setForceX</name>
+        <param>
+          <type>const float</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="74" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="74" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1a94916a0f75042c2e6265fa7c9ec4db32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BPlayer::setForceY</definition>
+        <argsstring>(const float y)</argsstring>
+        <name>setForceY</name>
+        <param>
+          <type>const float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="75" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="75" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1aa0f9b22686ad0aeec30ea21beb3740f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BPlayer::updateVelocity</definition>
+        <argsstring>()</argsstring>
+        <name>updateVelocity</name>
+        <briefdescription>
+<para>Updates the current velocity based on the force being applied. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="80" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="25" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1a86f9b0c0d7b4c61ed475f0e70249be7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BPlayer::update</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>update</name>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>Updates the position of the Sprite based on dt and its current velocity. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dt</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The time over which the velocity has been applied </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="86" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="51" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1a709a36eb859dd8f9a4355e036eac8ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BPlayer::update</definition>
+        <argsstring>()</argsstring>
+        <name>update</name>
+        <briefdescription>
+<para>Updates the position of the Sprite based on the currenttime - lastupdate Ths allows me to call update whenever a keychanges so the movement is calculated based on the time of the key event rather than the time of each update. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="94" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="75" bodyend="97"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1aa05278b0c6e02aeb2a2cbd514fafd446" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BPlayer::handleMovement</definition>
+        <argsstring>(const float x, const float y)</argsstring>
+        <name>handleMovement</name>
+        <param>
+          <type>const float</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const float</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Handles the collision and movement of the player. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="99" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="110" bodyend="336"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1ae0aaaa33013fd5c0070cf51619abf12b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BPlayer::keyPressed</definition>
+        <argsstring>(int keyCode)</argsstring>
+        <name>keyPressed</name>
+        <param>
+          <type>int</type>
+          <declname>keyCode</declname>
+        </param>
+        <briefdescription>
+<para>Handles keyPresses. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This will be digital movement. You either go max speed or full stop with a keyboard </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="105" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="338" bodyend="387"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_player_1a8210db4e8fac75ace4b71b3ded1df6bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BPlayer::keyReleased</definition>
+        <argsstring>(int keyCode)</argsstring>
+        <name>keyReleased</name>
+        <param>
+          <type>int</type>
+          <declname>keyCode</declname>
+        </param>
+        <briefdescription>
+<para>Handles keyReleases. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="110" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="389" bodyend="391"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
 <para>This will hold and draw the data for a Player. It will also handle player movement. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="20" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="19" bodyend="22"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="35" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="34" bodyend="111"/>
     <listofallmembers>
+      <member refid="class_b_player_1a81ff25cbd1dc216784b14547f8e92bcc" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>BPlayer</name></member>
+      <member refid="class_b_player_1adf6478c51df592730b02d0174f91351a" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>BPlayer</name></member>
+      <member refid="class_b_player_1a5e78beca6caeadb8339b977ee58f1d4c" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>dtCalculated</name></member>
+      <member refid="class_b_player_1ac03a57b66f6d846b2fed0142470587a5" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>force</name></member>
+      <member refid="class_b_player_1a33b7d635e3aa3c7a4796eabc4205cc58" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>getForce</name></member>
+      <member refid="class_b_player_1aa05278b0c6e02aeb2a2cbd514fafd446" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>handleMovement</name></member>
+      <member refid="class_b_player_1ae0aaaa33013fd5c0070cf51619abf12b" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>keyPressed</name></member>
+      <member refid="class_b_player_1a8210db4e8fac75ace4b71b3ded1df6bf" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>keyReleased</name></member>
+      <member refid="class_b_player_1a3152beb08679dfa9538bca632cde3624" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>keyState</name></member>
+      <member refid="class_b_player_1adcf843153230f6c3a842d14613d6ded3" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>lastUpdate</name></member>
+      <member refid="class_b_player_1aec08ca49744ee6bc33747389013ad47c" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>level</name></member>
+      <member refid="class_b_player_1a836682452c7380a303792daff1bf75e0" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>maxSpeed</name></member>
+      <member refid="class_b_player_1aa0f0d3bcfd8060da02e2c67d0b549504" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>player</name></member>
+      <member refid="class_b_player_1ae97ab8470903f7c595939f2331b6c6f4" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>setForce</name></member>
+      <member refid="class_b_player_1af7ae69e5c1d7880a5ebf4bd38c1adabb" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>setForceX</name></member>
+      <member refid="class_b_player_1a94916a0f75042c2e6265fa7c9ec4db32" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>setForceY</name></member>
+      <member refid="class_b_player_1a03add0a9a55d81912897518d94daf52f" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>setLevel</name></member>
+      <member refid="class_b_player_1ace0ec1b13a62c932950a86a469d0263f" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>setMaxSpeed</name></member>
+      <member refid="class_b_player_1a3772d37e802a5fcad52a753450853441" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>setPlayerPosition</name></member>
+      <member refid="class_b_player_1a86f9b0c0d7b4c61ed475f0e70249be7f" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>update</name></member>
+      <member refid="class_b_player_1a709a36eb859dd8f9a4355e036eac8ac8" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>update</name></member>
+      <member refid="class_b_player_1aa0f9b22686ad0aeec30ea21beb3740f2" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>updateVelocity</name></member>
+      <member refid="class_b_player_1aeba7acd97b65228677bd9fe2d0ca1e86" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>velocity</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

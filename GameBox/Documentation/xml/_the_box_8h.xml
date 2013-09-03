@@ -8,71 +8,71 @@
     <includedby refid="_player_sprite_8cpp" local="yes">GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp</includedby>
     <includedby refid="_the_box_8cpp" local="yes">GameBox/GameBox/Classes/TheBox/TheBox.cpp</includedby>
     <incdepgraph>
-      <node id="147">
+      <node id="155">
         <label>OverLayer.h</label>
         <link refid="_over_layer_8h"/>
-        <childnode refid="146" relation="include">
+        <childnode refid="154" relation="include">
         </childnode>
       </node>
-      <node id="146">
+      <node id="154">
         <label>cocos2d.h</label>
       </node>
-      <node id="145">
+      <node id="153">
         <label>../Helpers/CustomCC.h</label>
         <link refid="_custom_c_c_8h"/>
-        <childnode refid="146" relation="include">
+        <childnode refid="154" relation="include">
         </childnode>
       </node>
-      <node id="144">
+      <node id="152">
         <label>GameBox/GameBox/Classes/TheBox/TheBox.h</label>
         <link refid="TheBox.h"/>
-        <childnode refid="145" relation="include">
+        <childnode refid="153" relation="include">
         </childnode>
-        <childnode refid="147" relation="include">
+        <childnode refid="155" relation="include">
         </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="149">
+      <node id="157">
         <label>GameBox/GameBox/Classes/GameList.h</label>
         <link refid="_game_list_8h"/>
-        <childnode refid="150" relation="include">
+        <childnode refid="158" relation="include">
         </childnode>
       </node>
-      <node id="150">
+      <node id="158">
         <label>GameBox/GameBox/Classes/HomeScene.h</label>
         <link refid="_home_scene_8h"/>
-        <childnode refid="151" relation="include">
+        <childnode refid="159" relation="include">
         </childnode>
-        <childnode refid="152" relation="include">
+        <childnode refid="160" relation="include">
         </childnode>
-        <childnode refid="153" relation="include">
+        <childnode refid="161" relation="include">
         </childnode>
       </node>
-      <node id="152">
+      <node id="160">
         <label>GameBox/GameBox/Classes/HomeScene.cpp</label>
         <link refid="_home_scene_8cpp"/>
       </node>
-      <node id="154">
+      <node id="162">
         <label>GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp</label>
         <link refid="_player_sprite_8cpp"/>
       </node>
-      <node id="151">
+      <node id="159">
         <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
         <link refid="_app_delegate_8cpp"/>
       </node>
-      <node id="153">
+      <node id="161">
         <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
         <link refid="_the_box_8cpp"/>
       </node>
-      <node id="148">
+      <node id="156">
         <label>GameBox/GameBox/Classes/TheBox/TheBox.h</label>
         <link refid="TheBox.h"/>
-        <childnode refid="149" relation="include">
+        <childnode refid="157" relation="include">
         </childnode>
-        <childnode refid="154" relation="include">
+        <childnode refid="162" relation="include">
         </childnode>
-        <childnode refid="153" relation="include">
+        <childnode refid="161" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -211,37 +211,37 @@
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timeRemaining;<sp/><sp/></highlight><highlight class="comment">//time<sp/>remaining<sp/>in<sp/>the<sp/>current<sp/>level</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>timePerLevel;<sp/><sp/><sp/></highlight><highlight class="comment">//time<sp/>alloted<sp/>per<sp/>level</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>LabelTTF<sp/>*<sp/>timeLabel;<sp/></highlight><highlight class="comment">//the<sp/>label<sp/>that<sp/>displayes<sp/>the<sp/>timer</highlight></codeline>
-<codeline lineno="106"><highlight class="comment"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initTiles();</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initPlayer();</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>nextLevel();</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>restartGame();</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateTiles();</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkConditions();</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>changeExit(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>spawnTile(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
-<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setLayerSize(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setPlayer(Sprite<sp/>*<sp/>tile,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateBorder();</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkPlayerCollision(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dy);</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>openMenu();</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>startMenu();</highlight></codeline>
-<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="179"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="180" refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" kindref="member">isSnake</ref>;<sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>this<sp/>is<sp/>with<sp/>Snake<sp/>rules</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>LabelTTF<sp/>*<sp/>timeLabel;<sp/></highlight><highlight class="comment">//the<sp/>label<sp/>that<sp/>displayes<sp/>the<sp/>timer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>isSnake;<sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>this<sp/>is<sp/>with<sp/>Snake<sp/>rules</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initTiles();</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initPlayer();</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>nextLevel();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>restartGame();</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateTiles();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>checkConditions();</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>changeExit(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>spawnTile(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setLayerSize(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>setPlayer(Sprite<sp/>*<sp/>tile,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateBorder();</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>checkPlayerCollision(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dy);</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>openMenu();</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>startMenu();</highlight></codeline>
 <codeline lineno="181"><highlight class="normal"></highlight></codeline>
 <codeline lineno="182"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="183"><highlight class="normal"></highlight></codeline>

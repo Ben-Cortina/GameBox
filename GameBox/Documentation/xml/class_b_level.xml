@@ -123,11 +123,11 @@
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_b_level_1aa15bc1515221e23a3fc8e5063b69a3d2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="class_b_level" kindref="compound">BLevel</ref> *</type>
-        <definition>BLevel* BLevel::creatWithFile</definition>
+      <memberdef kind="function" id="class_b_level_1a8500d99ab55b7c80f69a38f25b597216" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BLevel::BLevel</definition>
         <argsstring>(char *level)</argsstring>
-        <name>creatWithFile</name>
+        <name>BLevel</name>
         <param>
           <type>char *</type>
           <declname>level</declname>
@@ -216,18 +216,54 @@
         </inbodydescription>
         <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="62" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="62" bodyend="62"/>
       </memberdef>
+      <memberdef kind="function" id="class_b_level_1af9220ff2364b269c82079792c657a46d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int BLevel::checkCollision</definition>
+        <argsstring>(const Rect)</argsstring>
+        <name>checkCollision</name>
+        <param>
+          <type>const Rect</type>
+        </param>
+        <briefdescription>
+<para>Checks if a rectangle collides with any tiles. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 if none, 1 if wall, 2 if explosion </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="68"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_level_1a4ea652af9cecf1cb4f19f9038d6fd047" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>Rect</type>
+        <definition>Rect BLevel::getTileBB</definition>
+        <argsstring>(Point pt)</argsstring>
+        <name>getTileBB</name>
+        <param>
+          <type>Point</type>
+          <declname>pt</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="70" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="70" bodyend="72"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This will hold and draw the data for a level. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="33" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="32" bodyend="65"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="33" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="32" bodyend="74"/>
     <listofallmembers>
-      <member refid="class_b_level_1aa15bc1515221e23a3fc8e5063b69a3d2" prot="public" virt="non-virtual"><scope>BLevel</scope><name>creatWithFile</name></member>
+      <member refid="class_b_level_1a8500d99ab55b7c80f69a38f25b597216" prot="public" virt="non-virtual"><scope>BLevel</scope><name>BLevel</name></member>
+      <member refid="class_b_level_1af9220ff2364b269c82079792c657a46d" prot="public" virt="non-virtual"><scope>BLevel</scope><name>checkCollision</name></member>
       <member refid="class_b_level_1a11c0243e34fa173fbcee54f338faa136" prot="private" virt="non-virtual"><scope>BLevel</scope><name>eTileCount</name></member>
       <member refid="class_b_level_1adf3d46368cfe19ed1e73a0b7d5539fba" prot="private" virt="non-virtual"><scope>BLevel</scope><name>eTiles</name></member>
       <member refid="class_b_level_1ac2110699926d964ca1dac8d79217e5a8" prot="private" virt="non-virtual"><scope>BLevel</scope><name>fTileCount</name></member>
       <member refid="class_b_level_1a2ba03921421fff1c7261fda079b6ba75" prot="private" virt="non-virtual"><scope>BLevel</scope><name>fTiles</name></member>
+      <member refid="class_b_level_1a4ea652af9cecf1cb4f19f9038d6fd047" prot="public" virt="non-virtual"><scope>BLevel</scope><name>getTileBB</name></member>
       <member refid="class_b_level_1abb0c14ba020af30d1d1f1bfa69dfea00" prot="private" virt="non-virtual"><scope>BLevel</scope><name>height</name></member>
       <member refid="class_b_level_1adf39bb6a72e7780031a0806df92f9fc5" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isExplosion</name></member>
       <member refid="class_b_level_1acf89db789ceb7f083221fab3fead042e" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isExplosion</name></member>

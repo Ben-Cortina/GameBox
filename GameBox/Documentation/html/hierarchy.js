@@ -12,6 +12,7 @@ var hierarchy =
     [ "Coords", "struct_coords.html", null ],
     [ "ExplosionSchedule", "struct_explosion_schedule.html", null ],
     [ "HomeLayer", "class_home_layer.html", null ],
+    [ "KeyStateStruct", "struct_key_state_struct.html", null ],
     [ "MyMenuItemImage", "class_my_menu_item_image.html", null ],
     [ "MyScene", "class_my_scene.html", null ],
     [ "OverLayer", "class_over_layer.html", null ],

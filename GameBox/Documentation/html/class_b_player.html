@@ -95,6 +95,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </script>
 <div id="doc-content">
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">BPlayer Class Reference</div>  </div>
 </div><!--header-->
@@ -104,10 +106,332 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="class_b_player.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="_bound_player_8h_source.html">BoundPlayer.h</a>&gt;</code></p>
+
+<p><a href="class_b_player-members.html">List of all members.</a></p>
+<table class="memberdecls">
+<tr><td colspan="2"><h2><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a81ff25cbd1dc216784b14547f8e92bcc">BPlayer</a> ()</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#adf6478c51df592730b02d0174f91351a">BPlayer</a> (const char *<a class="el" href="_game_list_8h.html#ac745ab21f82aa96829863dcfc37ef5a8">image</a>)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a03add0a9a55d81912897518d94daf52f">setLevel</a> (<a class="el" href="class_b_level.html">BLevel</a> *newLevel)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the level to check collision on.  <a href="#a03add0a9a55d81912897518d94daf52f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a3772d37e802a5fcad52a753450853441">setPlayerPosition</a> (const Point pos)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the position of the player's sprite.  <a href="#a3772d37e802a5fcad52a753450853441"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#ace0ec1b13a62c932950a86a469d0263f">setMaxSpeed</a> (const float speed)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the max speed of the player.  <a href="#ace0ec1b13a62c932950a86a469d0263f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_vector.html">Vector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a33b7d635e3aa3c7a4796eabc4205cc58">getForce</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get/Set methods for force.  <a href="#a33b7d635e3aa3c7a4796eabc4205cc58"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#ae97ab8470903f7c595939f2331b6c6f4">setForce</a> (const <a class="el" href="struct_vector.html">Vector</a> pforce)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#af7ae69e5c1d7880a5ebf4bd38c1adabb">setForceX</a> (const float x)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a94916a0f75042c2e6265fa7c9ec4db32">setForceY</a> (const float y)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#aa0f9b22686ad0aeec30ea21beb3740f2">updateVelocity</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current velocity based on the force being applied.  <a href="#aa0f9b22686ad0aeec30ea21beb3740f2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a86f9b0c0d7b4c61ed475f0e70249be7f">update</a> (float dt)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the position of the Sprite based on dt and its current velocity.  <a href="#a86f9b0c0d7b4c61ed475f0e70249be7f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a709a36eb859dd8f9a4355e036eac8ac8">update</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the position of the Sprite based on the currenttime - lastupdate Ths allows me to call update whenever a keychanges so the movement is calculated based on the time of the key event rather than the time of each update.  <a href="#a709a36eb859dd8f9a4355e036eac8ac8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#aa05278b0c6e02aeb2a2cbd514fafd446">handleMovement</a> (const float x, const float y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles the collision and movement of the player.  <a href="#aa05278b0c6e02aeb2a2cbd514fafd446"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#ae0aaaa33013fd5c0070cf51619abf12b">keyPressed</a> (int keyCode)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles keyPresses.  <a href="#ae0aaaa33013fd5c0070cf51619abf12b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a8210db4e8fac75ace4b71b3ded1df6bf">keyReleased</a> (int keyCode)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles keyReleases.  <a href="#a8210db4e8fac75ace4b71b3ded1df6bf"></a><br/></td></tr>
+</table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This will hold and draw the data for a Player. It will also handle player movement. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a81ff25cbd1dc216784b14547f8e92bcc"></a><!-- doxytag: member="BPlayer::BPlayer" ref="a81ff25cbd1dc216784b14547f8e92bcc" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_player.html#a81ff25cbd1dc216784b14547f8e92bcc">BPlayer::BPlayer</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="adf6478c51df592730b02d0174f91351a"></a><!-- doxytag: member="BPlayer::BPlayer" ref="adf6478c51df592730b02d0174f91351a" args="(const char *image)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_player.html#a81ff25cbd1dc216784b14547f8e92bcc">BPlayer::BPlayer</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>image</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="a33b7d635e3aa3c7a4796eabc4205cc58"></a><!-- doxytag: member="BPlayer::getForce" ref="a33b7d635e3aa3c7a4796eabc4205cc58" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_vector.html">Vector</a> <a class="el" href="class_b_player.html#a33b7d635e3aa3c7a4796eabc4205cc58">BPlayer::getForce</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get/Set methods for force. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa05278b0c6e02aeb2a2cbd514fafd446"></a><!-- doxytag: member="BPlayer::handleMovement" ref="aa05278b0c6e02aeb2a2cbd514fafd446" args="(const float x, const float y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#aa05278b0c6e02aeb2a2cbd514fafd446">BPlayer::handleMovement</a> </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>x</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>y</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Handles the collision and movement of the player. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae0aaaa33013fd5c0070cf51619abf12b"></a><!-- doxytag: member="BPlayer::keyPressed" ref="ae0aaaa33013fd5c0070cf51619abf12b" args="(int keyCode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#ae0aaaa33013fd5c0070cf51619abf12b">BPlayer::keyPressed</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keyCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Handles keyPresses. </p>
+<dl class="note"><dt><b>Note:</b></dt><dd>This will be digital movement. You either go max speed or full stop with a keyboard </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a8210db4e8fac75ace4b71b3ded1df6bf"></a><!-- doxytag: member="BPlayer::keyReleased" ref="a8210db4e8fac75ace4b71b3ded1df6bf" args="(int keyCode)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#a8210db4e8fac75ace4b71b3ded1df6bf">BPlayer::keyReleased</a> </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>keyCode</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Handles keyReleases. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae97ab8470903f7c595939f2331b6c6f4"></a><!-- doxytag: member="BPlayer::setForce" ref="ae97ab8470903f7c595939f2331b6c6f4" args="(const Vector pforce)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#ae97ab8470903f7c595939f2331b6c6f4">BPlayer::setForce</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_vector.html">Vector</a>&#160;</td>
+          <td class="paramname"><em>pforce</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="af7ae69e5c1d7880a5ebf4bd38c1adabb"></a><!-- doxytag: member="BPlayer::setForceX" ref="af7ae69e5c1d7880a5ebf4bd38c1adabb" args="(const float x)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#af7ae69e5c1d7880a5ebf4bd38c1adabb">BPlayer::setForceX</a> </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>x</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a94916a0f75042c2e6265fa7c9ec4db32"></a><!-- doxytag: member="BPlayer::setForceY" ref="a94916a0f75042c2e6265fa7c9ec4db32" args="(const float y)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#a94916a0f75042c2e6265fa7c9ec4db32">BPlayer::setForceY</a> </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>y</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a03add0a9a55d81912897518d94daf52f"></a><!-- doxytag: member="BPlayer::setLevel" ref="a03add0a9a55d81912897518d94daf52f" args="(BLevel *newLevel)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#a03add0a9a55d81912897518d94daf52f">BPlayer::setLevel</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_b_level.html">BLevel</a> *&#160;</td>
+          <td class="paramname"><em>newLevel</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the level to check collision on. </p>
+
+</div>
+</div>
+<a class="anchor" id="ace0ec1b13a62c932950a86a469d0263f"></a><!-- doxytag: member="BPlayer::setMaxSpeed" ref="ace0ec1b13a62c932950a86a469d0263f" args="(const float speed)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#ace0ec1b13a62c932950a86a469d0263f">BPlayer::setMaxSpeed</a> </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the max speed of the player. </p>
+
+</div>
+</div>
+<a class="anchor" id="a3772d37e802a5fcad52a753450853441"></a><!-- doxytag: member="BPlayer::setPlayerPosition" ref="a3772d37e802a5fcad52a753450853441" args="(const Point pos)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#a3772d37e802a5fcad52a753450853441">BPlayer::setPlayerPosition</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Point&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Set the position of the player's sprite. </p>
+
+</div>
+</div>
+<a class="anchor" id="a86f9b0c0d7b4c61ed475f0e70249be7f"></a><!-- doxytag: member="BPlayer::update" ref="a86f9b0c0d7b4c61ed475f0e70249be7f" args="(float dt)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#a86f9b0c0d7b4c61ed475f0e70249be7f">BPlayer::update</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Updates the position of the Sprite based on dt and its current velocity. </p>
+<dl class="params"><dt><b>Parameters:</b></dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dt</td><td>The time over which the velocity has been applied </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a709a36eb859dd8f9a4355e036eac8ac8"></a><!-- doxytag: member="BPlayer::update" ref="a709a36eb859dd8f9a4355e036eac8ac8" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#a86f9b0c0d7b4c61ed475f0e70249be7f">BPlayer::update</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Updates the position of the Sprite based on the currenttime - lastupdate Ths allows me to call update whenever a keychanges so the movement is calculated based on the time of the key event rather than the time of each update. </p>
+
+</div>
+</div>
+<a class="anchor" id="aa0f9b22686ad0aeec30ea21beb3740f2"></a><!-- doxytag: member="BPlayer::updateVelocity" ref="aa0f9b22686ad0aeec30ea21beb3740f2" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#aa0f9b22686ad0aeec30ea21beb3740f2">BPlayer::updateVelocity</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Updates the current velocity based on the force being applied. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>GameBox/GameBox/Classes/Bound/<a class="el" href="_bound_player_8h_source.html">BoundPlayer.h</a></li>
+<li>GameBox/GameBox/Classes/Bound/<a class="el" href="_bound_player_8cpp.html">BoundPlayer.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div>
@@ -129,7 +453,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="class_b_player.html">BPlayer</a>      </li>
 
-    <li class="footer">Generated on Mon Sep 2 2013 17:27:21 for GameBox by
+    <li class="footer">Generated on Tue Sep 3 2013 17:45:33 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -47,7 +47,7 @@ public:
     /**
      *  @brief  This will load in a level. Level formatting can be found in LevelMaking.bdl
      */
-    BLevel* creatWithFile(char* level);
+    BLevel(char* level);
     
     /**
      *  @brief  Checks if the provided location is a wall
@@ -61,6 +61,15 @@ public:
     bool isExplosion(const Coords loc);
     bool isExplosion(const int x, const int y) { return isExplosion( Coords(x, y) ); };
     
+    /**
+     *  @brief  Checks if a rectangle collides with any tiles
+     *  @return 0 if none, 1 if wall, 2 if explosion
+     */
+    int checkCollision(const Rect);
+    
+    Rect getTileBB(Point pt) { pt = pt - getPosition(); return Rect(tileSize * (int)(pt.x / tileSize),
+                                                                    tileSize * (int)(pt.y / tileSize),
+                                                                    tileSize, tileSize); };
     
 };
 

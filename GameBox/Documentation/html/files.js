@@ -9,7 +9,7 @@ var files =
     [ "GameBox/GameBox/Classes/Bound/Bound.h", "_bound_8h.html", null ],
     [ "GameBox/GameBox/Classes/Bound/BoundLevel.cpp", "_bound_level_8cpp.html", null ],
     [ "GameBox/GameBox/Classes/Bound/BoundLevel.h", "_bound_level_8h.html", "_bound_level_8h" ],
-    [ "GameBox/GameBox/Classes/Bound/BoundPlayer.cpp", "_bound_player_8cpp.html", null ],
+    [ "GameBox/GameBox/Classes/Bound/BoundPlayer.cpp", "_bound_player_8cpp.html", "_bound_player_8cpp" ],
     [ "GameBox/GameBox/Classes/Bound/BoundPlayer.h", "_bound_player_8h.html", "_bound_player_8h" ],
     [ "GameBox/GameBox/Classes/Bound/BoundTiles.cpp", "_bound_tiles_8cpp.html", null ],
     [ "GameBox/GameBox/Classes/Bound/BoundTiles.h", "_bound_tiles_8h.html", "_bound_tiles_8h" ],

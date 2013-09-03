@@ -2,13 +2,14 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
   <compounddef id="_bound_8h" kind="file">
     <compoundname>Bound.h</compoundname>
-    <includes refid="_bound_level_8h" local="yes">BoundLevel.h</includes>
     <includes refid="_bound_player_8h" local="yes">BoundPlayer.h</includes>
     <includedby refid="_bound_8cpp" local="yes">GameBox/GameBox/Classes/Bound/Bound.cpp</includedby>
     <incdepgraph>
-      <node id="24">
+      <node id="21">
         <label>BoundPlayer.h</label>
         <link refid="_bound_player_8h"/>
+        <childnode refid="22" relation="include">
+        </childnode>
         <childnode refid="23" relation="include">
         </childnode>
       </node>
@@ -17,22 +18,20 @@
         <link refid="Bound.h"/>
         <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
-        </childnode>
       </node>
-      <node id="22">
+      <node id="24">
         <label>BoundTiles.h</label>
         <link refid="_bound_tiles_8h"/>
-        <childnode refid="23" relation="include">
-        </childnode>
-      </node>
-      <node id="21">
-        <label>BoundLevel.h</label>
-        <link refid="_bound_level_8h"/>
         <childnode refid="22" relation="include">
         </childnode>
       </node>
       <node id="23">
+        <label>BoundLevel.h</label>
+        <link refid="_bound_level_8h"/>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
         <label>cocos2d.h</label>
       </node>
     </incdepgraph>
@@ -62,7 +61,7 @@
 <codeline lineno="18"><highlight class="preprocessor">#ifndef<sp/>__GameBox__Bound__</highlight></codeline>
 <codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__GameBox__Bound__</highlight></codeline>
 <codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bound_level_8h" kindref="compound">BoundLevel.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;BoundLevel.h&quot;<sp/>BoundPlayer.h<sp/>includes<sp/>BoundLevel</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bound_player_8h" kindref="compound">BoundPlayer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>

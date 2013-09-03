@@ -4,19 +4,19 @@
     <compoundname>BoundTiles.cpp</compoundname>
     <includes refid="_bound_tiles_8h" local="yes">BoundTiles.h</includes>
     <incdepgraph>
-      <node id="51">
+      <node id="57">
         <label>BoundTiles.h</label>
         <link refid="_bound_tiles_8h"/>
-        <childnode refid="52" relation="include">
+        <childnode refid="58" relation="include">
         </childnode>
       </node>
-      <node id="50">
+      <node id="56">
         <label>GameBox/GameBox/Classes/Bound/BoundTiles.cpp</label>
         <link refid="BoundTiles.cpp"/>
-        <childnode refid="51" relation="include">
+        <childnode refid="57" relation="include">
         </childnode>
       </node>
-      <node id="52">
+      <node id="58">
         <label>cocos2d.h</label>
       </node>
     </incdepgraph>

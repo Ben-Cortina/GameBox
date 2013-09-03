@@ -128,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00044"></a>00044     
 <a name="l00045"></a>00045 <span class="keyword">public</span>:
 <a name="l00046"></a>00046     
-<a name="l00050"></a>00050     <a class="code" href="class_b_level.html" title="This will hold and draw the data for a level.">BLevel</a>* <a class="code" href="class_b_level.html#aa15bc1515221e23a3fc8e5063b69a3d2" title="This will load in a level. Level formatting can be found in LevelMaking.bdl.">creatWithFile</a>(<span class="keywordtype">char</span>* level);
+<a name="l00050"></a>00050     <a class="code" href="class_b_level.html#a8500d99ab55b7c80f69a38f25b597216" title="This will load in a level. Level formatting can be found in LevelMaking.bdl.">BLevel</a>(<span class="keywordtype">char</span>* level);
 <a name="l00051"></a>00051     
 <a name="l00055"></a>00055     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#abb407d85aebcc0d6cded1ad13c2e2eed" title="Checks if the provided location is a wall.">isWall</a>(<span class="keyword">const</span> <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> loc);
 <a name="l00056"></a><a class="code" href="class_b_level.html#a7520cdd30191a75a7811c42ee1758e65">00056</a>     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#a7520cdd30191a75a7811c42ee1758e65">isWall</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y) { <span class="keywordflow">return</span> <a class="code" href="class_b_level.html#a7520cdd30191a75a7811c42ee1758e65">isWall</a>( <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a>(x, y) ); };
@@ -136,10 +136,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00061"></a>00061     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#adf39bb6a72e7780031a0806df92f9fc5" title="Checks to see if there is an active explosion there.">isExplosion</a>(<span class="keyword">const</span> <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> loc);
 <a name="l00062"></a><a class="code" href="class_b_level.html#acf89db789ceb7f083221fab3fead042e">00062</a>     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#acf89db789ceb7f083221fab3fead042e">isExplosion</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y) { <span class="keywordflow">return</span> <a class="code" href="class_b_level.html#acf89db789ceb7f083221fab3fead042e">isExplosion</a>( <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a>(x, y) ); };
 <a name="l00063"></a>00063     
-<a name="l00064"></a>00064     
-<a name="l00065"></a>00065 };
-<a name="l00066"></a>00066 
-<a name="l00067"></a>00067 <span class="preprocessor">#endif </span><span class="comment">/* defined(__GameBox__BoundLevel__) */</span>
+<a name="l00068"></a>00068     <span class="keywordtype">int</span> <a class="code" href="class_b_level.html#af9220ff2364b269c82079792c657a46d" title="Checks if a rectangle collides with any tiles.">checkCollision</a>(<span class="keyword">const</span> Rect);
+<a name="l00069"></a>00069     
+<a name="l00070"></a><a class="code" href="class_b_level.html#a4ea652af9cecf1cb4f19f9038d6fd047">00070</a>     Rect <a class="code" href="class_b_level.html#a4ea652af9cecf1cb4f19f9038d6fd047">getTileBB</a>(Point pt) { pt = pt - getPosition(); <span class="keywordflow">return</span> Rect(tileSize * (<span class="keywordtype">int</span>)(pt.x / tileSize),
+<a name="l00071"></a>00071                                                                     tileSize * (<span class="keywordtype">int</span>)(pt.y / tileSize),
+<a name="l00072"></a>00072                                                                     tileSize, tileSize); };
+<a name="l00073"></a>00073     
+<a name="l00074"></a>00074 };
+<a name="l00075"></a>00075 
+<a name="l00076"></a>00076 <span class="preprocessor">#endif </span><span class="comment">/* defined(__GameBox__BoundLevel__) */</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -160,7 +165,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_bound_level_8h.html">BoundLevel.h</a>      </li>
 
-    <li class="footer">Generated on Mon Sep 2 2013 17:27:20 for GameBox by
+    <li class="footer">Generated on Tue Sep 3 2013 17:45:33 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

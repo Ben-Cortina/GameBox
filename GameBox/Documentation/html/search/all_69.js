@@ -7,6 +7,5 @@ var searchData=
   ['interval',['interval',['../struct_explosion_schedule.html#a522eba73a372d30f86e5dfa608329ed6',1,'ExplosionSchedule']]],
   ['isexplosion',['isExplosion',['../class_b_level.html#adf39bb6a72e7780031a0806df92f9fc5',1,'BLevel::isExplosion(const Coords loc)'],['../class_b_level.html#acf89db789ceb7f083221fab3fead042e',1,'BLevel::isExplosion(const int x, const int y)']]],
   ['ison',['isOn',['../class_b_tile.html#ab59bb83ecf56ec30d95c98ab3090d532',1,'BTile']]],
-  ['issnake',['isSnake',['../class_the_box_layer.html#ad8d6cd2fd5690312bfdbd4049a43f2f5',1,'TheBoxLayer']]],
   ['iswall',['isWall',['../class_b_level.html#abb407d85aebcc0d6cded1ad13c2e2eed',1,'BLevel::isWall(const Coords loc)'],['../class_b_level.html#a7520cdd30191a75a7811c42ee1758e65',1,'BLevel::isWall(const int x, const int y)']]]
 ];

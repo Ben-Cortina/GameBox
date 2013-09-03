@@ -18,7 +18,7 @@
 #ifndef __GameBox__Bound__
 #define __GameBox__Bound__
 
-#include "BoundLevel.h"
+//#include "BoundLevel.h" BoundPlayer.h includes BoundLevel
 #include "BoundPlayer.h"
 
 

@@ -9,71 +9,71 @@
     <includes local="no">sstream</includes>
     <includes local="no">iomanip</includes>
     <incdepgraph>
-      <node id="142">
+      <node id="150">
         <label>iomanip</label>
       </node>
-      <node id="140">
+      <node id="148">
         <label>string</label>
       </node>
-      <node id="138">
+      <node id="146">
         <label>GameList.h</label>
         <link refid="_game_list_8h"/>
-        <childnode refid="135" relation="include">
-        </childnode>
-        <childnode refid="133" relation="include">
-        </childnode>
-      </node>
-      <node id="137">
-        <label>HomeScene.h</label>
-        <link refid="_home_scene_8h"/>
-        <childnode refid="134" relation="include">
-        </childnode>
-        <childnode refid="138" relation="include">
-        </childnode>
-      </node>
-      <node id="132">
-        <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
-        <link refid="TheBox.cpp"/>
-        <childnode refid="133" relation="include">
-        </childnode>
-        <childnode refid="137" relation="include">
-        </childnode>
-        <childnode refid="139" relation="include">
-        </childnode>
-        <childnode refid="140" relation="include">
+        <childnode refid="143" relation="include">
         </childnode>
         <childnode refid="141" relation="include">
         </childnode>
+      </node>
+      <node id="145">
+        <label>HomeScene.h</label>
+        <link refid="_home_scene_8h"/>
         <childnode refid="142" relation="include">
+        </childnode>
+        <childnode refid="146" relation="include">
+        </childnode>
+      </node>
+      <node id="140">
+        <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
+        <link refid="TheBox.cpp"/>
+        <childnode refid="141" relation="include">
+        </childnode>
+        <childnode refid="145" relation="include">
+        </childnode>
+        <childnode refid="147" relation="include">
+        </childnode>
+        <childnode refid="148" relation="include">
+        </childnode>
+        <childnode refid="149" relation="include">
+        </childnode>
+        <childnode refid="150" relation="include">
+        </childnode>
+      </node>
+      <node id="149">
+        <label>sstream</label>
+      </node>
+      <node id="147">
+        <label>iostream</label>
+      </node>
+      <node id="144">
+        <label>OverLayer.h</label>
+        <link refid="_over_layer_8h"/>
+        <childnode refid="143" relation="include">
+        </childnode>
+      </node>
+      <node id="143">
+        <label>cocos2d.h</label>
+      </node>
+      <node id="142">
+        <label>../Helpers/CustomCC.h</label>
+        <link refid="_custom_c_c_8h"/>
+        <childnode refid="143" relation="include">
         </childnode>
       </node>
       <node id="141">
-        <label>sstream</label>
-      </node>
-      <node id="139">
-        <label>iostream</label>
-      </node>
-      <node id="136">
-        <label>OverLayer.h</label>
-        <link refid="_over_layer_8h"/>
-        <childnode refid="135" relation="include">
-        </childnode>
-      </node>
-      <node id="135">
-        <label>cocos2d.h</label>
-      </node>
-      <node id="134">
-        <label>../Helpers/CustomCC.h</label>
-        <link refid="_custom_c_c_8h"/>
-        <childnode refid="135" relation="include">
-        </childnode>
-      </node>
-      <node id="133">
         <label>TheBox.h</label>
         <link refid="_the_box_8h"/>
-        <childnode refid="134" relation="include">
+        <childnode refid="142" relation="include">
         </childnode>
-        <childnode refid="136" relation="include">
+        <childnode refid="144" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -135,12 +135,12 @@
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>tileColor<sp/>=<sp/>Color3B(0,0,0);</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>initTiles();</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>setLayerSize(11,<sp/>11);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" kindref="member">isSnake</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>isSnake<sp/>=<sp/>3;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>TheBoxLayer::setPlayer(Sprite*<sp/>tile,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="38"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" kindref="member">isSnake</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isSnake<sp/>==<sp/>0)</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tile-&gt;setVisible(<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tile-&gt;setVisible(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
@@ -214,7 +214,7 @@
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//turn<sp/>off<sp/>player</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>setPlayer(sTiles[<ref refid="_the_box_8cpp_1a881b0818bcc307625d9ea7a231b2562d" kindref="member">tI</ref>(player.<ref refid="struct_player_data_1a6646f159881b83da159eb7410fad7fd5" kindref="member">loc</ref>.<ref refid="struct_coords_1a59992d986e76375f31828d32c05cd15d" kindref="member">x</ref>,<sp/>player.<ref refid="struct_player_data_1a6646f159881b83da159eb7410fad7fd5" kindref="member">loc</ref>.<ref refid="struct_coords_1a7ed64d02fb7550f1506a93fcfab7f16f" kindref="member">y</ref>)],<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" kindref="member">isSnake</ref><sp/>==<sp/>1)<sp/></highlight><highlight class="comment">//we&apos;ll<sp/>need<sp/>to<sp/>manually<sp/>turn<sp/>off<sp/>the<sp/>old<sp/>player<sp/>if<sp/>its<sp/>snakemode</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isSnake<sp/>==<sp/>1)<sp/></highlight><highlight class="comment">//we&apos;ll<sp/>need<sp/>to<sp/>manually<sp/>turn<sp/>off<sp/>the<sp/>old<sp/>player<sp/>if<sp/>its<sp/>snakemode</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sTiles[<ref refid="_the_box_8cpp_1a881b0818bcc307625d9ea7a231b2562d" kindref="member">tI</ref>(player.<ref refid="struct_player_data_1a6646f159881b83da159eb7410fad7fd5" kindref="member">loc</ref>.<ref refid="struct_coords_1a59992d986e76375f31828d32c05cd15d" kindref="member">x</ref>,<sp/>player.<ref refid="struct_player_data_1a6646f159881b83da159eb7410fad7fd5" kindref="member">loc</ref>.<ref refid="struct_coords_1a7ed64d02fb7550f1506a93fcfab7f16f" kindref="member">y</ref>)]-&gt;setVisible(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
 <codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//increase<sp/>time<sp/>allowed<sp/>per<sp/>level</highlight><highlight class="normal"></highlight></codeline>
@@ -238,7 +238,7 @@
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>scheduleUpdate();</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>using<sp/>schedule<sp/>allows<sp/>me<sp/>to<sp/>have<sp/>cocos2d<sp/>call<sp/>a<sp/>function<sp/>exery<sp/>X<sp/>seconds</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" kindref="member">isSnake</ref><sp/>==<sp/>0)</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isSnake<sp/>==<sp/>0)</highlight></codeline>
 <codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;schedule(<sp/>schedule_selector(TheBoxLayer::spawnTile),<sp/><ref refid="_the_box_8h_1a4226efab03d289775f3b691697439052" kindref="member">TIME_PER_SPAWN</ref><sp/>);</highlight></codeline>
 <codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;schedule(<sp/>schedule_selector(TheBoxLayer::changeExit),<sp/>2.0+((</highlight><highlight class="keywordtype">float</highlight><highlight class="normal">)layerSize.<ref refid="struct_coords_1a7ed64d02fb7550f1506a93fcfab7f16f" kindref="member">y</ref>+2.0)/15.0<sp/>);</highlight></codeline>
 <codeline lineno="140"><highlight class="normal">}</highlight></codeline>
@@ -253,7 +253,7 @@
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>timeRemaining<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>startMenu();</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" kindref="member">isSnake</ref><sp/>=<sp/>3;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isSnake<sp/>=<sp/>3;</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>std::stringstream<sp/>ss;</highlight></codeline>
 <codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>ss<sp/>&lt;&lt;<sp/>std::fixed<sp/>&lt;&lt;<sp/>std::setprecision(2)<sp/>&lt;&lt;<sp/>timeRemaining;</highlight></codeline>
@@ -445,9 +445,9 @@
 <codeline lineno="341"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_the_box_layer_1a2a76eca9790faad7097e37d5822d5e3e" kindref="member" tooltip="Sets whether or not the game is in snake mode.">TheBoxLayer::setSnake</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>b)</highlight></codeline>
 <codeline lineno="342"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="343"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//if<sp/>there<sp/>was<sp/>a<sp/>change<sp/>we<sp/>will<sp/>restart<sp/>with<sp/>snake<sp/>change</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" kindref="member">isSnake</ref><sp/>!=<sp/>b)</highlight></codeline>
+<codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(isSnake<sp/>!=<sp/>b)</highlight></codeline>
 <codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" kindref="member">isSnake</ref><sp/>=<sp/>b;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>isSnake<sp/>=<sp/>b;</highlight></codeline>
 <codeline lineno="347"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>restartGame();</highlight></codeline>
 <codeline lineno="348"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -537,7 +537,7 @@
 <codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/>mainMenu-&gt;setPosition(0,0);</highlight></codeline>
 <codeline lineno="434"><highlight class="normal"><sp/><sp/><sp/><sp/>pMenu-&gt;addChild(mainMenu);</highlight></codeline>
 <codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" kindref="member">isSnake</ref><sp/>==<sp/>1)</highlight></codeline>
+<codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(isSnake<sp/>==<sp/>1)</highlight></codeline>
 <codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>snake<sp/>=<sp/>MenuItemLabel::create(LabelTTF::create(</highlight><highlight class="stringliteral">&quot;Turn<sp/>Snake<sp/>Mode<sp/>OFF&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Arial&quot;</highlight><highlight class="normal">,<sp/>20),</highlight></codeline>
 <codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="class_the_box_layer_1ae03788f405b053b85e230804d7a88904" kindref="member" tooltip="This is a callback that will change the gamemode to Normal.">TheBoxLayer::offSnake</ref>);</highlight></codeline>
 <codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>

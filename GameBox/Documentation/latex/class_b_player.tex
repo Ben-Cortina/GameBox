@@ -10,11 +10,205 @@
 
 {\ttfamily \#include $<$\-Bound\-Player.\-h$>$}
 
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_b_player_a81ff25cbd1dc216784b14547f8e92bcc}{\-B\-Player} ()
+\item 
+\hyperlink{class_b_player_adf6478c51df592730b02d0174f91351a}{\-B\-Player} (const char $\ast$\hyperlink{_game_list_8h_ac745ab21f82aa96829863dcfc37ef5a8}{image})
+\item 
+void \hyperlink{class_b_player_a03add0a9a55d81912897518d94daf52f}{set\-Level} (\hyperlink{class_b_level}{\-B\-Level} $\ast$new\-Level)
+\begin{DoxyCompactList}\small\item\em \-Set the level to check collision on. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_player_a3772d37e802a5fcad52a753450853441}{set\-Player\-Position} (const \-Point pos)
+\begin{DoxyCompactList}\small\item\em \-Set the position of the player's sprite. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_player_ace0ec1b13a62c932950a86a469d0263f}{set\-Max\-Speed} (const float speed)
+\begin{DoxyCompactList}\small\item\em \-Set the max speed of the player. \end{DoxyCompactList}\item 
+\hyperlink{struct_vector}{\-Vector} \hyperlink{class_b_player_a33b7d635e3aa3c7a4796eabc4205cc58}{get\-Force} ()
+\begin{DoxyCompactList}\small\item\em \-Get/\-Set methods for force. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_player_ae97ab8470903f7c595939f2331b6c6f4}{set\-Force} (const \hyperlink{struct_vector}{\-Vector} pforce)
+\item 
+void \hyperlink{class_b_player_af7ae69e5c1d7880a5ebf4bd38c1adabb}{set\-Force\-X} (const float x)
+\item 
+void \hyperlink{class_b_player_a94916a0f75042c2e6265fa7c9ec4db32}{set\-Force\-Y} (const float y)
+\item 
+void \hyperlink{class_b_player_aa0f9b22686ad0aeec30ea21beb3740f2}{update\-Velocity} ()
+\begin{DoxyCompactList}\small\item\em \-Updates the current velocity based on the force being applied. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_player_a86f9b0c0d7b4c61ed475f0e70249be7f}{update} (float dt)
+\begin{DoxyCompactList}\small\item\em \-Updates the position of the \-Sprite based on dt and its current velocity. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_player_a709a36eb859dd8f9a4355e036eac8ac8}{update} ()
+\begin{DoxyCompactList}\small\item\em \-Updates the position of the \-Sprite based on the currenttime -\/ lastupdate \-Ths allows me to call update whenever a keychanges so the movement is calculated based on the time of the key event rather than the time of each update. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_player_aa05278b0c6e02aeb2a2cbd514fafd446}{handle\-Movement} (const float x, const float y)
+\begin{DoxyCompactList}\small\item\em \-Handles the collision and movement of the player. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_player_ae0aaaa33013fd5c0070cf51619abf12b}{key\-Pressed} (int key\-Code)
+\begin{DoxyCompactList}\small\item\em \-Handles key\-Presses. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_player_a8210db4e8fac75ace4b71b3ded1df6bf}{key\-Released} (int key\-Code)
+\begin{DoxyCompactList}\small\item\em \-Handles key\-Releases. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Detailed \-Description}
 \-This will hold and draw the data for a \-Player. \-It will also handle player movement. 
 
-\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_b_player_a81ff25cbd1dc216784b14547f8e92bcc}{\index{\-B\-Player@{\-B\-Player}!\-B\-Player@{\-B\-Player}}
+\index{\-B\-Player@{\-B\-Player}!BPlayer@{\-B\-Player}}
+\subsubsection[{\-B\-Player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-B\-Player\-::\-B\-Player} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_b_player_a81ff25cbd1dc216784b14547f8e92bcc}
+\hypertarget{class_b_player_adf6478c51df592730b02d0174f91351a}{\index{\-B\-Player@{\-B\-Player}!\-B\-Player@{\-B\-Player}}
+\index{\-B\-Player@{\-B\-Player}!BPlayer@{\-B\-Player}}
+\subsubsection[{\-B\-Player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-B\-Player\-::\-B\-Player} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{image}
+\end{DoxyParamCaption}
+)}}\label{class_b_player_adf6478c51df592730b02d0174f91351a}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_b_player_a33b7d635e3aa3c7a4796eabc4205cc58}{\index{\-B\-Player@{\-B\-Player}!get\-Force@{get\-Force}}
+\index{get\-Force@{get\-Force}!BPlayer@{\-B\-Player}}
+\subsubsection[{get\-Force}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Vector} {\bf \-B\-Player\-::get\-Force} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_player_a33b7d635e3aa3c7a4796eabc4205cc58}
+
+
+\-Get/\-Set methods for force. 
+
+\hypertarget{class_b_player_aa05278b0c6e02aeb2a2cbd514fafd446}{\index{\-B\-Player@{\-B\-Player}!handle\-Movement@{handle\-Movement}}
+\index{handle\-Movement@{handle\-Movement}!BPlayer@{\-B\-Player}}
+\subsubsection[{handle\-Movement}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::handle\-Movement} (
+\begin{DoxyParamCaption}
+\item[{const float}]{x, }
+\item[{const float}]{y}
+\end{DoxyParamCaption}
+)}}\label{class_b_player_aa05278b0c6e02aeb2a2cbd514fafd446}
+
+
+\-Handles the collision and movement of the player. 
+
+\hypertarget{class_b_player_ae0aaaa33013fd5c0070cf51619abf12b}{\index{\-B\-Player@{\-B\-Player}!key\-Pressed@{key\-Pressed}}
+\index{key\-Pressed@{key\-Pressed}!BPlayer@{\-B\-Player}}
+\subsubsection[{key\-Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::key\-Pressed} (
+\begin{DoxyParamCaption}
+\item[{int}]{key\-Code}
+\end{DoxyParamCaption}
+)}}\label{class_b_player_ae0aaaa33013fd5c0070cf51619abf12b}
+
+
+\-Handles key\-Presses. 
+
+\begin{DoxyNote}{\-Note}
+\-This will be digital movement. \-You either go max speed or full stop with a keyboard 
+\end{DoxyNote}
+\hypertarget{class_b_player_a8210db4e8fac75ace4b71b3ded1df6bf}{\index{\-B\-Player@{\-B\-Player}!key\-Released@{key\-Released}}
+\index{key\-Released@{key\-Released}!BPlayer@{\-B\-Player}}
+\subsubsection[{key\-Released}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::key\-Released} (
+\begin{DoxyParamCaption}
+\item[{int}]{key\-Code}
+\end{DoxyParamCaption}
+)}}\label{class_b_player_a8210db4e8fac75ace4b71b3ded1df6bf}
+
+
+\-Handles key\-Releases. 
+
+\hypertarget{class_b_player_ae97ab8470903f7c595939f2331b6c6f4}{\index{\-B\-Player@{\-B\-Player}!set\-Force@{set\-Force}}
+\index{set\-Force@{set\-Force}!BPlayer@{\-B\-Player}}
+\subsubsection[{set\-Force}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::set\-Force} (
+\begin{DoxyParamCaption}
+\item[{const {\bf \-Vector}}]{pforce}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_player_ae97ab8470903f7c595939f2331b6c6f4}
+\hypertarget{class_b_player_af7ae69e5c1d7880a5ebf4bd38c1adabb}{\index{\-B\-Player@{\-B\-Player}!set\-Force\-X@{set\-Force\-X}}
+\index{set\-Force\-X@{set\-Force\-X}!BPlayer@{\-B\-Player}}
+\subsubsection[{set\-Force\-X}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::set\-Force\-X} (
+\begin{DoxyParamCaption}
+\item[{const float}]{x}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_player_af7ae69e5c1d7880a5ebf4bd38c1adabb}
+\hypertarget{class_b_player_a94916a0f75042c2e6265fa7c9ec4db32}{\index{\-B\-Player@{\-B\-Player}!set\-Force\-Y@{set\-Force\-Y}}
+\index{set\-Force\-Y@{set\-Force\-Y}!BPlayer@{\-B\-Player}}
+\subsubsection[{set\-Force\-Y}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::set\-Force\-Y} (
+\begin{DoxyParamCaption}
+\item[{const float}]{y}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_player_a94916a0f75042c2e6265fa7c9ec4db32}
+\hypertarget{class_b_player_a03add0a9a55d81912897518d94daf52f}{\index{\-B\-Player@{\-B\-Player}!set\-Level@{set\-Level}}
+\index{set\-Level@{set\-Level}!BPlayer@{\-B\-Player}}
+\subsubsection[{set\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::set\-Level} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-B\-Level} $\ast$}]{new\-Level}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_player_a03add0a9a55d81912897518d94daf52f}
+
+
+\-Set the level to check collision on. 
+
+\hypertarget{class_b_player_ace0ec1b13a62c932950a86a469d0263f}{\index{\-B\-Player@{\-B\-Player}!set\-Max\-Speed@{set\-Max\-Speed}}
+\index{set\-Max\-Speed@{set\-Max\-Speed}!BPlayer@{\-B\-Player}}
+\subsubsection[{set\-Max\-Speed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::set\-Max\-Speed} (
+\begin{DoxyParamCaption}
+\item[{const float}]{speed}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_player_ace0ec1b13a62c932950a86a469d0263f}
+
+
+\-Set the max speed of the player. 
+
+\hypertarget{class_b_player_a3772d37e802a5fcad52a753450853441}{\index{\-B\-Player@{\-B\-Player}!set\-Player\-Position@{set\-Player\-Position}}
+\index{set\-Player\-Position@{set\-Player\-Position}!BPlayer@{\-B\-Player}}
+\subsubsection[{set\-Player\-Position}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::set\-Player\-Position} (
+\begin{DoxyParamCaption}
+\item[{const \-Point}]{pos}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_player_a3772d37e802a5fcad52a753450853441}
+
+
+\-Set the position of the player's sprite. 
+
+\hypertarget{class_b_player_a86f9b0c0d7b4c61ed475f0e70249be7f}{\index{\-B\-Player@{\-B\-Player}!update@{update}}
+\index{update@{update}!BPlayer@{\-B\-Player}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::update} (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)}}\label{class_b_player_a86f9b0c0d7b4c61ed475f0e70249be7f}
+
+
+\-Updates the position of the \-Sprite based on dt and its current velocity. 
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em dt} & \-The time over which the velocity has been applied \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_b_player_a709a36eb859dd8f9a4355e036eac8ac8}{\index{\-B\-Player@{\-B\-Player}!update@{update}}
+\index{update@{update}!BPlayer@{\-B\-Player}}
+\subsubsection[{update}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::update} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_b_player_a709a36eb859dd8f9a4355e036eac8ac8}
+
+
+\-Updates the position of the \-Sprite based on the currenttime -\/ lastupdate \-Ths allows me to call update whenever a keychanges so the movement is calculated based on the time of the key event rather than the time of each update. 
+
+\hypertarget{class_b_player_aa0f9b22686ad0aeec30ea21beb3740f2}{\index{\-B\-Player@{\-B\-Player}!update\-Velocity@{update\-Velocity}}
+\index{update\-Velocity@{update\-Velocity}!BPlayer@{\-B\-Player}}
+\subsubsection[{update\-Velocity}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::update\-Velocity} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_b_player_aa0f9b22686ad0aeec30ea21beb3740f2}
+
+
+\-Updates the current velocity based on the force being applied. 
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-\-Game\-Box/\-Game\-Box/\-Classes/\-Bound/\hyperlink{_bound_player_8h}{\-Bound\-Player.\-h}\end{DoxyCompactItemize}
+\-Game\-Box/\-Game\-Box/\-Classes/\-Bound/\hyperlink{_bound_player_8h}{\-Bound\-Player.\-h}\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-Bound/\hyperlink{_bound_player_8cpp}{\-Bound\-Player.\-cpp}\end{DoxyCompactItemize}

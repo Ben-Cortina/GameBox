@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="struct_key_state_struct" kind="struct" prot="public">
+    <compoundname>KeyStateStruct</compoundname>
+    <includes refid="_bound_player_8h" local="no">BoundPlayer.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_key_state_struct_1a3d388e2382b981fef46bd0ac827f9a41" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool KeyStateStruct::up</definition>
+        <argsstring></argsstring>
+        <name>up</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="24" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="24" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_key_state_struct_1aeda151e7db716720d5908f71bbebd762" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool KeyStateStruct::down</definition>
+        <argsstring></argsstring>
+        <name>down</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="25" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_key_state_struct_1a58af8e4068bce6dd66a29ba2b51ed96b" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool KeyStateStruct::left</definition>
+        <argsstring></argsstring>
+        <name>left</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="26" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_key_state_struct_1a4edc7213073c8090360733c06949e3cd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool KeyStateStruct::right</definition>
+        <argsstring></argsstring>
+        <name>right</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="27" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="23" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="22" bodyend="28"/>
+    <listofallmembers>
+      <member refid="struct_key_state_struct_1aeda151e7db716720d5908f71bbebd762" prot="public" virt="non-virtual"><scope>KeyStateStruct</scope><name>down</name></member>
+      <member refid="struct_key_state_struct_1a58af8e4068bce6dd66a29ba2b51ed96b" prot="public" virt="non-virtual"><scope>KeyStateStruct</scope><name>left</name></member>
+      <member refid="struct_key_state_struct_1a4edc7213073c8090360733c06949e3cd" prot="public" virt="non-virtual"><scope>KeyStateStruct</scope><name>right</name></member>
+      <member refid="struct_key_state_struct_1a3d388e2382b981fef46bd0ac827f9a41" prot="public" virt="non-virtual"><scope>KeyStateStruct</scope><name>up</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

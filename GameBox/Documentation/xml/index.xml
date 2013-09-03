@@ -25,13 +25,38 @@
     <member refid="class_b_level_1ac2110699926d964ca1dac8d79217e5a8" kind="variable"><name>fTileCount</name></member>
     <member refid="class_b_level_1aa95d39b724327298f6669280a36a7f64" kind="variable"><name>wTileCount</name></member>
     <member refid="class_b_level_1a11c0243e34fa173fbcee54f338faa136" kind="variable"><name>eTileCount</name></member>
-    <member refid="class_b_level_1aa15bc1515221e23a3fc8e5063b69a3d2" kind="function"><name>creatWithFile</name></member>
+    <member refid="class_b_level_1a8500d99ab55b7c80f69a38f25b597216" kind="function"><name>BLevel</name></member>
     <member refid="class_b_level_1abb407d85aebcc0d6cded1ad13c2e2eed" kind="function"><name>isWall</name></member>
     <member refid="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" kind="function"><name>isWall</name></member>
     <member refid="class_b_level_1adf39bb6a72e7780031a0806df92f9fc5" kind="function"><name>isExplosion</name></member>
     <member refid="class_b_level_1acf89db789ceb7f083221fab3fead042e" kind="function"><name>isExplosion</name></member>
+    <member refid="class_b_level_1af9220ff2364b269c82079792c657a46d" kind="function"><name>checkCollision</name></member>
+    <member refid="class_b_level_1a4ea652af9cecf1cb4f19f9038d6fd047" kind="function"><name>getTileBB</name></member>
   </compound>
   <compound refid="class_b_player" kind="class"><name>BPlayer</name>
+    <member refid="class_b_player_1adcf843153230f6c3a842d14613d6ded3" kind="variable"><name>lastUpdate</name></member>
+    <member refid="class_b_player_1a5e78beca6caeadb8339b977ee58f1d4c" kind="variable"><name>dtCalculated</name></member>
+    <member refid="class_b_player_1aec08ca49744ee6bc33747389013ad47c" kind="variable"><name>level</name></member>
+    <member refid="class_b_player_1aa0f0d3bcfd8060da02e2c67d0b549504" kind="variable"><name>player</name></member>
+    <member refid="class_b_player_1a836682452c7380a303792daff1bf75e0" kind="variable"><name>maxSpeed</name></member>
+    <member refid="class_b_player_1ac03a57b66f6d846b2fed0142470587a5" kind="variable"><name>force</name></member>
+    <member refid="class_b_player_1aeba7acd97b65228677bd9fe2d0ca1e86" kind="variable"><name>velocity</name></member>
+    <member refid="class_b_player_1a3152beb08679dfa9538bca632cde3624" kind="variable"><name>keyState</name></member>
+    <member refid="class_b_player_1a81ff25cbd1dc216784b14547f8e92bcc" kind="function"><name>BPlayer</name></member>
+    <member refid="class_b_player_1adf6478c51df592730b02d0174f91351a" kind="function"><name>BPlayer</name></member>
+    <member refid="class_b_player_1a03add0a9a55d81912897518d94daf52f" kind="function"><name>setLevel</name></member>
+    <member refid="class_b_player_1a3772d37e802a5fcad52a753450853441" kind="function"><name>setPlayerPosition</name></member>
+    <member refid="class_b_player_1ace0ec1b13a62c932950a86a469d0263f" kind="function"><name>setMaxSpeed</name></member>
+    <member refid="class_b_player_1a33b7d635e3aa3c7a4796eabc4205cc58" kind="function"><name>getForce</name></member>
+    <member refid="class_b_player_1ae97ab8470903f7c595939f2331b6c6f4" kind="function"><name>setForce</name></member>
+    <member refid="class_b_player_1af7ae69e5c1d7880a5ebf4bd38c1adabb" kind="function"><name>setForceX</name></member>
+    <member refid="class_b_player_1a94916a0f75042c2e6265fa7c9ec4db32" kind="function"><name>setForceY</name></member>
+    <member refid="class_b_player_1aa0f9b22686ad0aeec30ea21beb3740f2" kind="function"><name>updateVelocity</name></member>
+    <member refid="class_b_player_1a86f9b0c0d7b4c61ed475f0e70249be7f" kind="function"><name>update</name></member>
+    <member refid="class_b_player_1a709a36eb859dd8f9a4355e036eac8ac8" kind="function"><name>update</name></member>
+    <member refid="class_b_player_1aa05278b0c6e02aeb2a2cbd514fafd446" kind="function"><name>handleMovement</name></member>
+    <member refid="class_b_player_1ae0aaaa33013fd5c0070cf51619abf12b" kind="function"><name>keyPressed</name></member>
+    <member refid="class_b_player_1a8210db4e8fac75ace4b71b3ded1df6bf" kind="function"><name>keyReleased</name></member>
   </compound>
   <compound refid="class_b_scene" kind="class"><name>BScene</name>
     <member refid="class_b_scene_1a6869d39e608c87ec85c6260d9ca25d81" kind="variable"><name>levelLayer</name></member>
@@ -95,6 +120,12 @@
     <member refid="class_home_layer_1ad72b3afd71127c67721d1d04aea5ffe9" kind="function"><name>CREATE_FUNC</name></member>
     <member refid="class_home_layer_1abfa48630fcd7c04d077c92c673d419af" kind="function"><name>scene</name></member>
     <member refid="class_home_layer_1a1fbee493222ccf67c70396025a0af2ec" kind="function"><name>menuCloseCallback</name></member>
+  </compound>
+  <compound refid="struct_key_state_struct" kind="struct"><name>KeyStateStruct</name>
+    <member refid="struct_key_state_struct_1a3d388e2382b981fef46bd0ac827f9a41" kind="variable"><name>up</name></member>
+    <member refid="struct_key_state_struct_1aeda151e7db716720d5908f71bbebd762" kind="variable"><name>down</name></member>
+    <member refid="struct_key_state_struct_1a58af8e4068bce6dd66a29ba2b51ed96b" kind="variable"><name>left</name></member>
+    <member refid="struct_key_state_struct_1a4edc7213073c8090360733c06949e3cd" kind="variable"><name>right</name></member>
   </compound>
   <compound refid="class_my_menu_item_image" kind="class"><name>MyMenuItemImage</name>
     <member refid="class_my_menu_item_image_1a72ec449555c4b514536a85f1b432d95c" kind="function"><name>create</name></member>
@@ -199,6 +230,7 @@
     <member refid="_bound_level_8h_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
   </compound>
   <compound refid="_bound_player_8cpp" kind="file"><name>BoundPlayer.cpp</name>
+    <member refid="_bound_player_8cpp_1a8fcf5a6b80bd04214c28b45971355035" kind="function"><name>RectIntersectsRect</name></member>
   </compound>
   <compound refid="_bound_player_8h" kind="file"><name>BoundPlayer.h</name>
     <member refid="_bound_player_8h_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>

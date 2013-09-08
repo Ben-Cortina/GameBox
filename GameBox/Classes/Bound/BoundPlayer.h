@@ -41,25 +41,24 @@ private:
     BLevel* level;
     Sprite* player;
     
+    Color3B playerColor;
+    
     float maxSpeed;
     Vector force;
     Vector velocity;
     
     KeyStateStruct keyState;
+    bool isDying;
+    
     
 public:
     BPlayer();
     BPlayer(const char* image);
-    
+
     /**
      *  @brief  Set the level to check collision on
      */
-    void setLevel(BLevel* newLevel){ level = newLevel; };
-    
-    /**
-     *  @brief  Set the position of the player's sprite
-     */
-    void setPlayerPosition(const Point pos) { player->setPosition(pos); };
+    void setLevel(BLevel* newLevel);
     
     /**
      *  @brief  Set the max speed of the player
@@ -73,6 +72,23 @@ public:
     void setForce(const Vector pforce){ force.x = pforce.x; force.y = pforce.y; updateVelocity(); };
     void setForceX(const float x) { force.x = x; updateVelocity(); };
     void setForceY(const float y) { force.y = y; updateVelocity(); };
+    
+    
+    /**
+     *  @brief  runs the actions needed to represent a falling player
+     */
+    void fall();
+    
+    /**
+     *  @brief  runs the actions needed to represent a dying player
+     */
+    void die();
+    
+    /**
+     *  @brief  Spawns the player at the start tile
+     */
+    void spawn(float dt);
+    
     
     /**
      *  @brief  Updates the current velocity based on the force being applied
@@ -96,7 +112,7 @@ public:
     /**
      *  @brief  Handles the collision and movement of the player
      */
-    void handleMovement(const float x, const float y);
+    void handleCollisions(float x, float y);
     
     /**
      *  @brief  Handles keyPresses

@@ -35,19 +35,37 @@ private:
     BFloorTile** fTiles;
     BWallTile** wTiles;
     BExplosionTile** eTiles;
+    Sprite* playerSprite;
     int width;
     int height;
     float tileSize;
     int fTileCount;
     int wTileCount;
     int eTileCount;
+    Point start;
+    Coords end;
     
 public:
     
     /**
      *  @brief  This will load in a level. Level formatting can be found in LevelMaking.bdl
      */
-    BLevel(char* level);
+    BLevel(const char* file);
+    
+    /**
+     *  @brief  This will parse a .bdl file and populate BLevel
+     */
+    void parseFile(const char* file);
+    
+    /**
+     *  @brief returns the starting location
+     */
+    Point getStart() { return start; };
+    
+    /**
+     *  @brief returns the tileSize
+     */
+    float getTileSize() { return tileSize; };
     
     /**
      *  @brief  Checks if the provided location is a wall
@@ -62,14 +80,27 @@ public:
     bool isExplosion(const int x, const int y) { return isExplosion( Coords(x, y) ); };
     
     /**
-     *  @brief  Checks if a rectangle collides with any tiles
+     *  @brief  Checks if a rectangle collides with any Wall tiles
      *  @return 0 if none, 1 if wall, 2 if explosion
      */
-    int checkCollision(const Rect);
+    bool isWallCollision(Rect bb, Rect& tileBB);
     
-    Rect getTileBB(Point pt) { pt = pt - getPosition(); return Rect(tileSize * (int)(pt.x / tileSize),
-                                                                    tileSize * (int)(pt.y / tileSize),
-                                                                    tileSize, tileSize); };
+    /**
+     *  @brief  Checks if a rectangle collides with any Active Explosions tiles. If the player does, it dies.
+     */
+    bool isExplosionCollision(Rect bb);
+    
+    /**
+     *  @brief  Checks if the passed rectangle touches any floor.
+     *          If the player does not intersect any of the floor tiles he isnt touching any floor
+     *          thus, he falls.
+     */
+    bool isOnFloor(Rect bb);
+    
+    Coords getTile(Point pt) { pt = pt - getPosition(); return Coords((int)(pt.x / tileSize),
+                                                                      (int)(pt.y / tileSize)); };
+    
+    Rect getTileBB(Coords loc) { return Rect(tileSize * loc.x, tileSize * loc.y, tileSize, tileSize); };
     
 };
 

@@ -10,16 +10,51 @@
 BPlayer::BPlayer()
 {
     maxSpeed = 0;
-    
     keyState.up = keyState.down = keyState.left = keyState.right = false;
+    isDying = false;
+    playerColor = Color3B(100, 200, 125);
 }
 
 BPlayer::BPlayer(const char* image)
 {
     BPlayer();
     player = Sprite::create(image);
-    
     scheduleUpdate();
+}
+
+void BPlayer::setLevel(BLevel* newLevel)
+{
+    level = newLevel;
+    maxSpeed = level->getTileSize();
+    player->setScale(level->getTileSize()/20);
+    spawn(0);
+};
+
+void BPlayer::spawn(float dt)
+{
+    isDying = false;
+    player->setPosition( level->getStart() );
+    player->setColor(playerColor);
+    player->setOpacity(255);
+    Director::getInstance()->resume();
+}
+
+void BPlayer::fall()
+{
+    Director::getInstance()->pause();
+    isDying = true;
+    scheduleOnce( schedule_selector(BPlayer::spawn), 1.0f );
+    //fade out
+    player->runAction( ScaleTo::create(1.0f, 0.0001f) );
+}
+
+void BPlayer::die()
+{
+    Director::getInstance()->pause();
+    isDying = true;
+    scheduleOnce( schedule_selector(BPlayer::spawn), 1.0f );
+    //fade to black
+    runAction( TintTo::create(1.0f,0,0,0) );
 }
 
 void BPlayer::updateVelocity()
@@ -46,6 +81,7 @@ void BPlayer::updateVelocity()
         velocity.x = 0;
         velocity.y = 0;
     }
+    update();
 }
 
 void BPlayer::update(float dt)
@@ -60,16 +96,8 @@ void BPlayer::update(float dt)
     dt -= dtCalculated;
     dtCalculated = 0;
     
+    handleCollisions(velocity.x * dt, velocity.y * dt);
     
-    Point currentPos = _position;
-    
-    Rect bb = getBoundingBox();
-    
-    
-
-    //handleCollisions(velocity.x * dt, velocity.y * dt);
-    
-    setPosition(currentPos);
 }
 
 void BPlayer::update()
@@ -96,19 +124,83 @@ void BPlayer::update()
     dtCalculated = dc;
 }
 
-bool RectIntersectsRect(const Rect r1, const Rect r2)
+void BPlayer::handleCollisions(float x, float y)
 {
-    //if they intersect
-    if ( (r1.getMinX() <= r2.getMaxX() &&
-          r2.getMinX() <= r1.getMaxX() )  &&
-         (r1.getMinY() <= r2.getMaxY() &&
-          r2.getMinY() <= r1.getMaxY() )  )
-        return true;
-    return false;
-}
-
-void BPlayer::handleMovement(const float x, const float y)
-{
+    //if no movement, check nothing
+    if ( x == 0 && y == 0 )
+        return;
+    
+    Rect bb = player->getBoundingBox();
+    Rect bbMoved = bb;
+    bbMoved.origin.x += x;
+    bbMoved.origin.x += y;
+    Rect tileBB;
+    
+    float new_x = x;
+    float new_y = y;
+    
+    if( level->isWallCollision(bbMoved, tileBB) )
+    {
+        //compensate for the level position
+        tileBB.origin = tileBB.origin - level->getPosition();
+        
+        //handle movement with wall collision
+        
+        //find where it would hit first
+        Point playerMid = getPosition();
+        Point tileMid;
+        tileMid.x = tileBB.getMidX();
+        tileMid.y = tileBB.getMidY();
+        
+        //if it hit on the left or right side
+        if( abs( playerMid.x - tileMid.x ) / ( tileBB.size.width + bb.size.width ) )
+        {
+            //no x movement
+            new_x = 0;
+            // continue to either past the edge of the tile or the remaining y
+            new_y = MIN( abs(y),
+                         abs( playerMid.y - ( (y < 0 )? tileBB.getMinY() - bb.size.height/2 :
+                                                        tileBB.getMaxY() + bb.size.height/2 )));
+        } else //hit on top or bottom
+        {
+            // continue to either past the edge of the tile or the remaining x
+            new_x = MIN( abs(x),
+                         abs( playerMid.x - ( (y < 0 )? tileBB.getMinX() - bb.size.width/2 :
+                                                        tileBB.getMaxX() + bb.size.width/2 )));
+            //no y movement
+            new_y = 0;
+        }
+        
+        //run this again with adjusted movement
+        handleCollisions(new_x, new_y);
+        
+        //and again for any remaining movement
+        float percent_remaining = 1 - ( (new_y == 0 && y != 0)? new_y / y : new_x / x );
+        handleCollisions( new_x * percent_remaining, new_y * percent_remaining);
+        
+        //if it has reached here all movement has occured
+        x = 0;
+        y = 0;
+    }
+    //now we move it and check death collisions
+    Point pos = player->getPosition();
+    pos.x += x;
+    pos.y += y;
+    player->setPosition(pos);
+    bbMoved = player->getBoundingBox();
+    if ( !level->isOnFloor(bbMoved) )
+    {
+        //fall
+        fall();
+        
+    }
+    if ( level->isExplosionCollision(bbMoved) )
+    {
+        //die
+        die();
+    }
+    
+    //level->checkCollision(bb);
 //    // if there is no movement no check needs to occur
 //    if (x == 0 && y ==0)
 //        return;
@@ -379,7 +471,6 @@ void BPlayer::keyPressed(int keyCode)
         default:
             break;
     }
-    
     if( x != 0 )
         setForceX(x);
     if( y != 0)

@@ -1,5 +1,6 @@
 # A level file should be a plain text file ending in .bdl
-
+# First line will be the name of the level
+Level01
 # First we define the floor and wall tile for the level as such
 # <Letter> <Red 0-255> <Green 0-255> <Blue 0-255>
 # Where letter is what you will use to describe the tile later
@@ -11,18 +12,19 @@ O 255 255 255 240 240 240
 W 0 0 0
 
 # Next we will define the level using the tiles defined above
+# NOTE: It must begin and end with a dash
 # S will represent the start (there can only be one)
 # E will represent the location that must be reached (there can be multiple)
 # Spaces will be empty tiles
 # If the end of a line is left blank, empty space is assumed
 
 # Level
-Name: Level 1
+-
    WWWWWWWWW   
 WWWWOOOWOOOWWWW 
 WSOOOWOOOWOOOEW 
 WWWWWWWWWWWWWWW 
-
+-
 # Lastly, we will define the explosion timers 
 # coordinates X Y (1 1 is bottom left) open bracket
 # 5 2 would be where X is

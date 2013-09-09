@@ -42,8 +42,10 @@ private:
     int fTileCount;
     int wTileCount;
     int eTileCount;
+    
     Point start;
-    Coords end;
+    Coords** end;
+    int endCount;
     
 public:
     
@@ -55,7 +57,7 @@ public:
     /**
      *  @brief  This will parse a .bdl file and populate BLevel
      */
-    void parseFile(const char* file);
+    bool parseFile(const char* file);
     
     /**
      *  @brief returns the starting location

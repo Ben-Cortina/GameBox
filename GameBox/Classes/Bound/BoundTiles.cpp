@@ -9,20 +9,16 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 /*=======================================      BTile      =======================================*/
-BTile::BTile()
-{
-    BTile(Color3B(255,255,255),Color3B(0,0,0));
-}
 
-BTile::BTile(const Color3B onC, const Color3B offC): onColor(onC), offColor(offC)
+BTile::BTile(const Color3B c, Coords position): color(c), loc(position)
 {
     on = false;
-    updateColor();
+    updateVisibility();
 }
 
-BTile* BTile::createWithFileColors(const char* image, const Color3B onC, const Color3B offC)
+BTile* BTile::createWithFileColorLoc(const char* image, const Color3B c, const Coords position)
 {
-    BTile *pobBTile = new BTile(onC, offC);
+    BTile *pobBTile = new BTile(c, position);
     if (pobBTile && pobBTile->initWithFile(image))
     {
         pobBTile->autorelease();
@@ -30,5 +26,26 @@ BTile* BTile::createWithFileColors(const char* image, const Color3B onC, const C
     }
     CC_SAFE_DELETE(pobBTile);
     return NULL;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/*====================================      BFloorTile      =====================================*/
+BFloorTile* BFloorTile::createWithFileColorLoc(const char* image, const Color3B c, const Coords position)
+{
+    BFloorTile* tile = (BFloorTile*)BTile::createWithFileColorLoc(image, c, position);
+    if (tile)
+        tile->setOn(true);
+    return tile;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////
+/*=====================================      BWallTile      =====================================*/
+BWallTile* BWallTile::createWithFileColorLoc(const char* image, const Color3B c, const Coords position)
+{
+    BWallTile* tile = (BWallTile*)BTile::createWithFileColorLoc(image, c, position);
+    if (tile)
+        tile->setOn(true);
+    return tile;
 }
 

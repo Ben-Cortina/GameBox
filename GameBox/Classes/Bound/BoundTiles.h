@@ -24,7 +24,7 @@ struct Coords
     Coords(int px, int py):x(px),y(py){};
     
     inline bool operator== (const Coords r) {return (x == r.x && y == r.y);};
-    inline Coords& operator= (const Coords r) {x = r.x; y = r.y; return *this;};
+    inline Coords& operator= (Coords r) {x = r.x; y = r.y; return *this;};
     inline Coords& operator+= (const Coords r) {(*this) = (*this) + r; return *this;};
     Coords operator+ (Coords r) {r.x = x + r.x; r.y = y + r.y; return r;};
     inline Coords& operator-= (const Coords r) {(*this) = (*this) - r; return *this;};
@@ -44,13 +44,12 @@ protected:
     float tileSize;
     Coords loc;
     bool on;
-    Color3B onColor;
-    Color3B offColor;
+    Color3B color;
     
     /**
      *  @brief  Updates the current color based on the state of 'on'
      */
-    void updateColor() { (on) ? setColor(onColor) : setColor(offColor); };
+    virtual void updateVisibility() { setVisible(on); };
     
     /**
      *  @brief  Updates the current position of the tile
@@ -58,28 +57,15 @@ protected:
     void updatePosition() { setPosition( Point(loc.x * tileSize + tileSize/2, loc.y * tileSize + tileSize/2) ); };
     
 public:
-    BTile();
-    BTile(const Color3B onC, const Color3B offC);
+    BTile(const Color3B c, const Coords position);
     
-    BTile* createWithFileColors(const char* image, const Color3B onC, const Color3B offC);
+    static BTile* createWithFileColorLoc(const char* image, const Color3B c, const Coords position);
     
-    /**
-     *  @brief  Change the "On" color of the tile
-     *  @param  color   The color to set as the onColor
-     */
-    void setOnColor(const Color3B color) { onColor = color; updateColor(); };
-    
-    /**
-     *  @brief  Change the "Off" color of the tile
-     *  @param  color   The color to set as the offColor
-     */
-    void setOffColor(const Color3B color) { onColor = color; updateColor(); };
-    
-    /**
+    /** 
      *  @brief  Sets the state of the Tile
      *  @param  state   True will set this to "On"
      */
-    virtual void setOn(bool state) { on = state; updateColor(); };
+    void setOn(bool state) { on = state; updateVisibility(); };
     
     /**
      *  @brief  Reutrns the on start
@@ -104,7 +90,8 @@ public:
  */
 class BFloorTile : public BTile
 {
-
+public:
+    static BFloorTile* createWithFileColorLoc(const char* image, const Color3B c, const Coords position);
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -116,7 +103,8 @@ class BFloorTile : public BTile
  */
 class BWallTile : public BTile
 {
-    
+public:
+    static BWallTile* createWithFileColorLoc(const char* image, const Color3B c, const Coords position);
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -134,12 +122,15 @@ private:
     float duration;
     
 public:
+    
+    static BExplosionTile* createWithFileColorLoc(const char* image, const Color3B c, const Coords position)
+                            { return (BExplosionTile*)BTile::createWithFileColorLoc(image, c, position); };
+
     /**
      *  @brief  Special updateColor will fade to off rather than just instantly turn off
      */
-    void updateColor() { if(on) setColor(onColor);
-                        else runAction( Sequence::create(
-                        TintTo::create(interval / 2, offColor.r, offColor.g, offColor.b), NULL));};
+    void updateVisibility() { if(on) setOpacity(150);
+                         else runAction( FadeOut::create(interval/2) );};
 
 };
 

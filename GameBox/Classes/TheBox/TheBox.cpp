@@ -104,7 +104,7 @@ void TheBoxLayer::restartGame()
 
 void TheBoxLayer::nextLevel()
 {
-    std::cout << 2+((float)layerSize.y+2.0)/20.0 << std::endl;
+    //std::cout << 2+((float)layerSize.y+2.0)/20.0 << std::endl;
     //this will reset my timers
     unscheduleAllSelectors();
     
@@ -159,7 +159,7 @@ void TheBoxLayer::update(float dt)
 
 void TheBoxLayer::spawnTile(float dt)
 {
-    std::cout << "tile " << dt << std::endl;
+    //std::cout << "tile " << dt << std::endl;
     //choose a random tile that is not on
     Coords tile;
     do {
@@ -347,7 +347,6 @@ void TheBoxLayer::setSnake(int b)
         restartGame();
     }
     
-    std::cout << "snakey" << std::endl;
     //resume game
     Director::getInstance()->resume();
     setTouchEnabled(true);

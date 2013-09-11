@@ -13,23 +13,9 @@
 #define __GameBox__BoundTiles__
 
 #include "cocos2d.h"
+#include "CustomTileGrid.h"
 
 USING_NS_CC;
-
-struct Coords
-{
-    int x;
-    int y;
-    Coords(){};
-    Coords(int px, int py):x(px),y(py){};
-    
-    inline bool operator== (const Coords r) {return (x == r.x && y == r.y);};
-    inline Coords& operator= (Coords r) {x = r.x; y = r.y; return *this;};
-    inline Coords& operator+= (const Coords r) {(*this) = (*this) + r; return *this;};
-    Coords operator+ (Coords r) {r.x = x + r.x; r.y = y + r.y; return r;};
-    inline Coords& operator-= (const Coords r) {(*this) = (*this) - r; return *this;};
-    Coords operator- (Coords r) {r.x = x - r.x; r.y = y - r.y; return r;};
-};
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 /*=======================================      BTile      =======================================*/
@@ -57,6 +43,8 @@ protected:
     void updatePosition() { setPosition( Point(loc.x * tileSize + tileSize/2, loc.y * tileSize + tileSize/2) ); };
     
 public:
+    BTile(){};
+    
     BTile(const Color3B c, const Coords position);
     
     static BTile* createWithFileColorLoc(const char* image, const Color3B c, const Coords position);
@@ -91,7 +79,8 @@ public:
 class BFloorTile : public BTile
 {
 public:
-    static BFloorTile* createWithFileColorLoc(const char* image, const Color3B c, const Coords position);
+    static BFloorTile* createWithFileColorLoc(const char* image, const Color3B c, const Coords position)
+                            {return (BFloorTile*)BTile::createWithFileColorLoc(image, c, position); };
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -104,7 +93,8 @@ public:
 class BWallTile : public BTile
 {
 public:
-    static BWallTile* createWithFileColorLoc(const char* image, const Color3B c, const Coords position);
+    static BWallTile* createWithFileColorLoc(const char* image, const Color3B c, const Coords position)
+                            {return (BWallTile*)BTile::createWithFileColorLoc(image, c, position); };
 };
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -117,20 +107,68 @@ public:
 class BExplosionTile : public BTile
 {
 private:
-    float start;
     float interval;
     float duration;
+    bool exploded;
     
 public:
     
-    static BExplosionTile* createWithFileColorLoc(const char* image, const Color3B c, const Coords position)
-                            { return (BExplosionTile*)BTile::createWithFileColorLoc(image, c, position); };
+    BExplosionTile(const Color3B c, Coords position);
+    
+    static BExplosionTile* createWithFileColorLoc(const char* image, const Color3B c, const Coords position);
+    
+    /** @brief set method for interval */
+    void setInterval(const float f) { interval = f; };
+    /** @brief Get method for interval */
+    float getInterval() { return interval; };
+    
+    /** @brief set method for duration */
+    void setDuration(const float f) { duration = f; };
+    /** @brief Get method for duration */
+    float getDuration() { return duration; };
+    
+    /**
+     *  @brief  holds the exploded state until it has been checked
+     */
+    bool hasExploded()
+    { if(exploded)
+        {
+            exploded = false;
+            return true;
+        } else
+            return false;
+    };
 
     /**
      *  @brief  Special updateColor will fade to off rather than just instantly turn off
      */
     void updateVisibility() { if(on) setOpacity(150);
                          else runAction( FadeOut::create(interval/2) );};
+    
+    /**
+     *  @brief  schedules firstFade and firstExplode once
+     */
+    void scheduleFirstExplode(float st);
+    
+    /**
+     *  @brief  fades then schedules fade
+     */
+    void firstFade(float dt);
+    
+    /**
+     *  @brief  explodes then schedules explode
+     */
+    void firstExplode(float dt);
+    
+    /**
+     *  @brief  sets exploded then sets the tile on
+     */
+    void explode(float dt);
+    
+    /**
+     *  @brief  sets the tile off
+     */
+    void fade(float dt);
 
 };
 

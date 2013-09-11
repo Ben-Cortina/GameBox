@@ -1,6 +1,7 @@
 # A level file should be a plain text file ending in .bdl
 # First line will be the name of the level
 Level01
+
 # First we define the floor and wall tile for the level as such
 # <Letter> <Red 0-255> <Green 0-255> <Blue 0-255>
 # Where letter is what you will use to describe the tile later
@@ -33,8 +34,8 @@ WWWWWWWWWWWWWWW
 # WSOOXWOOOWOOOEW 
 # WWWWWWWWWWWWWWW 
 
-# Multiple coordinates can be designated definition
-#so the following will define all the tiles marked as X
+# Multiple explosions can be placed on the same tile.
+# so the following will define all the tiles marked as X
 #    WWWWWWWWW   
 # WWWWOXOWOXOWWWW 
 # WSOOXWXOXWXOOEW 
@@ -68,11 +69,8 @@ WWWWWWWWWWWWWWW
 # This means there will be a explosion orangered explosion
 # at each of those coords that will go off immediately and will only kill 
 # players currently on it (if the explosion duration was non-zero
-# it would kill anyone crossing into it during the duration.
-# Then, 1 second after it has ended it 
-# will go off again.
-
-# Multiple explosions can be placed on the same tile.
+# it would kill anyone crossing into it during the duration.)
+# Then, 1 second after it has ended it will go off again.
 
 #    WWWWWWWWW   
 # WWWWXOXWXOXWWWW 

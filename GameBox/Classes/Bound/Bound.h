@@ -41,7 +41,7 @@ public:
     /**
      *  @brief  This will load a new level
      */
-    void newLevel(const char* file);
+    void newLevel(const char* filepath);
     
     /**
      * @brief   This method creates a new BScene and runs it

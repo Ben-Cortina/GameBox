@@ -44,28 +44,10 @@
 
 #include "../Helpers/CustomCC.h"
 #include "OverLayer.h"
+#include "CustomTileGrid.h"
 
 USING_NS_CC;
 
-
-/**
- *  @struct Coords
- *  @brief  simple structure with two ints to represent 2D coordinates
- */
-struct Coords
-{
-    int x;
-    int y;
-    Coords(){};
-    Coords(int px, int py):x(px),y(py){};
-    
-    bool operator== (const Coords r) {return (x == r.x && y == r.y);};
-    Coords& operator= (const Coords r) {x = r.x; y = r.y; return *this;};
-    Coords& operator+= (const Coords r) {(*this) = (*this) + r; return *this;};
-    Coords operator+ (Coords r) {r.x = x + r.x; r.y = y + r.y; return r;};
-    inline Coords& operator-= (const Coords r) {(*this) = (*this) - r; return *this;};
-    Coords operator- (Coords r) {r.x = x - r.x; r.y = y - r.y; return r;};
-};
 
 /**
  *  @struct PlayerData

@@ -84,6 +84,8 @@ public:
      */
     void die();
     
+    //void gotToEnd();
+    
     /**
      *  @brief  Spawns the player at the start tile
      */

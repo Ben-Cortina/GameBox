@@ -15,11 +15,12 @@
 #include "cocos2d.h"
 
 //  Number of Games in the GameBox
-#define GAME_COUNT 1
+#define GAME_COUNT 2
 
 // The main headers for each game
 // This header should include the game's layer
 #include "TheBox/TheBox.h"
+#include "Bound/Bound.h"
 
 // So this is for the menu on the HomeScene
 /**
@@ -33,7 +34,8 @@ static const struct {
     const char* image;
 	std::function<void(Object*)> callback;
 } g_GameList[] = {
-    {"TheBox", "BoxMenu.png",TheBoxLayer::runThisGame}
+    {"TheBox", "BoxMenu.png",TheBoxLayer::runThisGame},
+    {"Bound", "BoxMenu.png",BScene::runThisGame}
 };
 
 

@@ -10,6 +10,7 @@
 #define __GameBox__BoundLevel__
 
 #include "BoundTiles.h"
+#include <vector>
 
 USING_NS_CC;
 
@@ -35,6 +36,7 @@ private:
     BFloorTile** fTiles;
     BWallTile** wTiles;
     BExplosionTile** eTiles;
+    float exlosionTimes;
     Sprite* playerSprite;
     int width;
     int height;
@@ -47,17 +49,22 @@ private:
     Coords** end;
     int endCount;
     
+    /**
+     *  @brief  This will parse a .bdl file and populate BLevel
+     */
+    bool parseFile(const char* file);
+    
+    /**
+     *  @brief  Size and position all of the tiles
+     */
+    void setupTiles();
+    
 public:
     
     /**
      *  @brief  This will load in a level. Level formatting can be found in LevelMaking.bdl
      */
     BLevel(const char* file);
-    
-    /**
-     *  @brief  This will parse a .bdl file and populate BLevel
-     */
-    bool parseFile(const char* file);
     
     /**
      *  @brief returns the starting location
@@ -93,6 +100,11 @@ public:
     bool isExplosionCollision(Rect bb);
     
     /**
+     *  @brief  This checks if any explosions have gone off on top of the player.
+     */
+    bool checkExplosions(Rect bb);
+    
+    /**
      *  @brief  Checks if the passed rectangle touches any floor.
      *          If the player does not intersect any of the floor tiles he isnt touching any floor
      *          thus, he falls.
@@ -103,6 +115,7 @@ public:
                                                                       (int)(pt.y / tileSize)); };
     
     Rect getTileBB(Coords loc) { return Rect(tileSize * loc.x, tileSize * loc.y, tileSize, tileSize); };
+    
     
 };
 

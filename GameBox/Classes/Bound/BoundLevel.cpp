@@ -22,12 +22,38 @@ bool RectIntersectsRect(const Rect r1, const Rect r2)
     return false;
 }
 
-BLevel::BLevel(const char* file)
+BLevel::BLevel(const char* filepath)
 {
-    parseFile(file);
+    init();
+    std::string pathKey = filepath;
+    pathKey = FileUtils::getInstance()->fullPathForFilename(pathKey.c_str());
+    
+    parseFile(pathKey.c_str());
+    
+    setupTiles();
 }
 
-
+void BLevel::setupTiles()
+{
+    for (int i = 0; i < fTileCount; i++)
+    {
+        fTiles[i]->setScale(tileSize);
+        fTiles[i]->setPosition(Point(tileSize*fTiles[i]->getLocation().x,
+                                     tileSize*fTiles[i]->getLocation().y));
+    }
+    for (int i = 0; i < wTileCount; i++)
+    {
+        wTiles[i]->setScale(tileSize);
+        wTiles[i]->setPosition(Point(tileSize*wTiles[i]->getLocation().x,
+                                     tileSize*wTiles[i]->getLocation().y));
+    }
+    for (int i = 0; i < eTileCount; i++)
+    {
+        /*eTiles[i]->setScale(tileSize);
+        eTiles[i]->setPosition(Point(tileSize*eTiles[i]->getLocation().x,
+                                     tileSize*eTiles[i]->getLocation().y));*/
+    }
+}
 
 bool BLevel::isWall(const Coords loc)
 {
@@ -139,6 +165,20 @@ bool BLevel::isWallCollision(Rect bb, Rect& tileBB)
 //    return false;
 }
 
+//I may replace this with NotificationCenter eventually...
+bool BLevel::checkExplosions(Rect bb)
+{
+    bool hit = false;
+    
+    //I have to check each of them to ensure I reset "bool exploded"
+    for ( int i = 0; i < eTileCount; i++)
+        //if it has exploded and the player was touching it...
+        if (eTiles[i]->hasExploded() && RectIntersectsRect(bb, eTiles[i]->getBoundingBox()))
+            hit = true;
+    
+    return hit;
+}
+
 bool BLevel::isExplosionCollision(Rect bb)
 {
     //adjust for BLevel position
@@ -153,7 +193,28 @@ bool BLevel::isExplosionCollision(Rect bb)
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /*-------------  Ugly File Parsing Method. Abandon hope all ye who enter here  ---------------*/
-// This is only in place until I get around to making a level editor so I can write my files as bits
+// This is only in place until I get around to making a level editor so I can write a class/struct
+// to a file and extract it easily
+
+bool skipComments(std::ifstream& file)
+{
+    std::streampos prevLine;
+    char firstChar;
+    do {
+        //get line
+        prevLine = file.tellg();
+        file >> firstChar;
+        file.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        if (file.eof())
+            return false;
+        //while its a comment line
+    } while (firstChar == '#');
+    
+    //back one line
+    file.seekg(prevLine);
+    return true;
+}
+
 bool BLevel::parseFile(const char* file)
 {
     std::ifstream bdlfile;
@@ -162,7 +223,8 @@ bool BLevel::parseFile(const char* file)
     
     if(!bdlfile.is_open())
     {
-        //ERROR opening file
+        std::cout << "ERROR opening file" <<std::endl;
+        bdlfile.close();
         return false;
     }
     
@@ -178,67 +240,55 @@ bool BLevel::parseFile(const char* file)
     height = 0;
     
     int intIn;
-    float floatIn;
     
     std::string line;
-    std::streampos prevLine;
+    std::streampos prevPoint;
     
     ////////////////////////////////////////////////////////
     //Name line
-    do {
-        if (bdlfile.eof()) {
-            //ERROR: wrong format, no content
-            return false;
-        }
-        
-        //get line
-        prevLine = bdlfile.tellg();
-        bdlfile >> firstChar;
-        bdlfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        
-        //while its a comment line
-    } while (firstChar == '#');
+    if (!(skipComments(bdlfile)))
+    {
+        std::cout << "ERROR eof before name" <<std::endl;
+        bdlfile.close();
+        return false;
+    }
     
     //do nothing, we dont need the name
+    //next line
+    bdlfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     
     ////////////////////////////////////////////////////////
     //Floor line
-    do {
-        if (bdlfile.eof()) {
-            //ERROR: wrong format, no content
-            return false;
-        }
-        
-        //get line
-        prevLine = bdlfile.tellg();
-        bdlfile >> firstChar;
-        bdlfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        
-        //while its a comment line
-    } while (firstChar == '#');
+    if (!(skipComments(bdlfile)))
+    {
+        std::cout << "ERROR eof before floor" <<std::endl;
+        bdlfile.close();
+        return false;
+    }
     
-    //back up one line
-    bdlfile.seekg(prevLine);
     bdlfile >> floorChar;
     
     //------------------floor color 1
     if (!(bdlfile >> intIn) || intIn > 255 || intIn < 0)
     {
-        //ERROR reading floorColor1r
+        std::cout << floorChar << " " << "ERROR reading floorColor1r" <<std::endl;
+        bdlfile.close();
         return false;
     }
     floorColor1.r = intIn;
     
     if (!(bdlfile >> intIn) || intIn > 255 || intIn < 0)
     {
-        //ERROR reading floorColor1g
+        std::cout << "ERROR reading floorColor1g" <<std::endl;
+        bdlfile.close();
         return false;
     }
     floorColor1.g = intIn;
     
     if (!(bdlfile >> intIn) || intIn > 255 || intIn < 0)
     {
-        //ERROR reading floorColor1b
+        std::cout << "ERROR reading floorColor1b" <<std::endl;
+        bdlfile.close();
         return false;
     }
     floorColor1.b = intIn;
@@ -246,21 +296,24 @@ bool BLevel::parseFile(const char* file)
     //-------------------floor color 2
     if (!(bdlfile >> intIn) || intIn > 255 || intIn < 0)
     {
-        //ERROR reading floorColor2r
+        std::cout << "ERROR reading floorColor2r" <<std::endl;
+        bdlfile.close();
         return false;
     }
     floorColor2.r = intIn;
     
     if (!(bdlfile >> intIn) || intIn > 255 || intIn < 0)
     {
-        //ERROR reading floorColor2g
+        std::cout << "ERROR reading floorColor2g" <<std::endl;
+        bdlfile.close();
         return false;
     }
     floorColor2.g = intIn;
     
     if (!(bdlfile >> intIn) || intIn > 255 || intIn < 0)
     {
-        //ERROR reading floorColor2b
+        std::cout << "ERROR reading floorColor2b" <<std::endl;
+        bdlfile.close();
         return false;
     }
     floorColor2.b = intIn;
@@ -270,42 +323,36 @@ bool BLevel::parseFile(const char* file)
     
     ////////////////////////////////////////////////////////
     //Wall line
-    do {
-        if (bdlfile.eof()) {
-            //ERROR: wrong format, no wall
-            return false;
-        }
-        
-        //get line
-        prevLine = bdlfile.tellg();
-        bdlfile >> firstChar;
-        bdlfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        
-        //while its a comment line
-    } while (firstChar == '#');
+    if (!(skipComments(bdlfile)))
+    {
+        std::cout << "ERROR eof before wall" <<std::endl;
+        bdlfile.close();
+        return false;
+    }
     
-    //back up one line
-    bdlfile.seekg(prevLine);
     bdlfile >> wallChar;
     
     //------------------wall color
     if (!(bdlfile >> intIn) || intIn > 255 || intIn < 0)
     {
-        //ERROR reading wallColorr
+        std::cout << "ERROR reading wallColorr" <<std::endl;
+        bdlfile.close();
         return false;
     }
     wallColor.r = intIn;
     
     if (!(bdlfile >> intIn) || intIn > 255 || intIn < 0)
     {
-        //ERROR reading wallColorg
+        std::cout << "ERROR reading wallColorg" <<std::endl;
+        bdlfile.close();
         return false;
     }
     wallColor.g = intIn;
     
     if (!(bdlfile >> intIn) || intIn > 255 || intIn < 0)
     {
-        //ERROR reading wallColorb
+        std::cout << "ERROR reading wallColorb" <<std::endl;
+        bdlfile.close();
         return false;
     }
     wallColor.b = intIn;
@@ -314,46 +361,48 @@ bool BLevel::parseFile(const char* file)
     bdlfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     
     
-    
     if (floorChar == 'E' || wallChar == 'E')
     {
-        //ERROR E is reserved for End
+        std::cout << "ERROR E is reserved for End" <<std::endl;
+        bdlfile.close();
         return false;
     }
     
     if (floorChar == 'S' || wallChar == 'S')
     {
-        //ERROR S is reserved for Start
+        std::cout << "ERROR S is reserved for Start" <<std::endl;
+        bdlfile.close();
         return false;
     }
     
     ////////////////////////////////////////////////////////
     //Level
-    do {
-        if (bdlfile.eof()) {
-            //ERROR: no level
-            return false;
-        }
-        
-        //get line
-        prevLine = bdlfile.tellg();
-        bdlfile >> firstChar;
-        bdlfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        
-        //while its a comment line
-    } while (firstChar == '#');
-    
-    if (firstChar != '-') {
-        //ERROR level not found (the line before and after the level must start with '-'
+    if (!(skipComments(bdlfile)))
+    {
+        std::cout << "ERROR eof before level" <<std::endl;
+        bdlfile.close();
         return false;
     }
     
-    //this is the beggining of the level
+    bdlfile >> firstChar;
+    
+    if (firstChar != '-') {
+        std::cout << "ERROR level not found (the line before and after the level must start with '-'" <<std::endl;
+        bdlfile.close();
+        return false;
+    }
+    
+    //next line
+    bdlfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    
     std::vector<std::string> levelLines;
+    
     //lets find out how big the level is
     do {
-        if (bdlfile.eof()) {
-            //ERROR: no level end, the line after the level end must start with '-'
+        if (!(skipComments(bdlfile)))
+        {
+            std::cout << "ERROR eof before end of level (The line after the level must start with '-')" <<std::endl;
+            bdlfile.close();
             return false;
         }
         //get line
@@ -361,6 +410,8 @@ bool BLevel::parseFile(const char* file)
         line = line.substr(0,line.find_first_of('#'));
         width = MAX(width, line.size());
         levelLines.push_back(line);
+        
+        std::cout << line <<std::endl;
         height++;
         
         //while its not the end of the level
@@ -370,6 +421,10 @@ bool BLevel::parseFile(const char* file)
     height--;
     levelLines.pop_back();
     
+    //set tileSize
+    Size winSize = Director::getInstance()->getVisibleSize();
+    tileSize = MIN(winSize.height / (float)height, winSize.width / (float)width);
+    
     fTileCount = 0;
     wTileCount = 0;
     endCount = 0;
@@ -378,38 +433,48 @@ bool BLevel::parseFile(const char* file)
     //now that we know how many tiles, we will count them
     for (int i = 0; i < levelLines.size(); i++)
     {
-        for (int j = 0; levelLines[i].size(); j++)
+        for (int j = 0; j < levelLines[i].size(); j++)
         {
             if (levelLines[i][j] == floorChar)
                 fTileCount++;
             if (levelLines[i][j] == wallChar)
                 wTileCount++;
             if (levelLines[i][j] == 'E')
+            {
                 endCount++;
-            if (levelLines[i][j] == 'S') {
+                fTileCount++;
+            }
+            if (levelLines[i][j] == 'S')
+            {
                 if (startloc == Coords(-1,-1))
-                    startloc = Coords(j, i);
-                else
                 {
-                    //ERROR multiple starts declared
+                    startloc = Coords(j, i);
+                } else
+                {
+                    std::cout << "ERROR multiple starts declared" <<std::endl;
+                    bdlfile.close();
                     return false;
                 }
+                fTileCount++;
             }
         }
     }
     if (fTileCount == 0)
     {
-        //ERROR no floor tiles
+        std::cout << "ERROR no floor tiles" <<std::endl;
+        bdlfile.close();
         return false;
     }
     if (endCount == 0)
     {
-        //ERROR no end tile
+        std::cout << "ERROR no end tile" <<std::endl;
+        bdlfile.close();
         return false;
     }
     if (startloc == Coords(-1,-1))
     {
-        //ERROR no start tile
+        std::cout << "ERROR no start tile" <<std::endl;
+        bdlfile.close();
         return false;
     }
     //create tile arrays
@@ -421,25 +486,28 @@ bool BLevel::parseFile(const char* file)
     start.x = startbb.getMidX();
     start.y = startbb.getMidY();
     
+    
     //create the tiles
     int wItt = 0;
     int fItt = 0;
     for (int i = 0; i < levelLines.size(); i++)
     {
-        for (int j = 0; levelLines[i].size(); j++)
+        for (int j = 0; j < levelLines[i].size(); j++)
         {
             if (levelLines[i][j] == floorChar || levelLines[i][j] == 'E' || levelLines[i][j] == 'S')
             {
                 fTiles[fItt] = BFloorTile::createWithFileColorLoc("Pixel.png",
                                                                   (((i+j)%2 == 0) ? floorColor1 : floorColor2),
                                                                   Coords(j,i));
+                addChild(fTiles[fItt]);
                 fItt++;
             }
             if (levelLines[i][j] == wallChar)
             {
-                wTiles[fItt] = BWallTile::createWithFileColorLoc("Pixel.png",
+                wTiles[wItt] = BWallTile::createWithFileColorLoc("Pixel.png",
                                                                  wallColor,
                                                                  Coords(j,i));
+                addChild(wTiles[wItt]);
                 wItt++;
             }
         }
@@ -451,23 +519,199 @@ bool BLevel::parseFile(const char* file)
     int ex_x;
     int ex_y;
     Color3B ex_color;
+    bool outside = true;
     
+    eTileCount = 0;
+    //beggining of the explosions
+    std::streampos eStart = bdlfile.tellg();
+    
+    //count how many explosions there will be
     while (!bdlfile.eof()) {
-        do {
-            //get line
-            prevLine = bdlfile.tellg();
-            bdlfile >> firstChar;
-            bdlfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            
-            //while its a comment line
-        } while (firstChar == '#');
-        //back up one line
-        bdlfile.seekg(prevLine);
         
+        while (outside) {
+            if (!(skipComments(bdlfile)))
+                break;
+            
+            prevPoint = bdlfile.tellg();
+            bdlfile >> firstChar;
+            
+            if (firstChar == '{')
+            {
+                outside = false;
+                break;
+            }
+            
+            //back up one line
+            bdlfile.seekg(prevPoint);
+            
+            //get coords
+            if ( !(bdlfile >> ex_x) || !(bdlfile >> ex_y))
+            {
+                std::cout << "ERROR reading explosion coords;" <<std::endl;
+                bdlfile.close();
+                return false;
+            } else
+            {
+                eTileCount++;
+            }
+        }
+        
+        while (!outside) {
+            if (bdlfile.eof())
+            {
+                std::cout << "ERROR explosion definition does not end." <<std::endl;
+                bdlfile.close();
+                return false;
+            }
+            
+            bdlfile >> firstChar;
+            
+            
+            if (firstChar == '#')
+                bdlfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            
+            if (firstChar == '}')
+            {
+                outside = true;
+            }
+        }
     }
     
-    eTiles = new BExplosionTile*[eTileCount];
+    //return to start of explosions
+    bdlfile.clear();
+    bdlfile.seekg(eStart);
     
+    //create explosions
+    eTiles = new BExplosionTile*[eTileCount];
+    std::vector<Coords> eCoords;
+    int eItt = 0;
+    float eFirst;
+    float eInterval;
+    float eDuration;
+    Color3B eColor;
+    
+    //populate the explosions
+    while (!bdlfile.eof())
+    {
+
+        while (outside) {
+            if (!(skipComments(bdlfile)))
+                break;
+            
+            prevPoint = bdlfile.tellg();
+            bdlfile >> firstChar;
+            
+            if (firstChar == '{')
+            {
+                outside = false;
+                break;
+            }
+            
+            //back up one line
+            bdlfile.seekg(prevPoint);
+            
+            //get coords
+            bdlfile >> ex_x;
+            bdlfile >> ex_y;
+            eCoords.push_back(Coords(ex_x, ex_y));
+            
+        }
+        
+        while (!outside && !bdlfile.eof())
+        {
+            //get first explosion time
+            skipComments(bdlfile);
+            if ( !(bdlfile >> eFirst) )
+            {
+                std::cout << "ERROR could not read first explosion time" <<std::endl;
+                bdlfile.close();
+                return false;
+            }
+            
+            //get explosion interval
+            skipComments(bdlfile);
+            if ( !(bdlfile >> eInterval) )
+            {
+                std::cout << "ERROR could not read explosion interval" <<std::endl;
+                bdlfile.close();
+                return false;
+            }
+            
+            //get explosion duration
+            skipComments(bdlfile);
+            if ( !(bdlfile >> eDuration) )
+            {
+                std::cout << "ERROR could not read explosion duration" <<std::endl;
+                bdlfile.close();
+                return false;
+            }
+            
+            //get color
+            skipComments(bdlfile);
+            if (!(bdlfile >> intIn) || intIn > 255 || intIn < 0)
+            {
+                std::cout << "ERROR reading explosion color r" <<std::endl;
+                bdlfile.close();
+                return false;
+            }
+            eColor.r = intIn;
+            
+            if (!(bdlfile >> intIn) || intIn > 255 || intIn < 0)
+            {
+                std::cout << "ERROR reading explosion color g" <<std::endl;
+                bdlfile.close();
+                return false;
+            }
+            eColor.g = intIn;
+            
+            if (!(bdlfile >> intIn) || intIn > 255 || intIn < 0)
+            {
+                std::cout << "ERROR reading explosion color b" <<std::endl;
+                bdlfile.close();
+                return false;
+            }
+            eColor.b = intIn;
+            
+            // next should be the end of the explosion definition
+            skipComments(bdlfile);
+            bdlfile >> firstChar;
+            
+            if (firstChar == '}')
+            {
+                //nextline
+                bdlfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+                outside = true;
+            } else
+            {
+                std::cout << "ERROR Invalid explosion definition" <<std::endl;
+                bdlfile.close();
+                return false;
+            }
+        }
+        
+        if (eFirst < 0 || eInterval < 0 || eDuration < 0) {
+            std::cout << "ERROR negative values are not allowed in the exlosion declaration" <<std::endl;
+            bdlfile.close();
+            return false;
+        }
+
+        for (int i = 0; i < eCoords.size(); i++)
+        {
+            eTiles[eItt] = BExplosionTile::createWithFileColorLoc("Pixel.png",
+                                                                  eColor,
+                                                                  eCoords[i]);
+            eTiles[eItt]->setInterval(eInterval);
+            eTiles[eItt]->setDuration(eDuration);
+            eTiles[eItt]->scheduleFirstExplode(eFirst);
+            addChild(eTiles[eItt]);
+            eItt++;
+        }
+        
+        
+        eCoords.clear();
+    }
+    
+    std::cout<< "we did it, we made it to the eof without any errors! Well done everybody. " <<std::endl;
     
     bdlfile.close();
     return true;

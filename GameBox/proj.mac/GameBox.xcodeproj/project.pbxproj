@@ -29,6 +29,7 @@
 		41BC70E615BF81A5006A0A6C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BC70DE15BF81A5006A0A6C /* MainMenu.xib */; };
 		41BC70E715BF81A5006A0A6C /* Icon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 41BC70E015BF81A5006A0A6C /* Icon.icns */; };
 		41BC70E815BF81A5006A0A6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BC70E115BF81A5006A0A6C /* main.m */; };
+		E12D831517E10D1B00FFB98E /* CustomTileGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E12D831317E10D1B00FFB98E /* CustomTileGrid.cpp */; };
 		E134B88F17A30AE400EBC6B2 /* Marker Felt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E134B88917A30AE400EBC6B2 /* Marker Felt.ttf */; };
 		E16EBC6917D1266500514A01 /* BoundLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16EBC6717D1266500514A01 /* BoundLevel.cpp */; };
 		E16EBC7717D1320300514A01 /* BoundTiles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16EBC7517D1320300514A01 /* BoundTiles.cpp */; };
@@ -203,13 +204,15 @@
 		41BC70E115BF81A5006A0A6C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		41BC70E215BF81A5006A0A6C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		41BC70E315BF81A5006A0A6C /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = SOURCE_ROOT; };
+		E12D831317E10D1B00FFB98E /* CustomTileGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CustomTileGrid.cpp; path = ../../../../../../../Blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomTileGrid.cpp; sourceTree = "<group>"; };
+		E12D831417E10D1B00FFB98E /* CustomTileGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTileGrid.h; path = ../../../../../../../Blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomTileGrid.h; sourceTree = "<group>"; };
 		E134B88917A30AE400EBC6B2 /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
 		E16EBC6717D1266500514A01 /* BoundLevel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoundLevel.cpp; sourceTree = "<group>"; };
 		E16EBC6817D1266500514A01 /* BoundLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundLevel.h; sourceTree = "<group>"; };
 		E16EBC7517D1320300514A01 /* BoundTiles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoundTiles.cpp; sourceTree = "<group>"; };
 		E16EBC7617D1320300514A01 /* BoundTiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundTiles.h; sourceTree = "<group>"; };
 		E17372C617A2F44100ABF075 /* GameList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameList.h; sourceTree = "<group>"; };
-		E184F9CB17DD1EDD0040326E /* LevelMaking.bdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = LevelMaking.bdl; path = LevelMaking.bdl; sourceTree = "<group>"; };
+		E184F9CB17DD1EDD0040326E /* LevelMaking.bdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LevelMaking.bdl; sourceTree = "<group>"; };
 		E1865A1417A1B19B008530D2 /* CustomCC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomCC.cpp; sourceTree = "<group>"; };
 		E1865A1517A1B19B008530D2 /* CustomCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCC.h; sourceTree = "<group>"; };
 		E1865A2817A1E1E8008530D2 /* TheBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TheBox.cpp; sourceTree = "<group>"; };
@@ -397,6 +400,8 @@
 			children = (
 				E1865A1517A1B19B008530D2 /* CustomCC.h */,
 				E1865A1417A1B19B008530D2 /* CustomCC.cpp */,
+				E12D831317E10D1B00FFB98E /* CustomTileGrid.cpp */,
+				E12D831417E10D1B00FFB98E /* CustomTileGrid.h */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -620,6 +625,7 @@
 				E16EBC6917D1266500514A01 /* BoundLevel.cpp in Sources */,
 				E16EBC7717D1320300514A01 /* BoundTiles.cpp in Sources */,
 				E1F1639F17D5359800B11618 /* BoundPlayer.cpp in Sources */,
+				E12D831517E10D1B00FFB98E /* CustomTileGrid.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

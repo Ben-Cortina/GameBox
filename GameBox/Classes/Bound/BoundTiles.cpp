@@ -21,6 +21,7 @@ BTile* BTile::createWithFileColorLoc(const char* image, const Color3B c, const C
     BTile *pobBTile = new BTile(c, position);
     if (pobBTile && pobBTile->initWithFile(image))
     {
+        pobBTile->setColor(c);
         pobBTile->autorelease();
         return pobBTile;
     }
@@ -38,7 +39,6 @@ BExplosionTile::BExplosionTile(const Color3B c, Coords position)
     exploded = false;
     duration = 0;
     interval = 1;
-    updateVisibility();
 }
 
 BExplosionTile* BExplosionTile::createWithFileColorLoc(const char* image, const Color3B c, const Coords position)
@@ -46,8 +46,8 @@ BExplosionTile* BExplosionTile::createWithFileColorLoc(const char* image, const 
     BExplosionTile *pobBTile = new BExplosionTile(c, position);
     if (pobBTile && pobBTile->initWithFile(image))
     {
-        if (!pobBTile->hasExploded())
-            std::cout<<"faild"<<std::endl;
+        pobBTile->setColor(c);
+        pobBTile->setOpacity(0);
         pobBTile->autorelease();
         return pobBTile;
     }
@@ -55,12 +55,22 @@ BExplosionTile* BExplosionTile::createWithFileColorLoc(const char* image, const 
     return NULL;
 }
 
+bool BExplosionTile::hasExploded()
+{
+    if(exploded)
+    {
+        exploded = false;
+        return true;
+    } else
+        return false;
+};
+
 void BExplosionTile::scheduleFirstExplode(float st)
 {
     //schedule first explosion
-    scheduleOnce(schedule_selector(BExplosionTile::firstExplode), st);
+    scheduleOnce(schedule_selector(BExplosionTile::firstExplode), st + 0.1f);
     //schedule first fade
-    scheduleOnce(schedule_selector(BExplosionTile::firstFade), st+duration);
+    scheduleOnce(schedule_selector(BExplosionTile::firstFade), st + duration + 0.1f);
 }
 
 void BExplosionTile::firstExplode(float dt)

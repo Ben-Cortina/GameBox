@@ -52,7 +52,6 @@ private:
     
     
 public:
-    BPlayer();
     BPlayer(const char* image);
 
     /**

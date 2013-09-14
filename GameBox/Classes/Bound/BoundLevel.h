@@ -114,7 +114,7 @@ public:
     Coords getTile(Point pt) { pt = pt - getPosition(); return Coords((int)(pt.x / tileSize),
                                                                       (int)(pt.y / tileSize)); };
     
-    Rect getTileBB(Coords loc) { return Rect(tileSize * loc.x, tileSize * loc.y, tileSize, tileSize); };
+    Rect getTileBB(Coords loc);
     
     
 };

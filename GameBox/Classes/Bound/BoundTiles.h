@@ -130,14 +130,7 @@ public:
     /**
      *  @brief  holds the exploded state until it has been checked
      */
-    bool hasExploded()
-    { if(exploded)
-        {
-            exploded = false;
-            return true;
-        } else
-            return false;
-    };
+    bool hasExploded();
 
     /**
      *  @brief  Special updateColor will fade to off rather than just instantly turn off

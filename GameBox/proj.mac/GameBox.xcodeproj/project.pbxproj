@@ -204,8 +204,8 @@
 		41BC70E115BF81A5006A0A6C /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = SOURCE_ROOT; };
 		41BC70E215BF81A5006A0A6C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = SOURCE_ROOT; };
 		41BC70E315BF81A5006A0A6C /* Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = SOURCE_ROOT; };
-		E12D831317E10D1B00FFB98E /* CustomTileGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CustomTileGrid.cpp; path = ../../../../../../../Blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomTileGrid.cpp; sourceTree = "<group>"; };
-		E12D831417E10D1B00FFB98E /* CustomTileGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTileGrid.h; path = ../../../../../../../Blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/CustomTileGrid.h; sourceTree = "<group>"; };
+		E12D831317E10D1B00FFB98E /* CustomTileGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = CustomTileGrid.cpp; path = CustomTileGrid.cpp; sourceTree = "<group>"; };
+		E12D831417E10D1B00FFB98E /* CustomTileGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomTileGrid.h; path = CustomTileGrid.h; sourceTree = "<group>"; };
 		E134B88917A30AE400EBC6B2 /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
 		E16EBC6717D1266500514A01 /* BoundLevel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoundLevel.cpp; sourceTree = "<group>"; };
 		E16EBC6817D1266500514A01 /* BoundLevel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundLevel.h; sourceTree = "<group>"; };

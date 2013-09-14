@@ -32,6 +32,7 @@ void BScene::newLevel(const char* filepath)
 
 void BScene::runThisGame(Object* pSender)
 {
+
     //pause while loading
     Director::getInstance()->pause();
     

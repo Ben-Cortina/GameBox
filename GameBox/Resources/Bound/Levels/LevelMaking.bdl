@@ -21,10 +21,10 @@ W 0 0 0
 
 # Level
 -
-   WWWWWWWWW   
-WWWWOOOWOOOWWWW 
-WSOOOWOOOWOOOEW 
-WWWWWWWWWWWWWWW 
+   WWWWWWWWW
+WWWWOOOWOOOWWWW
+WSOOOWOOOWOOOEW
+WWWWWWWWWWWWWWW
 -
 # Lastly, we will define the explosion timers 
 # coordinates X Y (1 1 is bottom left) open bracket
@@ -40,6 +40,7 @@ WWWWWWWWWWWWWWW
 # WWWWOXOWOXOWWWW 
 # WSOOXWXOXWXOOEW 
 # WWWWWWWWWWWWWWW 
+# The player can move 2 tiles per second
 
 # coords 
 5 2
@@ -73,7 +74,7 @@ WWWWWWWWWWWWWWW
 # Then, 1 second after it has ended it will go off again.
 
 #    WWWWWWWWW   
-# WWWWXOXWXOXWWWW 
+# WWWWXOXWXOXWWWW
 # WSOOOWOXOWOOOEW 
 # WWWWWWWWWWWWWWW 
 5 3
@@ -83,7 +84,7 @@ WWWWWWWWWWWWWWW
 11 3
 11 2
 {
-0.0
+0.5
 1.0
 0.0
 255 100 100

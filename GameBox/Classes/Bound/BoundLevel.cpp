@@ -14,10 +14,10 @@
 bool RectIntersectsRect(const Rect r1, const Rect r2)
 {
     //if they intersect
-    if ( (r1.getMinX() <= r2.getMaxX() &&
-          r2.getMinX() <= r1.getMaxX() )  &&
-        (r1.getMinY() <= r2.getMaxY() &&
-         r2.getMinY() <= r1.getMaxY() )  )
+    if ( (r1.getMinX() < r2.getMaxX() &&
+          r2.getMinX() < r1.getMaxX() )  &&
+         (r1.getMinY() < r2.getMaxY() &&
+          r2.getMinY() < r1.getMaxY() )  )
         return true;
     return false;
 }
@@ -35,23 +35,28 @@ BLevel::BLevel(const char* filepath)
 
 void BLevel::setupTiles()
 {
+    //I could either center the layer or center the tiles... I prefer centering the tiles
+    Size winSize = Director::getInstance()->getVisibleSize();
+    Size margin = Size((winSize.width - tileSize * width)/ 2,
+                       (winSize.height - tileSize * height)/ 2);
+    
     for (int i = 0; i < fTileCount; i++)
     {
         fTiles[i]->setScale(tileSize);
-        fTiles[i]->setPosition(Point(tileSize*fTiles[i]->getLocation().x,
-                                     tileSize*fTiles[i]->getLocation().y));
+        fTiles[i]->setPosition(Point(tileSize*fTiles[i]->getLocation().x + tileSize / 2 + margin.width,
+                                     tileSize*fTiles[i]->getLocation().y + tileSize / 2 + margin.height));
     }
     for (int i = 0; i < wTileCount; i++)
     {
         wTiles[i]->setScale(tileSize);
-        wTiles[i]->setPosition(Point(tileSize*wTiles[i]->getLocation().x,
-                                     tileSize*wTiles[i]->getLocation().y));
+        wTiles[i]->setPosition(Point(tileSize*wTiles[i]->getLocation().x + tileSize / 2 + margin.width,
+                                     tileSize*wTiles[i]->getLocation().y + tileSize / 2 + margin.height));
     }
     for (int i = 0; i < eTileCount; i++)
     {
-        /*eTiles[i]->setScale(tileSize);
-        eTiles[i]->setPosition(Point(tileSize*eTiles[i]->getLocation().x,
-                                     tileSize*eTiles[i]->getLocation().y));*/
+        eTiles[i]->setScale(tileSize);
+        eTiles[i]->setPosition(Point(tileSize*eTiles[i]->getLocation().x + tileSize / 2 + margin.width,
+                                     tileSize*eTiles[i]->getLocation().y + tileSize / 2 + margin.height));
     }
 }
 
@@ -81,7 +86,7 @@ bool BLevel::isExplosion(const Coords loc)
 bool BLevel::isOnFloor(Rect bb)
 {
     //adjust for BLevel position
-    bb.origin = bb.origin + getPosition();
+    bb.origin = bb.origin - getPosition();
     
     //check every one. Because Y.O.L.O.
     for ( int i = 0; i < fTileCount; i++)
@@ -94,7 +99,7 @@ bool BLevel::isOnFloor(Rect bb)
 bool BLevel::isWallCollision(Rect bb, Rect& tileBB)
 {
     //adjust for BLevel position
-    bb.origin = bb.origin + getPosition();
+    bb.origin = bb.origin - getPosition();
     
     //check every one. Because Y.O.L.O.
     for ( int i = 0; i < wTileCount; i++)
@@ -105,64 +110,6 @@ bool BLevel::isWallCollision(Rect bb, Rect& tileBB)
             return true;
     }
     return false;
-    
-//
-//    Coords loc = getTile(bb.origin);
-//    //check all nine surrounding tiles
-//    //0,0
-//    tileBB = getTileBB(loc);
-//    if ( RectIntersectsRect(bb, tileBB) && isWall(loc) )
-//        return true;
-//    
-//    //+1,0
-//    loc.x++;
-//    tileBB = getTileBB(loc);
-//    if ( RectIntersectsRect(bb, tileBB) && isWall(loc) )
-//        return true;
-//    
-//    //+1,+1
-//    loc.y++;
-//    tileBB = getTileBB(loc);
-//    if ( RectIntersectsRect(bb, tileBB) && isWall(loc) )
-//        return true;
-//    
-//    //0,+1
-//    loc.x--;
-//    tileBB = getTileBB(loc);
-//    if ( RectIntersectsRect(bb, tileBB) && isWall(loc) )
-//        return true;
-//    
-//    //-1,+1
-//    loc.x--;
-//    tileBB = getTileBB(loc);
-//    if ( RectIntersectsRect(bb, tileBB) && isWall(loc) )
-//        return true;
-//    
-//    //-1,0
-//    loc.y--;
-//    tileBB = getTileBB(loc);
-//    if ( RectIntersectsRect(bb, tileBB) && isWall(loc) )
-//        return true;
-//    
-//    //-1,-1
-//    loc.y--;
-//    tileBB = getTileBB(loc);
-//    if ( RectIntersectsRect(bb, tileBB) && isWall(loc) )
-//        return true;
-//    
-//    //0,-1
-//    loc.x++;
-//    tileBB = getTileBB(loc);
-//    if ( RectIntersectsRect(bb, tileBB) && isWall(loc) )
-//        return true;
-//    
-//    //+1,-1
-//    loc.x++;
-//    tileBB = getTileBB(loc);
-//    if ( RectIntersectsRect(bb, tileBB) && isWall(loc) )
-//        return true;
-//    
-//    return false;
 }
 
 //I may replace this with NotificationCenter eventually...
@@ -172,9 +119,11 @@ bool BLevel::checkExplosions(Rect bb)
     
     //I have to check each of them to ensure I reset "bool exploded"
     for ( int i = 0; i < eTileCount; i++)
+    {
         //if it has exploded and the player was touching it...
         if (eTiles[i]->hasExploded() && RectIntersectsRect(bb, eTiles[i]->getBoundingBox()))
             hit = true;
+    }
     
     return hit;
 }
@@ -190,6 +139,17 @@ bool BLevel::isExplosionCollision(Rect bb)
             return true;
     return false;
 }
+
+Rect BLevel::getTileBB( Coords loc )
+{
+    Size winSize = Director::getInstance()->getVisibleSize();
+    Size margin = Size((winSize.width - tileSize * width)/ 2,
+                       (winSize.height - tileSize * height)/ 2);
+    return Rect(tileSize * loc.x + margin.width,
+                tileSize * loc.y + margin.height,
+                tileSize,
+                tileSize);
+};
 
 ////////////////////////////////////////////////////////////////////////////////////////////////
 /*-------------  Ugly File Parsing Method. Abandon hope all ye who enter here  ---------------*/
@@ -448,7 +408,7 @@ bool BLevel::parseFile(const char* file)
             {
                 if (startloc == Coords(-1,-1))
                 {
-                    startloc = Coords(j, i);
+                    startloc = Coords(j, levelLines.size() - i - 1);
                 } else
                 {
                     std::cout << "ERROR multiple starts declared" <<std::endl;
@@ -496,9 +456,14 @@ bool BLevel::parseFile(const char* file)
         {
             if (levelLines[i][j] == floorChar || levelLines[i][j] == 'E' || levelLines[i][j] == 'S')
             {
-                fTiles[fItt] = BFloorTile::createWithFileColorLoc("Pixel.png",
-                                                                  (((i+j)%2 == 0) ? floorColor1 : floorColor2),
-                                                                  Coords(j,i));
+                if ( levelLines[i][j] == 'E')
+                    fTiles[fItt] = BFloorTile::createWithFileColorLoc("Pixel.png",
+                                                                      Color3B(255, 250, 210),
+                                                                      Coords(j, levelLines.size() - i - 1));
+                else
+                    fTiles[fItt] = BFloorTile::createWithFileColorLoc("Pixel.png",
+                                                                      (((i+j)%2 == 0) ? floorColor1 : floorColor2),
+                                                                      Coords(j, levelLines.size() - i - 1));
                 addChild(fTiles[fItt]);
                 fItt++;
             }
@@ -506,7 +471,7 @@ bool BLevel::parseFile(const char* file)
             {
                 wTiles[wItt] = BWallTile::createWithFileColorLoc("Pixel.png",
                                                                  wallColor,
-                                                                 Coords(j,i));
+                                                                 Coords(j,levelLines.size() - i - 1));
                 addChild(wTiles[wItt]);
                 wItt++;
             }
@@ -613,7 +578,7 @@ bool BLevel::parseFile(const char* file)
             //get coords
             bdlfile >> ex_x;
             bdlfile >> ex_y;
-            eCoords.push_back(Coords(ex_x, ex_y));
+            eCoords.push_back(Coords(ex_x-1, ex_y-1));
             
         }
         

@@ -50,10 +50,16 @@ private:
     KeyStateStruct keyState;
     bool isDying;
     
+    bool active;
     
 public:
     BPlayer(const char* image);
 
+    /**
+     *  @brief  Stops the player and any interaction
+     */
+    void setActive(const bool a);
+    
     /**
      *  @brief  Set the level to check collision on
      */

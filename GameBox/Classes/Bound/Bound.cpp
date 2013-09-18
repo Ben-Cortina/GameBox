@@ -10,6 +10,8 @@
 BScene::BScene()
 {
     init();
+    layerFocus = 1;
+    
     //create background Layer
     backgroundLayer = LayerColor::create(Color4B(255, 255, 255, 255));
     addChild(backgroundLayer);
@@ -17,7 +19,13 @@ BScene::BScene()
     //create player Layer
     playerLayer = new BPlayer("Pixel.png");
     
-    //TODO:load menu
+    //load menu
+    menuLayer = new BMenu(BScene::loadLevel);
+    
+    menuLayer->setVisible(true);
+    playerLayer->setVisible(false);
+    playerLayer->setActive(false);
+    
     //for now well load a level
     newLevel("LevelMaking.bdl");
     addChild(levelLayer,1);
@@ -26,13 +34,46 @@ BScene::BScene()
 
 void BScene::newLevel(const char* filepath)
 {
+    Director::getInstance()->pause();
+    
+    
+    //release the old level
+    if (levelLayer)
+        levelLayer->release();
+    
+    //load the new one
     levelLayer = new BLevel(filepath);
+    
+    //replace the level
     playerLayer->setLevel(levelLayer);
+    
+    //hide the menu and show the level
+    menuLayer->setVisible(false);
+    playerLayer->setVisible(true);
+    levelLayer->setVisible(true);
+    playerLayer->setActive(true);
+    
+    
+    Director::getInstance()->resume();
+}
+
+void BScene::loadLevel(Object * pSender)
+{
+	Director::getInstance()->purgeCachedData();
+    
+    // get the userdata, it's the index of the menu item clicked
+    MenuItem* menuItem = (MenuItem *)(pSender);
+    int idx = menuItem->getZOrder() - 10000;
+    Menu* pmenu = (((Menu*)(menuItem->getParent())));
+    BMenu* menuL = (BMenu*)(pmenu->getParent());
+    BScene* thisScene = (BScene*)(menuL->getParent());
+    
+    // replace the old level
+    thisScene->newLevel(menuL->getLevelPath(idx));
 }
 
 void BScene::runThisGame(Object* pSender)
 {
-
     //pause while loading
     Director::getInstance()->pause();
     

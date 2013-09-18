@@ -21,11 +21,26 @@ BPlayer::BPlayer(const char* image)
     setKeyboardEnabled(true);
 }
 
+void BPlayer::setActive(const bool a)
+{
+    active = a;
+    setKeyboardEnabled(a);
+    if (!a)
+    {
+        force.x = 0;
+        force.y = 0;
+        velocity.x = 0;
+        velocity.y = 0;
+        maxSpeed = 0;
+        keyState.up = keyState.down = keyState.left = keyState.right = false;
+    }
+}
+
 void BPlayer::setLevel(BLevel* newLevel)
 {
     level = newLevel;
-    maxSpeed = level->getTileSize()*2;
-    player->setScale((int)(level->getTileSize()/10));
+    maxSpeed = level->getTileSize() * 2;
+    player->setScale((int)(level->getTileSize() / 10));
     spawn(0);
     scheduleUpdate();
 };
@@ -102,6 +117,9 @@ void BPlayer::update(float dt)
     //adjust for how much has already been calcualted
     dt -= dtCalculated;
     dtCalculated = 0;
+    
+    if (!active)
+        return;
     
     //check explosions incase one went off on player
     if (level->checkExplosions(player->getBoundingBox()) && !isDying)
@@ -243,7 +261,7 @@ void BPlayer::handleCollisions(float x, float y)
 void BPlayer::keyPressed(int keyCode)
 {
     //do nothing if it is paused
-    if (Director::getInstance()->isPaused())
+    if (Director::getInstance()->isPaused() || !active)
         return;
     
     //the change as a result of the keypress
@@ -310,7 +328,7 @@ void BPlayer::keyPressed(int keyCode)
 void BPlayer::keyReleased(int keyCode)
 {
     //do nothing if it is paused
-    if (Director::getInstance()->isPaused())
+    if (Director::getInstance()->isPaused() || !active)
         return;
     
     switch(keyCode)

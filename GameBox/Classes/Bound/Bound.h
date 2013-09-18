@@ -20,6 +20,7 @@
 
 //#include "BoundLevel.h" BoundPlayer.h includes BoundLevel
 #include "BoundPlayer.h"
+#include "BoundMenu.h"
 
 
 /**
@@ -31,6 +32,10 @@ private:
     BLevel* levelLayer;
     BPlayer* playerLayer;
     LayerColor* backgroundLayer;
+    BMenu* menuLayer;
+    
+    int layerFocus; //0 = main, 1 = level, 2 = game, 3 = pause
+    
 public:
 
     /**
@@ -44,7 +49,38 @@ public:
     void newLevel(const char* filepath);
     
     /**
-     * @brief   This method creates a new BScene and runs it
+     *  @brief  Show main Menu UNIMPLEMENTED
+     */
+    void showMainMenu();
+    
+    /**
+     *  @brief  Show the level Menu
+     */
+    void showLevelMenu();
+    
+    /**
+     *  @brief  Show the Pause Menu
+     */
+    void showPauseMenu();
+    
+    /**
+     *  @brief  Loads the level stored in sender->levelname
+     *          This is called from BMenu
+     */
+    static void loadLevel(Object* pSender);
+    
+    /**
+     *  @brief  Exits this game and returns to the Home Screen
+     */
+    void exitGame();
+    
+    /**
+     *  @brief  Handles keyPresses. Will handle Esc presses
+     */
+    void keyPressed(int keyCode);
+    
+    /**
+     *  @brief  This method creates a new BScene and runs it
      */
     static void runThisGame(Object* pSender);
 };

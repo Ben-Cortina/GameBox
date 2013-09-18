@@ -41,8 +41,7 @@
 #define TIME_PER_SPAWN 1.0f
 #define TIME_INC_PER_LEVEL 1.0f
 
-
-#include "../Helpers/CustomCC.h"
+#include "cocos2d.h"
 #include "OverLayer.h"
 #include "CustomTileGrid.h"
 

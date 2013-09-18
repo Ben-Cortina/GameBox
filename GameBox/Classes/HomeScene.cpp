@@ -83,6 +83,9 @@ void HomeLayer::addMenuItems()
 // on "init" you need to initialize your instance
 bool HomeLayer::init()
 {
+    //clear the cache
+    Director::getInstance()->purgeCachedData();
+    
     //////////////////////////////
     // 1. super init first
     if ( !Layer::init() )

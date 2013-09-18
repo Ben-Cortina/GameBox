@@ -35,7 +35,7 @@ static const struct {
 	std::function<void(Object*)> callback;
 } g_GameList[] = {
     {"TheBox", "BoxMenu.png",TheBoxLayer::runThisGame},
-    {"Bound", "BoxMenu.png",BScene::runThisGame}
+    {"Bound", "BoundMenu.png",BScene::runThisGame}
 };
 
 

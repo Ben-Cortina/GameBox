@@ -13,19 +13,33 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_b_level_a8500d99ab55b7c80f69a38f25b597216}{\-B\-Level} (char $\ast$level)
+\hyperlink{class_b_level_a8e48d62f02a21d2a57c682dc7737396f}{\-B\-Level} (const char $\ast$file)
 \begin{DoxyCompactList}\small\item\em \-This will load in a level. \-Level formatting can be found in \-Level\-Making.\-bdl. \end{DoxyCompactList}\item 
+\-Point \hyperlink{class_b_level_ad4f4a9f5658ac8ed21917df61678f4b2}{get\-Start} ()
+\begin{DoxyCompactList}\small\item\em returns the starting location \end{DoxyCompactList}\item 
+float \hyperlink{class_b_level_a8d02e52b25ff8c39bb68d0880c31771c}{get\-Tile\-Size} ()
+\begin{DoxyCompactList}\small\item\em returns the tile\-Size \end{DoxyCompactList}\item 
 bool \hyperlink{class_b_level_abb407d85aebcc0d6cded1ad13c2e2eed}{is\-Wall} (const \hyperlink{struct_coords}{\-Coords} loc)
 \begin{DoxyCompactList}\small\item\em \-Checks if the provided location is a wall. \end{DoxyCompactList}\item 
 bool \hyperlink{class_b_level_a7520cdd30191a75a7811c42ee1758e65}{is\-Wall} (const int x, const int y)
-\item 
+\begin{DoxyCompactList}\small\item\em \-Checks if the provided location is a wall. \end{DoxyCompactList}\item 
 bool \hyperlink{class_b_level_adf39bb6a72e7780031a0806df92f9fc5}{is\-Explosion} (const \hyperlink{struct_coords}{\-Coords} loc)
 \begin{DoxyCompactList}\small\item\em \-Checks to see if there is an active explosion there. \end{DoxyCompactList}\item 
 bool \hyperlink{class_b_level_acf89db789ceb7f083221fab3fead042e}{is\-Explosion} (const int x, const int y)
+\begin{DoxyCompactList}\small\item\em \-Checks to see if there is an active explosion there. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b_level_ad9a6d59f73f29c78a0b2e57997202eb5}{is\-Valid} ()
+\begin{DoxyCompactList}\small\item\em \-Did the level load. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b_level_ae32bcaf31096afb8356391e8ad6552e1}{is\-Wall\-Collision} (\-Rect bb, \-Rect \&tile\-B\-B)
+\begin{DoxyCompactList}\small\item\em \-Checks if a rectangle collides with any \-Wall tiles. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b_level_a432d3dde8efb542646792f9c5563a522}{is\-Explosion\-Collision} (\-Rect bb)
+\begin{DoxyCompactList}\small\item\em \-Checks if a rectangle collides with any \-Active \-Explosions tiles. \-If the player does, it dies. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b_level_a6526db006b1f862697b1f9f89eb0a968}{check\-Explosions} (\-Rect bb)
+\begin{DoxyCompactList}\small\item\em \-This checks if any explosions have gone off on top of the player. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b_level_ab79289460372842f15ca0fe13311d7c9}{is\-On\-Floor} (\-Rect bb)
+\begin{DoxyCompactList}\small\item\em \-Checks if the passed rectangle touches any floor. \-If the player does not intersect any of the floor tiles he isnt touching any floor thus, he falls. \end{DoxyCompactList}\item 
+\hyperlink{struct_coords}{\-Coords} \hyperlink{class_b_level_a6bb41eebd07bf260b42168183bdd37c1}{get\-Tile} (\-Point pt)
 \item 
-int \hyperlink{class_b_level_af9220ff2364b269c82079792c657a46d}{check\-Collision} (const \-Rect)
-\begin{DoxyCompactList}\small\item\em \-Checks if a rectangle collides with any tiles. \end{DoxyCompactList}\item 
-\-Rect \hyperlink{class_b_level_a4ea652af9cecf1cb4f19f9038d6fd047}{get\-Tile\-B\-B} (\-Point pt)
+\-Rect \hyperlink{class_b_level_a9adc000ce6523936febd5a4d20d52eb8}{get\-Tile\-B\-B} (\hyperlink{struct_coords}{\-Coords} loc)
 \end{DoxyCompactItemize}
 
 
@@ -33,13 +47,13 @@ int \hyperlink{class_b_level_af9220ff2364b269c82079792c657a46d}{check\-Collision
 \-This will hold and draw the data for a level. 
 
 \subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{class_b_level_a8500d99ab55b7c80f69a38f25b597216}{\index{\-B\-Level@{\-B\-Level}!\-B\-Level@{\-B\-Level}}
+\hypertarget{class_b_level_a8e48d62f02a21d2a57c682dc7737396f}{\index{\-B\-Level@{\-B\-Level}!\-B\-Level@{\-B\-Level}}
 \index{\-B\-Level@{\-B\-Level}!BLevel@{\-B\-Level}}
 \subsubsection[{\-B\-Level}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-B\-Level\-::\-B\-Level} (
 \begin{DoxyParamCaption}
-\item[{char $\ast$}]{level}
+\item[{const char $\ast$}]{file}
 \end{DoxyParamCaption}
-)}}\label{class_b_level_a8500d99ab55b7c80f69a38f25b597216}
+)}}\label{class_b_level_a8e48d62f02a21d2a57c682dc7737396f}
 
 
 \-This will load in a level. \-Level formatting can be found in \-Level\-Making.\-bdl. 
@@ -47,27 +61,53 @@ int \hyperlink{class_b_level_af9220ff2364b269c82079792c657a46d}{check\-Collision
 
 
 \subsection{\-Member \-Function \-Documentation}
-\hypertarget{class_b_level_af9220ff2364b269c82079792c657a46d}{\index{\-B\-Level@{\-B\-Level}!check\-Collision@{check\-Collision}}
-\index{check\-Collision@{check\-Collision}!BLevel@{\-B\-Level}}
-\subsubsection[{check\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-B\-Level\-::check\-Collision} (
+\hypertarget{class_b_level_a6526db006b1f862697b1f9f89eb0a968}{\index{\-B\-Level@{\-B\-Level}!check\-Explosions@{check\-Explosions}}
+\index{check\-Explosions@{check\-Explosions}!BLevel@{\-B\-Level}}
+\subsubsection[{check\-Explosions}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Level\-::check\-Explosions} (
 \begin{DoxyParamCaption}
-\item[{const \-Rect}]{}
+\item[{\-Rect}]{bb}
 \end{DoxyParamCaption}
-)}}\label{class_b_level_af9220ff2364b269c82079792c657a46d}
+)}}\label{class_b_level_a6526db006b1f862697b1f9f89eb0a968}
 
 
-\-Checks if a rectangle collides with any tiles. 
+\-This checks if any explosions have gone off on top of the player. 
 
-\begin{DoxyReturn}{\-Returns}
-0 if none, 1 if wall, 2 if explosion 
-\end{DoxyReturn}
-\hypertarget{class_b_level_a4ea652af9cecf1cb4f19f9038d6fd047}{\index{\-B\-Level@{\-B\-Level}!get\-Tile\-B\-B@{get\-Tile\-B\-B}}
-\index{get\-Tile\-B\-B@{get\-Tile\-B\-B}!BLevel@{\-B\-Level}}
-\subsubsection[{get\-Tile\-B\-B}]{\setlength{\rightskip}{0pt plus 5cm}\-Rect {\bf \-B\-Level\-::get\-Tile\-B\-B} (
+\hypertarget{class_b_level_ad4f4a9f5658ac8ed21917df61678f4b2}{\index{\-B\-Level@{\-B\-Level}!get\-Start@{get\-Start}}
+\index{get\-Start@{get\-Start}!BLevel@{\-B\-Level}}
+\subsubsection[{get\-Start}]{\setlength{\rightskip}{0pt plus 5cm}\-Point {\bf \-B\-Level\-::get\-Start} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_level_ad4f4a9f5658ac8ed21917df61678f4b2}
+
+
+returns the starting location 
+
+\hypertarget{class_b_level_a6bb41eebd07bf260b42168183bdd37c1}{\index{\-B\-Level@{\-B\-Level}!get\-Tile@{get\-Tile}}
+\index{get\-Tile@{get\-Tile}!BLevel@{\-B\-Level}}
+\subsubsection[{get\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Coords} {\bf \-B\-Level\-::get\-Tile} (
 \begin{DoxyParamCaption}
 \item[{\-Point}]{pt}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_level_a4ea652af9cecf1cb4f19f9038d6fd047}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_level_a6bb41eebd07bf260b42168183bdd37c1}
+\hypertarget{class_b_level_a9adc000ce6523936febd5a4d20d52eb8}{\index{\-B\-Level@{\-B\-Level}!get\-Tile\-B\-B@{get\-Tile\-B\-B}}
+\index{get\-Tile\-B\-B@{get\-Tile\-B\-B}!BLevel@{\-B\-Level}}
+\subsubsection[{get\-Tile\-B\-B}]{\setlength{\rightskip}{0pt plus 5cm}\-Rect {\bf \-B\-Level\-::get\-Tile\-B\-B} (
+\begin{DoxyParamCaption}
+\item[{{\bf \-Coords}}]{loc}
+\end{DoxyParamCaption}
+)}}\label{class_b_level_a9adc000ce6523936febd5a4d20d52eb8}
+\hypertarget{class_b_level_a8d02e52b25ff8c39bb68d0880c31771c}{\index{\-B\-Level@{\-B\-Level}!get\-Tile\-Size@{get\-Tile\-Size}}
+\index{get\-Tile\-Size@{get\-Tile\-Size}!BLevel@{\-B\-Level}}
+\subsubsection[{get\-Tile\-Size}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-B\-Level\-::get\-Tile\-Size} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_level_a8d02e52b25ff8c39bb68d0880c31771c}
+
+
+returns the tile\-Size 
+
 \hypertarget{class_b_level_adf39bb6a72e7780031a0806df92f9fc5}{\index{\-B\-Level@{\-B\-Level}!is\-Explosion@{is\-Explosion}}
 \index{is\-Explosion@{is\-Explosion}!BLevel@{\-B\-Level}}
 \subsubsection[{is\-Explosion}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Level\-::is\-Explosion} (
@@ -87,6 +127,43 @@ int \hyperlink{class_b_level_af9220ff2364b269c82079792c657a46d}{check\-Collision
 \item[{const int}]{y}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_level_acf89db789ceb7f083221fab3fead042e}
+
+
+\-Checks to see if there is an active explosion there. 
+
+\hypertarget{class_b_level_a432d3dde8efb542646792f9c5563a522}{\index{\-B\-Level@{\-B\-Level}!is\-Explosion\-Collision@{is\-Explosion\-Collision}}
+\index{is\-Explosion\-Collision@{is\-Explosion\-Collision}!BLevel@{\-B\-Level}}
+\subsubsection[{is\-Explosion\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Level\-::is\-Explosion\-Collision} (
+\begin{DoxyParamCaption}
+\item[{\-Rect}]{bb}
+\end{DoxyParamCaption}
+)}}\label{class_b_level_a432d3dde8efb542646792f9c5563a522}
+
+
+\-Checks if a rectangle collides with any \-Active \-Explosions tiles. \-If the player does, it dies. 
+
+\hypertarget{class_b_level_ab79289460372842f15ca0fe13311d7c9}{\index{\-B\-Level@{\-B\-Level}!is\-On\-Floor@{is\-On\-Floor}}
+\index{is\-On\-Floor@{is\-On\-Floor}!BLevel@{\-B\-Level}}
+\subsubsection[{is\-On\-Floor}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Level\-::is\-On\-Floor} (
+\begin{DoxyParamCaption}
+\item[{\-Rect}]{bb}
+\end{DoxyParamCaption}
+)}}\label{class_b_level_ab79289460372842f15ca0fe13311d7c9}
+
+
+\-Checks if the passed rectangle touches any floor. \-If the player does not intersect any of the floor tiles he isnt touching any floor thus, he falls. 
+
+\hypertarget{class_b_level_ad9a6d59f73f29c78a0b2e57997202eb5}{\index{\-B\-Level@{\-B\-Level}!is\-Valid@{is\-Valid}}
+\index{is\-Valid@{is\-Valid}!BLevel@{\-B\-Level}}
+\subsubsection[{is\-Valid}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Level\-::is\-Valid} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_level_ad9a6d59f73f29c78a0b2e57997202eb5}
+
+
+\-Did the level load. 
+
 \hypertarget{class_b_level_abb407d85aebcc0d6cded1ad13c2e2eed}{\index{\-B\-Level@{\-B\-Level}!is\-Wall@{is\-Wall}}
 \index{is\-Wall@{is\-Wall}!BLevel@{\-B\-Level}}
 \subsubsection[{is\-Wall}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Level\-::is\-Wall} (
@@ -106,6 +183,25 @@ int \hyperlink{class_b_level_af9220ff2364b269c82079792c657a46d}{check\-Collision
 \item[{const int}]{y}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_level_a7520cdd30191a75a7811c42ee1758e65}
+
+
+\-Checks if the provided location is a wall. 
+
+\hypertarget{class_b_level_ae32bcaf31096afb8356391e8ad6552e1}{\index{\-B\-Level@{\-B\-Level}!is\-Wall\-Collision@{is\-Wall\-Collision}}
+\index{is\-Wall\-Collision@{is\-Wall\-Collision}!BLevel@{\-B\-Level}}
+\subsubsection[{is\-Wall\-Collision}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Level\-::is\-Wall\-Collision} (
+\begin{DoxyParamCaption}
+\item[{\-Rect}]{bb, }
+\item[{\-Rect \&}]{tile\-B\-B}
+\end{DoxyParamCaption}
+)}}\label{class_b_level_ae32bcaf31096afb8356391e8ad6552e1}
+
+
+\-Checks if a rectangle collides with any \-Wall tiles. 
+
+\begin{DoxyReturn}{\-Returns}
+0 if none, 1 if wall, 2 if explosion 
+\end{DoxyReturn}
 
 
 \-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

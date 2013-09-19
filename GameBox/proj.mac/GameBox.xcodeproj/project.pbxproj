@@ -31,11 +31,11 @@
 		41BC70E815BF81A5006A0A6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BC70E115BF81A5006A0A6C /* main.m */; };
 		E108503517E4E55B00CA4D25 /* BoundLevelMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E108503317E4E55B00CA4D25 /* BoundLevelMenu.cpp */; };
 		E10C74B117E4E9DD006AFB97 /* BoundMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = E10C74B017E4E9DD006AFB97 /* BoundMenu.png */; };
+		E111D26B17EBA27A0002F4EB /* BoundLevels.txt in Resources */ = {isa = PBXBuildFile; fileRef = E111D26A17EBA27A0002F4EB /* BoundLevels.txt */; };
 		E12D831517E10D1B00FFB98E /* CustomTileGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E12D831317E10D1B00FFB98E /* CustomTileGrid.cpp */; };
 		E134B88F17A30AE400EBC6B2 /* Marker Felt.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E134B88917A30AE400EBC6B2 /* Marker Felt.ttf */; };
 		E16EBC6917D1266500514A01 /* BoundLevel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16EBC6717D1266500514A01 /* BoundLevel.cpp */; };
 		E16EBC7717D1320300514A01 /* BoundTiles.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E16EBC7517D1320300514A01 /* BoundTiles.cpp */; };
-		E184F9CC17DD1EDD0040326E /* LevelMaking.bdl in Resources */ = {isa = PBXBuildFile; fileRef = E184F9CB17DD1EDD0040326E /* LevelMaking.bdl */; };
 		E1865A1617A1B19B008530D2 /* CustomCC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1865A1417A1B19B008530D2 /* CustomCC.cpp */; };
 		E1865A2A17A1E1E8008530D2 /* TheBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1865A2817A1E1E8008530D2 /* TheBox.cpp */; };
 		E1871E9817BAE07200753932 /* Pixel.png in Resources */ = {isa = PBXBuildFile; fileRef = E1871E9617BAE07200753932 /* Pixel.png */; };
@@ -209,6 +209,7 @@
 		E108503317E4E55B00CA4D25 /* BoundLevelMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoundLevelMenu.cpp; sourceTree = "<group>"; };
 		E108503417E4E55B00CA4D25 /* BoundLevelMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundLevelMenu.h; sourceTree = "<group>"; };
 		E10C74B017E4E9DD006AFB97 /* BoundMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoundMenu.png; sourceTree = "<group>"; };
+		E111D26A17EBA27A0002F4EB /* BoundLevels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BoundLevels.txt; path = BoundLevels.txt; sourceTree = "<group>"; };
 		E12D831317E10D1B00FFB98E /* CustomTileGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomTileGrid.cpp; sourceTree = "<group>"; };
 		E12D831417E10D1B00FFB98E /* CustomTileGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTileGrid.h; sourceTree = "<group>"; };
 		E134B88917A30AE400EBC6B2 /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
@@ -217,14 +218,13 @@
 		E16EBC7517D1320300514A01 /* BoundTiles.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoundTiles.cpp; sourceTree = "<group>"; };
 		E16EBC7617D1320300514A01 /* BoundTiles.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundTiles.h; sourceTree = "<group>"; };
 		E17372C617A2F44100ABF075 /* GameList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameList.h; sourceTree = "<group>"; };
-		E184F9CB17DD1EDD0040326E /* LevelMaking.bdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LevelMaking.bdl; sourceTree = "<group>"; };
 		E1865A1417A1B19B008530D2 /* CustomCC.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomCC.cpp; sourceTree = "<group>"; };
 		E1865A1517A1B19B008530D2 /* CustomCC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCC.h; sourceTree = "<group>"; };
 		E1865A2817A1E1E8008530D2 /* TheBox.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TheBox.cpp; sourceTree = "<group>"; };
 		E1865A2917A1E1E8008530D2 /* TheBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheBox.h; sourceTree = "<group>"; };
 		E1871E9617BAE07200753932 /* Pixel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pixel.png; sourceTree = "<group>"; };
-		E18B11D717CE520B00A54C8C /* OverLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = OverLayer.cpp; path = OverLayer.cpp; sourceTree = "<group>"; };
-		E18B11D817CE520B00A54C8C /* OverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverLayer.h; path = OverLayer.h; sourceTree = "<group>"; };
+		E18B11D717CE520B00A54C8C /* OverLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OverLayer.cpp; sourceTree = "<group>"; };
+		E18B11D817CE520B00A54C8C /* OverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverLayer.h; sourceTree = "<group>"; };
 		E1B371A417CFD6F9002F1401 /* Bound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bound.cpp; sourceTree = "<group>"; };
 		E1B371A517CFD6F9002F1401 /* Bound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bound.h; sourceTree = "<group>"; };
 		E1B911DF17CBD447009CF148 /* BoxMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoxMenu.png; sourceTree = "<group>"; };
@@ -387,18 +387,10 @@
 		E147C1DB17D0165500E95271 /* Bound */ = {
 			isa = PBXGroup;
 			children = (
+				E111D26A17EBA27A0002F4EB /* BoundLevels.txt */,
 				E10C74B017E4E9DD006AFB97 /* BoundMenu.png */,
-				E184F9BE17DD1E7B0040326E /* Levels */,
 			);
 			path = Bound;
-			sourceTree = "<group>";
-		};
-		E184F9BE17DD1E7B0040326E /* Levels */ = {
-			isa = PBXGroup;
-			children = (
-				E184F9CB17DD1EDD0040326E /* LevelMaking.bdl */,
-			);
-			path = Levels;
 			sourceTree = "<group>";
 		};
 		E1865A2217A1B34D008530D2 /* Helpers */ = {
@@ -607,11 +599,11 @@
 			files = (
 				41BC70E515BF81A5006A0A6C /* InfoPlist.strings in Resources */,
 				41BC70E615BF81A5006A0A6C /* MainMenu.xib in Resources */,
+				E111D26B17EBA27A0002F4EB /* BoundLevels.txt in Resources */,
 				41BC70E715BF81A5006A0A6C /* Icon.icns in Resources */,
 				E134B88F17A30AE400EBC6B2 /* Marker Felt.ttf in Resources */,
 				E1871E9817BAE07200753932 /* Pixel.png in Resources */,
 				E1B911E017CBD447009CF148 /* BoxMenu.png in Resources */,
-				E184F9CC17DD1EDD0040326E /* LevelMaking.bdl in Resources */,
 				E10C74B117E4E9DD006AFB97 /* BoundMenu.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

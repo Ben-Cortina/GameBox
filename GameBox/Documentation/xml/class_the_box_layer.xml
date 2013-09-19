@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="89" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="89" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="70" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="70" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_the_box_layer_1a891a97e3461d8c676d72f0433194fc35" prot="private" static="no" mutable="no">
         <type>Size</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="90" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="90" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="71" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="71" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_the_box_layer_1ac0301e62cf6fc53ad5ecc880c0ddce5e" prot="private" static="no" mutable="no">
         <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="91" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="91" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="72" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_the_box_layer_1ac76984df99d1661ef4caf472f2872deb" prot="private" static="no" mutable="no">
         <type>Sprite *</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="93" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="93" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="74" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="74" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_the_box_layer_1a7e95d565561e87bb383260517cebb31c" prot="private" static="no" mutable="no">
         <type>Color3B</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="94" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="94" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="75" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_the_box_layer_1a77eb482f9ecc6f5d2f318880b07fac98" prot="private" static="no" mutable="no">
         <type><ref refid="struct_player_data" kindref="compound">PlayerData</ref></type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="96" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="96" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="77" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="77" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_the_box_layer_1ac6d88241d6e565a53c39c3fc64c8298b" prot="private" static="no" mutable="no">
         <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="98" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="98" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="79" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_the_box_layer_1a954d018b72ce163b37dd839169981497" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="100" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="100" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="81" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="81" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_the_box_layer_1aa5e625170457ea51b8d9436e97510d82" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="101" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="101" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="82" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="82" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_the_box_layer_1a4f24914bded3d6dea1d35c170516a7fd" prot="private" static="no" mutable="no">
         <type>LabelTTF *</type>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="102" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="102" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="83" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="83" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_the_box_layer_1ad8d6cd2fd5690312bfdbd4049a43f2f5" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="104" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="104" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="85" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="85" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -160,7 +160,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="109" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="48" bodyend="60"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="90" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="48" bodyend="60"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1ac18c492485d7040b63cfe4f537d2bed6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -173,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="114" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="62" bodyend="68"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="95" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="62" bodyend="68"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1a6e903c30bce569bcb9998a00c048f4a0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -186,7 +186,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="119" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="105" bodyend="140"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="100" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="105" bodyend="140"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1a01dc9031926317333bdd0efe536f64e0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -199,7 +199,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="124" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="89" bodyend="103"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="105" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="89" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1a4a1f85b549b18426675fcc954223d9c2" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -212,7 +212,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="129" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="224" bodyend="245"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="110" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="224" bodyend="245"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1ad95232efe89c9d70b5abb16584612645" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -225,7 +225,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="134" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="216" bodyend="222"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="115" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="216" bodyend="222"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1a54554ac300af2c55450602493401af37" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -242,7 +242,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="139" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="175" bodyend="214"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="120" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="175" bodyend="214"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1abf3bdb7e6139f96545aeddb3179e3695" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -259,7 +259,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="144" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="160" bodyend="173"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="125" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="160" bodyend="173"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1a4aeedd00294db32074018a61fee9451e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -280,7 +280,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="149" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="247" bodyend="259"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="130" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="247" bodyend="259"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1ae90bb92b7c1ddbcc544833a75b8942e8" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -316,7 +316,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="157" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="37" bodyend="46"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="138" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="37" bodyend="46"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1adcd0efa9f61e1a02f4c5ec112371ac7b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -329,7 +329,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="162" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="261" bodyend="276"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="143" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="261" bodyend="276"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1a1c0bba40d3ace73b51eb2db472ef9be0" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -366,7 +366,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="170" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="278" bodyend="281"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="151" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="278" bodyend="281"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1ab89dc38698f103a16bcbeedeb1bbf48f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -379,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="175" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="411" bodyend="460"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="156" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="410" bodyend="459"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1a70c264c1a255c1e2773ed7c2bd0e3a2b" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -392,7 +392,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="180" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="357" bodyend="409"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="161" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="356" bodyend="408"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -407,7 +407,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="184" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="19" bodyend="35"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="165" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="19" bodyend="35"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1a2a76eca9790faad7097e37d5822d5e3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -424,7 +424,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="190" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="341" bodyend="355"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="171" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="341" bodyend="354"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1ac15f63f9808501a2aa7d725259068fd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>bool</type>
@@ -438,7 +438,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="197" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="71" bodyend="87"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="178" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="71" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1a26cd4adbaec048f0df01ddb085c2beb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -463,7 +463,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="204" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="142" bodyend="157"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="185" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="142" bodyend="157"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1af367b00c0d970f0c5e25a74ad28eb5cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -488,7 +488,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="211" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="283" bodyend="339"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="192" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="283" bodyend="339"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1a2b2a79bf9a1dbb25a702a6a21623c658" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -504,7 +504,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="242"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="223"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -523,7 +523,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="216" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="479" bodyend="494"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="197" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="478" bodyend="493"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1ae03788f405b053b85e230804d7a88904" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -540,7 +540,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="221" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="462" bodyend="477"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="202" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="461" bodyend="476"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1a3e32611fa82942d00d5e561bc59251e9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -557,7 +557,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="226"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="207"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1af670f77242c15a7de84d6658cddb7056" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -574,7 +574,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="231" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="496" bodyend="503"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="212" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="495" bodyend="502"/>
       </memberdef>
       <memberdef kind="function" id="class_the_box_layer_1a3acdbe7193e4da946ba01f80daa951ad" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -591,14 +591,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="236" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="507" bodyend="521"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="217" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.cpp" bodystart="506" bodyend="520"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This layer holds everythign needed for TheBox game Im not using any TMX feature because they dont allow me its features and my needs dont line up as well as I&apos;d like. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="87" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="86" bodyend="243"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="68" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="67" bodyend="224"/>
     <listofallmembers>
       <member refid="class_the_box_layer_1a54554ac300af2c55450602493401af37" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>changeExit</name></member>
       <member refid="class_the_box_layer_1ad95232efe89c9d70b5abb16584612645" prot="private" virt="non-virtual"><scope>TheBoxLayer</scope><name>checkConditions</name></member>

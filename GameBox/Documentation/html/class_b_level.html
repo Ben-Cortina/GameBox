@@ -111,30 +111,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a8500d99ab55b7c80f69a38f25b597216">BLevel</a> (char *level)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will load in a level. Level formatting can be found in LevelMaking.bdl.  <a href="#a8500d99ab55b7c80f69a38f25b597216"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a8e48d62f02a21d2a57c682dc7737396f">BLevel</a> (const char *file)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will load in a level. Level formatting can be found in LevelMaking.bdl.  <a href="#a8e48d62f02a21d2a57c682dc7737396f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Point&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#ad4f4a9f5658ac8ed21917df61678f4b2">getStart</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the starting location  <a href="#ad4f4a9f5658ac8ed21917df61678f4b2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a8d02e52b25ff8c39bb68d0880c31771c">getTileSize</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the tileSize  <a href="#a8d02e52b25ff8c39bb68d0880c31771c"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#abb407d85aebcc0d6cded1ad13c2e2eed">isWall</a> (const <a class="el" href="struct_coords.html">Coords</a> loc)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided location is a wall.  <a href="#abb407d85aebcc0d6cded1ad13c2e2eed"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a7520cdd30191a75a7811c42ee1758e65">isWall</a> (const int x, const int y)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided location is a wall.  <a href="#a7520cdd30191a75a7811c42ee1758e65"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#adf39bb6a72e7780031a0806df92f9fc5">isExplosion</a> (const <a class="el" href="struct_coords.html">Coords</a> loc)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if there is an active explosion there.  <a href="#adf39bb6a72e7780031a0806df92f9fc5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#acf89db789ceb7f083221fab3fead042e">isExplosion</a> (const int x, const int y)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#af9220ff2364b269c82079792c657a46d">checkCollision</a> (const Rect)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a rectangle collides with any tiles.  <a href="#af9220ff2364b269c82079792c657a46d"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a4ea652af9cecf1cb4f19f9038d6fd047">getTileBB</a> (Point pt)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if there is an active explosion there.  <a href="#acf89db789ceb7f083221fab3fead042e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#ad9a6d59f73f29c78a0b2e57997202eb5">isValid</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Did the level load.  <a href="#ad9a6d59f73f29c78a0b2e57997202eb5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#ae32bcaf31096afb8356391e8ad6552e1">isWallCollision</a> (Rect bb, Rect &amp;tileBB)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a rectangle collides with any Wall tiles.  <a href="#ae32bcaf31096afb8356391e8ad6552e1"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a432d3dde8efb542646792f9c5563a522">isExplosionCollision</a> (Rect bb)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a rectangle collides with any Active Explosions tiles. If the player does, it dies.  <a href="#a432d3dde8efb542646792f9c5563a522"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a6526db006b1f862697b1f9f89eb0a968">checkExplosions</a> (Rect bb)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This checks if any explosions have gone off on top of the player.  <a href="#a6526db006b1f862697b1f9f89eb0a968"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#ab79289460372842f15ca0fe13311d7c9">isOnFloor</a> (Rect bb)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the passed rectangle touches any floor. If the player does not intersect any of the floor tiles he isnt touching any floor thus, he falls.  <a href="#ab79289460372842f15ca0fe13311d7c9"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_coords.html">Coords</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a6bb41eebd07bf260b42168183bdd37c1">getTile</a> (Point pt)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Rect&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a9adc000ce6523936febd5a4d20d52eb8">getTileBB</a> (<a class="el" href="struct_coords.html">Coords</a> loc)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This will hold and draw the data for a level. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="a8500d99ab55b7c80f69a38f25b597216"></a><!-- doxytag: member="BLevel::BLevel" ref="a8500d99ab55b7c80f69a38f25b597216" args="(char *level)" -->
+<a class="anchor" id="a8e48d62f02a21d2a57c682dc7737396f"></a><!-- doxytag: member="BLevel::BLevel" ref="a8e48d62f02a21d2a57c682dc7737396f" args="(const char *file)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_b_level.html#a8500d99ab55b7c80f69a38f25b597216">BLevel::BLevel</a> </td>
+          <td class="memname"><a class="el" href="class_b_level.html#a8e48d62f02a21d2a57c682dc7737396f">BLevel::BLevel</a> </td>
           <td>(</td>
-          <td class="paramtype">char *&#160;</td>
-          <td class="paramname"><em>level</em></td><td>)</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -146,32 +161,49 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="af9220ff2364b269c82079792c657a46d"></a><!-- doxytag: member="BLevel::checkCollision" ref="af9220ff2364b269c82079792c657a46d" args="(const Rect)" -->
+<a class="anchor" id="a6526db006b1f862697b1f9f89eb0a968"></a><!-- doxytag: member="BLevel::checkExplosions" ref="a6526db006b1f862697b1f9f89eb0a968" args="(Rect bb)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int <a class="el" href="class_b_level.html#af9220ff2364b269c82079792c657a46d">BLevel::checkCollision</a> </td>
+          <td class="memname">bool <a class="el" href="class_b_level.html#a6526db006b1f862697b1f9f89eb0a968">BLevel::checkExplosions</a> </td>
           <td>(</td>
-          <td class="paramtype">const Rect&#160;</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>bb</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Checks if a rectangle collides with any tiles. </p>
-<dl class="return"><dt><b>Returns:</b></dt><dd>0 if none, 1 if wall, 2 if explosion </dd></dl>
+<p>This checks if any explosions have gone off on top of the player. </p>
 
 </div>
 </div>
-<a class="anchor" id="a4ea652af9cecf1cb4f19f9038d6fd047"></a><!-- doxytag: member="BLevel::getTileBB" ref="a4ea652af9cecf1cb4f19f9038d6fd047" args="(Point pt)" -->
+<a class="anchor" id="ad4f4a9f5658ac8ed21917df61678f4b2"></a><!-- doxytag: member="BLevel::getStart" ref="ad4f4a9f5658ac8ed21917df61678f4b2" args="()" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">Rect <a class="el" href="class_b_level.html#a4ea652af9cecf1cb4f19f9038d6fd047">BLevel::getTileBB</a> </td>
+          <td class="memname">Point <a class="el" href="class_b_level.html#ad4f4a9f5658ac8ed21917df61678f4b2">BLevel::getStart</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>returns the starting location </p>
+
+</div>
+</div>
+<a class="anchor" id="a6bb41eebd07bf260b42168183bdd37c1"></a><!-- doxytag: member="BLevel::getTile" ref="a6bb41eebd07bf260b42168183bdd37c1" args="(Point pt)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="struct_coords.html">Coords</a> <a class="el" href="class_b_level.html#a6bb41eebd07bf260b42168183bdd37c1">BLevel::getTile</a> </td>
           <td>(</td>
           <td class="paramtype">Point&#160;</td>
           <td class="paramname"><em>pt</em></td><td>)</td>
@@ -180,6 +212,41 @@ Public Member Functions</h2></td></tr>
       </table>
 </div>
 <div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a9adc000ce6523936febd5a4d20d52eb8"></a><!-- doxytag: member="BLevel::getTileBB" ref="a9adc000ce6523936febd5a4d20d52eb8" args="(Coords loc)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Rect <a class="el" href="class_b_level.html#a9adc000ce6523936febd5a4d20d52eb8">BLevel::getTileBB</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_coords.html">Coords</a>&#160;</td>
+          <td class="paramname"><em>loc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a8d02e52b25ff8c39bb68d0880c31771c"></a><!-- doxytag: member="BLevel::getTileSize" ref="a8d02e52b25ff8c39bb68d0880c31771c" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="class_b_level.html#a8d02e52b25ff8c39bb68d0880c31771c">BLevel::getTileSize</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>returns the tileSize </p>
 
 </div>
 </div>
@@ -227,6 +294,64 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Checks to see if there is an active explosion there. </p>
+
+</div>
+</div>
+<a class="anchor" id="a432d3dde8efb542646792f9c5563a522"></a><!-- doxytag: member="BLevel::isExplosionCollision" ref="a432d3dde8efb542646792f9c5563a522" args="(Rect bb)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_b_level.html#a432d3dde8efb542646792f9c5563a522">BLevel::isExplosionCollision</a> </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>bb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Checks if a rectangle collides with any Active Explosions tiles. If the player does, it dies. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab79289460372842f15ca0fe13311d7c9"></a><!-- doxytag: member="BLevel::isOnFloor" ref="ab79289460372842f15ca0fe13311d7c9" args="(Rect bb)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_b_level.html#ab79289460372842f15ca0fe13311d7c9">BLevel::isOnFloor</a> </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>bb</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Checks if the passed rectangle touches any floor. If the player does not intersect any of the floor tiles he isnt touching any floor thus, he falls. </p>
+
+</div>
+</div>
+<a class="anchor" id="ad9a6d59f73f29c78a0b2e57997202eb5"></a><!-- doxytag: member="BLevel::isValid" ref="ad9a6d59f73f29c78a0b2e57997202eb5" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_b_level.html#ad9a6d59f73f29c78a0b2e57997202eb5">BLevel::isValid</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Did the level load. </p>
+
 </div>
 </div>
 <a class="anchor" id="abb407d85aebcc0d6cded1ad13c2e2eed"></a><!-- doxytag: member="BLevel::isWall" ref="abb407d85aebcc0d6cded1ad13c2e2eed" args="(const Coords loc)" -->
@@ -273,6 +398,38 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Checks if the provided location is a wall. </p>
+
+</div>
+</div>
+<a class="anchor" id="ae32bcaf31096afb8356391e8ad6552e1"></a><!-- doxytag: member="BLevel::isWallCollision" ref="ae32bcaf31096afb8356391e8ad6552e1" args="(Rect bb, Rect &amp;tileBB)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_b_level.html#ae32bcaf31096afb8356391e8ad6552e1">BLevel::isWallCollision</a> </td>
+          <td>(</td>
+          <td class="paramtype">Rect&#160;</td>
+          <td class="paramname"><em>bb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Rect &amp;&#160;</td>
+          <td class="paramname"><em>tileBB</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Checks if a rectangle collides with any Wall tiles. </p>
+<dl class="return"><dt><b>Returns:</b></dt><dd>0 if none, 1 if wall, 2 if explosion </dd></dl>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
@@ -299,7 +456,7 @@ Public Member Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="class_b_level.html">BLevel</a>      </li>
 
-    <li class="footer">Generated on Tue Sep 3 2013 17:45:33 for GameBox by
+    <li class="footer">Generated on Thu Sep 19 2013 18:51:28 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -28,9 +28,10 @@ BLevel::BLevel(const char* filepath)
     std::string pathKey = filepath;
     pathKey = FileUtils::getInstance()->fullPathForFilename(pathKey.c_str());
     
-    parseFile(pathKey.c_str());
+    valid = parseFile(pathKey.c_str());
     
-    setupTiles();
+    if (valid)
+        setupTiles();
 }
 
 void BLevel::setupTiles()
@@ -203,19 +204,6 @@ bool BLevel::parseFile(const char* file)
     
     std::string line;
     std::streampos prevPoint;
-    
-    ////////////////////////////////////////////////////////
-    //Name line
-    if (!(skipComments(bdlfile)))
-    {
-        std::cout << "ERROR eof before name" <<std::endl;
-        bdlfile.close();
-        return false;
-    }
-    
-    //do nothing, we dont need the name
-    //next line
-    bdlfile.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     
     ////////////////////////////////////////////////////////
     //Floor line

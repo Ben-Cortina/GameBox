@@ -482,7 +482,7 @@ void TheBoxLayer::onSnake(Object* pSender)
     OverLayer* overlay = (OverLayer*)((Node*)((Node*)pSender )->getParent() //MenuItemLabel->getParent()
                                       )->getParent(); //Menu->getParent()
 
-    TheBoxLayer* thisLayer =(TheBoxLayer*)(overlay)->getParent();
+    TheBoxLayer* thisLayer = (TheBoxLayer*)(overlay)->getParent();
     
     //kill overlay
     thisLayer->removeChild(overlay);

@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_b_level_menu" kind="class" prot="public">
+    <compoundname>BLevelMenu</compoundname>
+    <includes refid="_bound_level_menu_8h" local="no">BoundLevelMenu.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_b_level_menu_1aef9ea60912404f6a836ba43f7c0bf98f" prot="private" static="no" mutable="no">
+        <type>Rect</type>
+        <definition>Rect BLevelMenu::visRect</definition>
+        <argsstring></argsstring>
+        <name>visRect</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="36" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_menu_1a1d2a02614af3b0d57acc7c41325ccaf3" prot="private" static="no" mutable="no">
+        <type>Point</type>
+        <definition>Point BLevelMenu::beginPos</definition>
+        <argsstring></argsstring>
+        <name>beginPos</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="37" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_menu_1a5181768d54631054795c74b1083783a4" prot="private" static="no" mutable="no">
+        <type>Menu *</type>
+        <definition>Menu* BLevelMenu::itemMenu</definition>
+        <argsstring></argsstring>
+        <name>itemMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="38" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_menu_1a8f420f26d60d4a1248b601c6e3e10b07" prot="private" static="no" mutable="no">
+        <type>std::function&lt; void(Object *)</type>
+        <definition>std::function&lt;void(Object*) BLevelMenu::callback)</definition>
+        <argsstring>)</argsstring>
+        <name>callback</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="39" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_menu_1a9c655642f8a2dbb4e1e5a4e0c0b8e6f5" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_l_d" kindref="compound">LD</ref> *</type>
+        <definition>LD* BLevelMenu::levelData</definition>
+        <argsstring></argsstring>
+        <name>levelData</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="40" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_level_menu_1a8dceac84ef9679854a005f1ac2144042" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int BLevelMenu::levelCount</definition>
+        <argsstring></argsstring>
+        <name>levelCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="41" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_b_level_menu_1a69ba640ac24dc36f82a5fe62a0036f52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BLevelMenu::BLevelMenu</definition>
+        <argsstring>(std::function&lt; void(Object *)&gt; cb, LD *levels, int ldCount)</argsstring>
+        <name>BLevelMenu</name>
+        <param>
+          <type>std::function&lt; void(Object *)&gt;</type>
+          <declname>cb</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_l_d" kindref="compound">LD</ref> *</type>
+          <declname>levels</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>ldCount</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="23" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.cpp" bodystart="13" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_level_menu_1a4646279f37990d842a77eb2e071a3919" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BLevelMenu::~BLevelMenu</definition>
+        <argsstring>()</argsstring>
+        <name>~BLevelMenu</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="24" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.cpp" bodystart="40" bodyend="43"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_level_menu_1a38bfb874e8a2d32bb01f4a281032e84c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * BLevelMenu::getLevelPath</definition>
+        <argsstring>(const int idx)</argsstring>
+        <name>getLevelPath</name>
+        <param>
+          <type>const int</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Gets the path of the file at the given index. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="27" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.cpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_level_menu_1a3a7207f8b357ae3e82b26b3507137775" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BLevelMenu::ccTouchesBegan</definition>
+        <argsstring>(Set *pTouches, Event *pEvent)</argsstring>
+        <name>ccTouchesBegan</name>
+        <param>
+          <type>Set *</type>
+          <declname>pTouches</declname>
+        </param>
+        <param>
+          <type>Event *</type>
+          <declname>pEvent</declname>
+        </param>
+        <briefdescription>
+<para>Handles clicks/touches. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="30" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.cpp" bodystart="50" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_level_menu_1a14fc166131531c3c9ef271eb965bfd64" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BLevelMenu::ccTouchesMoved</definition>
+        <argsstring>(Set *pTouches, Event *pEvent)</argsstring>
+        <name>ccTouchesMoved</name>
+        <param>
+          <type>Set *</type>
+          <declname>pTouches</declname>
+        </param>
+        <param>
+          <type>Event *</type>
+          <declname>pEvent</declname>
+        </param>
+        <briefdescription>
+<para>Handles click/touch drags. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="33" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.cpp" bodystart="57" bodyend="82"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="21" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" bodystart="20" bodyend="42"/>
+    <listofallmembers>
+      <member refid="class_b_level_menu_1a1d2a02614af3b0d57acc7c41325ccaf3" prot="private" virt="non-virtual"><scope>BLevelMenu</scope><name>beginPos</name></member>
+      <member refid="class_b_level_menu_1a69ba640ac24dc36f82a5fe62a0036f52" prot="public" virt="non-virtual"><scope>BLevelMenu</scope><name>BLevelMenu</name></member>
+      <member refid="class_b_level_menu_1a8f420f26d60d4a1248b601c6e3e10b07" prot="private" virt="non-virtual"><scope>BLevelMenu</scope><name>callback</name></member>
+      <member refid="class_b_level_menu_1a3a7207f8b357ae3e82b26b3507137775" prot="public" virt="virtual"><scope>BLevelMenu</scope><name>ccTouchesBegan</name></member>
+      <member refid="class_b_level_menu_1a14fc166131531c3c9ef271eb965bfd64" prot="public" virt="virtual"><scope>BLevelMenu</scope><name>ccTouchesMoved</name></member>
+      <member refid="class_b_level_menu_1a38bfb874e8a2d32bb01f4a281032e84c" prot="public" virt="non-virtual"><scope>BLevelMenu</scope><name>getLevelPath</name></member>
+      <member refid="class_b_level_menu_1a5181768d54631054795c74b1083783a4" prot="private" virt="non-virtual"><scope>BLevelMenu</scope><name>itemMenu</name></member>
+      <member refid="class_b_level_menu_1a8dceac84ef9679854a005f1ac2144042" prot="private" virt="non-virtual"><scope>BLevelMenu</scope><name>levelCount</name></member>
+      <member refid="class_b_level_menu_1a9c655642f8a2dbb4e1e5a4e0c0b8e6f5" prot="private" virt="non-virtual"><scope>BLevelMenu</scope><name>levelData</name></member>
+      <member refid="class_b_level_menu_1aef9ea60912404f6a836ba43f7c0bf98f" prot="private" virt="non-virtual"><scope>BLevelMenu</scope><name>visRect</name></member>
+      <member refid="class_b_level_menu_1a4646279f37990d842a77eb2e071a3919" prot="public" virt="non-virtual"><scope>BLevelMenu</scope><name>~BLevelMenu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

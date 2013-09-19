@@ -6,6 +6,8 @@
     <innerfile refid="_bound_8h">Bound.h</innerfile>
     <innerfile refid="_bound_level_8cpp">BoundLevel.cpp</innerfile>
     <innerfile refid="_bound_level_8h">BoundLevel.h</innerfile>
+    <innerfile refid="_bound_level_menu_8cpp">BoundLevelMenu.cpp</innerfile>
+    <innerfile refid="_bound_level_menu_8h">BoundLevelMenu.h</innerfile>
     <innerfile refid="_bound_player_8cpp">BoundPlayer.cpp</innerfile>
     <innerfile refid="_bound_player_8h">BoundPlayer.h</innerfile>
     <innerfile refid="_bound_tiles_8cpp">BoundTiles.cpp</innerfile>

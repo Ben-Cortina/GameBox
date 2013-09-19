@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="struct_l_d" kind="struct" prot="public">
+    <compoundname>LD</compoundname>
+    <includes refid="_bound_level_menu_8h" local="no">BoundLevelMenu.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_l_d_1aa6b37791d70e12687247633a11143c7a" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string LD::level_name</definition>
+        <argsstring></argsstring>
+        <name>level_name</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="16" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" bodystart="16" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_l_d_1af926c9a4c205c12493e97ad03119bbc5" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string LD::filepath</definition>
+        <argsstring></argsstring>
+        <name>filepath</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="17" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" line="15" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h" bodystart="15" bodyend="18"/>
+    <listofallmembers>
+      <member refid="struct_l_d_1af926c9a4c205c12493e97ad03119bbc5" prot="public" virt="non-virtual"><scope>LD</scope><name>filepath</name></member>
+      <member refid="struct_l_d_1aa6b37791d70e12687247633a11143c7a" prot="public" virt="non-virtual"><scope>LD</scope><name>level_name</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

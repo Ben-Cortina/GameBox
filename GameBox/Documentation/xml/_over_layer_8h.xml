@@ -4,71 +4,77 @@
     <compoundname>OverLayer.h</compoundname>
     <includes local="yes">cocos2d.h</includes>
     <includedby refid="_the_box_8h" local="yes">GameBox/GameBox/Classes/TheBox/TheBox.h</includedby>
-    <includedby refid="_over_layer_8cpp" local="yes">GameBox/GameBox/Classes/TheBox/OverLayer.cpp</includedby>
+    <includedby refid="_over_layer_8cpp" local="yes">GameBox/GameBox/Classes/Helpers/OverLayer.cpp</includedby>
     <incdepgraph>
-      <node id="118">
-        <label>GameBox/GameBox/Classes/TheBox/OverLayer.h</label>
-        <link refid="OverLayer.h"/>
-        <childnode refid="119" relation="include">
-        </childnode>
-      </node>
-      <node id="119">
+      <node id="204">
         <label>cocos2d.h</label>
+      </node>
+      <node id="203">
+        <label>GameBox/GameBox/Classes/Helpers/OverLayer.h</label>
+        <link refid="OverLayer.h"/>
+        <childnode refid="204" relation="include">
+        </childnode>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="122">
+      <node id="210">
+        <label>GameBox/GameBox/Classes/Bound/Bound.cpp</label>
+        <link refid="_bound_8cpp"/>
+      </node>
+      <node id="207">
         <label>GameBox/GameBox/Classes/GameList.h</label>
         <link refid="_game_list_8h"/>
-        <childnode refid="123" relation="include">
+        <childnode refid="208" relation="include">
         </childnode>
       </node>
-      <node id="123">
+      <node id="208">
         <label>GameBox/GameBox/Classes/HomeScene.h</label>
         <link refid="_home_scene_8h"/>
-        <childnode refid="124" relation="include">
+        <childnode refid="209" relation="include">
         </childnode>
-        <childnode refid="125" relation="include">
+        <childnode refid="210" relation="include">
         </childnode>
-        <childnode refid="126" relation="include">
+        <childnode refid="211" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
         </childnode>
       </node>
-      <node id="125">
+      <node id="211">
         <label>GameBox/GameBox/Classes/HomeScene.cpp</label>
         <link refid="_home_scene_8cpp"/>
       </node>
-      <node id="128">
-        <label>GameBox/GameBox/Classes/TheBox/OverLayer.cpp</label>
-        <link refid="_over_layer_8cpp"/>
-      </node>
-      <node id="127">
+      <node id="213">
         <label>GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp</label>
         <link refid="_player_sprite_8cpp"/>
       </node>
-      <node id="124">
+      <node id="209">
         <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
         <link refid="_app_delegate_8cpp"/>
       </node>
-      <node id="126">
+      <node id="212">
         <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
         <link refid="_the_box_8cpp"/>
       </node>
-      <node id="120">
-        <label>GameBox/GameBox/Classes/TheBox/OverLayer.h</label>
+      <node id="214">
+        <label>GameBox/GameBox/Classes/Helpers/OverLayer.cpp</label>
+        <link refid="_over_layer_8cpp"/>
+      </node>
+      <node id="205">
+        <label>GameBox/GameBox/Classes/Helpers/OverLayer.h</label>
         <link refid="OverLayer.h"/>
-        <childnode refid="121" relation="include">
+        <childnode refid="206" relation="include">
         </childnode>
-        <childnode refid="128" relation="include">
+        <childnode refid="214" relation="include">
         </childnode>
       </node>
-      <node id="121">
+      <node id="206">
         <label>GameBox/GameBox/Classes/TheBox/TheBox.h</label>
         <link refid="_the_box_8h"/>
-        <childnode refid="122" relation="include">
+        <childnode refid="207" relation="include">
         </childnode>
-        <childnode refid="127" relation="include">
+        <childnode refid="213" relation="include">
         </childnode>
-        <childnode refid="126" relation="include">
+        <childnode refid="212" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -85,7 +91,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" line="13" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h" bodystart="13" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/OverLayer.h" line="13" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/OverLayer.h" bodystart="13" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -114,6 +120,6 @@
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__OverLayer__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.h"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/OverLayer.h"/>
   </compounddef>
 </doxygen>

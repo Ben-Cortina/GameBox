@@ -100,13 +100,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 This is the complete list of members for <a class="el" href="class_b_level.html">BLevel</a>, including all inherited members.<table>
-  <tr class="memlist"><td><a class="el" href="class_b_level.html#a8500d99ab55b7c80f69a38f25b597216">BLevel</a>(char *level)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_b_level.html#af9220ff2364b269c82079792c657a46d">checkCollision</a>(const Rect)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_b_level.html#a4ea652af9cecf1cb4f19f9038d6fd047">getTileBB</a>(Point pt)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_level.html#a8e48d62f02a21d2a57c682dc7737396f">BLevel</a>(const char *file)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_level.html#a6526db006b1f862697b1f9f89eb0a968">checkExplosions</a>(Rect bb)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_level.html#ad4f4a9f5658ac8ed21917df61678f4b2">getStart</a>()</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_level.html#a6bb41eebd07bf260b42168183bdd37c1">getTile</a>(Point pt)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_level.html#a9adc000ce6523936febd5a4d20d52eb8">getTileBB</a>(Coords loc)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_level.html#a8d02e52b25ff8c39bb68d0880c31771c">getTileSize</a>()</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_level.html#adf39bb6a72e7780031a0806df92f9fc5">isExplosion</a>(const Coords loc)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_level.html#acf89db789ceb7f083221fab3fead042e">isExplosion</a>(const int x, const int y)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_level.html#a432d3dde8efb542646792f9c5563a522">isExplosionCollision</a>(Rect bb)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_level.html#ab79289460372842f15ca0fe13311d7c9">isOnFloor</a>(Rect bb)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_level.html#ad9a6d59f73f29c78a0b2e57997202eb5">isValid</a>()</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_level.html#abb407d85aebcc0d6cded1ad13c2e2eed">isWall</a>(const Coords loc)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_level.html#a7520cdd30191a75a7811c42ee1758e65">isWall</a>(const int x, const int y)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_level.html#ae32bcaf31096afb8356391e8ad6552e1">isWallCollision</a>(Rect bb, Rect &amp;tileBB)</td><td><a class="el" href="class_b_level.html">BLevel</a></td><td></td></tr>
 </table></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -126,7 +133,7 @@ This is the complete list of members for <a class="el" href="class_b_level.html"
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Tue Sep 3 2013 17:45:33 for GameBox by
+    <li class="footer">Generated on Thu Sep 19 2013 18:51:28 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -48,6 +48,7 @@ private:
     Point start;
     Coords** end;
     int endCount;
+    bool valid;
     
     /**
      *  @brief  This will parse a .bdl file and populate BLevel
@@ -61,32 +62,27 @@ private:
     
 public:
     
-    /**
-     *  @brief  This will load in a level. Level formatting can be found in LevelMaking.bdl
-     */
+    /** @brief  This will load in a level. Level formatting can be found in LevelMaking.bdl */
     BLevel(const char* file);
     
-    /**
-     *  @brief returns the starting location
-     */
+    /** @brief returns the starting location */
     Point getStart() { return start; };
     
-    /**
-     *  @brief returns the tileSize
-     */
+    /** @brief returns the tileSize */
     float getTileSize() { return tileSize; };
     
-    /**
-     *  @brief  Checks if the provided location is a wall
-     */
+    /** @brief  Checks if the provided location is a wall */
     bool isWall(const Coords loc);
+    /** @brief  Checks if the provided location is a wall */
     bool isWall(const int x, const int y) { return isWall( Coords(x, y) ); };
     
-    /**
-     *  @brief  Checks to see if there is an active explosion there
-     */
+    /** @brief  Checks to see if there is an active explosion there */
     bool isExplosion(const Coords loc);
+    /** @brief  Checks to see if there is an active explosion there */
     bool isExplosion(const int x, const int y) { return isExplosion( Coords(x, y) ); };
+    
+    /** @brief  Did the level load */
+    bool isValid(){ return valid; };
     
     /**
      *  @brief  Checks if a rectangle collides with any Wall tiles

@@ -100,22 +100,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 This is the complete list of members for <a class="el" href="class_b_explosion_tile.html">BExplosionTile</a>, including all inherited members.<table>
-  <tr class="memlist"><td><a class="el" href="class_b_tile.html#a7646b89b701a776494e16405b9d90871">BTile</a>()</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_b_tile.html#a3bf473aada31f2a76de8ea244d889d16">BTile</a>(const Color3B onC, const Color3B offC)</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_b_tile.html#a238d813159a2c767471ad12e3ada7421">createWithFileColors</a>(const char *image, const Color3B onC, const Color3B offC)</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#aaa3e3d527dada2a0aec18c0144321832">BExplosionTile</a>(const Color3B c, Coords position)</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_tile.html#a7646b89b701a776494e16405b9d90871">BTile</a>()</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_tile.html#aac430c52b468db1167d715cc867e617e">BTile</a>(const Color3B c, const Coords position)</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_tile.html#a24df3d28185701700b2fd217641775f6">color</a></td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#ac8f21b7fc8e481647b0da1814c8581a3">createWithFileColorLoc</a>(const char *image, const Color3B c, const Coords position)</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#a33aa8f23913aad84380eb6313c332448">explode</a>(float dt)</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#a2afddaca5a174592c15f36e7228ad821">fade</a>(float dt)</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#af7e3201b26423dba9f444e8e38f55bf2">firstExplode</a>(float dt)</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#a502982df55ae867ade34a740365dd353">firstFade</a>(float dt)</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#a5eb4f1055a55608fe35341bb98a3c65f">getDuration</a>()</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#ab6a40589c3a728c8700f1f20a2fd7275">getInterval</a>()</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_tile.html#af0e20c14792be231f3b490eb1ec10a73">getLocation</a>()</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#a0d54cd6a37386d3d31f3bb565783973a">hasExploded</a>()</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_tile.html#ab59bb83ecf56ec30d95c98ab3090d532">isOn</a>()</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">loc</a></td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_b_tile.html#a06ca0d5b7b5c17a3d8c53395c2614a87">offColor</a></td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [protected]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">on</a></td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_b_tile.html#adf1af86d1ae9fdc122007381d4bf0a94">onColor</a></td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#a53e3eab8f3d8d1abfe6f611d0ecbe408">scheduleFirstExplode</a>(float st)</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#a85953e050b9d016fb182525f8d81294a">setDuration</a>(const float f)</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#a917731da768b4bb35255a853df6d80c8">setInterval</a>(const float f)</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_tile.html#a64dfa0b2841ab4fc5a1e465f1389cb10">setLocation</a>(Coords location)</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_b_tile.html#a992da9e2ba93dfffb623af6905d5d4ae">setOffColor</a>(const Color3B color)</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [inline]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_b_tile.html#add471df28a98f6fcb4a3ca7409092fad">setOn</a>(bool state)</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [inline, virtual]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_b_tile.html#abb4e47d337854e27649b6505536a8d4a">setOnColor</a>(const Color3B color)</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [inline]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_tile.html#a0eccbc17368dbc03efea70fd9ca5af20">setOn</a>(bool state)</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">tileSize</a></td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [protected]</code></td></tr>
-  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#a993eb687f4f595994747cc0f8534f78f">updateColor</a>()</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_tile.html#ae6faeef28449999ac4f1b2938fd2e89c">updatePosition</a>()</td><td><a class="el" href="class_b_tile.html">BTile</a></td><td><code> [inline, protected]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_explosion_tile.html#a4c58075332815284002ddcff3fa2c5b0">updateVisibility</a>()</td><td><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a></td><td><code> [inline, virtual]</code></td></tr>
 </table></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -135,7 +143,7 @@ This is the complete list of members for <a class="el" href="class_b_explosion_t
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Tue Sep 3 2013 17:45:33 for GameBox by
+    <li class="footer">Generated on Thu Sep 19 2013 18:51:28 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

@@ -4,20 +4,20 @@
     <compoundname>OverLayer.cpp</compoundname>
     <includes refid="_over_layer_8h" local="yes">OverLayer.h</includes>
     <incdepgraph>
-      <node id="114">
-        <label>GameBox/GameBox/Classes/TheBox/OverLayer.cpp</label>
+      <node id="199">
+        <label>GameBox/GameBox/Classes/Helpers/OverLayer.cpp</label>
         <link refid="OverLayer.cpp"/>
-        <childnode refid="115" relation="include">
+        <childnode refid="200" relation="include">
         </childnode>
       </node>
-      <node id="115">
+      <node id="201">
+        <label>cocos2d.h</label>
+      </node>
+      <node id="200">
         <label>OverLayer.h</label>
         <link refid="_over_layer_8h"/>
-        <childnode refid="116" relation="include">
+        <childnode refid="201" relation="include">
         </childnode>
-      </node>
-      <node id="116">
-        <label>cocos2d.h</label>
       </node>
     </incdepgraph>
     <briefdescription>
@@ -39,6 +39,6 @@
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>addChild(menu);</highlight></codeline>
 <codeline lineno="16"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/OverLayer.cpp"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/OverLayer.cpp"/>
   </compounddef>
 </doxygen>

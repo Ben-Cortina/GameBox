@@ -96,7 +96,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">BExplosionTile Class Reference</div>  </div>
 </div><!--header-->
@@ -120,18 +121,181 @@ Inheritance diagram for BExplosionTile:</div>
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#a993eb687f4f595994747cc0f8534f78f">updateColor</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Special updateColor will fade to off rather than just instantly turn off.  <a href="#a993eb687f4f595994747cc0f8534f78f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#aaa3e3d527dada2a0aec18c0144321832">BExplosionTile</a> (const Color3B c, <a class="el" href="struct_coords.html">Coords</a> position)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#a917731da768b4bb35255a853df6d80c8">setInterval</a> (const float f)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">set method for interval  <a href="#a917731da768b4bb35255a853df6d80c8"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#ab6a40589c3a728c8700f1f20a2fd7275">getInterval</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get method for interval.  <a href="#ab6a40589c3a728c8700f1f20a2fd7275"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#a85953e050b9d016fb182525f8d81294a">setDuration</a> (const float f)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">set method for duration  <a href="#a85953e050b9d016fb182525f8d81294a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#a5eb4f1055a55608fe35341bb98a3c65f">getDuration</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Get method for duration.  <a href="#a5eb4f1055a55608fe35341bb98a3c65f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#a0d54cd6a37386d3d31f3bb565783973a">hasExploded</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">holds the exploded state until it has been checked  <a href="#a0d54cd6a37386d3d31f3bb565783973a"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#a4c58075332815284002ddcff3fa2c5b0">updateVisibility</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Special updateColor will fade to off rather than just instantly turn off.  <a href="#a4c58075332815284002ddcff3fa2c5b0"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#a53e3eab8f3d8d1abfe6f611d0ecbe408">scheduleFirstExplode</a> (float st)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">schedules firstFade and firstExplode once  <a href="#a53e3eab8f3d8d1abfe6f611d0ecbe408"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#a502982df55ae867ade34a740365dd353">firstFade</a> (float dt)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">fades then schedules fade  <a href="#a502982df55ae867ade34a740365dd353"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#af7e3201b26423dba9f444e8e38f55bf2">firstExplode</a> (float dt)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">explodes then schedules explode  <a href="#af7e3201b26423dba9f444e8e38f55bf2"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#a33aa8f23913aad84380eb6313c332448">explode</a> (float dt)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">sets exploded then sets the tile on  <a href="#a33aa8f23913aad84380eb6313c332448"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#a2afddaca5a174592c15f36e7228ad821">fade</a> (float dt)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">sets the tile off  <a href="#a2afddaca5a174592c15f36e7228ad821"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_b_explosion_tile.html">BExplosionTile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_explosion_tile.html#ac8f21b7fc8e481647b0da1814c8581a3">createWithFileColorLoc</a> (const char *<a class="el" href="_game_list_8h.html#ac745ab21f82aa96829863dcfc37ef5a8">image</a>, const Color3B c, const <a class="el" href="struct_coords.html">Coords</a> position)</td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This is an explosion tile, the player will die if they touch this while its on. </p>
-</div><hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a993eb687f4f595994747cc0f8534f78f"></a><!-- doxytag: member="BExplosionTile::updateColor" ref="a993eb687f4f595994747cc0f8534f78f" args="()" -->
+</div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aaa3e3d527dada2a0aec18c0144321832"></a><!-- doxytag: member="BExplosionTile::BExplosionTile" ref="aaa3e3d527dada2a0aec18c0144321832" args="(const Color3B c, Coords position)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_b_explosion_tile.html#a993eb687f4f595994747cc0f8534f78f">BExplosionTile::updateColor</a> </td>
+          <td class="memname"><a class="el" href="class_b_explosion_tile.html#aaa3e3d527dada2a0aec18c0144321832">BExplosionTile::BExplosionTile</a> </td>
+          <td>(</td>
+          <td class="paramtype">const Color3B&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_coords.html">Coords</a>&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
+<hr/><h2>Member Function Documentation</h2>
+<a class="anchor" id="ac8f21b7fc8e481647b0da1814c8581a3"></a><!-- doxytag: member="BExplosionTile::createWithFileColorLoc" ref="ac8f21b7fc8e481647b0da1814c8581a3" args="(const char *image, const Color3B c, const Coords position)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a> * <a class="el" href="class_b_explosion_tile.html#ac8f21b7fc8e481647b0da1814c8581a3">BExplosionTile::createWithFileColorLoc</a> </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>image</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Color3B&#160;</td>
+          <td class="paramname"><em>c</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="struct_coords.html">Coords</a>&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Reimplemented from <a class="el" href="class_b_tile.html#a66fcbdd086a6a5d51ca07545d41f7f73">BTile</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a33aa8f23913aad84380eb6313c332448"></a><!-- doxytag: member="BExplosionTile::explode" ref="a33aa8f23913aad84380eb6313c332448" args="(float dt)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_explosion_tile.html#a33aa8f23913aad84380eb6313c332448">BExplosionTile::explode</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>sets exploded then sets the tile on </p>
+
+</div>
+</div>
+<a class="anchor" id="a2afddaca5a174592c15f36e7228ad821"></a><!-- doxytag: member="BExplosionTile::fade" ref="a2afddaca5a174592c15f36e7228ad821" args="(float dt)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_explosion_tile.html#a2afddaca5a174592c15f36e7228ad821">BExplosionTile::fade</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>sets the tile off </p>
+
+</div>
+</div>
+<a class="anchor" id="af7e3201b26423dba9f444e8e38f55bf2"></a><!-- doxytag: member="BExplosionTile::firstExplode" ref="af7e3201b26423dba9f444e8e38f55bf2" args="(float dt)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_explosion_tile.html#af7e3201b26423dba9f444e8e38f55bf2">BExplosionTile::firstExplode</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>explodes then schedules explode </p>
+
+</div>
+</div>
+<a class="anchor" id="a502982df55ae867ade34a740365dd353"></a><!-- doxytag: member="BExplosionTile::firstFade" ref="a502982df55ae867ade34a740365dd353" args="(float dt)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_explosion_tile.html#a502982df55ae867ade34a740365dd353">BExplosionTile::firstFade</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>dt</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>fades then schedules fade </p>
+
+</div>
+</div>
+<a class="anchor" id="a5eb4f1055a55608fe35341bb98a3c65f"></a><!-- doxytag: member="BExplosionTile::getDuration" ref="a5eb4f1055a55608fe35341bb98a3c65f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="class_b_explosion_tile.html#a5eb4f1055a55608fe35341bb98a3c65f">BExplosionTile::getDuration</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td><code> [inline]</code></td>
@@ -140,14 +304,126 @@ Public Member Functions</h2></td></tr>
 </div>
 <div class="memdoc">
 
+<p>Get method for duration. </p>
+
+</div>
+</div>
+<a class="anchor" id="ab6a40589c3a728c8700f1f20a2fd7275"></a><!-- doxytag: member="BExplosionTile::getInterval" ref="ab6a40589c3a728c8700f1f20a2fd7275" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">float <a class="el" href="class_b_explosion_tile.html#ab6a40589c3a728c8700f1f20a2fd7275">BExplosionTile::getInterval</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Get method for interval. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0d54cd6a37386d3d31f3bb565783973a"></a><!-- doxytag: member="BExplosionTile::hasExploded" ref="a0d54cd6a37386d3d31f3bb565783973a" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="class_b_explosion_tile.html#a0d54cd6a37386d3d31f3bb565783973a">BExplosionTile::hasExploded</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>holds the exploded state until it has been checked </p>
+
+</div>
+</div>
+<a class="anchor" id="a53e3eab8f3d8d1abfe6f611d0ecbe408"></a><!-- doxytag: member="BExplosionTile::scheduleFirstExplode" ref="a53e3eab8f3d8d1abfe6f611d0ecbe408" args="(float st)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_explosion_tile.html#a53e3eab8f3d8d1abfe6f611d0ecbe408">BExplosionTile::scheduleFirstExplode</a> </td>
+          <td>(</td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>st</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>schedules firstFade and firstExplode once </p>
+
+</div>
+</div>
+<a class="anchor" id="a85953e050b9d016fb182525f8d81294a"></a><!-- doxytag: member="BExplosionTile::setDuration" ref="a85953e050b9d016fb182525f8d81294a" args="(const float f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_explosion_tile.html#a85953e050b9d016fb182525f8d81294a">BExplosionTile::setDuration</a> </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>set method for duration </p>
+
+</div>
+</div>
+<a class="anchor" id="a917731da768b4bb35255a853df6d80c8"></a><!-- doxytag: member="BExplosionTile::setInterval" ref="a917731da768b4bb35255a853df6d80c8" args="(const float f)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_explosion_tile.html#a917731da768b4bb35255a853df6d80c8">BExplosionTile::setInterval</a> </td>
+          <td>(</td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>f</em></td><td>)</td>
+          <td><code> [inline]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>set method for interval </p>
+
+</div>
+</div>
+<a class="anchor" id="a4c58075332815284002ddcff3fa2c5b0"></a><!-- doxytag: member="BExplosionTile::updateVisibility" ref="a4c58075332815284002ddcff3fa2c5b0" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_explosion_tile.html#a4c58075332815284002ddcff3fa2c5b0">BExplosionTile::updateVisibility</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
 <p>Special updateColor will fade to off rather than just instantly turn off. </p>
 
-<p>Reimplemented from <a class="el" href="class_b_tile.html#af9d81dcd02de972c1d451af63c0a48e5">BTile</a>.</p>
+<p>Reimplemented from <a class="el" href="class_b_tile.html#a918487991f9b721438231c5a1ed0140f">BTile</a>.</p>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>GameBox/GameBox/Classes/Bound/<a class="el" href="_bound_tiles_8h_source.html">BoundTiles.h</a></li>
+<li>GameBox/GameBox/Classes/Bound/<a class="el" href="_bound_tiles_8cpp.html">BoundTiles.cpp</a></li>
 </ul>
 </div><!-- contents -->
 </div>
@@ -169,7 +445,7 @@ Public Member Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="class_b_explosion_tile.html">BExplosionTile</a>      </li>
 
-    <li class="footer">Generated on Tue Sep 3 2013 17:45:33 for GameBox by
+    <li class="footer">Generated on Thu Sep 19 2013 18:51:28 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

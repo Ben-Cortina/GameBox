@@ -8,53 +8,100 @@
     <member refid="class_app_delegate_1ac4d653e3f74a91efef5f2def58fe3108" kind="function"><name>applicationWillEnterForeground</name></member>
   </compound>
   <compound refid="class_b_explosion_tile" kind="class"><name>BExplosionTile</name>
-    <member refid="class_b_explosion_tile_1acfdf51efa0a8dfef039e29ed5755a2c3" kind="variable"><name>start</name></member>
     <member refid="class_b_explosion_tile_1a3282133c7be84940650baeeee93a64c1" kind="variable"><name>interval</name></member>
     <member refid="class_b_explosion_tile_1a36449b3adea5c288302408a83f271183" kind="variable"><name>duration</name></member>
-    <member refid="class_b_explosion_tile_1a993eb687f4f595994747cc0f8534f78f" kind="function"><name>updateColor</name></member>
+    <member refid="class_b_explosion_tile_1a87c385be0339a1d9ca26264e534420de" kind="variable"><name>exploded</name></member>
+    <member refid="class_b_explosion_tile_1aaa3e3d527dada2a0aec18c0144321832" kind="function"><name>BExplosionTile</name></member>
+    <member refid="class_b_explosion_tile_1a917731da768b4bb35255a853df6d80c8" kind="function"><name>setInterval</name></member>
+    <member refid="class_b_explosion_tile_1ab6a40589c3a728c8700f1f20a2fd7275" kind="function"><name>getInterval</name></member>
+    <member refid="class_b_explosion_tile_1a85953e050b9d016fb182525f8d81294a" kind="function"><name>setDuration</name></member>
+    <member refid="class_b_explosion_tile_1a5eb4f1055a55608fe35341bb98a3c65f" kind="function"><name>getDuration</name></member>
+    <member refid="class_b_explosion_tile_1a0d54cd6a37386d3d31f3bb565783973a" kind="function"><name>hasExploded</name></member>
+    <member refid="class_b_explosion_tile_1a4c58075332815284002ddcff3fa2c5b0" kind="function"><name>updateVisibility</name></member>
+    <member refid="class_b_explosion_tile_1a53e3eab8f3d8d1abfe6f611d0ecbe408" kind="function"><name>scheduleFirstExplode</name></member>
+    <member refid="class_b_explosion_tile_1a502982df55ae867ade34a740365dd353" kind="function"><name>firstFade</name></member>
+    <member refid="class_b_explosion_tile_1af7e3201b26423dba9f444e8e38f55bf2" kind="function"><name>firstExplode</name></member>
+    <member refid="class_b_explosion_tile_1a33aa8f23913aad84380eb6313c332448" kind="function"><name>explode</name></member>
+    <member refid="class_b_explosion_tile_1a2afddaca5a174592c15f36e7228ad821" kind="function"><name>fade</name></member>
+    <member refid="class_b_explosion_tile_1ac8f21b7fc8e481647b0da1814c8581a3" kind="function"><name>createWithFileColorLoc</name></member>
   </compound>
   <compound refid="class_b_floor_tile" kind="class"><name>BFloorTile</name>
+    <member refid="class_b_floor_tile_1af8518a127131e179e2a9c11fd232db4d" kind="function"><name>createWithFileColorLoc</name></member>
   </compound>
   <compound refid="class_b_level" kind="class"><name>BLevel</name>
     <member refid="class_b_level_1a2ba03921421fff1c7261fda079b6ba75" kind="variable"><name>fTiles</name></member>
     <member refid="class_b_level_1af1885c1ae9b86c0a80db643acbbe50d4" kind="variable"><name>wTiles</name></member>
     <member refid="class_b_level_1adf3d46368cfe19ed1e73a0b7d5539fba" kind="variable"><name>eTiles</name></member>
+    <member refid="class_b_level_1a2ca11e1077311deb54ecff0748e2db49" kind="variable"><name>exlosionTimes</name></member>
+    <member refid="class_b_level_1afa98ebe59a2fc12acdf81e360a0c2cae" kind="variable"><name>playerSprite</name></member>
     <member refid="class_b_level_1a4f1cdbc4216de46f7f766a4f0c5a51b7" kind="variable"><name>width</name></member>
     <member refid="class_b_level_1abb0c14ba020af30d1d1f1bfa69dfea00" kind="variable"><name>height</name></member>
     <member refid="class_b_level_1adde75adfdfbbddd7846a65569d53d5d0" kind="variable"><name>tileSize</name></member>
     <member refid="class_b_level_1ac2110699926d964ca1dac8d79217e5a8" kind="variable"><name>fTileCount</name></member>
     <member refid="class_b_level_1aa95d39b724327298f6669280a36a7f64" kind="variable"><name>wTileCount</name></member>
     <member refid="class_b_level_1a11c0243e34fa173fbcee54f338faa136" kind="variable"><name>eTileCount</name></member>
-    <member refid="class_b_level_1a8500d99ab55b7c80f69a38f25b597216" kind="function"><name>BLevel</name></member>
+    <member refid="class_b_level_1a2bbf5b3cdf1689e9a98c48189f9a0ab9" kind="variable"><name>start</name></member>
+    <member refid="class_b_level_1a4845fd99df61f85f905cc596794d234f" kind="variable"><name>end</name></member>
+    <member refid="class_b_level_1ade96d7cedbf6a2e1719ed6eec9c463c9" kind="variable"><name>endCount</name></member>
+    <member refid="class_b_level_1a70ff8d684d97dda624a74a8f84c25e4c" kind="variable"><name>valid</name></member>
+    <member refid="class_b_level_1a8cac4d9b9f748167b2f871460a650756" kind="function"><name>parseFile</name></member>
+    <member refid="class_b_level_1ab523ea2f79df9335906edea71cd3fbbc" kind="function"><name>setupTiles</name></member>
+    <member refid="class_b_level_1a8e48d62f02a21d2a57c682dc7737396f" kind="function"><name>BLevel</name></member>
+    <member refid="class_b_level_1ad4f4a9f5658ac8ed21917df61678f4b2" kind="function"><name>getStart</name></member>
+    <member refid="class_b_level_1a8d02e52b25ff8c39bb68d0880c31771c" kind="function"><name>getTileSize</name></member>
     <member refid="class_b_level_1abb407d85aebcc0d6cded1ad13c2e2eed" kind="function"><name>isWall</name></member>
     <member refid="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" kind="function"><name>isWall</name></member>
     <member refid="class_b_level_1adf39bb6a72e7780031a0806df92f9fc5" kind="function"><name>isExplosion</name></member>
     <member refid="class_b_level_1acf89db789ceb7f083221fab3fead042e" kind="function"><name>isExplosion</name></member>
-    <member refid="class_b_level_1af9220ff2364b269c82079792c657a46d" kind="function"><name>checkCollision</name></member>
-    <member refid="class_b_level_1a4ea652af9cecf1cb4f19f9038d6fd047" kind="function"><name>getTileBB</name></member>
+    <member refid="class_b_level_1ad9a6d59f73f29c78a0b2e57997202eb5" kind="function"><name>isValid</name></member>
+    <member refid="class_b_level_1ae32bcaf31096afb8356391e8ad6552e1" kind="function"><name>isWallCollision</name></member>
+    <member refid="class_b_level_1a432d3dde8efb542646792f9c5563a522" kind="function"><name>isExplosionCollision</name></member>
+    <member refid="class_b_level_1a6526db006b1f862697b1f9f89eb0a968" kind="function"><name>checkExplosions</name></member>
+    <member refid="class_b_level_1ab79289460372842f15ca0fe13311d7c9" kind="function"><name>isOnFloor</name></member>
+    <member refid="class_b_level_1a6bb41eebd07bf260b42168183bdd37c1" kind="function"><name>getTile</name></member>
+    <member refid="class_b_level_1a9adc000ce6523936febd5a4d20d52eb8" kind="function"><name>getTileBB</name></member>
+  </compound>
+  <compound refid="class_b_level_menu" kind="class"><name>BLevelMenu</name>
+    <member refid="class_b_level_menu_1aef9ea60912404f6a836ba43f7c0bf98f" kind="variable"><name>visRect</name></member>
+    <member refid="class_b_level_menu_1a1d2a02614af3b0d57acc7c41325ccaf3" kind="variable"><name>beginPos</name></member>
+    <member refid="class_b_level_menu_1a5181768d54631054795c74b1083783a4" kind="variable"><name>itemMenu</name></member>
+    <member refid="class_b_level_menu_1a8f420f26d60d4a1248b601c6e3e10b07" kind="variable"><name>callback</name></member>
+    <member refid="class_b_level_menu_1a9c655642f8a2dbb4e1e5a4e0c0b8e6f5" kind="variable"><name>levelData</name></member>
+    <member refid="class_b_level_menu_1a8dceac84ef9679854a005f1ac2144042" kind="variable"><name>levelCount</name></member>
+    <member refid="class_b_level_menu_1a69ba640ac24dc36f82a5fe62a0036f52" kind="function"><name>BLevelMenu</name></member>
+    <member refid="class_b_level_menu_1a4646279f37990d842a77eb2e071a3919" kind="function"><name>~BLevelMenu</name></member>
+    <member refid="class_b_level_menu_1a38bfb874e8a2d32bb01f4a281032e84c" kind="function"><name>getLevelPath</name></member>
+    <member refid="class_b_level_menu_1a3a7207f8b357ae3e82b26b3507137775" kind="function"><name>ccTouchesBegan</name></member>
+    <member refid="class_b_level_menu_1a14fc166131531c3c9ef271eb965bfd64" kind="function"><name>ccTouchesMoved</name></member>
   </compound>
   <compound refid="class_b_player" kind="class"><name>BPlayer</name>
     <member refid="class_b_player_1adcf843153230f6c3a842d14613d6ded3" kind="variable"><name>lastUpdate</name></member>
     <member refid="class_b_player_1a5e78beca6caeadb8339b977ee58f1d4c" kind="variable"><name>dtCalculated</name></member>
     <member refid="class_b_player_1aec08ca49744ee6bc33747389013ad47c" kind="variable"><name>level</name></member>
     <member refid="class_b_player_1aa0f0d3bcfd8060da02e2c67d0b549504" kind="variable"><name>player</name></member>
+    <member refid="class_b_player_1ade7f7dfb34c2a6e8ffdb2e77406377ba" kind="variable"><name>playerColor</name></member>
     <member refid="class_b_player_1a836682452c7380a303792daff1bf75e0" kind="variable"><name>maxSpeed</name></member>
     <member refid="class_b_player_1ac03a57b66f6d846b2fed0142470587a5" kind="variable"><name>force</name></member>
     <member refid="class_b_player_1aeba7acd97b65228677bd9fe2d0ca1e86" kind="variable"><name>velocity</name></member>
     <member refid="class_b_player_1a3152beb08679dfa9538bca632cde3624" kind="variable"><name>keyState</name></member>
-    <member refid="class_b_player_1a81ff25cbd1dc216784b14547f8e92bcc" kind="function"><name>BPlayer</name></member>
-    <member refid="class_b_player_1adf6478c51df592730b02d0174f91351a" kind="function"><name>BPlayer</name></member>
+    <member refid="class_b_player_1ad0d73285c5ebdc088f0626d40c5db555" kind="variable"><name>isDying</name></member>
+    <member refid="class_b_player_1a090473b64492723552a27dd436a78385" kind="variable"><name>active</name></member>
+    <member refid="class_b_player_1aea1798277d5db2f597276108953c2aa2" kind="variable"><name>escFunc</name></member>
+    <member refid="class_b_player_1ab32977496976aff5421f2af0d277aaf8" kind="function"><name>BPlayer</name></member>
+    <member refid="class_b_player_1a2c7606b7353aa365048bcb4e6fe1fadc" kind="function"><name>setActive</name></member>
     <member refid="class_b_player_1a03add0a9a55d81912897518d94daf52f" kind="function"><name>setLevel</name></member>
-    <member refid="class_b_player_1a3772d37e802a5fcad52a753450853441" kind="function"><name>setPlayerPosition</name></member>
     <member refid="class_b_player_1ace0ec1b13a62c932950a86a469d0263f" kind="function"><name>setMaxSpeed</name></member>
     <member refid="class_b_player_1a33b7d635e3aa3c7a4796eabc4205cc58" kind="function"><name>getForce</name></member>
     <member refid="class_b_player_1ae97ab8470903f7c595939f2331b6c6f4" kind="function"><name>setForce</name></member>
     <member refid="class_b_player_1af7ae69e5c1d7880a5ebf4bd38c1adabb" kind="function"><name>setForceX</name></member>
     <member refid="class_b_player_1a94916a0f75042c2e6265fa7c9ec4db32" kind="function"><name>setForceY</name></member>
+    <member refid="class_b_player_1a7981065d2d5b4c581d84cb5b63a15d00" kind="function"><name>fall</name></member>
+    <member refid="class_b_player_1a5a46736f890786b465bfe51c9c4f8ff7" kind="function"><name>die</name></member>
+    <member refid="class_b_player_1a1f66cceac56c4252237f6e30003efa4d" kind="function"><name>spawn</name></member>
     <member refid="class_b_player_1aa0f9b22686ad0aeec30ea21beb3740f2" kind="function"><name>updateVelocity</name></member>
     <member refid="class_b_player_1a86f9b0c0d7b4c61ed475f0e70249be7f" kind="function"><name>update</name></member>
     <member refid="class_b_player_1a709a36eb859dd8f9a4355e036eac8ac8" kind="function"><name>update</name></member>
-    <member refid="class_b_player_1aa05278b0c6e02aeb2a2cbd514fafd446" kind="function"><name>handleMovement</name></member>
+    <member refid="class_b_player_1a4c0f72ebb2a0b95eb35fab6598924992" kind="function"><name>handleCollisions</name></member>
     <member refid="class_b_player_1ae0aaaa33013fd5c0070cf51619abf12b" kind="function"><name>keyPressed</name></member>
     <member refid="class_b_player_1a8210db4e8fac75ace4b71b3ded1df6bf" kind="function"><name>keyReleased</name></member>
   </compound>
@@ -62,29 +109,40 @@
     <member refid="class_b_scene_1a6869d39e608c87ec85c6260d9ca25d81" kind="variable"><name>levelLayer</name></member>
     <member refid="class_b_scene_1a9351cec96b21e50a7d1132feb4cb4e65" kind="variable"><name>playerLayer</name></member>
     <member refid="class_b_scene_1a1dc8e3413c7d47423269274e18615278" kind="variable"><name>backgroundLayer</name></member>
+    <member refid="class_b_scene_1a2a1527b5a74b4734d50c7b27764b8d23" kind="variable"><name>menuLayer</name></member>
+    <member refid="class_b_scene_1a8ff8ff84f4632bf9b153bdce4c719852" kind="variable"><name>layerFocus</name></member>
+    <member refid="class_b_scene_1a309abd9a83ba6ec3fcf37bc685f1108a" kind="variable"><name>curLevel</name></member>
     <member refid="class_b_scene_1a814659a27cecfe7e5aefc32081d0f3a5" kind="function"><name>BScene</name></member>
-    <member refid="class_b_scene_1a354c06937ec9f0170e89a118bb9368b7" kind="function"><name>newLevel</name></member>
+    <member refid="class_b_scene_1a94e762ddd0893943d05d58eac2f6d641" kind="function"><name>loadLevelDict</name></member>
+    <member refid="class_b_scene_1ae8759c51e7bcd9888f3035cbcd9d675c" kind="function"><name>getFocus</name></member>
+    <member refid="class_b_scene_1a79117c8d522c8907c474b8448b5e486b" kind="function"><name>newLevel</name></member>
+    <member refid="class_b_scene_1a98a3fdedfb94c433624c0ce664adb343" kind="function"><name>showLevelMenu</name></member>
+    <member refid="class_b_scene_1a2817197ebb69c55473bd50808a66a27f" kind="function"><name>showPauseMenu</name></member>
+    <member refid="class_b_scene_1aa3e76c81d0eeadf1c6b6f7d9560c14cf" kind="function"><name>handleEsc</name></member>
+    <member refid="class_b_scene_1af600788366f63a8954b892fdc7934236" kind="function"><name>resumeCB</name></member>
+    <member refid="class_b_scene_1a21e02f1209ed73a1dfbcada5f153a3b4" kind="function"><name>levelSelectCB</name></member>
+    <member refid="class_b_scene_1a2cef71e8f1d699acc111ea43b872e050" kind="function"><name>exitGameCB</name></member>
+    <member refid="class_b_scene_1a43226267f8e0d11e0440d64db1814889" kind="function"><name>loadLevel</name></member>
+    <member refid="class_b_scene_1a9b647ad2b4ebc0289a3170009653c41d" kind="function"><name>exitGame</name></member>
     <member refid="class_b_scene_1a90db09771569a058108341368724efc9" kind="function"><name>runThisGame</name></member>
   </compound>
   <compound refid="class_b_tile" kind="class"><name>BTile</name>
     <member refid="class_b_tile_1a0c85a54373837c9bbe0fa2f83475234b" kind="variable"><name>tileSize</name></member>
     <member refid="class_b_tile_1a9a106634c3890eaa7a69cddc9680d822" kind="variable"><name>loc</name></member>
     <member refid="class_b_tile_1a793fe978c4d34fc611dbe7d21079610d" kind="variable"><name>on</name></member>
-    <member refid="class_b_tile_1adf1af86d1ae9fdc122007381d4bf0a94" kind="variable"><name>onColor</name></member>
-    <member refid="class_b_tile_1a06ca0d5b7b5c17a3d8c53395c2614a87" kind="variable"><name>offColor</name></member>
-    <member refid="class_b_tile_1af9d81dcd02de972c1d451af63c0a48e5" kind="function"><name>updateColor</name></member>
+    <member refid="class_b_tile_1a24df3d28185701700b2fd217641775f6" kind="variable"><name>color</name></member>
+    <member refid="class_b_tile_1a918487991f9b721438231c5a1ed0140f" kind="function"><name>updateVisibility</name></member>
     <member refid="class_b_tile_1ae6faeef28449999ac4f1b2938fd2e89c" kind="function"><name>updatePosition</name></member>
     <member refid="class_b_tile_1a7646b89b701a776494e16405b9d90871" kind="function"><name>BTile</name></member>
-    <member refid="class_b_tile_1a3bf473aada31f2a76de8ea244d889d16" kind="function"><name>BTile</name></member>
-    <member refid="class_b_tile_1a238d813159a2c767471ad12e3ada7421" kind="function"><name>createWithFileColors</name></member>
-    <member refid="class_b_tile_1abb4e47d337854e27649b6505536a8d4a" kind="function"><name>setOnColor</name></member>
-    <member refid="class_b_tile_1a992da9e2ba93dfffb623af6905d5d4ae" kind="function"><name>setOffColor</name></member>
-    <member refid="class_b_tile_1add471df28a98f6fcb4a3ca7409092fad" kind="function"><name>setOn</name></member>
+    <member refid="class_b_tile_1aac430c52b468db1167d715cc867e617e" kind="function"><name>BTile</name></member>
+    <member refid="class_b_tile_1a0eccbc17368dbc03efea70fd9ca5af20" kind="function"><name>setOn</name></member>
     <member refid="class_b_tile_1ab59bb83ecf56ec30d95c98ab3090d532" kind="function"><name>isOn</name></member>
     <member refid="class_b_tile_1a64dfa0b2841ab4fc5a1e465f1389cb10" kind="function"><name>setLocation</name></member>
     <member refid="class_b_tile_1af0e20c14792be231f3b490eb1ec10a73" kind="function"><name>getLocation</name></member>
+    <member refid="class_b_tile_1a66fcbdd086a6a5d51ca07545d41f7f73" kind="function"><name>createWithFileColorLoc</name></member>
   </compound>
   <compound refid="class_b_wall_tile" kind="class"><name>BWallTile</name>
+    <member refid="class_b_wall_tile_1a834cb0c60a8fd985e3c1ac1845f4192f" kind="function"><name>createWithFileColorLoc</name></member>
   </compound>
   <compound refid="struct_coords" kind="struct"><name>Coords</name>
     <member refid="struct_coords_1a59992d986e76375f31828d32c05cd15d" kind="variable"><name>x</name></member>
@@ -92,15 +150,7 @@
     <member refid="struct_coords_1a5922d1783cefa759950faa50ac347191" kind="function"><name>Coords</name></member>
     <member refid="struct_coords_1aa268e580151ea70eec212852dd4c5f94" kind="function"><name>Coords</name></member>
     <member refid="struct_coords_1a7507f92d1feefa3355ae8e9edae34e54" kind="function"><name>operator==</name></member>
-    <member refid="struct_coords_1a25bcb0e2d2f5677a10b7652e90a6f97b" kind="function"><name>operator=</name></member>
-    <member refid="struct_coords_1a2549173108b2479b62fd79b82ec54e01" kind="function"><name>operator+=</name></member>
-    <member refid="struct_coords_1a168a9ed9edbffaf04e67c5b39306ca99" kind="function"><name>operator+</name></member>
-    <member refid="struct_coords_1a9f61875c64b3726afd0bb0d465889bad" kind="function"><name>operator-=</name></member>
-    <member refid="struct_coords_1a7cc7a225781b6bbad3e00a5e9572fee1" kind="function"><name>operator-</name></member>
-    <member refid="struct_coords_1a5922d1783cefa759950faa50ac347191" kind="function"><name>Coords</name></member>
-    <member refid="struct_coords_1aa268e580151ea70eec212852dd4c5f94" kind="function"><name>Coords</name></member>
-    <member refid="struct_coords_1a7507f92d1feefa3355ae8e9edae34e54" kind="function"><name>operator==</name></member>
-    <member refid="struct_coords_1a25bcb0e2d2f5677a10b7652e90a6f97b" kind="function"><name>operator=</name></member>
+    <member refid="struct_coords_1a62705975ff5dd29d606da6a9b2c1ca20" kind="function"><name>operator=</name></member>
     <member refid="struct_coords_1a2549173108b2479b62fd79b82ec54e01" kind="function"><name>operator+=</name></member>
     <member refid="struct_coords_1a168a9ed9edbffaf04e67c5b39306ca99" kind="function"><name>operator+</name></member>
     <member refid="struct_coords_1a9f61875c64b3726afd0bb0d465889bad" kind="function"><name>operator-=</name></member>
@@ -126,6 +176,10 @@
     <member refid="struct_key_state_struct_1aeda151e7db716720d5908f71bbebd762" kind="variable"><name>down</name></member>
     <member refid="struct_key_state_struct_1a58af8e4068bce6dd66a29ba2b51ed96b" kind="variable"><name>left</name></member>
     <member refid="struct_key_state_struct_1a4edc7213073c8090360733c06949e3cd" kind="variable"><name>right</name></member>
+  </compound>
+  <compound refid="struct_l_d" kind="struct"><name>LD</name>
+    <member refid="struct_l_d_1aa6b37791d70e12687247633a11143c7a" kind="variable"><name>level_name</name></member>
+    <member refid="struct_l_d_1af926c9a4c205c12493e97ad03119bbc5" kind="variable"><name>filepath</name></member>
   </compound>
   <compound refid="class_my_menu_item_image" kind="class"><name>MyMenuItemImage</name>
     <member refid="class_my_menu_item_image_1a72ec449555c4b514536a85f1b432d95c" kind="function"><name>create</name></member>
@@ -225,12 +279,20 @@
   <compound refid="_bound_8h" kind="file"><name>Bound.h</name>
   </compound>
   <compound refid="_bound_level_8cpp" kind="file"><name>BoundLevel.cpp</name>
+    <member refid="_bound_level_8cpp_1a8fcf5a6b80bd04214c28b45971355035" kind="function"><name>RectIntersectsRect</name></member>
+    <member refid="_bound_level_8cpp_1ab19f808cab369ddd9a2c621d5e693f62" kind="function"><name>skipComments</name></member>
   </compound>
   <compound refid="_bound_level_8h" kind="file"><name>BoundLevel.h</name>
     <member refid="_bound_level_8h_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
   </compound>
+  <compound refid="_bound_level_menu_8cpp" kind="file"><name>BoundLevelMenu.cpp</name>
+    <member refid="_bound_level_menu_8cpp_1a83c7ad240be6e41dc2ed8f27a94316a3" kind="define"><name>LINE_SPACE</name></member>
+    <member refid="_bound_level_menu_8cpp_1a6367c0cfbf17343cd61ca7131d3c3230" kind="variable"><name>s_tCurPos</name></member>
+  </compound>
+  <compound refid="_bound_level_menu_8h" kind="file"><name>BoundLevelMenu.h</name>
+    <member refid="_bound_level_menu_8h_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
   <compound refid="_bound_player_8cpp" kind="file"><name>BoundPlayer.cpp</name>
-    <member refid="_bound_player_8cpp_1a8fcf5a6b80bd04214c28b45971355035" kind="function"><name>RectIntersectsRect</name></member>
   </compound>
   <compound refid="_bound_player_8h" kind="file"><name>BoundPlayer.h</name>
     <member refid="_bound_player_8h_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
@@ -252,15 +314,19 @@
   <compound refid="_custom_c_c_8h" kind="file"><name>CustomCC.h</name>
     <member refid="_custom_c_c_8h_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
   </compound>
-  <compound refid="_home_scene_8cpp" kind="file"><name>HomeScene.cpp</name>
-    <member refid="_home_scene_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  <compound refid="_custom_tile_grid_8cpp" kind="file"><name>CustomTileGrid.cpp</name>
   </compound>
-  <compound refid="_home_scene_8h" kind="file"><name>HomeScene.h</name>
+  <compound refid="_custom_tile_grid_8h" kind="file"><name>CustomTileGrid.h</name>
   </compound>
   <compound refid="_over_layer_8cpp" kind="file"><name>OverLayer.cpp</name>
   </compound>
   <compound refid="_over_layer_8h" kind="file"><name>OverLayer.h</name>
     <member refid="_over_layer_8h_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
+  <compound refid="_home_scene_8cpp" kind="file"><name>HomeScene.cpp</name>
+    <member refid="_home_scene_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
+  </compound>
+  <compound refid="_home_scene_8h" kind="file"><name>HomeScene.h</name>
   </compound>
   <compound refid="_player_sprite_8cpp" kind="file"><name>PlayerSprite.cpp</name>
     <member refid="_player_sprite_8cpp_1a02903a3a418cbb9675a4b928f6f62faf" kind="function"><name>getTime</name></member>

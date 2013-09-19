@@ -19,31 +19,193 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_b_explosion_tile_a993eb687f4f595994747cc0f8534f78f}{update\-Color} ()
-\begin{DoxyCompactList}\small\item\em \-Special update\-Color will fade to off rather than just instantly turn off. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\hyperlink{class_b_explosion_tile_aaa3e3d527dada2a0aec18c0144321832}{\-B\-Explosion\-Tile} (const \-Color3\-B c, \hyperlink{struct_coords}{\-Coords} position)
+\item 
+void \hyperlink{class_b_explosion_tile_a917731da768b4bb35255a853df6d80c8}{set\-Interval} (const float f)
+\begin{DoxyCompactList}\small\item\em set method for interval \end{DoxyCompactList}\item 
+float \hyperlink{class_b_explosion_tile_ab6a40589c3a728c8700f1f20a2fd7275}{get\-Interval} ()
+\begin{DoxyCompactList}\small\item\em \-Get method for interval. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_explosion_tile_a85953e050b9d016fb182525f8d81294a}{set\-Duration} (const float f)
+\begin{DoxyCompactList}\small\item\em set method for duration \end{DoxyCompactList}\item 
+float \hyperlink{class_b_explosion_tile_a5eb4f1055a55608fe35341bb98a3c65f}{get\-Duration} ()
+\begin{DoxyCompactList}\small\item\em \-Get method for duration. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b_explosion_tile_a0d54cd6a37386d3d31f3bb565783973a}{has\-Exploded} ()
+\begin{DoxyCompactList}\small\item\em holds the exploded state until it has been checked \end{DoxyCompactList}\item 
+void \hyperlink{class_b_explosion_tile_a4c58075332815284002ddcff3fa2c5b0}{update\-Visibility} ()
+\begin{DoxyCompactList}\small\item\em \-Special update\-Color will fade to off rather than just instantly turn off. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_explosion_tile_a53e3eab8f3d8d1abfe6f611d0ecbe408}{schedule\-First\-Explode} (float st)
+\begin{DoxyCompactList}\small\item\em schedules first\-Fade and first\-Explode once \end{DoxyCompactList}\item 
+void \hyperlink{class_b_explosion_tile_a502982df55ae867ade34a740365dd353}{first\-Fade} (float dt)
+\begin{DoxyCompactList}\small\item\em fades then schedules fade \end{DoxyCompactList}\item 
+void \hyperlink{class_b_explosion_tile_af7e3201b26423dba9f444e8e38f55bf2}{first\-Explode} (float dt)
+\begin{DoxyCompactList}\small\item\em explodes then schedules explode \end{DoxyCompactList}\item 
+void \hyperlink{class_b_explosion_tile_a33aa8f23913aad84380eb6313c332448}{explode} (float dt)
+\begin{DoxyCompactList}\small\item\em sets exploded then sets the tile on \end{DoxyCompactList}\item 
+void \hyperlink{class_b_explosion_tile_a2afddaca5a174592c15f36e7228ad821}{fade} (float dt)
+\begin{DoxyCompactList}\small\item\em sets the tile off \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{class_b_explosion_tile}{\-B\-Explosion\-Tile} $\ast$ \hyperlink{class_b_explosion_tile_ac8f21b7fc8e481647b0da1814c8581a3}{create\-With\-File\-Color\-Loc} (const char $\ast$\hyperlink{_game_list_8h_ac745ab21f82aa96829863dcfc37ef5a8}{image}, const \-Color3\-B c, const \hyperlink{struct_coords}{\-Coords} position)
+\end{DoxyCompactItemize}
 
 
 \subsection{\-Detailed \-Description}
 \-This is an explosion tile, the player will die if they touch this while its on. 
 
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_b_explosion_tile_aaa3e3d527dada2a0aec18c0144321832}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}}
+\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{\-B\-Explosion\-Tile}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-B\-Explosion\-Tile\-::\-B\-Explosion\-Tile} (
+\begin{DoxyParamCaption}
+\item[{const \-Color3\-B}]{c, }
+\item[{{\bf \-Coords}}]{position}
+\end{DoxyParamCaption}
+)}}\label{class_b_explosion_tile_aaa3e3d527dada2a0aec18c0144321832}
+
+
 \subsection{\-Member \-Function \-Documentation}
-\hypertarget{class_b_explosion_tile_a993eb687f4f595994747cc0f8534f78f}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!update\-Color@{update\-Color}}
-\index{update\-Color@{update\-Color}!BExplosionTile@{\-B\-Explosion\-Tile}}
-\subsubsection[{update\-Color}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Explosion\-Tile\-::update\-Color} (
+\hypertarget{class_b_explosion_tile_ac8f21b7fc8e481647b0da1814c8581a3}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!create\-With\-File\-Color\-Loc@{create\-With\-File\-Color\-Loc}}
+\index{create\-With\-File\-Color\-Loc@{create\-With\-File\-Color\-Loc}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{create\-With\-File\-Color\-Loc}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-B\-Explosion\-Tile} $\ast$ {\bf \-B\-Explosion\-Tile\-::create\-With\-File\-Color\-Loc} (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{image, }
+\item[{const \-Color3\-B}]{c, }
+\item[{const {\bf \-Coords}}]{position}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_b_explosion_tile_ac8f21b7fc8e481647b0da1814c8581a3}
+
+
+\-Reimplemented from \hyperlink{class_b_tile_a66fcbdd086a6a5d51ca07545d41f7f73}{\-B\-Tile}.
+
+\hypertarget{class_b_explosion_tile_a33aa8f23913aad84380eb6313c332448}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!explode@{explode}}
+\index{explode@{explode}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{explode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Explosion\-Tile\-::explode} (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)}}\label{class_b_explosion_tile_a33aa8f23913aad84380eb6313c332448}
+
+
+sets exploded then sets the tile on 
+
+\hypertarget{class_b_explosion_tile_a2afddaca5a174592c15f36e7228ad821}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!fade@{fade}}
+\index{fade@{fade}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{fade}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Explosion\-Tile\-::fade} (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)}}\label{class_b_explosion_tile_a2afddaca5a174592c15f36e7228ad821}
+
+
+sets the tile off 
+
+\hypertarget{class_b_explosion_tile_af7e3201b26423dba9f444e8e38f55bf2}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!first\-Explode@{first\-Explode}}
+\index{first\-Explode@{first\-Explode}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{first\-Explode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Explosion\-Tile\-::first\-Explode} (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)}}\label{class_b_explosion_tile_af7e3201b26423dba9f444e8e38f55bf2}
+
+
+explodes then schedules explode 
+
+\hypertarget{class_b_explosion_tile_a502982df55ae867ade34a740365dd353}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!first\-Fade@{first\-Fade}}
+\index{first\-Fade@{first\-Fade}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{first\-Fade}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Explosion\-Tile\-::first\-Fade} (
+\begin{DoxyParamCaption}
+\item[{float}]{dt}
+\end{DoxyParamCaption}
+)}}\label{class_b_explosion_tile_a502982df55ae867ade34a740365dd353}
+
+
+fades then schedules fade 
+
+\hypertarget{class_b_explosion_tile_a5eb4f1055a55608fe35341bb98a3c65f}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!get\-Duration@{get\-Duration}}
+\index{get\-Duration@{get\-Duration}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{get\-Duration}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-B\-Explosion\-Tile\-::get\-Duration} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_explosion_tile_a993eb687f4f595994747cc0f8534f78f}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_explosion_tile_a5eb4f1055a55608fe35341bb98a3c65f}
+
+
+\-Get method for duration. 
+
+\hypertarget{class_b_explosion_tile_ab6a40589c3a728c8700f1f20a2fd7275}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!get\-Interval@{get\-Interval}}
+\index{get\-Interval@{get\-Interval}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{get\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}float {\bf \-B\-Explosion\-Tile\-::get\-Interval} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_explosion_tile_ab6a40589c3a728c8700f1f20a2fd7275}
+
+
+\-Get method for interval. 
+
+\hypertarget{class_b_explosion_tile_a0d54cd6a37386d3d31f3bb565783973a}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!has\-Exploded@{has\-Exploded}}
+\index{has\-Exploded@{has\-Exploded}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{has\-Exploded}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Explosion\-Tile\-::has\-Exploded} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_b_explosion_tile_a0d54cd6a37386d3d31f3bb565783973a}
+
+
+holds the exploded state until it has been checked 
+
+\hypertarget{class_b_explosion_tile_a53e3eab8f3d8d1abfe6f611d0ecbe408}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!schedule\-First\-Explode@{schedule\-First\-Explode}}
+\index{schedule\-First\-Explode@{schedule\-First\-Explode}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{schedule\-First\-Explode}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Explosion\-Tile\-::schedule\-First\-Explode} (
+\begin{DoxyParamCaption}
+\item[{float}]{st}
+\end{DoxyParamCaption}
+)}}\label{class_b_explosion_tile_a53e3eab8f3d8d1abfe6f611d0ecbe408}
+
+
+schedules first\-Fade and first\-Explode once 
+
+\hypertarget{class_b_explosion_tile_a85953e050b9d016fb182525f8d81294a}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!set\-Duration@{set\-Duration}}
+\index{set\-Duration@{set\-Duration}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{set\-Duration}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Explosion\-Tile\-::set\-Duration} (
+\begin{DoxyParamCaption}
+\item[{const float}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_explosion_tile_a85953e050b9d016fb182525f8d81294a}
+
+
+set method for duration 
+
+\hypertarget{class_b_explosion_tile_a917731da768b4bb35255a853df6d80c8}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!set\-Interval@{set\-Interval}}
+\index{set\-Interval@{set\-Interval}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{set\-Interval}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Explosion\-Tile\-::set\-Interval} (
+\begin{DoxyParamCaption}
+\item[{const float}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_explosion_tile_a917731da768b4bb35255a853df6d80c8}
+
+
+set method for interval 
+
+\hypertarget{class_b_explosion_tile_a4c58075332815284002ddcff3fa2c5b0}{\index{\-B\-Explosion\-Tile@{\-B\-Explosion\-Tile}!update\-Visibility@{update\-Visibility}}
+\index{update\-Visibility@{update\-Visibility}!BExplosionTile@{\-B\-Explosion\-Tile}}
+\subsubsection[{update\-Visibility}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Explosion\-Tile\-::update\-Visibility} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline, virtual\mbox{]}}}}\label{class_b_explosion_tile_a4c58075332815284002ddcff3fa2c5b0}
 
 
 \-Special update\-Color will fade to off rather than just instantly turn off. 
 
 
 
-\-Reimplemented from \hyperlink{class_b_tile_af9d81dcd02de972c1d451af63c0a48e5}{\-B\-Tile}.
+\-Reimplemented from \hyperlink{class_b_tile_a918487991f9b721438231c5a1ed0140f}{\-B\-Tile}.
 
 
 
-\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
 \item 
-\-Game\-Box/\-Game\-Box/\-Classes/\-Bound/\hyperlink{_bound_tiles_8h}{\-Bound\-Tiles.\-h}\end{DoxyCompactItemize}
+\-Game\-Box/\-Game\-Box/\-Classes/\-Bound/\hyperlink{_bound_tiles_8h}{\-Bound\-Tiles.\-h}\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-Bound/\hyperlink{_bound_tiles_8cpp}{\-Bound\-Tiles.\-cpp}\end{DoxyCompactItemize}

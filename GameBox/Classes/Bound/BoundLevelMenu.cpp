@@ -6,36 +6,23 @@
 
 #include "BoundLevelMenu.h"
 
-
-struct {
-	const char *level_name;
-	const char *filepath;
-} levelData[] = {
-	{ "Level Making", "LevelMaking.bdl" }
-};
-
-static int levelCount = sizeof(levelData) / sizeof(levelData[0]);
-
 #define LINE_SPACE          40
 
 static Point s_tCurPos = Point::ZERO;
 
-BLevelMenu::BLevelMenu(std::function<void(Object*)> cb)
-: beginPos(Point::ZERO), callback(cb)
+BLevelMenu::BLevelMenu(std::function<void(Object*)> cb, LD * levels, int ldCount)
+: beginPos(Point::ZERO), callback(cb), levelCount(ldCount)
 {
+    levelData = levels;
     Size visSize = Director::getInstance()->getVisibleSize();
     Point visOrigin = Director::getInstance()->getVisibleOrigin();
     visRect = Rect(visOrigin.x, visOrigin.y, visSize.width, visSize.height);
     
-    // add menu items for tests
+    // add menu items for levels
     itemMenu = Menu::create();
     for (int i = 0; i < levelCount; ++i)
     {
-        // #if (CC_TARGET_PLATFORM == CC_PLATFORM_MARMALADE)
-        //         LabelBMFont* label = LabelBMFont::create(g_aTestNames[i].c_str(),  "fonts/arial16.fnt");
-        // #else
-        LabelTTF* label = LabelTTF::create( levelData[i].level_name, "Arial", 24);
-        // #endif
+        LabelTTF* label = LabelTTF::create( levelData[i].level_name.c_str(), "Arial", 24);
         MenuItemLabel* menuItem = MenuItemLabel::create(label, cb);
         
         itemMenu->addChild(menuItem, i + 10000);
@@ -50,17 +37,14 @@ BLevelMenu::BLevelMenu(std::function<void(Object*)> cb)
     
 }
 
-const char* BLevelMenu::getLevelPath(const int idx)
+BLevelMenu::~BLevelMenu()
 {
-    return levelData[idx].filepath;
+    delete [] levelData;
 }
 
-void BLevelMenu::closeCallback(Object * pSender)
+const char* BLevelMenu::getLevelPath(const int idx)
 {
-    Director::getInstance()->end();
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    exit(0);
-#endif
+    return levelData[idx].filepath.c_str();
 }
 
 void BLevelMenu::ccTouchesBegan(Set *pTouches, Event *pEvent)

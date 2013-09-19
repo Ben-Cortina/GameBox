@@ -5,19 +5,6 @@
     <basecompoundref refid="class_b_tile" prot="public" virt="non-virtual">BTile</basecompoundref>
     <includes refid="_bound_tiles_8h" local="no">BoundTiles.h</includes>
       <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="class_b_explosion_tile_1acfdf51efa0a8dfef039e29ed5755a2c3" prot="private" static="no" mutable="no">
-        <type>float</type>
-        <definition>float BExplosionTile::start</definition>
-        <argsstring></argsstring>
-        <name>start</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="132" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="132" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="class_b_explosion_tile_1a3282133c7be84940650baeeee93a64c1" prot="private" static="no" mutable="no">
         <type>float</type>
         <definition>float BExplosionTile::interval</definition>
@@ -29,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="133" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="133" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="110" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="110" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_b_explosion_tile_1a36449b3adea5c288302408a83f271183" prot="private" static="no" mutable="no">
         <type>float</type>
@@ -42,23 +29,243 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="134" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="134" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="111" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_b_explosion_tile_1a87c385be0339a1d9ca26264e534420de" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool BExplosionTile::exploded</definition>
+        <argsstring></argsstring>
+        <name>exploded</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="112" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="class_b_explosion_tile_1a993eb687f4f595994747cc0f8534f78f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="class_b_explosion_tile_1aaa3e3d527dada2a0aec18c0144321832" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BExplosionTile::BExplosionTile</definition>
+        <argsstring>(const Color3B c, Coords position)</argsstring>
+        <name>BExplosionTile</name>
+        <param>
+          <type>const Color3B</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="116" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp" bodystart="34" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_explosion_tile_1a917731da768b4bb35255a853df6d80c8" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
-        <definition>void BExplosionTile::updateColor</definition>
+        <definition>void BExplosionTile::setInterval</definition>
+        <argsstring>(const float f)</argsstring>
+        <name>setInterval</name>
+        <param>
+          <type>const float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>set method for interval </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="121" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="121" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_explosion_tile_1ab6a40589c3a728c8700f1f20a2fd7275" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float BExplosionTile::getInterval</definition>
         <argsstring>()</argsstring>
-        <name>updateColor</name>
-        <reimplements refid="class_b_tile_1af9d81dcd02de972c1d451af63c0a48e5">updateColor</reimplements>
+        <name>getInterval</name>
+        <briefdescription>
+<para>Get method for interval. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="123" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="123" bodyend="123"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_explosion_tile_1a85953e050b9d016fb182525f8d81294a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BExplosionTile::setDuration</definition>
+        <argsstring>(const float f)</argsstring>
+        <name>setDuration</name>
+        <param>
+          <type>const float</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>set method for duration </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="126" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="126" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_explosion_tile_1a5eb4f1055a55608fe35341bb98a3c65f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float BExplosionTile::getDuration</definition>
+        <argsstring>()</argsstring>
+        <name>getDuration</name>
+        <briefdescription>
+<para>Get method for duration. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="128" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_explosion_tile_1a0d54cd6a37386d3d31f3bb565783973a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool BExplosionTile::hasExploded</definition>
+        <argsstring>()</argsstring>
+        <name>hasExploded</name>
+        <briefdescription>
+<para>holds the exploded state until it has been checked </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="133" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp" bodystart="58" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_explosion_tile_1a4c58075332815284002ddcff3fa2c5b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void BExplosionTile::updateVisibility</definition>
+        <argsstring>()</argsstring>
+        <name>updateVisibility</name>
+        <reimplements refid="class_b_tile_1a918487991f9b721438231c5a1ed0140f">updateVisibility</reimplements>
         <briefdescription>
 <para>Special updateColor will fade to off rather than just instantly turn off. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="140" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="140" bodyend="142"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="138" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="138" bodyend="139"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_explosion_tile_1a53e3eab8f3d8d1abfe6f611d0ecbe408" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BExplosionTile::scheduleFirstExplode</definition>
+        <argsstring>(float st)</argsstring>
+        <name>scheduleFirstExplode</name>
+        <param>
+          <type>float</type>
+          <declname>st</declname>
+        </param>
+        <briefdescription>
+<para>schedules firstFade and firstExplode once </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="144" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp" bodystart="68" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_explosion_tile_1a502982df55ae867ade34a740365dd353" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BExplosionTile::firstFade</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>firstFade</name>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>fades then schedules fade </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="149" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp" bodystart="82" bodyend="86"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_explosion_tile_1af7e3201b26423dba9f444e8e38f55bf2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BExplosionTile::firstExplode</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>firstExplode</name>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>explodes then schedules explode </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="154" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp" bodystart="76" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_explosion_tile_1a33aa8f23913aad84380eb6313c332448" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BExplosionTile::explode</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>explode</name>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>sets exploded then sets the tile on </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="159" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp" bodystart="88" bodyend="92"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_explosion_tile_1a2afddaca5a174592c15f36e7228ad821" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BExplosionTile::fade</definition>
+        <argsstring>(float dt)</argsstring>
+        <name>fade</name>
+        <param>
+          <type>float</type>
+          <declname>dt</declname>
+        </param>
+        <briefdescription>
+<para>sets the tile off </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="164" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp" bodystart="94" bodyend="97"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_b_explosion_tile_1ac8f21b7fc8e481647b0da1814c8581a3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="class_b_explosion_tile" kindref="compound">BExplosionTile</ref> *</type>
+        <definition>BExplosionTile * BExplosionTile::createWithFileColorLoc</definition>
+        <argsstring>(const char *image, const Color3B c, const Coords position)</argsstring>
+        <name>createWithFileColorLoc</name>
+        <reimplements refid="class_b_tile_1a66fcbdd086a6a5d51ca07545d41f7f73">createWithFileColorLoc</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>const Color3B</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_coords" kindref="compound">Coords</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="118" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp" bodystart="44" bodyend="56"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -96,27 +303,35 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="130" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="129" bodyend="144"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="108" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="107" bodyend="166"/>
     <listofallmembers>
+      <member refid="class_b_explosion_tile_1aaa3e3d527dada2a0aec18c0144321832" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>BExplosionTile</name></member>
       <member refid="class_b_tile_1a7646b89b701a776494e16405b9d90871" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>BTile</name></member>
-      <member refid="class_b_tile_1a3bf473aada31f2a76de8ea244d889d16" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>BTile</name></member>
-      <member refid="class_b_tile_1a238d813159a2c767471ad12e3ada7421" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>createWithFileColors</name></member>
+      <member refid="class_b_tile_1aac430c52b468db1167d715cc867e617e" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>BTile</name></member>
+      <member refid="class_b_tile_1a24df3d28185701700b2fd217641775f6" prot="protected" virt="non-virtual"><scope>BExplosionTile</scope><name>color</name></member>
+      <member refid="class_b_explosion_tile_1ac8f21b7fc8e481647b0da1814c8581a3" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>createWithFileColorLoc</name></member>
       <member refid="class_b_explosion_tile_1a36449b3adea5c288302408a83f271183" prot="private" virt="non-virtual"><scope>BExplosionTile</scope><name>duration</name></member>
+      <member refid="class_b_explosion_tile_1a33aa8f23913aad84380eb6313c332448" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>explode</name></member>
+      <member refid="class_b_explosion_tile_1a87c385be0339a1d9ca26264e534420de" prot="private" virt="non-virtual"><scope>BExplosionTile</scope><name>exploded</name></member>
+      <member refid="class_b_explosion_tile_1a2afddaca5a174592c15f36e7228ad821" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>fade</name></member>
+      <member refid="class_b_explosion_tile_1af7e3201b26423dba9f444e8e38f55bf2" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>firstExplode</name></member>
+      <member refid="class_b_explosion_tile_1a502982df55ae867ade34a740365dd353" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>firstFade</name></member>
+      <member refid="class_b_explosion_tile_1a5eb4f1055a55608fe35341bb98a3c65f" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>getDuration</name></member>
+      <member refid="class_b_explosion_tile_1ab6a40589c3a728c8700f1f20a2fd7275" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>getInterval</name></member>
       <member refid="class_b_tile_1af0e20c14792be231f3b490eb1ec10a73" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>getLocation</name></member>
+      <member refid="class_b_explosion_tile_1a0d54cd6a37386d3d31f3bb565783973a" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>hasExploded</name></member>
       <member refid="class_b_explosion_tile_1a3282133c7be84940650baeeee93a64c1" prot="private" virt="non-virtual"><scope>BExplosionTile</scope><name>interval</name></member>
       <member refid="class_b_tile_1ab59bb83ecf56ec30d95c98ab3090d532" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>isOn</name></member>
       <member refid="class_b_tile_1a9a106634c3890eaa7a69cddc9680d822" prot="protected" virt="non-virtual"><scope>BExplosionTile</scope><name>loc</name></member>
-      <member refid="class_b_tile_1a06ca0d5b7b5c17a3d8c53395c2614a87" prot="protected" virt="non-virtual"><scope>BExplosionTile</scope><name>offColor</name></member>
       <member refid="class_b_tile_1a793fe978c4d34fc611dbe7d21079610d" prot="protected" virt="non-virtual"><scope>BExplosionTile</scope><name>on</name></member>
-      <member refid="class_b_tile_1adf1af86d1ae9fdc122007381d4bf0a94" prot="protected" virt="non-virtual"><scope>BExplosionTile</scope><name>onColor</name></member>
+      <member refid="class_b_explosion_tile_1a53e3eab8f3d8d1abfe6f611d0ecbe408" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>scheduleFirstExplode</name></member>
+      <member refid="class_b_explosion_tile_1a85953e050b9d016fb182525f8d81294a" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>setDuration</name></member>
+      <member refid="class_b_explosion_tile_1a917731da768b4bb35255a853df6d80c8" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>setInterval</name></member>
       <member refid="class_b_tile_1a64dfa0b2841ab4fc5a1e465f1389cb10" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>setLocation</name></member>
-      <member refid="class_b_tile_1a992da9e2ba93dfffb623af6905d5d4ae" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>setOffColor</name></member>
-      <member refid="class_b_tile_1add471df28a98f6fcb4a3ca7409092fad" prot="public" virt="virtual"><scope>BExplosionTile</scope><name>setOn</name></member>
-      <member refid="class_b_tile_1abb4e47d337854e27649b6505536a8d4a" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>setOnColor</name></member>
-      <member refid="class_b_explosion_tile_1acfdf51efa0a8dfef039e29ed5755a2c3" prot="private" virt="non-virtual"><scope>BExplosionTile</scope><name>start</name></member>
+      <member refid="class_b_tile_1a0eccbc17368dbc03efea70fd9ca5af20" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>setOn</name></member>
       <member refid="class_b_tile_1a0c85a54373837c9bbe0fa2f83475234b" prot="protected" virt="non-virtual"><scope>BExplosionTile</scope><name>tileSize</name></member>
-      <member refid="class_b_explosion_tile_1a993eb687f4f595994747cc0f8534f78f" prot="public" virt="non-virtual"><scope>BExplosionTile</scope><name>updateColor</name></member>
       <member refid="class_b_tile_1ae6faeef28449999ac4f1b2938fd2e89c" prot="protected" virt="non-virtual"><scope>BExplosionTile</scope><name>updatePosition</name></member>
+      <member refid="class_b_explosion_tile_1a4c58075332815284002ddcff3fa2c5b0" prot="public" virt="virtual"><scope>BExplosionTile</scope><name>updateVisibility</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

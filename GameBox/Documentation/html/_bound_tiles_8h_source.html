@@ -102,89 +102,97 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00013"></a>00013 <span class="preprocessor"></span><span class="preprocessor">#define __GameBox__BoundTiles__</span>
 <a name="l00014"></a>00014 <span class="preprocessor"></span>
 <a name="l00015"></a>00015 <span class="preprocessor">#include &quot;cocos2d.h&quot;</span>
-<a name="l00016"></a>00016 
-<a name="l00017"></a><a class="code" href="_bound_tiles_8h.html#ac10da2fd6444e5c9f74c64c543c0d747">00017</a> <a class="code" href="_app_delegate_8cpp.html#ac10da2fd6444e5c9f74c64c543c0d747">USING_NS_CC</a>;
-<a name="l00018"></a>00018 
-<a name="l00019"></a><a class="code" href="struct_coords.html">00019</a> <span class="keyword">struct </span><a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a>
-<a name="l00020"></a>00020 {
-<a name="l00021"></a><a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">00021</a>     <span class="keywordtype">int</span> <a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a>;
-<a name="l00022"></a><a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">00022</a>     <span class="keywordtype">int</span> <a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a>;
-<a name="l00023"></a><a class="code" href="struct_coords.html#a5922d1783cefa759950faa50ac347191">00023</a>     <a class="code" href="struct_coords.html#a5922d1783cefa759950faa50ac347191">Coords</a>(){};
-<a name="l00024"></a><a class="code" href="struct_coords.html#aa268e580151ea70eec212852dd4c5f94">00024</a>     <a class="code" href="struct_coords.html#aa268e580151ea70eec212852dd4c5f94">Coords</a>(<span class="keywordtype">int</span> px, <span class="keywordtype">int</span> py):<a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a>(px),<a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a>(py){};
-<a name="l00025"></a>00025     
-<a name="l00026"></a><a class="code" href="struct_coords.html#a7507f92d1feefa3355ae8e9edae34e54">00026</a>     <span class="keyword">inline</span> <span class="keywordtype">bool</span> <a class="code" href="struct_coords.html#a7507f92d1feefa3355ae8e9edae34e54">operator== </a>(<span class="keyword">const</span> <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> r) {<span class="keywordflow">return</span> (<a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a> == r.<a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a> &amp;&amp; <a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a> == r.<a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a>);};
-<a name="l00027"></a><a class="code" href="struct_coords.html#a25bcb0e2d2f5677a10b7652e90a6f97b">00027</a>     <span class="keyword">inline</span> <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a>&amp; <a class="code" href="struct_coords.html#a25bcb0e2d2f5677a10b7652e90a6f97b">operator= </a>(<span class="keyword">const</span> <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> r) {<a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a> = r.<a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a>; <a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a> = r.<a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a>; <span class="keywordflow">return</span> *<span class="keyword">this</span>;};
-<a name="l00028"></a><a class="code" href="struct_coords.html#a2549173108b2479b62fd79b82ec54e01">00028</a>     <span class="keyword">inline</span> <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a>&amp; <a class="code" href="struct_coords.html#a2549173108b2479b62fd79b82ec54e01">operator+= </a>(<span class="keyword">const</span> <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> r) {(*this) = (*this) + r; <span class="keywordflow">return</span> *<span class="keyword">this</span>;};
-<a name="l00029"></a><a class="code" href="struct_coords.html#a168a9ed9edbffaf04e67c5b39306ca99">00029</a>     <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> <a class="code" href="struct_coords.html#a168a9ed9edbffaf04e67c5b39306ca99">operator+ </a>(<a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> r) {r.<a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a> = <a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a> + r.<a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a>; r.<a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a> = <a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a> + r.<a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a>; <span class="keywordflow">return</span> r;};
-<a name="l00030"></a><a class="code" href="struct_coords.html#a9f61875c64b3726afd0bb0d465889bad">00030</a>     <span class="keyword">inline</span> <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a>&amp; <a class="code" href="struct_coords.html#a9f61875c64b3726afd0bb0d465889bad">operator-= </a>(<span class="keyword">const</span> <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> r) {(*this) = (*this) - r; <span class="keywordflow">return</span> *<span class="keyword">this</span>;};
-<a name="l00031"></a><a class="code" href="struct_coords.html#a7cc7a225781b6bbad3e00a5e9572fee1">00031</a>     <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> <a class="code" href="struct_coords.html#a7cc7a225781b6bbad3e00a5e9572fee1">operator- </a>(<a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> r) {r.<a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a> = <a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a> - r.<a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a>; r.<a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a> = <a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a> - r.<a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a>; <span class="keywordflow">return</span> r;};
-<a name="l00032"></a>00032 };
-<a name="l00033"></a>00033 
-<a name="l00035"></a>00035 <span class="comment">/*=======================================      BTile      =======================================*/</span>
-<a name="l00036"></a>00036 
-<a name="l00041"></a><a class="code" href="class_b_tile.html">00041</a> <span class="keyword">class </span><a class="code" href="class_b_tile.html" title="This is the base class for tiles in the bound game.">BTile</a> : <span class="keyword">public</span> Sprite
-<a name="l00042"></a>00042 {
-<a name="l00043"></a>00043 <span class="keyword">protected</span>:
-<a name="l00044"></a><a class="code" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">00044</a>     <span class="keywordtype">float</span> <a class="code" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">tileSize</a>;
-<a name="l00045"></a><a class="code" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">00045</a>     <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> <a class="code" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">loc</a>;
-<a name="l00046"></a><a class="code" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">00046</a>     <span class="keywordtype">bool</span> <a class="code" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">on</a>;
-<a name="l00047"></a><a class="code" href="class_b_tile.html#adf1af86d1ae9fdc122007381d4bf0a94">00047</a>     Color3B <a class="code" href="class_b_tile.html#adf1af86d1ae9fdc122007381d4bf0a94">onColor</a>;
-<a name="l00048"></a><a class="code" href="class_b_tile.html#a06ca0d5b7b5c17a3d8c53395c2614a87">00048</a>     Color3B <a class="code" href="class_b_tile.html#a06ca0d5b7b5c17a3d8c53395c2614a87">offColor</a>;
+<a name="l00016"></a>00016 <span class="preprocessor">#include &quot;<a class="code" href="_custom_tile_grid_8h.html">CustomTileGrid.h</a>&quot;</span>
+<a name="l00017"></a>00017 
+<a name="l00018"></a><a class="code" href="_bound_tiles_8h.html#ac10da2fd6444e5c9f74c64c543c0d747">00018</a> <a class="code" href="_app_delegate_8cpp.html#ac10da2fd6444e5c9f74c64c543c0d747">USING_NS_CC</a>;
+<a name="l00019"></a>00019 
+<a name="l00021"></a>00021 <span class="comment">/*=======================================      BTile      =======================================*/</span>
+<a name="l00022"></a>00022 
+<a name="l00027"></a><a class="code" href="class_b_tile.html">00027</a> <span class="keyword">class </span><a class="code" href="class_b_tile.html" title="This is the base class for tiles in the bound game.">BTile</a> : <span class="keyword">public</span> Sprite
+<a name="l00028"></a>00028 {
+<a name="l00029"></a>00029 <span class="keyword">protected</span>:
+<a name="l00030"></a><a class="code" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">00030</a>     <span class="keywordtype">float</span> <a class="code" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">tileSize</a>;
+<a name="l00031"></a><a class="code" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">00031</a>     <a class="code" href="struct_coords.html">Coords</a> <a class="code" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">loc</a>;
+<a name="l00032"></a><a class="code" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">00032</a>     <span class="keywordtype">bool</span> <a class="code" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">on</a>;
+<a name="l00033"></a><a class="code" href="class_b_tile.html#a24df3d28185701700b2fd217641775f6">00033</a>     Color3B <a class="code" href="class_b_tile.html#a24df3d28185701700b2fd217641775f6">color</a>;
+<a name="l00034"></a>00034     
+<a name="l00038"></a><a class="code" href="class_b_tile.html#a918487991f9b721438231c5a1ed0140f">00038</a>     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_tile.html#a918487991f9b721438231c5a1ed0140f" title="Updates the current color based on the state of &#39;on&#39;.">updateVisibility</a>() { setVisible(<a class="code" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">on</a>); };
+<a name="l00039"></a>00039     
+<a name="l00043"></a><a class="code" href="class_b_tile.html#ae6faeef28449999ac4f1b2938fd2e89c">00043</a>     <span class="keywordtype">void</span> <a class="code" href="class_b_tile.html#ae6faeef28449999ac4f1b2938fd2e89c" title="Updates the current position of the tile.">updatePosition</a>() { setPosition( Point(<a class="code" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">loc</a>.<a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a> * <a class="code" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">tileSize</a> + <a class="code" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">tileSize</a>/2, <a class="code" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">loc</a>.<a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a> * <a class="code" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">tileSize</a> + <a class="code" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">tileSize</a>/2) ); };
+<a name="l00044"></a>00044     
+<a name="l00045"></a>00045 <span class="keyword">public</span>:
+<a name="l00046"></a><a class="code" href="class_b_tile.html#a7646b89b701a776494e16405b9d90871">00046</a>     <a class="code" href="class_b_tile.html#a7646b89b701a776494e16405b9d90871">BTile</a>(){};
+<a name="l00047"></a>00047     
+<a name="l00048"></a>00048     <a class="code" href="class_b_tile.html#a7646b89b701a776494e16405b9d90871">BTile</a>(<span class="keyword">const</span> Color3B c, <span class="keyword">const</span> <a class="code" href="struct_coords.html">Coords</a> position);
 <a name="l00049"></a>00049     
-<a name="l00053"></a><a class="code" href="class_b_tile.html#af9d81dcd02de972c1d451af63c0a48e5">00053</a>     <span class="keywordtype">void</span> <a class="code" href="class_b_tile.html#af9d81dcd02de972c1d451af63c0a48e5" title="Updates the current color based on the state of &#39;on&#39;.">updateColor</a>() { (<a class="code" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">on</a>) ? setColor(<a class="code" href="class_b_tile.html#adf1af86d1ae9fdc122007381d4bf0a94">onColor</a>) : setColor(<a class="code" href="class_b_tile.html#a06ca0d5b7b5c17a3d8c53395c2614a87">offColor</a>); };
-<a name="l00054"></a>00054     
-<a name="l00058"></a><a class="code" href="class_b_tile.html#ae6faeef28449999ac4f1b2938fd2e89c">00058</a>     <span class="keywordtype">void</span> <a class="code" href="class_b_tile.html#ae6faeef28449999ac4f1b2938fd2e89c" title="Updates the current position of the tile.">updatePosition</a>() { setPosition( Point(<a class="code" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">loc</a>.<a class="code" href="struct_coords.html#a59992d986e76375f31828d32c05cd15d">x</a> * <a class="code" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">tileSize</a> + <a class="code" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">tileSize</a>/2, <a class="code" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">loc</a>.<a class="code" href="struct_coords.html#a7ed64d02fb7550f1506a93fcfab7f16f">y</a> * <a class="code" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">tileSize</a> + <a class="code" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">tileSize</a>/2) ); };
-<a name="l00059"></a>00059     
-<a name="l00060"></a>00060 <span class="keyword">public</span>:
-<a name="l00061"></a>00061     <a class="code" href="class_b_tile.html#a7646b89b701a776494e16405b9d90871">BTile</a>();
-<a name="l00062"></a>00062     <a class="code" href="class_b_tile.html#a7646b89b701a776494e16405b9d90871">BTile</a>(<span class="keyword">const</span> Color3B onC, <span class="keyword">const</span> Color3B offC);
-<a name="l00063"></a>00063     
-<a name="l00064"></a>00064     <a class="code" href="class_b_tile.html" title="This is the base class for tiles in the bound game.">BTile</a>* <a class="code" href="class_b_tile.html#a238d813159a2c767471ad12e3ada7421">createWithFileColors</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="_game_list_8h.html#ac745ab21f82aa96829863dcfc37ef5a8">image</a>, <span class="keyword">const</span> Color3B onC, <span class="keyword">const</span> Color3B offC);
-<a name="l00065"></a>00065     
-<a name="l00070"></a><a class="code" href="class_b_tile.html#abb4e47d337854e27649b6505536a8d4a">00070</a>     <span class="keywordtype">void</span> <a class="code" href="class_b_tile.html#abb4e47d337854e27649b6505536a8d4a" title="Change the &quot;On&quot; color of the tile.">setOnColor</a>(<span class="keyword">const</span> Color3B color) { <a class="code" href="class_b_tile.html#adf1af86d1ae9fdc122007381d4bf0a94">onColor</a> = color; <a class="code" href="class_b_tile.html#af9d81dcd02de972c1d451af63c0a48e5" title="Updates the current color based on the state of &#39;on&#39;.">updateColor</a>(); };
-<a name="l00071"></a>00071     
-<a name="l00076"></a><a class="code" href="class_b_tile.html#a992da9e2ba93dfffb623af6905d5d4ae">00076</a>     <span class="keywordtype">void</span> <a class="code" href="class_b_tile.html#a992da9e2ba93dfffb623af6905d5d4ae" title="Change the &quot;Off&quot; color of the tile.">setOffColor</a>(<span class="keyword">const</span> Color3B color) { <a class="code" href="class_b_tile.html#adf1af86d1ae9fdc122007381d4bf0a94">onColor</a> = color; <a class="code" href="class_b_tile.html#af9d81dcd02de972c1d451af63c0a48e5" title="Updates the current color based on the state of &#39;on&#39;.">updateColor</a>(); };
-<a name="l00077"></a>00077     
-<a name="l00082"></a><a class="code" href="class_b_tile.html#add471df28a98f6fcb4a3ca7409092fad">00082</a>     <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code" href="class_b_tile.html#add471df28a98f6fcb4a3ca7409092fad" title="Sets the state of the Tile.">setOn</a>(<span class="keywordtype">bool</span> state) { <a class="code" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">on</a> = state; <a class="code" href="class_b_tile.html#af9d81dcd02de972c1d451af63c0a48e5" title="Updates the current color based on the state of &#39;on&#39;.">updateColor</a>(); };
-<a name="l00083"></a>00083     
-<a name="l00087"></a><a class="code" href="class_b_tile.html#ab59bb83ecf56ec30d95c98ab3090d532">00087</a>     <span class="keywordtype">bool</span> <a class="code" href="class_b_tile.html#ab59bb83ecf56ec30d95c98ab3090d532" title="Reutrns the on start.">isOn</a>() {<span class="keywordflow">return</span> <a class="code" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">on</a>;};
-<a name="l00088"></a>00088     
-<a name="l00093"></a><a class="code" href="class_b_tile.html#a64dfa0b2841ab4fc5a1e465f1389cb10">00093</a>     <span class="keywordtype">void</span> <a class="code" href="class_b_tile.html#a64dfa0b2841ab4fc5a1e465f1389cb10" title="Sets the location of the tile.">setLocation</a>(<a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> location) { <a class="code" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">loc</a> = location; <a class="code" href="class_b_tile.html#ae6faeef28449999ac4f1b2938fd2e89c" title="Updates the current position of the tile.">updatePosition</a>(); };
-<a name="l00094"></a><a class="code" href="class_b_tile.html#af0e20c14792be231f3b490eb1ec10a73">00094</a>     <a class="code" href="struct_coords.html" title="simple structure with two ints to represent 2D coordinates">Coords</a> <a class="code" href="class_b_tile.html#af0e20c14792be231f3b490eb1ec10a73">getLocation</a>() {<span class="keywordflow">return</span> <a class="code" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">loc</a>;};
-<a name="l00095"></a>00095     
-<a name="l00096"></a>00096 };
-<a name="l00097"></a>00097 
-<a name="l00099"></a>00099 <span class="comment">/*=====================================      BFloorTile      ====================================*/</span>
-<a name="l00100"></a>00100 
-<a name="l00105"></a><a class="code" href="class_b_floor_tile.html">00105</a> <span class="keyword">class </span><a class="code" href="class_b_floor_tile.html" title="This is a floor tile, the player can move throught this freely.">BFloorTile</a> : <span class="keyword">public</span> <a class="code" href="class_b_tile.html" title="This is the base class for tiles in the bound game.">BTile</a>
-<a name="l00106"></a>00106 {
-<a name="l00107"></a>00107 
-<a name="l00108"></a>00108 };
-<a name="l00109"></a>00109 
-<a name="l00111"></a>00111 <span class="comment">/*=====================================      BWallTile      =====================================*/</span>
-<a name="l00112"></a>00112 
-<a name="l00117"></a><a class="code" href="class_b_wall_tile.html">00117</a> <span class="keyword">class </span><a class="code" href="class_b_wall_tile.html" title="This is a wall tile, the player can not pass through this.">BWallTile</a> : <span class="keyword">public</span> <a class="code" href="class_b_tile.html" title="This is the base class for tiles in the bound game.">BTile</a>
-<a name="l00118"></a>00118 {
+<a name="l00050"></a>00050     <span class="keyword">static</span> <a class="code" href="class_b_tile.html" title="This is the base class for tiles in the bound game.">BTile</a>* <a class="code" href="class_b_tile.html#a66fcbdd086a6a5d51ca07545d41f7f73">createWithFileColorLoc</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="_game_list_8h.html#ac745ab21f82aa96829863dcfc37ef5a8">image</a>, <span class="keyword">const</span> Color3B c, <span class="keyword">const</span> <a class="code" href="struct_coords.html">Coords</a> position);
+<a name="l00051"></a>00051     
+<a name="l00056"></a><a class="code" href="class_b_tile.html#a0eccbc17368dbc03efea70fd9ca5af20">00056</a>     <span class="keywordtype">void</span> <a class="code" href="class_b_tile.html#a0eccbc17368dbc03efea70fd9ca5af20" title="Sets the state of the Tile.">setOn</a>(<span class="keywordtype">bool</span> state) { <a class="code" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">on</a> = state; <a class="code" href="class_b_tile.html#a918487991f9b721438231c5a1ed0140f" title="Updates the current color based on the state of &#39;on&#39;.">updateVisibility</a>(); };
+<a name="l00057"></a>00057     
+<a name="l00061"></a><a class="code" href="class_b_tile.html#ab59bb83ecf56ec30d95c98ab3090d532">00061</a>     <span class="keywordtype">bool</span> <a class="code" href="class_b_tile.html#ab59bb83ecf56ec30d95c98ab3090d532" title="Reutrns the on start.">isOn</a>() {<span class="keywordflow">return</span> <a class="code" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">on</a>;};
+<a name="l00062"></a>00062     
+<a name="l00067"></a><a class="code" href="class_b_tile.html#a64dfa0b2841ab4fc5a1e465f1389cb10">00067</a>     <span class="keywordtype">void</span> <a class="code" href="class_b_tile.html#a64dfa0b2841ab4fc5a1e465f1389cb10" title="Sets the location of the tile.">setLocation</a>(<a class="code" href="struct_coords.html">Coords</a> location) { <a class="code" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">loc</a> = location; <a class="code" href="class_b_tile.html#ae6faeef28449999ac4f1b2938fd2e89c" title="Updates the current position of the tile.">updatePosition</a>(); };
+<a name="l00068"></a><a class="code" href="class_b_tile.html#af0e20c14792be231f3b490eb1ec10a73">00068</a>     <a class="code" href="struct_coords.html">Coords</a> <a class="code" href="class_b_tile.html#af0e20c14792be231f3b490eb1ec10a73">getLocation</a>() {<span class="keywordflow">return</span> <a class="code" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">loc</a>;};
+<a name="l00069"></a>00069     
+<a name="l00070"></a>00070 };
+<a name="l00071"></a>00071 
+<a name="l00073"></a>00073 <span class="comment">/*=====================================      BFloorTile      ====================================*/</span>
+<a name="l00074"></a>00074 
+<a name="l00079"></a><a class="code" href="class_b_floor_tile.html">00079</a> <span class="keyword">class </span><a class="code" href="class_b_floor_tile.html" title="This is a floor tile, the player can move throught this freely.">BFloorTile</a> : <span class="keyword">public</span> <a class="code" href="class_b_tile.html" title="This is the base class for tiles in the bound game.">BTile</a>
+<a name="l00080"></a>00080 {
+<a name="l00081"></a>00081 <span class="keyword">public</span>:
+<a name="l00082"></a><a class="code" href="class_b_floor_tile.html#af8518a127131e179e2a9c11fd232db4d">00082</a>     <span class="keyword">static</span> <a class="code" href="class_b_floor_tile.html" title="This is a floor tile, the player can move throught this freely.">BFloorTile</a>* <a class="code" href="class_b_floor_tile.html#af8518a127131e179e2a9c11fd232db4d">createWithFileColorLoc</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="_game_list_8h.html#ac745ab21f82aa96829863dcfc37ef5a8">image</a>, <span class="keyword">const</span> Color3B c, <span class="keyword">const</span> <a class="code" href="struct_coords.html">Coords</a> position)
+<a name="l00083"></a>00083                             {<span class="keywordflow">return</span> (<a class="code" href="class_b_floor_tile.html" title="This is a floor tile, the player can move throught this freely.">BFloorTile</a>*)<a class="code" href="class_b_floor_tile.html#af8518a127131e179e2a9c11fd232db4d">BTile::createWithFileColorLoc</a>(image, c, position); };
+<a name="l00084"></a>00084 };
+<a name="l00085"></a>00085 
+<a name="l00087"></a>00087 <span class="comment">/*=====================================      BWallTile      =====================================*/</span>
+<a name="l00088"></a>00088 
+<a name="l00093"></a><a class="code" href="class_b_wall_tile.html">00093</a> <span class="keyword">class </span><a class="code" href="class_b_wall_tile.html" title="This is a wall tile, the player can not pass through this.">BWallTile</a> : <span class="keyword">public</span> <a class="code" href="class_b_tile.html" title="This is the base class for tiles in the bound game.">BTile</a>
+<a name="l00094"></a>00094 {
+<a name="l00095"></a>00095 <span class="keyword">public</span>:
+<a name="l00096"></a><a class="code" href="class_b_wall_tile.html#a834cb0c60a8fd985e3c1ac1845f4192f">00096</a>     <span class="keyword">static</span> <a class="code" href="class_b_wall_tile.html" title="This is a wall tile, the player can not pass through this.">BWallTile</a>* <a class="code" href="class_b_wall_tile.html#a834cb0c60a8fd985e3c1ac1845f4192f">createWithFileColorLoc</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="_game_list_8h.html#ac745ab21f82aa96829863dcfc37ef5a8">image</a>, <span class="keyword">const</span> Color3B c, <span class="keyword">const</span> <a class="code" href="struct_coords.html">Coords</a> position)
+<a name="l00097"></a>00097                             {<span class="keywordflow">return</span> (<a class="code" href="class_b_wall_tile.html" title="This is a wall tile, the player can not pass through this.">BWallTile</a>*)<a class="code" href="class_b_wall_tile.html#a834cb0c60a8fd985e3c1ac1845f4192f">BTile::createWithFileColorLoc</a>(image, c, position); };
+<a name="l00098"></a>00098 };
+<a name="l00099"></a>00099 
+<a name="l00101"></a>00101 <span class="comment">/*===================================      BExplosionTile      ==================================*/</span>
+<a name="l00102"></a>00102 
+<a name="l00107"></a><a class="code" href="class_b_explosion_tile.html">00107</a> <span class="keyword">class </span><a class="code" href="class_b_explosion_tile.html" title="This is an explosion tile, the player will die if they touch this while its on.">BExplosionTile</a> : <span class="keyword">public</span> <a class="code" href="class_b_tile.html" title="This is the base class for tiles in the bound game.">BTile</a>
+<a name="l00108"></a>00108 {
+<a name="l00109"></a>00109 <span class="keyword">private</span>:
+<a name="l00110"></a>00110     <span class="keywordtype">float</span> interval;
+<a name="l00111"></a>00111     <span class="keywordtype">float</span> duration;
+<a name="l00112"></a>00112     <span class="keywordtype">bool</span> exploded;
+<a name="l00113"></a>00113     
+<a name="l00114"></a>00114 <span class="keyword">public</span>:
+<a name="l00115"></a>00115     
+<a name="l00116"></a>00116     <a class="code" href="class_b_explosion_tile.html#aaa3e3d527dada2a0aec18c0144321832">BExplosionTile</a>(<span class="keyword">const</span> Color3B c, <a class="code" href="struct_coords.html">Coords</a> position);
+<a name="l00117"></a>00117     
+<a name="l00118"></a>00118     <span class="keyword">static</span> <a class="code" href="class_b_explosion_tile.html" title="This is an explosion tile, the player will die if they touch this while its on.">BExplosionTile</a>* <a class="code" href="class_b_explosion_tile.html#ac8f21b7fc8e481647b0da1814c8581a3">createWithFileColorLoc</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* <a class="code" href="_game_list_8h.html#ac745ab21f82aa96829863dcfc37ef5a8">image</a>, <span class="keyword">const</span> Color3B c, <span class="keyword">const</span> <a class="code" href="struct_coords.html">Coords</a> position);
 <a name="l00119"></a>00119     
-<a name="l00120"></a>00120 };
-<a name="l00121"></a>00121 
-<a name="l00123"></a>00123 <span class="comment">/*===================================      BExplosionTile      ==================================*/</span>
-<a name="l00124"></a>00124 
-<a name="l00129"></a><a class="code" href="class_b_explosion_tile.html">00129</a> <span class="keyword">class </span><a class="code" href="class_b_explosion_tile.html" title="This is an explosion tile, the player will die if they touch this while its on.">BExplosionTile</a> : <span class="keyword">public</span> <a class="code" href="class_b_tile.html" title="This is the base class for tiles in the bound game.">BTile</a>
-<a name="l00130"></a>00130 {
-<a name="l00131"></a>00131 <span class="keyword">private</span>:
-<a name="l00132"></a>00132     <span class="keywordtype">float</span> start;
-<a name="l00133"></a>00133     <span class="keywordtype">float</span> interval;
-<a name="l00134"></a>00134     <span class="keywordtype">float</span> duration;
-<a name="l00135"></a>00135     
-<a name="l00136"></a>00136 <span class="keyword">public</span>:
-<a name="l00140"></a><a class="code" href="class_b_explosion_tile.html#a993eb687f4f595994747cc0f8534f78f">00140</a>     <span class="keywordtype">void</span> <a class="code" href="class_b_explosion_tile.html#a993eb687f4f595994747cc0f8534f78f" title="Special updateColor will fade to off rather than just instantly turn off.">updateColor</a>() { <span class="keywordflow">if</span>(<a class="code" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">on</a>) setColor(<a class="code" href="class_b_tile.html#adf1af86d1ae9fdc122007381d4bf0a94">onColor</a>);
-<a name="l00141"></a>00141                         <span class="keywordflow">else</span> runAction( Sequence::create(
-<a name="l00142"></a>00142                         TintTo::create(interval / 2, <a class="code" href="class_b_tile.html#a06ca0d5b7b5c17a3d8c53395c2614a87">offColor</a>.r, <a class="code" href="class_b_tile.html#a06ca0d5b7b5c17a3d8c53395c2614a87">offColor</a>.g, <a class="code" href="class_b_tile.html#a06ca0d5b7b5c17a3d8c53395c2614a87">offColor</a>.b), NULL));};
-<a name="l00143"></a>00143 
-<a name="l00144"></a>00144 };
-<a name="l00145"></a>00145 
-<a name="l00146"></a>00146 <span class="preprocessor">#endif </span><span class="comment">/* defined(__GameBox__BoundTiles__) */</span>
+<a name="l00121"></a><a class="code" href="class_b_explosion_tile.html#a917731da768b4bb35255a853df6d80c8">00121</a>     <span class="keywordtype">void</span> <a class="code" href="class_b_explosion_tile.html#a917731da768b4bb35255a853df6d80c8" title="set method for interval">setInterval</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> f) { interval = f; };
+<a name="l00123"></a><a class="code" href="class_b_explosion_tile.html#ab6a40589c3a728c8700f1f20a2fd7275">00123</a>     <span class="keywordtype">float</span> <a class="code" href="class_b_explosion_tile.html#ab6a40589c3a728c8700f1f20a2fd7275" title="Get method for interval.">getInterval</a>() { <span class="keywordflow">return</span> interval; };
+<a name="l00124"></a>00124     
+<a name="l00126"></a><a class="code" href="class_b_explosion_tile.html#a85953e050b9d016fb182525f8d81294a">00126</a>     <span class="keywordtype">void</span> <a class="code" href="class_b_explosion_tile.html#a85953e050b9d016fb182525f8d81294a" title="set method for duration">setDuration</a>(<span class="keyword">const</span> <span class="keywordtype">float</span> f) { duration = f; };
+<a name="l00128"></a><a class="code" href="class_b_explosion_tile.html#a5eb4f1055a55608fe35341bb98a3c65f">00128</a>     <span class="keywordtype">float</span> <a class="code" href="class_b_explosion_tile.html#a5eb4f1055a55608fe35341bb98a3c65f" title="Get method for duration.">getDuration</a>() { <span class="keywordflow">return</span> duration; };
+<a name="l00129"></a>00129     
+<a name="l00133"></a>00133     <span class="keywordtype">bool</span> <a class="code" href="class_b_explosion_tile.html#a0d54cd6a37386d3d31f3bb565783973a" title="holds the exploded state until it has been checked">hasExploded</a>();
+<a name="l00134"></a>00134 
+<a name="l00138"></a><a class="code" href="class_b_explosion_tile.html#a4c58075332815284002ddcff3fa2c5b0">00138</a>     <span class="keywordtype">void</span> <a class="code" href="class_b_explosion_tile.html#a4c58075332815284002ddcff3fa2c5b0" title="Special updateColor will fade to off rather than just instantly turn off.">updateVisibility</a>() { <span class="keywordflow">if</span>(<a class="code" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">on</a>) setOpacity(150);
+<a name="l00139"></a>00139                          <span class="keywordflow">else</span> runAction( FadeOut::create(interval/2) );};
+<a name="l00140"></a>00140     
+<a name="l00144"></a>00144     <span class="keywordtype">void</span> <a class="code" href="class_b_explosion_tile.html#a53e3eab8f3d8d1abfe6f611d0ecbe408" title="schedules firstFade and firstExplode once">scheduleFirstExplode</a>(<span class="keywordtype">float</span> st);
+<a name="l00145"></a>00145     
+<a name="l00149"></a>00149     <span class="keywordtype">void</span> <a class="code" href="class_b_explosion_tile.html#a502982df55ae867ade34a740365dd353" title="fades then schedules fade">firstFade</a>(<span class="keywordtype">float</span> dt);
+<a name="l00150"></a>00150     
+<a name="l00154"></a>00154     <span class="keywordtype">void</span> <a class="code" href="class_b_explosion_tile.html#af7e3201b26423dba9f444e8e38f55bf2" title="explodes then schedules explode">firstExplode</a>(<span class="keywordtype">float</span> dt);
+<a name="l00155"></a>00155     
+<a name="l00159"></a>00159     <span class="keywordtype">void</span> <a class="code" href="class_b_explosion_tile.html#a33aa8f23913aad84380eb6313c332448" title="sets exploded then sets the tile on">explode</a>(<span class="keywordtype">float</span> dt);
+<a name="l00160"></a>00160     
+<a name="l00164"></a>00164     <span class="keywordtype">void</span> <a class="code" href="class_b_explosion_tile.html#a2afddaca5a174592c15f36e7228ad821" title="sets the tile off">fade</a>(<span class="keywordtype">float</span> dt);
+<a name="l00165"></a>00165 
+<a name="l00166"></a>00166 };
+<a name="l00167"></a>00167 
+<a name="l00168"></a>00168 <span class="preprocessor">#endif </span><span class="comment">/* defined(__GameBox__BoundTiles__) */</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -205,7 +213,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_bound_tiles_8h.html">BoundTiles.h</a>      </li>
 
-    <li class="footer">Generated on Tue Sep 3 2013 17:45:33 for GameBox by
+    <li class="footer">Generated on Thu Sep 19 2013 18:51:28 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

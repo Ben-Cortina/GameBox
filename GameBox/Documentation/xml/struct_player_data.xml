@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="76" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="76" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="57" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="57" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_player_data_1ad1fb36f8e37fa1ee21fece6f6634a3be" prot="public" static="no" mutable="no">
         <type>Color3B</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="77" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="77" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="58" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="58" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -36,19 +36,19 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="44">
+      <node id="48">
         <label>PlayerData</label>
         <link refid="struct_player_data"/>
-        <childnode refid="45" relation="usage">
+        <childnode refid="49" relation="usage">
           <edgelabel>loc</edgelabel>
         </childnode>
       </node>
-      <node id="45">
+      <node id="49">
         <label>Coords</label>
         <link refid="struct_coords"/>
       </node>
     </collaborationgraph>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="75" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="74" bodyend="78"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" line="56" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/TheBox/TheBox.h" bodystart="55" bodyend="59"/>
     <listofallmembers>
       <member refid="struct_player_data_1ad1fb36f8e37fa1ee21fece6f6634a3be" prot="public" virt="non-virtual"><scope>PlayerData</scope><name>color</name></member>
       <member refid="struct_player_data_1a6646f159881b83da159eb7410fad7fd5" prot="public" virt="non-virtual"><scope>PlayerData</scope><name>loc</name></member>

@@ -4,19 +4,30 @@
     <compoundname>BoundTiles.cpp</compoundname>
     <includes refid="_bound_tiles_8h" local="yes">BoundTiles.h</includes>
     <incdepgraph>
-      <node id="57">
+      <node id="123">
         <label>BoundTiles.h</label>
         <link refid="_bound_tiles_8h"/>
-        <childnode refid="58" relation="include">
+        <childnode refid="124" relation="include">
+        </childnode>
+        <childnode refid="125" relation="include">
         </childnode>
       </node>
-      <node id="56">
+      <node id="122">
         <label>GameBox/GameBox/Classes/Bound/BoundTiles.cpp</label>
         <link refid="BoundTiles.cpp"/>
-        <childnode refid="57" relation="include">
+        <childnode refid="123" relation="include">
         </childnode>
       </node>
-      <node id="58">
+      <node id="126">
+        <label>iostream</label>
+      </node>
+      <node id="125">
+        <label>CustomTileGrid.h</label>
+        <link refid="_custom_tile_grid_8h"/>
+        <childnode refid="126" relation="include">
+        </childnode>
+      </node>
+      <node id="124">
         <label>cocos2d.h</label>
       </node>
     </incdepgraph>
@@ -31,29 +42,91 @@
 <codeline lineno="8"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bound_tiles_8h" kindref="compound">BoundTiles.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="comment">/*=======================================<sp/><sp/><sp/><sp/><sp/><sp/>BTile<sp/><sp/><sp/><sp/><sp/><sp/>=======================================*/</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><ref refid="class_b_tile_1a7646b89b701a776494e16405b9d90871" kindref="member">BTile::BTile</ref>()</highlight></codeline>
-<codeline lineno="13"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_tile_1a7646b89b701a776494e16405b9d90871" kindref="member">BTile</ref>(Color3B(255,255,255),Color3B(0,0,0));</highlight></codeline>
-<codeline lineno="15"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"><ref refid="class_b_tile_1a7646b89b701a776494e16405b9d90871" kindref="member">BTile::BTile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Color3B<sp/>onC,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Color3B<sp/>offC):<sp/>onColor(onC),<sp/>offColor(offC)</highlight></codeline>
-<codeline lineno="18"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>on<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>updateColor();</highlight></codeline>
-<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><ref refid="class_b_tile" kindref="compound" tooltip="This is the base class for tiles in the bound game.">BTile</ref>*<sp/><ref refid="class_b_tile_1a238d813159a2c767471ad12e3ada7421" kindref="member">BTile::createWithFileColors</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_game_list_8h_1ac745ab21f82aa96829863dcfc37ef5a8" kindref="member">image</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Color3B<sp/>onC,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Color3B<sp/>offC)</highlight></codeline>
-<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_tile" kindref="compound" tooltip="This is the base class for tiles in the bound game.">BTile</ref><sp/>*pobBTile<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_b_tile_1a7646b89b701a776494e16405b9d90871" kindref="member">BTile</ref>(onC,<sp/>offC);</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pobBTile<sp/>&amp;&amp;<sp/>pobBTile-&gt;initWithFile(image))</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pobBTile-&gt;autorelease();</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pobBTile;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>CC_SAFE_DELETE(pobBTile);</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
-<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><ref refid="class_b_tile_1a7646b89b701a776494e16405b9d90871" kindref="member">BTile::BTile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Color3B<sp/>c,<sp/><ref refid="struct_coords" kindref="compound">Coords</ref><sp/>position):<sp/>color(c),<sp/>loc(position)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>on<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>updateVisibility();</highlight></codeline>
+<codeline lineno="17"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><ref refid="class_b_tile" kindref="compound" tooltip="This is the base class for tiles in the bound game.">BTile</ref>*<sp/><ref refid="class_b_tile_1a66fcbdd086a6a5d51ca07545d41f7f73" kindref="member">BTile::createWithFileColorLoc</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="_game_list_8h_1ac745ab21f82aa96829863dcfc37ef5a8" kindref="member">image</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Color3B<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_coords" kindref="compound">Coords</ref><sp/>position)</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_tile" kindref="compound" tooltip="This is the base class for tiles in the bound game.">BTile</ref><sp/>*pobBTile<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_b_tile_1a7646b89b701a776494e16405b9d90871" kindref="member">BTile</ref>(c,<sp/>position);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pobBTile<sp/>&amp;&amp;<sp/>pobBTile-&gt;initWithFile(image))</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pobBTile-&gt;setColor(c);</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pobBTile-&gt;autorelease();</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pobBTile;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>CC_SAFE_DELETE(pobBTile);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="comment">/*==================================<sp/><sp/><sp/><sp/><sp/><sp/>BExplosionTile<sp/><sp/><sp/><sp/><sp/><sp/>===================================*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><ref refid="class_b_explosion_tile_1aaa3e3d527dada2a0aec18c0144321832" kindref="member">BExplosionTile::BExplosionTile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Color3B<sp/>c,<sp/><ref refid="struct_coords" kindref="compound">Coords</ref><sp/>position)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_tile_1a24df3d28185701700b2fd217641775f6" kindref="member">color</ref><sp/>=<sp/>c;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_tile_1a9a106634c3890eaa7a69cddc9680d822" kindref="member">loc</ref><sp/>=<sp/>position;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_tile_1a793fe978c4d34fc611dbe7d21079610d" kindref="member">on</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>exploded<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>duration<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>interval<sp/>=<sp/>1;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><ref refid="class_b_explosion_tile" kindref="compound" tooltip="This is an explosion tile, the player will die if they touch this while its on.">BExplosionTile</ref>*<sp/><ref refid="class_b_explosion_tile_1ac8f21b7fc8e481647b0da1814c8581a3" kindref="member">BExplosionTile::createWithFileColorLoc</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>image,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Color3B<sp/>c,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_coords" kindref="compound">Coords</ref><sp/>position)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_explosion_tile" kindref="compound" tooltip="This is an explosion tile, the player will die if they touch this while its on.">BExplosionTile</ref><sp/>*pobBTile<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="class_b_explosion_tile_1aaa3e3d527dada2a0aec18c0144321832" kindref="member">BExplosionTile</ref>(c,<sp/>position);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(pobBTile<sp/>&amp;&amp;<sp/>pobBTile-&gt;initWithFile(image))</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pobBTile-&gt;setColor(c);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pobBTile-&gt;setOpacity(0);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>pobBTile-&gt;autorelease();</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>pobBTile;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>CC_SAFE_DELETE(pobBTile);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>NULL;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_explosion_tile_1a0d54cd6a37386d3d31f3bb565783973a" kindref="member" tooltip="holds the exploded state until it has been checked">BExplosionTile::hasExploded</ref>()</highlight></codeline>
+<codeline lineno="59"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(exploded)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exploded<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_explosion_tile_1a53e3eab8f3d8d1abfe6f611d0ecbe408" kindref="member" tooltip="schedules firstFade and firstExplode once">BExplosionTile::scheduleFirstExplode</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>st)</highlight></codeline>
+<codeline lineno="69"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//schedule<sp/>first<sp/>explosion</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>scheduleOnce(schedule_selector(<ref refid="class_b_explosion_tile_1af7e3201b26423dba9f444e8e38f55bf2" kindref="member" tooltip="explodes then schedules explode">BExplosionTile::firstExplode</ref>),<sp/>st<sp/>+<sp/>0.1f);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//schedule<sp/>first<sp/>fade</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>scheduleOnce(schedule_selector(<ref refid="class_b_explosion_tile_1a502982df55ae867ade34a740365dd353" kindref="member" tooltip="fades then schedules fade">BExplosionTile::firstFade</ref>),<sp/>st<sp/>+<sp/>duration<sp/>+<sp/>0.1f);</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_explosion_tile_1af7e3201b26423dba9f444e8e38f55bf2" kindref="member" tooltip="explodes then schedules explode">BExplosionTile::firstExplode</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>
+<codeline lineno="77"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_explosion_tile_1a33aa8f23913aad84380eb6313c332448" kindref="member" tooltip="sets exploded then sets the tile on">explode</ref>(dt);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>schedule(schedule_selector(<ref refid="class_b_explosion_tile_1a33aa8f23913aad84380eb6313c332448" kindref="member" tooltip="sets exploded then sets the tile on">BExplosionTile::explode</ref>),<sp/>interval);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_explosion_tile_1a502982df55ae867ade34a740365dd353" kindref="member" tooltip="fades then schedules fade">BExplosionTile::firstFade</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_explosion_tile_1a2afddaca5a174592c15f36e7228ad821" kindref="member" tooltip="sets the tile off">fade</ref>(dt);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>schedule(schedule_selector(<ref refid="class_b_explosion_tile_1a2afddaca5a174592c15f36e7228ad821" kindref="member" tooltip="sets the tile off">BExplosionTile::fade</ref>),<sp/>interval);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_explosion_tile_1a33aa8f23913aad84380eb6313c332448" kindref="member" tooltip="sets exploded then sets the tile on">BExplosionTile::explode</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>exploded<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_tile_1a0eccbc17368dbc03efea70fd9ca5af20" kindref="member" tooltip="Sets the state of the Tile.">setOn</ref>(</highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_explosion_tile_1a2afddaca5a174592c15f36e7228ad821" kindref="member" tooltip="sets the tile off">BExplosionTile::fade</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>dt)</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_tile_1a0eccbc17368dbc03efea70fd9ca5af20" kindref="member" tooltip="Sets the state of the Tile.">setOn</ref>(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.cpp"/>
   </compounddef>

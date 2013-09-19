@@ -4,6 +4,10 @@
     <compoundname>GameBox/GameBox/Classes/Helpers/</compoundname>
     <innerfile refid="_custom_c_c_8cpp">CustomCC.cpp</innerfile>
     <innerfile refid="_custom_c_c_8h">CustomCC.h</innerfile>
+    <innerfile refid="_custom_tile_grid_8cpp">CustomTileGrid.cpp</innerfile>
+    <innerfile refid="_custom_tile_grid_8h">CustomTileGrid.h</innerfile>
+    <innerfile refid="_over_layer_8cpp">OverLayer.cpp</innerfile>
+    <innerfile refid="_over_layer_8h">OverLayer.h</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -6,8 +6,9 @@
 
 #include "BoundPlayer.h"
 
-BPlayer::BPlayer(const char* image)
+BPlayer::BPlayer(const char* image, std::function<void(Object*)> escF)
 {
+    escFunc = escF;
     force.x = 0;
     force.y = 0;
     velocity.x = 0;
@@ -260,9 +261,6 @@ void BPlayer::handleCollisions(float x, float y)
 
 void BPlayer::keyPressed(int keyCode)
 {
-    //do nothing if it is paused
-    if (Director::getInstance()->isPaused() || !active)
-        return;
     
     //the change as a result of the keypress
     int x = 0;
@@ -272,7 +270,7 @@ void BPlayer::keyPressed(int keyCode)
     {
             // exitLoc
         case 53: //Esc
-            //openMenu();
+            escFunc(getParent());
             break;
             
             // Player Up
@@ -319,6 +317,10 @@ void BPlayer::keyPressed(int keyCode)
             break;
     }
     
+    //do nothing if it is paused
+    if (Director::getInstance()->isPaused() || !active)
+        return;
+    
     if( x != 0 )
         setForceX(x);
     if( y != 0)
@@ -327,17 +329,9 @@ void BPlayer::keyPressed(int keyCode)
 
 void BPlayer::keyReleased(int keyCode)
 {
-    //do nothing if it is paused
-    if (Director::getInstance()->isPaused() || !active)
-        return;
     
     switch(keyCode)
     {
-            // exitLoc
-        case 53: //Esc
-            //openMenu();
-            break;
-            
             // Player Up
         case 126: // Up Arrow
         case 13:  // W
@@ -365,6 +359,11 @@ void BPlayer::keyReleased(int keyCode)
         default:
             break;
     }
+    
+    //do nothing if it is paused
+    if (Director::getInstance()->isPaused() || !active)
+        return;
+    
     if( !keyState.left && !keyState.right )
         setForceX(0);
     if( !keyState.up && !keyState.down )

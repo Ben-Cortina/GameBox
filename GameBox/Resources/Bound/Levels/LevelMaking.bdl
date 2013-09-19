@@ -1,6 +1,5 @@
 # A level file should be a plain text file ending in .bdl
-# First line will be the name of the level
-Level01
+# Everything after a # on a line will be ignored
 
 # First we define the floor and wall tile for the level as such
 # <Letter> <Red 0-255> <Green 0-255> <Blue 0-255>

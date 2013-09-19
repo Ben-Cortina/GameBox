@@ -4,6 +4,34 @@
     <compoundname>BFloorTile</compoundname>
     <basecompoundref refid="class_b_tile" prot="public" virt="non-virtual">BTile</basecompoundref>
     <includes refid="_bound_tiles_8h" local="no">BoundTiles.h</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="class_b_floor_tile_1af8518a127131e179e2a9c11fd232db4d" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_b_floor_tile" kindref="compound">BFloorTile</ref> *</type>
+        <definition>static BFloorTile* BFloorTile::createWithFileColorLoc</definition>
+        <argsstring>(const char *image, const Color3B c, const Coords position)</argsstring>
+        <name>createWithFileColorLoc</name>
+        <reimplements refid="class_b_tile_1a66fcbdd086a6a5d51ca07545d41f7f73">createWithFileColorLoc</reimplements>
+        <param>
+          <type>const char *</type>
+          <declname>image</declname>
+        </param>
+        <param>
+          <type>const Color3B</type>
+          <declname>c</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_coords" kindref="compound">Coords</ref></type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="83" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="82" bodyend="83"/>
+      </memberdef>
+      </sectiondef>
     <briefdescription>
 <para>This is a floor tile, the player can move throught this freely. </para>    </briefdescription>
     <detaileddescription>
@@ -39,24 +67,21 @@
         <link refid="struct_coords"/>
       </node>
     </collaborationgraph>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="106" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="105" bodyend="108"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" line="80" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundTiles.h" bodystart="79" bodyend="84"/>
     <listofallmembers>
       <member refid="class_b_tile_1a7646b89b701a776494e16405b9d90871" prot="public" virt="non-virtual"><scope>BFloorTile</scope><name>BTile</name></member>
-      <member refid="class_b_tile_1a3bf473aada31f2a76de8ea244d889d16" prot="public" virt="non-virtual"><scope>BFloorTile</scope><name>BTile</name></member>
-      <member refid="class_b_tile_1a238d813159a2c767471ad12e3ada7421" prot="public" virt="non-virtual"><scope>BFloorTile</scope><name>createWithFileColors</name></member>
+      <member refid="class_b_tile_1aac430c52b468db1167d715cc867e617e" prot="public" virt="non-virtual"><scope>BFloorTile</scope><name>BTile</name></member>
+      <member refid="class_b_tile_1a24df3d28185701700b2fd217641775f6" prot="protected" virt="non-virtual"><scope>BFloorTile</scope><name>color</name></member>
+      <member refid="class_b_floor_tile_1af8518a127131e179e2a9c11fd232db4d" prot="public" virt="non-virtual"><scope>BFloorTile</scope><name>createWithFileColorLoc</name></member>
       <member refid="class_b_tile_1af0e20c14792be231f3b490eb1ec10a73" prot="public" virt="non-virtual"><scope>BFloorTile</scope><name>getLocation</name></member>
       <member refid="class_b_tile_1ab59bb83ecf56ec30d95c98ab3090d532" prot="public" virt="non-virtual"><scope>BFloorTile</scope><name>isOn</name></member>
       <member refid="class_b_tile_1a9a106634c3890eaa7a69cddc9680d822" prot="protected" virt="non-virtual"><scope>BFloorTile</scope><name>loc</name></member>
-      <member refid="class_b_tile_1a06ca0d5b7b5c17a3d8c53395c2614a87" prot="protected" virt="non-virtual"><scope>BFloorTile</scope><name>offColor</name></member>
       <member refid="class_b_tile_1a793fe978c4d34fc611dbe7d21079610d" prot="protected" virt="non-virtual"><scope>BFloorTile</scope><name>on</name></member>
-      <member refid="class_b_tile_1adf1af86d1ae9fdc122007381d4bf0a94" prot="protected" virt="non-virtual"><scope>BFloorTile</scope><name>onColor</name></member>
       <member refid="class_b_tile_1a64dfa0b2841ab4fc5a1e465f1389cb10" prot="public" virt="non-virtual"><scope>BFloorTile</scope><name>setLocation</name></member>
-      <member refid="class_b_tile_1a992da9e2ba93dfffb623af6905d5d4ae" prot="public" virt="non-virtual"><scope>BFloorTile</scope><name>setOffColor</name></member>
-      <member refid="class_b_tile_1add471df28a98f6fcb4a3ca7409092fad" prot="public" virt="virtual"><scope>BFloorTile</scope><name>setOn</name></member>
-      <member refid="class_b_tile_1abb4e47d337854e27649b6505536a8d4a" prot="public" virt="non-virtual"><scope>BFloorTile</scope><name>setOnColor</name></member>
+      <member refid="class_b_tile_1a0eccbc17368dbc03efea70fd9ca5af20" prot="public" virt="non-virtual"><scope>BFloorTile</scope><name>setOn</name></member>
       <member refid="class_b_tile_1a0c85a54373837c9bbe0fa2f83475234b" prot="protected" virt="non-virtual"><scope>BFloorTile</scope><name>tileSize</name></member>
-      <member refid="class_b_tile_1af9d81dcd02de972c1d451af63c0a48e5" prot="protected" virt="non-virtual"><scope>BFloorTile</scope><name>updateColor</name></member>
       <member refid="class_b_tile_1ae6faeef28449999ac4f1b2938fd2e89c" prot="protected" virt="non-virtual"><scope>BFloorTile</scope><name>updatePosition</name></member>
+      <member refid="class_b_tile_1a918487991f9b721438231c5a1ed0140f" prot="protected" virt="virtual"><scope>BFloorTile</scope><name>updateVisibility</name></member>
     </listofallmembers>
   </compounddef>
 </doxygen>

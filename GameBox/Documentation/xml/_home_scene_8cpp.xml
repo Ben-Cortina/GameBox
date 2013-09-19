@@ -5,54 +5,105 @@
     <includes refid="_home_scene_8h" local="yes">HomeScene.h</includes>
     <includes local="no">iostream</includes>
     <incdepgraph>
-      <node id="99">
+      <node id="225">
+        <label>BoundPlayer.h</label>
+        <link refid="_bound_player_8h"/>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="226" relation="include">
+        </childnode>
+      </node>
+      <node id="219">
         <label>GameList.h</label>
         <link refid="_game_list_8h"/>
-        <childnode refid="98" relation="include">
+        <childnode refid="218" relation="include">
         </childnode>
-        <childnode refid="100" relation="include">
+        <childnode refid="220" relation="include">
+        </childnode>
+        <childnode refid="224" relation="include">
         </childnode>
       </node>
-      <node id="96">
+      <node id="224">
+        <label>Bound/Bound.h</label>
+        <link refid="_bound_8h"/>
+        <childnode refid="225" relation="include">
+        </childnode>
+        <childnode refid="229" relation="include">
+        </childnode>
+      </node>
+      <node id="227">
+        <label>BoundTiles.h</label>
+        <link refid="_bound_tiles_8h"/>
+        <childnode refid="218" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
+        </childnode>
+      </node>
+      <node id="216">
         <label>HomeScene.h</label>
         <link refid="_home_scene_8h"/>
-        <childnode refid="97" relation="include">
+        <childnode refid="217" relation="include">
         </childnode>
-        <childnode refid="99" relation="include">
+        <childnode refid="219" relation="include">
         </childnode>
       </node>
-      <node id="95">
+      <node id="229">
+        <label>BoundLevelMenu.h</label>
+        <link refid="_bound_level_menu_8h"/>
+        <childnode refid="218" relation="include">
+        </childnode>
+      </node>
+      <node id="215">
         <label>GameBox/GameBox/Classes/HomeScene.cpp</label>
         <link refid="HomeScene.cpp"/>
-        <childnode refid="96" relation="include">
+        <childnode refid="216" relation="include">
         </childnode>
-        <childnode refid="102" relation="include">
+        <childnode refid="223" relation="include">
         </childnode>
       </node>
-      <node id="102">
+      <node id="228">
+        <label>vector</label>
+      </node>
+      <node id="223">
         <label>iostream</label>
       </node>
-      <node id="101">
-        <label>OverLayer.h</label>
-        <link refid="_over_layer_8h"/>
-        <childnode refid="98" relation="include">
+      <node id="226">
+        <label>BoundLevel.h</label>
+        <link refid="_bound_level_8h"/>
+        <childnode refid="227" relation="include">
+        </childnode>
+        <childnode refid="228" relation="include">
         </childnode>
       </node>
-      <node id="98">
+      <node id="222">
+        <label>CustomTileGrid.h</label>
+        <link refid="_custom_tile_grid_8h"/>
+        <childnode refid="223" relation="include">
+        </childnode>
+      </node>
+      <node id="218">
         <label>cocos2d.h</label>
       </node>
-      <node id="97">
-        <label>CustomCC.h</label>
-        <link refid="_custom_c_c_8h"/>
-        <childnode refid="98" relation="include">
+      <node id="221">
+        <label>OverLayer.h</label>
+        <link refid="_over_layer_8h"/>
+        <childnode refid="218" relation="include">
         </childnode>
       </node>
-      <node id="100">
+      <node id="217">
+        <label>CustomCC.h</label>
+        <link refid="_custom_c_c_8h"/>
+        <childnode refid="218" relation="include">
+        </childnode>
+      </node>
+      <node id="220">
         <label>TheBox/TheBox.h</label>
         <link refid="_the_box_8h"/>
-        <childnode refid="97" relation="include">
+        <childnode refid="218" relation="include">
         </childnode>
-        <childnode refid="101" relation="include">
+        <childnode refid="221" relation="include">
+        </childnode>
+        <childnode refid="222" relation="include">
         </childnode>
       </node>
     </incdepgraph>
@@ -161,42 +212,45 @@
 <codeline lineno="83"><highlight class="normal"></highlight><highlight class="comment">//<sp/>on<sp/>&quot;init&quot;<sp/>you<sp/>need<sp/>to<sp/>initialize<sp/>your<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_home_layer_1a7b39d554c7e3089a0855b471496ea0b6" kindref="member">HomeLayer::init</ref>()</highlight></codeline>
 <codeline lineno="85"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1.<sp/>super<sp/>init<sp/>first</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!Layer::init()<sp/>)</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>Size<sp/>visibleSize<sp/>=<sp/>Director::getInstance()-&gt;getVisibleSize();</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>Point<sp/>origin<sp/>=<sp/>Director::getInstance()-&gt;getVisibleOrigin();</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//add<sp/>the<sp/>buttons</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>addMenuItems();</highlight></codeline>
-<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3.<sp/>add<sp/>your<sp/>codes<sp/>below...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>a<sp/>label<sp/>shows<sp/>&quot;Hello<sp/>World&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>and<sp/>initialize<sp/>a<sp/>label</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>LabelTTF*<sp/>pLabel<sp/>=<sp/>LabelTTF::create(</highlight><highlight class="stringliteral">&quot;Game<sp/>Box&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Arial&quot;</highlight><highlight class="normal">,<sp/>24);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>position<sp/>the<sp/>label<sp/>on<sp/>the<sp/>center<sp/>of<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>pLabel-&gt;setPosition(Point(origin.x<sp/>+<sp/>visibleSize.width/2,</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>origin.y<sp/>+<sp/>visibleSize.height<sp/>-<sp/>pLabel-&gt;getContentSize().height/2));</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>the<sp/>label<sp/>as<sp/>a<sp/>child<sp/>to<sp/>this<sp/>layer</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>addChild(pLabel,<sp/>1);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//clear<sp/>the<sp/>cache</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>Director::getInstance()-&gt;purgeCachedData();</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>1.<sp/>super<sp/>init<sp/>first</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<sp/>!Layer::init()<sp/>)</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>Size<sp/>visibleSize<sp/>=<sp/>Director::getInstance()-&gt;getVisibleSize();</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>Point<sp/>origin<sp/>=<sp/>Director::getInstance()-&gt;getVisibleOrigin();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//add<sp/>the<sp/>buttons</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>addMenuItems();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>3.<sp/>add<sp/>your<sp/>codes<sp/>below...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>a<sp/>label<sp/>shows<sp/>&quot;Hello<sp/>World&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>create<sp/>and<sp/>initialize<sp/>a<sp/>label</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>LabelTTF*<sp/>pLabel<sp/>=<sp/>LabelTTF::create(</highlight><highlight class="stringliteral">&quot;Game<sp/>Box&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Arial&quot;</highlight><highlight class="normal">,<sp/>24);</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>position<sp/>the<sp/>label<sp/>on<sp/>the<sp/>center<sp/>of<sp/>the<sp/>screen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>pLabel-&gt;setPosition(Point(origin.x<sp/>+<sp/>visibleSize.width/2,</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>origin.y<sp/>+<sp/>visibleSize.height<sp/>-<sp/>pLabel-&gt;getContentSize().height/2));</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="114"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"></highlight></codeline>
-<codeline lineno="116"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_home_layer_1a1fbee493222ccf67c70396025a0af2ec" kindref="member">HomeLayer::menuCloseCallback</ref>(Object*<sp/>pSender)</highlight></codeline>
-<codeline lineno="117"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>Director::getInstance()-&gt;end();</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CC_TARGET_PLATFORM<sp/>==<sp/>CC_PLATFORM_IOS)</highlight></codeline>
-<codeline lineno="121"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>exit(0);</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
-<codeline lineno="123"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>add<sp/>the<sp/>label<sp/>as<sp/>a<sp/>child<sp/>to<sp/>this<sp/>layer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>addChild(pLabel,<sp/>1);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_home_layer_1a1fbee493222ccf67c70396025a0af2ec" kindref="member">HomeLayer::menuCloseCallback</ref>(Object*<sp/>pSender)</highlight></codeline>
+<codeline lineno="120"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>Director::getInstance()-&gt;end();</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>(CC_TARGET_PLATFORM<sp/>==<sp/>CC_PLATFORM_IOS)</highlight></codeline>
+<codeline lineno="124"><highlight class="preprocessor"></highlight><highlight class="normal"><sp/><sp/><sp/><sp/>exit(0);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="126"><highlight class="preprocessor"></highlight><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.cpp"/>
   </compounddef>

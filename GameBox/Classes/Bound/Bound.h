@@ -20,7 +20,7 @@
 
 //#include "BoundLevel.h" BoundPlayer.h includes BoundLevel
 #include "BoundPlayer.h"
-#include "BoundMenu.h"
+#include "BoundLevelMenu.h"
 
 
 /**
@@ -32,56 +32,48 @@ private:
     BLevel* levelLayer;
     BPlayer* playerLayer;
     LayerColor* backgroundLayer;
-    BMenu* menuLayer;
+    BLevelMenu* menuLayer;
     
-    int layerFocus; //0 = main, 1 = level, 2 = game, 3 = pause
+    int layerFocus; //0 = level, 1 = pause, 2 = game
+    int curLevel;
     
 public:
 
-    /**
-     *  @brief  This will create and init a BScene
-     */
+    /** @brief  This will create and init a BScene */
     BScene();
     
-    /**
-     *  @brief  This will load a new level
-     */
+    /** @brief  This will read all the levels from the level dictionary and populate 'levels' */
+    int loadLevelDict(LD * levels);
+    
+    /** @brief  Returns the current focus of the game */
+    int getFocus(){return layerFocus;};
+    
+    /** @brief  This will load a new level */
     void newLevel(const char* filepath);
     
-    /**
-     *  @brief  Show main Menu UNIMPLEMENTED
-     */
-    void showMainMenu();
+    /** @brief  This will handle EscPresses */
+    static void handleEsc(Object * scene);
     
-    /**
-     *  @brief  Show the level Menu
-     */
+    /** @brief  Show the level Menu */
     void showLevelMenu();
     
-    /**
-     *  @brief  Show the Pause Menu
-     */
+    /** @brief  Show the Pause Menu */
     void showPauseMenu();
+    
+    static void resumeCB(Object* pSender);
+    static void levelSelectCB(Object* pSender);
+    static void exitGameCB(Object* pSender);
     
     /**
      *  @brief  Loads the level stored in sender->levelname
-     *          This is called from BMenu
+     *          This is called from BLevelMenu
      */
     static void loadLevel(Object* pSender);
     
-    /**
-     *  @brief  Exits this game and returns to the Home Screen
-     */
-    void exitGame();
+    /** @brief  Exits this game and returns to the Home Screen */
+    static void exitGame(Object * scene);
     
-    /**
-     *  @brief  Handles keyPresses. Will handle Esc presses
-     */
-    void keyPressed(int keyCode);
-    
-    /**
-     *  @brief  This method creates a new BScene and runs it
-     */
+    /** @brief  This method creates a new BScene and runs it */
     static void runThisGame(Object* pSender);
 };
 

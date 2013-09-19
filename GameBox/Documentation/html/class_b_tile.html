@@ -97,6 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a>  </div>
   <div class="headertitle">
@@ -125,23 +126,21 @@ Inheritance diagram for BTile:</div>
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a7646b89b701a776494e16405b9d90871">BTile</a> ()</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a3bf473aada31f2a76de8ea244d889d16">BTile</a> (const Color3B onC, const Color3B offC)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_b_tile.html">BTile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a238d813159a2c767471ad12e3ada7421">createWithFileColors</a> (const char *<a class="el" href="_game_list_8h.html#ac745ab21f82aa96829863dcfc37ef5a8">image</a>, const Color3B onC, const Color3B offC)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#abb4e47d337854e27649b6505536a8d4a">setOnColor</a> (const Color3B color)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the "On" color of the tile.  <a href="#abb4e47d337854e27649b6505536a8d4a"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a992da9e2ba93dfffb623af6905d5d4ae">setOffColor</a> (const Color3B color)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the "Off" color of the tile.  <a href="#a992da9e2ba93dfffb623af6905d5d4ae"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#add471df28a98f6fcb4a3ca7409092fad">setOn</a> (bool state)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state of the Tile.  <a href="#add471df28a98f6fcb4a3ca7409092fad"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#aac430c52b468db1167d715cc867e617e">BTile</a> (const Color3B c, const <a class="el" href="struct_coords.html">Coords</a> position)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a0eccbc17368dbc03efea70fd9ca5af20">setOn</a> (bool state)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the state of the Tile.  <a href="#a0eccbc17368dbc03efea70fd9ca5af20"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#ab59bb83ecf56ec30d95c98ab3090d532">isOn</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Reutrns the on start.  <a href="#ab59bb83ecf56ec30d95c98ab3090d532"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a64dfa0b2841ab4fc5a1e465f1389cb10">setLocation</a> (<a class="el" href="struct_coords.html">Coords</a> location)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the location of the tile.  <a href="#a64dfa0b2841ab4fc5a1e465f1389cb10"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_coords.html">Coords</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#af0e20c14792be231f3b490eb1ec10a73">getLocation</a> ()</td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_b_tile.html">BTile</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a66fcbdd086a6a5d51ca07545d41f7f73">createWithFileColorLoc</a> (const char *<a class="el" href="_game_list_8h.html#ac745ab21f82aa96829863dcfc37ef5a8">image</a>, const Color3B c, const <a class="el" href="struct_coords.html">Coords</a> position)</td></tr>
 <tr><td colspan="2"><h2><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#af9d81dcd02de972c1d451af63c0a48e5">updateColor</a> ()</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current color based on the state of 'on'.  <a href="#af9d81dcd02de972c1d451af63c0a48e5"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a918487991f9b721438231c5a1ed0140f">updateVisibility</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current color based on the state of 'on'.  <a href="#a918487991f9b721438231c5a1ed0140f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#ae6faeef28449999ac4f1b2938fd2e89c">updatePosition</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the current position of the tile.  <a href="#ae6faeef28449999ac4f1b2938fd2e89c"></a><br/></td></tr>
 <tr><td colspan="2"><h2><a name="pro-attribs"></a>
@@ -149,8 +148,7 @@ Protected Attributes</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a0c85a54373837c9bbe0fa2f83475234b">tileSize</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top"><a class="el" href="struct_coords.html">Coords</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a9a106634c3890eaa7a69cddc9680d822">loc</a></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">on</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Color3B&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#adf1af86d1ae9fdc122007381d4bf0a94">onColor</a></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">Color3B&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a06ca0d5b7b5c17a3d8c53395c2614a87">offColor</a></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">Color3B&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_tile.html#a24df3d28185701700b2fd217641775f6">color</a></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This is the base class for tiles in the bound game. </p>
@@ -163,7 +161,7 @@ Protected Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="class_b_tile.html#a7646b89b701a776494e16405b9d90871">BTile::BTile</a> </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -171,7 +169,7 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a3bf473aada31f2a76de8ea244d889d16"></a><!-- doxytag: member="BTile::BTile" ref="a3bf473aada31f2a76de8ea244d889d16" args="(const Color3B onC, const Color3B offC)" -->
+<a class="anchor" id="aac430c52b468db1167d715cc867e617e"></a><!-- doxytag: member="BTile::BTile" ref="aac430c52b468db1167d715cc867e617e" args="(const Color3B c, const Coords position)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -179,13 +177,13 @@ Protected Attributes</h2></td></tr>
           <td class="memname"><a class="el" href="class_b_tile.html#a7646b89b701a776494e16405b9d90871">BTile::BTile</a> </td>
           <td>(</td>
           <td class="paramtype">const Color3B&#160;</td>
-          <td class="paramname"><em>onC</em>, </td>
+          <td class="paramname"><em>c</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Color3B&#160;</td>
-          <td class="paramname"><em>offC</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_coords.html">Coords</a>&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -199,12 +197,12 @@ Protected Attributes</h2></td></tr>
 </div>
 </div>
 <hr/><h2>Member Function Documentation</h2>
-<a class="anchor" id="a238d813159a2c767471ad12e3ada7421"></a><!-- doxytag: member="BTile::createWithFileColors" ref="a238d813159a2c767471ad12e3ada7421" args="(const char *image, const Color3B onC, const Color3B offC)" -->
+<a class="anchor" id="a66fcbdd086a6a5d51ca07545d41f7f73"></a><!-- doxytag: member="BTile::createWithFileColorLoc" ref="a66fcbdd086a6a5d51ca07545d41f7f73" args="(const char *image, const Color3B c, const Coords position)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_b_tile.html">BTile</a> * <a class="el" href="class_b_tile.html#a238d813159a2c767471ad12e3ada7421">BTile::createWithFileColors</a> </td>
+          <td class="memname"><a class="el" href="class_b_tile.html">BTile</a> * <a class="el" href="class_b_tile.html#a66fcbdd086a6a5d51ca07545d41f7f73">BTile::createWithFileColorLoc</a> </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>image</em>, </td>
@@ -213,22 +211,24 @@ Protected Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const Color3B&#160;</td>
-          <td class="paramname"><em>onC</em>, </td>
+          <td class="paramname"><em>c</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const Color3B&#160;</td>
-          <td class="paramname"><em>offC</em>&#160;</td>
+          <td class="paramtype">const <a class="el" href="struct_coords.html">Coords</a>&#160;</td>
+          <td class="paramname"><em>position</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
           <td>)</td>
-          <td></td><td></td>
+          <td></td><td><code> [static]</code></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
+
+<p>Reimplemented in <a class="el" href="class_b_explosion_tile.html#ac8f21b7fc8e481647b0da1814c8581a3">BExplosionTile</a>, <a class="el" href="class_b_wall_tile.html#a834cb0c60a8fd985e3c1ac1845f4192f">BWallTile</a>, and <a class="el" href="class_b_floor_tile.html#af8518a127131e179e2a9c11fd232db4d">BFloorTile</a>.</p>
 
 </div>
 </div>
@@ -291,41 +291,16 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a992da9e2ba93dfffb623af6905d5d4ae"></a><!-- doxytag: member="BTile::setOffColor" ref="a992da9e2ba93dfffb623af6905d5d4ae" args="(const Color3B color)" -->
+<a class="anchor" id="a0eccbc17368dbc03efea70fd9ca5af20"></a><!-- doxytag: member="BTile::setOn" ref="a0eccbc17368dbc03efea70fd9ca5af20" args="(bool state)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_b_tile.html#a992da9e2ba93dfffb623af6905d5d4ae">BTile::setOffColor</a> </td>
-          <td>(</td>
-          <td class="paramtype">const Color3B&#160;</td>
-          <td class="paramname"><em>color</em></td><td>)</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Change the "Off" color of the tile. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">color</td><td>The color to set as the offColor </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="add471df28a98f6fcb4a3ca7409092fad"></a><!-- doxytag: member="BTile::setOn" ref="add471df28a98f6fcb4a3ca7409092fad" args="(bool state)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void <a class="el" href="class_b_tile.html#add471df28a98f6fcb4a3ca7409092fad">BTile::setOn</a> </td>
+          <td class="memname">void <a class="el" href="class_b_tile.html#a0eccbc17368dbc03efea70fd9ca5af20">BTile::setOn</a> </td>
           <td>(</td>
           <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>state</em></td><td>)</td>
-          <td><code> [inline, virtual]</code></td>
+          <td><code> [inline]</code></td>
         </tr>
       </table>
 </div>
@@ -338,51 +313,6 @@ Protected Attributes</h2></td></tr>
   </table>
   </dd>
 </dl>
-
-</div>
-</div>
-<a class="anchor" id="abb4e47d337854e27649b6505536a8d4a"></a><!-- doxytag: member="BTile::setOnColor" ref="abb4e47d337854e27649b6505536a8d4a" args="(const Color3B color)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="class_b_tile.html#abb4e47d337854e27649b6505536a8d4a">BTile::setOnColor</a> </td>
-          <td>(</td>
-          <td class="paramtype">const Color3B&#160;</td>
-          <td class="paramname"><em>color</em></td><td>)</td>
-          <td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Change the "On" color of the tile. </p>
-<dl class="params"><dt><b>Parameters:</b></dt><dd>
-  <table class="params">
-    <tr><td class="paramname">color</td><td>The color to set as the onColor </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="af9d81dcd02de972c1d451af63c0a48e5"></a><!-- doxytag: member="BTile::updateColor" ref="af9d81dcd02de972c1d451af63c0a48e5" args="()" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void <a class="el" href="class_b_tile.html#af9d81dcd02de972c1d451af63c0a48e5">BTile::updateColor</a> </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td><code> [inline, protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Updates the current color based on the state of 'on'. </p>
-
-<p>Reimplemented in <a class="el" href="class_b_explosion_tile.html#a993eb687f4f595994747cc0f8534f78f">BExplosionTile</a>.</p>
 
 </div>
 </div>
@@ -404,7 +334,40 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a918487991f9b721438231c5a1ed0140f"></a><!-- doxytag: member="BTile::updateVisibility" ref="a918487991f9b721438231c5a1ed0140f" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="class_b_tile.html#a918487991f9b721438231c5a1ed0140f">BTile::updateVisibility</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td><code> [inline, protected, virtual]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Updates the current color based on the state of 'on'. </p>
+
+<p>Reimplemented in <a class="el" href="class_b_explosion_tile.html#a4c58075332815284002ddcff3fa2c5b0">BExplosionTile</a>.</p>
+
+</div>
+</div>
 <hr/><h2>Member Data Documentation</h2>
+<a class="anchor" id="a24df3d28185701700b2fd217641775f6"></a><!-- doxytag: member="BTile::color" ref="a24df3d28185701700b2fd217641775f6" args="" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color3B <a class="el" href="class_b_tile.html#a24df3d28185701700b2fd217641775f6">BTile::color</a><code> [protected]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a9a106634c3890eaa7a69cddc9680d822"></a><!-- doxytag: member="BTile::loc" ref="a9a106634c3890eaa7a69cddc9680d822" args="" -->
 <div class="memitem">
 <div class="memproto">
@@ -418,38 +381,12 @@ Protected Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a06ca0d5b7b5c17a3d8c53395c2614a87"></a><!-- doxytag: member="BTile::offColor" ref="a06ca0d5b7b5c17a3d8c53395c2614a87" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Color3B <a class="el" href="class_b_tile.html#a06ca0d5b7b5c17a3d8c53395c2614a87">BTile::offColor</a><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="a793fe978c4d34fc611dbe7d21079610d"></a><!-- doxytag: member="BTile::on" ref="a793fe978c4d34fc611dbe7d21079610d" args="" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">bool <a class="el" href="class_b_tile.html#a793fe978c4d34fc611dbe7d21079610d">BTile::on</a><code> [protected]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-</div>
-</div>
-<a class="anchor" id="adf1af86d1ae9fdc122007381d4bf0a94"></a><!-- doxytag: member="BTile::onColor" ref="adf1af86d1ae9fdc122007381d4bf0a94" args="" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Color3B <a class="el" href="class_b_tile.html#adf1af86d1ae9fdc122007381d4bf0a94">BTile::onColor</a><code> [protected]</code></td>
         </tr>
       </table>
 </div>
@@ -494,7 +431,7 @@ Protected Attributes</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="class_b_tile.html">BTile</a>      </li>
 
-    <li class="footer">Generated on Tue Sep 3 2013 17:45:33 for GameBox by
+    <li class="footer">Generated on Thu Sep 19 2013 18:51:28 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

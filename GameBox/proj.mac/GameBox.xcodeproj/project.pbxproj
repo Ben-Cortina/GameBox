@@ -43,6 +43,7 @@
 		E1B371A617CFD6F9002F1401 /* Bound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B371A417CFD6F9002F1401 /* Bound.cpp */; };
 		E1B911E017CBD447009CF148 /* BoxMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B911DF17CBD447009CF148 /* BoxMenu.png */; };
 		E1F1639F17D5359800B11618 /* BoundPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1F1639D17D5359800B11618 /* BoundPlayer.cpp */; };
+		E1F5F96E17ECC7EC000400CC /* LevelMaking.bdl in Resources */ = {isa = PBXBuildFile; fileRef = E1F5F96D17ECC7EC000400CC /* LevelMaking.bdl */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -209,7 +210,7 @@
 		E108503317E4E55B00CA4D25 /* BoundLevelMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoundLevelMenu.cpp; sourceTree = "<group>"; };
 		E108503417E4E55B00CA4D25 /* BoundLevelMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundLevelMenu.h; sourceTree = "<group>"; };
 		E10C74B017E4E9DD006AFB97 /* BoundMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoundMenu.png; sourceTree = "<group>"; };
-		E111D26A17EBA27A0002F4EB /* BoundLevels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = BoundLevels.txt; path = BoundLevels.txt; sourceTree = "<group>"; };
+		E111D26A17EBA27A0002F4EB /* BoundLevels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = BoundLevels.txt; sourceTree = "<group>"; };
 		E12D831317E10D1B00FFB98E /* CustomTileGrid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CustomTileGrid.cpp; sourceTree = "<group>"; };
 		E12D831417E10D1B00FFB98E /* CustomTileGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomTileGrid.h; sourceTree = "<group>"; };
 		E134B88917A30AE400EBC6B2 /* Marker Felt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Marker Felt.ttf"; sourceTree = "<group>"; };
@@ -230,6 +231,7 @@
 		E1B911DF17CBD447009CF148 /* BoxMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoxMenu.png; sourceTree = "<group>"; };
 		E1F1639D17D5359800B11618 /* BoundPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoundPlayer.cpp; sourceTree = "<group>"; };
 		E1F1639E17D5359800B11618 /* BoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundPlayer.h; sourceTree = "<group>"; };
+		E1F5F96D17ECC7EC000400CC /* LevelMaking.bdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LevelMaking.bdl; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -387,6 +389,7 @@
 		E147C1DB17D0165500E95271 /* Bound */ = {
 			isa = PBXGroup;
 			children = (
+				E1F5F96C17ECC7EC000400CC /* Levels */,
 				E111D26A17EBA27A0002F4EB /* BoundLevels.txt */,
 				E10C74B017E4E9DD006AFB97 /* BoundMenu.png */,
 			);
@@ -430,6 +433,15 @@
 				E108503417E4E55B00CA4D25 /* BoundLevelMenu.h */,
 			);
 			path = Bound;
+			sourceTree = "<group>";
+		};
+		E1F5F96C17ECC7EC000400CC /* Levels */ = {
+			isa = PBXGroup;
+			children = (
+				E1F5F96D17ECC7EC000400CC /* LevelMaking.bdl */,
+			);
+			name = Levels;
+			path = Levels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -605,6 +617,7 @@
 				E1871E9817BAE07200753932 /* Pixel.png in Resources */,
 				E1B911E017CBD447009CF148 /* BoxMenu.png in Resources */,
 				E10C74B117E4E9DD006AFB97 /* BoundMenu.png in Resources */,
+				E1F5F96E17ECC7EC000400CC /* LevelMaking.bdl in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

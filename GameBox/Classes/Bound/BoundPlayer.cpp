@@ -19,22 +19,6 @@ BPlayer::BPlayer(const char* image, std::function<void(Object*)> escF)
     player = Sprite::create(image);
     playerColor = Color3B(100, 200, 125);
     addChild(player);
-    setKeyboardEnabled(true);
-}
-
-void BPlayer::setActive(const bool a)
-{
-    active = a;
-    setKeyboardEnabled(a);
-    if (!a)
-    {
-        force.x = 0;
-        force.y = 0;
-        velocity.x = 0;
-        velocity.y = 0;
-        maxSpeed = 0;
-        keyState.up = keyState.down = keyState.left = keyState.right = false;
-    }
 }
 
 void BPlayer::setLevel(BLevel* newLevel)
@@ -44,6 +28,7 @@ void BPlayer::setLevel(BLevel* newLevel)
     player->setScale((int)(level->getTileSize() / 10));
     spawn(0);
     scheduleUpdate();
+    setKeyboardEnabled(true);
 };
 
 void BPlayer::spawn(float dt)
@@ -118,9 +103,6 @@ void BPlayer::update(float dt)
     //adjust for how much has already been calcualted
     dt -= dtCalculated;
     dtCalculated = 0;
-    
-    if (!active)
-        return;
     
     //check explosions incase one went off on player
     if (level->checkExplosions(player->getBoundingBox()) && !isDying)
@@ -318,7 +300,7 @@ void BPlayer::keyPressed(int keyCode)
     }
     
     //do nothing if it is paused
-    if (Director::getInstance()->isPaused() || !active)
+    if (Director::getInstance()->isPaused())
         return;
     
     if( x != 0 )
@@ -361,7 +343,7 @@ void BPlayer::keyReleased(int keyCode)
     }
     
     //do nothing if it is paused
-    if (Director::getInstance()->isPaused() || !active)
+    if (Director::getInstance()->isPaused())
         return;
     
     if( !keyState.left && !keyState.right )

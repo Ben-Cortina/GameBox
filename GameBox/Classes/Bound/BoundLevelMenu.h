@@ -20,7 +20,7 @@ struct LD{
 class BLevelMenu : public Layer
 {
 public:
-    BLevelMenu(std::function<void(Object*)> cb, LD * levels, int ldCount);
+    BLevelMenu(std::function<void(Object*)> cb, LD levels[], int ldCount);
     ~BLevelMenu();
     
     /** @brief  Gets the path of the file at the given index */
@@ -37,7 +37,7 @@ private:
     Point beginPos;
     Menu* itemMenu;
     std::function<void(Object*)> callback;
-    LD * levelData;
+    LD *levelData;
     int levelCount;
 };
 #endif /* defined(__GameBox__BoundLevelMenu__) */

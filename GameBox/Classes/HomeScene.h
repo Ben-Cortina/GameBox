@@ -30,9 +30,6 @@ public:
 
     // there's no 'id' in cpp, so we recommend returning the class instance pointer
     static Scene* scene();
-    
-    // a selector callback
-    static void menuCloseCallback(Object* pSender);
 
     // implement the "static create()" method
     CREATE_FUNC(HomeLayer);

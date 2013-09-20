@@ -134,19 +134,6 @@
         </inbodydescription>
         <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="51" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="51" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_b_player_1a090473b64492723552a27dd436a78385" prot="private" static="no" mutable="no">
-        <type>bool</type>
-        <definition>bool BPlayer::active</definition>
-        <argsstring></argsstring>
-        <name>active</name>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="53" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="53" bodyend="-1"/>
-      </memberdef>
       <memberdef kind="variable" id="class_b_player_1aea1798277d5db2f597276108953c2aa2" prot="private" static="no" mutable="no">
         <type>std::function&lt; void(Object *)</type>
         <definition>std::function&lt;void(Object*) BPlayer::escFunc)</definition>
@@ -158,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="55" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="55" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="54" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -181,24 +168,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="58" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="9" bodyend="23"/>
-      </memberdef>
-      <memberdef kind="function" id="class_b_player_1a2c7606b7353aa365048bcb4e6fe1fadc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void BPlayer::setActive</definition>
-        <argsstring>(const bool a)</argsstring>
-        <name>setActive</name>
-        <param>
-          <type>const bool</type>
-          <declname>a</declname>
-        </param>
-        <briefdescription>
-<para>Stops the player and any interaction. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="63" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="25" bodyend="38"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="57" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="9" bodyend="22"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1a03add0a9a55d81912897518d94daf52f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -215,7 +185,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="68" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="40" bodyend="47"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="62" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="24" bodyend="32"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1ace0ec1b13a62c932950a86a469d0263f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -232,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="73" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="73" bodyend="73"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="67" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="67" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1a33b7d635e3aa3c7a4796eabc4205cc58" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_vector" kindref="compound">Vector</ref></type>
@@ -245,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="78" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="78" bodyend="78"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="72" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="72" bodyend="72"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1ae97ab8470903f7c595939f2331b6c6f4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -262,7 +232,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="79" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="79" bodyend="79"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="73" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="73" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1af7ae69e5c1d7880a5ebf4bd38c1adabb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -279,7 +249,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="80" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="80" bodyend="80"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="74" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="74" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1a94916a0f75042c2e6265fa7c9ec4db32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -296,7 +266,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="81" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="81" bodyend="81"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="75" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="75" bodyend="75"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1a7981065d2d5b4c581d84cb5b63a15d00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -309,7 +279,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="87" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="59" bodyend="68"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="81" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="44" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1a5a46736f890786b465bfe51c9c4f8ff7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -322,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="92" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="70" bodyend="81"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="86" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="55" bodyend="66"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1a1f66cceac56c4252237f6e30003efa4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -339,7 +309,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="99" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="49" bodyend="57"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="93" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="34" bodyend="42"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1aa0f9b22686ad0aeec30ea21beb3740f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -352,7 +322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="105" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="83" bodyend="108"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="99" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="68" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1a86f9b0c0d7b4c61ed475f0e70249be7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -377,7 +347,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="111" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="110" bodyend="131"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="105" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="95" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1a709a36eb859dd8f9a4355e036eac8ac8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -390,7 +360,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="119" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="134" bodyend="156"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="113" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="116" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1a4c0f72ebb2a0b95eb35fab6598924992" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -411,7 +381,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="124" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="158" bodyend="260"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="118" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="140" bodyend="242"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1ae0aaaa33013fd5c0070cf51619abf12b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -429,7 +399,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="130" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="262" bodyend="328"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="124" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="244" bodyend="310"/>
       </memberdef>
       <memberdef kind="function" id="class_b_player_1a8210db4e8fac75ace4b71b3ded1df6bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -446,16 +416,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="135" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="330" bodyend="371"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="129" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.cpp" bodystart="312" bodyend="353"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This will hold and draw the data for a Player. It will also handle player movement. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="35" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="34" bodyend="136"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" line="35" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundPlayer.h" bodystart="34" bodyend="130"/>
     <listofallmembers>
-      <member refid="class_b_player_1a090473b64492723552a27dd436a78385" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>active</name></member>
       <member refid="class_b_player_1ab32977496976aff5421f2af0d277aaf8" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>BPlayer</name></member>
       <member refid="class_b_player_1a5a46736f890786b465bfe51c9c4f8ff7" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>die</name></member>
       <member refid="class_b_player_1a5e78beca6caeadb8339b977ee58f1d4c" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>dtCalculated</name></member>
@@ -473,7 +442,6 @@
       <member refid="class_b_player_1a836682452c7380a303792daff1bf75e0" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>maxSpeed</name></member>
       <member refid="class_b_player_1aa0f0d3bcfd8060da02e2c67d0b549504" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>player</name></member>
       <member refid="class_b_player_1ade7f7dfb34c2a6e8ffdb2e77406377ba" prot="private" virt="non-virtual"><scope>BPlayer</scope><name>playerColor</name></member>
-      <member refid="class_b_player_1a2c7606b7353aa365048bcb4e6fe1fadc" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>setActive</name></member>
       <member refid="class_b_player_1ae97ab8470903f7c595939f2331b6c6f4" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>setForce</name></member>
       <member refid="class_b_player_1af7ae69e5c1d7880a5ebf4bd38c1adabb" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>setForceX</name></member>
       <member refid="class_b_player_1a94916a0f75042c2e6265fa7c9ec4db32" prot="public" virt="non-virtual"><scope>BPlayer</scope><name>setForceY</name></member>

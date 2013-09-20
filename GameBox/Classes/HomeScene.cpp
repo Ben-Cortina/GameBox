@@ -115,12 +115,3 @@ bool HomeLayer::init()
     
     return true;
 }
-
-void HomeLayer::menuCloseCallback(Object* pSender)
-{
-    Director::getInstance()->end();
-
-#if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
-    exit(0);
-#endif
-}

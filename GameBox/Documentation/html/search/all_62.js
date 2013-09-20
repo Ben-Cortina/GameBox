@@ -3,7 +3,7 @@ var searchData=
   ['bexplosiontile',['BExplosionTile',['../class_b_explosion_tile.html',1,'BExplosionTile'],['../class_b_explosion_tile.html#aaa3e3d527dada2a0aec18c0144321832',1,'BExplosionTile::BExplosionTile()']]],
   ['bfloortile',['BFloorTile',['../class_b_floor_tile.html',1,'']]],
   ['blevel',['BLevel',['../class_b_level.html',1,'BLevel'],['../class_b_level.html#a8e48d62f02a21d2a57c682dc7737396f',1,'BLevel::BLevel()']]],
-  ['blevelmenu',['BLevelMenu',['../class_b_level_menu.html',1,'BLevelMenu'],['../class_b_level_menu.html#a69ba640ac24dc36f82a5fe62a0036f52',1,'BLevelMenu::BLevelMenu()']]],
+  ['blevelmenu',['BLevelMenu',['../class_b_level_menu.html',1,'BLevelMenu'],['../class_b_level_menu.html#a0d27ff3c8303ab37a5db7e3afb99847e',1,'BLevelMenu::BLevelMenu()']]],
   ['bound_2ecpp',['Bound.cpp',['../_bound_8cpp.html',1,'']]],
   ['bound_2eh',['Bound.h',['../_bound_8h.html',1,'']]],
   ['boundlevel_2ecpp',['BoundLevel.cpp',['../_bound_level_8cpp.html',1,'']]],

@@ -68,7 +68,7 @@
     <member refid="class_b_level_menu_1a8f420f26d60d4a1248b601c6e3e10b07" kind="variable"><name>callback</name></member>
     <member refid="class_b_level_menu_1a9c655642f8a2dbb4e1e5a4e0c0b8e6f5" kind="variable"><name>levelData</name></member>
     <member refid="class_b_level_menu_1a8dceac84ef9679854a005f1ac2144042" kind="variable"><name>levelCount</name></member>
-    <member refid="class_b_level_menu_1a69ba640ac24dc36f82a5fe62a0036f52" kind="function"><name>BLevelMenu</name></member>
+    <member refid="class_b_level_menu_1a0d27ff3c8303ab37a5db7e3afb99847e" kind="function"><name>BLevelMenu</name></member>
     <member refid="class_b_level_menu_1a4646279f37990d842a77eb2e071a3919" kind="function"><name>~BLevelMenu</name></member>
     <member refid="class_b_level_menu_1a38bfb874e8a2d32bb01f4a281032e84c" kind="function"><name>getLevelPath</name></member>
     <member refid="class_b_level_menu_1a3a7207f8b357ae3e82b26b3507137775" kind="function"><name>ccTouchesBegan</name></member>
@@ -85,10 +85,8 @@
     <member refid="class_b_player_1aeba7acd97b65228677bd9fe2d0ca1e86" kind="variable"><name>velocity</name></member>
     <member refid="class_b_player_1a3152beb08679dfa9538bca632cde3624" kind="variable"><name>keyState</name></member>
     <member refid="class_b_player_1ad0d73285c5ebdc088f0626d40c5db555" kind="variable"><name>isDying</name></member>
-    <member refid="class_b_player_1a090473b64492723552a27dd436a78385" kind="variable"><name>active</name></member>
     <member refid="class_b_player_1aea1798277d5db2f597276108953c2aa2" kind="variable"><name>escFunc</name></member>
     <member refid="class_b_player_1ab32977496976aff5421f2af0d277aaf8" kind="function"><name>BPlayer</name></member>
-    <member refid="class_b_player_1a2c7606b7353aa365048bcb4e6fe1fadc" kind="function"><name>setActive</name></member>
     <member refid="class_b_player_1a03add0a9a55d81912897518d94daf52f" kind="function"><name>setLevel</name></member>
     <member refid="class_b_player_1ace0ec1b13a62c932950a86a469d0263f" kind="function"><name>setMaxSpeed</name></member>
     <member refid="class_b_player_1a33b7d635e3aa3c7a4796eabc4205cc58" kind="function"><name>getForce</name></member>
@@ -113,17 +111,19 @@
     <member refid="class_b_scene_1a8ff8ff84f4632bf9b153bdce4c719852" kind="variable"><name>layerFocus</name></member>
     <member refid="class_b_scene_1a309abd9a83ba6ec3fcf37bc685f1108a" kind="variable"><name>curLevel</name></member>
     <member refid="class_b_scene_1a814659a27cecfe7e5aefc32081d0f3a5" kind="function"><name>BScene</name></member>
-    <member refid="class_b_scene_1a94e762ddd0893943d05d58eac2f6d641" kind="function"><name>loadLevelDict</name></member>
+    <member refid="class_b_scene_1a717840a63b4399bb70d420ba34cc324d" kind="function"><name>loadLevelDict</name></member>
     <member refid="class_b_scene_1ae8759c51e7bcd9888f3035cbcd9d675c" kind="function"><name>getFocus</name></member>
+    <member refid="class_b_scene_1a71869b30ce6256f90b7873a4ffa4fd12" kind="function"><name>setFocus</name></member>
     <member refid="class_b_scene_1a79117c8d522c8907c474b8448b5e486b" kind="function"><name>newLevel</name></member>
     <member refid="class_b_scene_1a98a3fdedfb94c433624c0ce664adb343" kind="function"><name>showLevelMenu</name></member>
     <member refid="class_b_scene_1a2817197ebb69c55473bd50808a66a27f" kind="function"><name>showPauseMenu</name></member>
+    <member refid="class_b_scene_1aa90fdc62093e8c1a8ad454b95015ee2e" kind="function"><name>resumeGame</name></member>
+    <member refid="class_b_scene_1a8c547547d6a90ab1e2ae5abc3805c3f2" kind="function"><name>exitGame</name></member>
     <member refid="class_b_scene_1aa3e76c81d0eeadf1c6b6f7d9560c14cf" kind="function"><name>handleEsc</name></member>
-    <member refid="class_b_scene_1af600788366f63a8954b892fdc7934236" kind="function"><name>resumeCB</name></member>
-    <member refid="class_b_scene_1a21e02f1209ed73a1dfbcada5f153a3b4" kind="function"><name>levelSelectCB</name></member>
-    <member refid="class_b_scene_1a2cef71e8f1d699acc111ea43b872e050" kind="function"><name>exitGameCB</name></member>
+    <member refid="class_b_scene_1a25d15df90b25965d88b48c8630da9af3" kind="function"><name>resumeCB</name></member>
+    <member refid="class_b_scene_1a57bc71835cfbd1596d639f8ba949b795" kind="function"><name>levelSelectCB</name></member>
+    <member refid="class_b_scene_1a762573ed16243cbe4d6539fbfe36b0e3" kind="function"><name>exitGameCB</name></member>
     <member refid="class_b_scene_1a43226267f8e0d11e0440d64db1814889" kind="function"><name>loadLevel</name></member>
-    <member refid="class_b_scene_1a9b647ad2b4ebc0289a3170009653c41d" kind="function"><name>exitGame</name></member>
     <member refid="class_b_scene_1a90db09771569a058108341368724efc9" kind="function"><name>runThisGame</name></member>
   </compound>
   <compound refid="class_b_tile" kind="class"><name>BTile</name>
@@ -169,7 +169,6 @@
     <member refid="class_home_layer_1a7b39d554c7e3089a0855b471496ea0b6" kind="function"><name>init</name></member>
     <member refid="class_home_layer_1ad72b3afd71127c67721d1d04aea5ffe9" kind="function"><name>CREATE_FUNC</name></member>
     <member refid="class_home_layer_1abfa48630fcd7c04d077c92c673d419af" kind="function"><name>scene</name></member>
-    <member refid="class_home_layer_1a1fbee493222ccf67c70396025a0af2ec" kind="function"><name>menuCloseCallback</name></member>
   </compound>
   <compound refid="struct_key_state_struct" kind="struct"><name>KeyStateStruct</name>
     <member refid="struct_key_state_struct_1a3d388e2382b981fef46bd0ac827f9a41" kind="variable"><name>up</name></member>

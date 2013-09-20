@@ -72,7 +72,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.h" line="38"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.h" line="35"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -89,35 +89,17 @@
         </inbodydescription>
         <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.h" line="32" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.cpp" bodystart="17" bodyend="30"/>
       </memberdef>
-      <memberdef kind="function" id="class_home_layer_1a1fbee493222ccf67c70396025a0af2ec" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void HomeLayer::menuCloseCallback</definition>
-        <argsstring>(Object *pSender)</argsstring>
-        <name>menuCloseCallback</name>
-        <param>
-          <type>Object *</type>
-          <declname>pSender</declname>
-        </param>
-        <briefdescription>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.h" line="35" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.cpp" bodystart="119" bodyend="126"/>
-      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.h" line="19" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.h" bodystart="18" bodyend="40"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.h" line="19" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.h" bodystart="18" bodyend="37"/>
     <listofallmembers>
       <member refid="class_home_layer_1a5bd1105e3d31dffcccb13209bbebd7a5" prot="private" virt="non-virtual"><scope>HomeLayer</scope><name>addMenuItems</name></member>
       <member refid="class_home_layer_1ad72b3afd71127c67721d1d04aea5ffe9" prot="public" virt="non-virtual"><scope>HomeLayer</scope><name>CREATE_FUNC</name></member>
       <member refid="class_home_layer_1a70820b0aae19e4cf50d11413db578af6" prot="public" virt="non-virtual"><scope>HomeLayer</scope><name>HomeLayer</name></member>
       <member refid="class_home_layer_1a7b39d554c7e3089a0855b471496ea0b6" prot="public" virt="virtual"><scope>HomeLayer</scope><name>init</name></member>
-      <member refid="class_home_layer_1a1fbee493222ccf67c70396025a0af2ec" prot="public" virt="non-virtual"><scope>HomeLayer</scope><name>menuCloseCallback</name></member>
       <member refid="class_home_layer_1abfa48630fcd7c04d077c92c673d419af" prot="public" virt="non-virtual"><scope>HomeLayer</scope><name>scene</name></member>
       <member refid="class_home_layer_1a74c4bad7f4d90f02536645886b86529b" prot="public" virt="non-virtual"><scope>HomeLayer</scope><name>~HomeLayer</name></member>
     </listofallmembers>

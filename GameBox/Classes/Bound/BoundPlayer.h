@@ -49,18 +49,12 @@ private:
     
     KeyStateStruct keyState;
     bool isDying;
-    
-    bool active;
+
     
     std::function<void(Object*)> escFunc; //this is the function to call when esc is pressed
     
 public:
     BPlayer(const char* image, std::function<void(Object*)> escF);
-
-    /**
-     *  @brief  Stops the player and any interaction
-     */
-    void setActive(const bool a);
     
     /**
      *  @brief  Set the level to check collision on

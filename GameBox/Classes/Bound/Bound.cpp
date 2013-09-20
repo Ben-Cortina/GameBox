@@ -12,44 +12,41 @@
 BScene::BScene()
 {
     init();
-    layerFocus = 1;
+    layerFocus = 0;
     curLevel = 0;
     
     //create background Layer
-    backgroundLayer = LayerColor::create(Color4B(255, 255, 255, 255));
-    addChild(backgroundLayer);
+    backgroundLayer = new LayerColor();
+    backgroundLayer->initWithColor(Color4B(150, 150, 150, 255));
     
     //create player Layer
     playerLayer = new BPlayer("Pixel.png", BScene::handleEsc);
     
     //load level Data
-    LD * levellist;
-    int ldCount = loadLevelDict(levellist);
+    int ldCount;
+    LD * levellist = loadLevelDict(ldCount);
     
     //load menu
     menuLayer = new BLevelMenu(BScene::loadLevel, levellist, ldCount);
     
-    menuLayer->setVisible(true);
-    playerLayer->setVisible(false);
-    playerLayer->setActive(false);
-    
-    //for now well load a level
+    //load the levelmenu
     showLevelMenu();
-    addChild(menuLayer, 1);
 }
 
-int BScene::loadLevelDict(LD * levels)
+LD* BScene::loadLevelDict(int & cnt)
 {
     std::string name;
     std::string path;
-    int cnt = 0;
+    cnt = 0;
     std::ifstream levelFile;
     
     std::string pathKey = FileUtils::getInstance()->fullPathForFilename("BoundLevels.txt");
     levelFile.open(pathKey.c_str());
     
-    if (!levelFile.is_open())
+    if (!levelFile)
         return 0;
+    
+    std::streampos start = levelFile.tellg();
     
     //count lines and check errors
     while (levelFile >> name && levelFile >> path)
@@ -62,9 +59,10 @@ int BScene::loadLevelDict(LD * levels)
     }
     //reset file
     levelFile.clear();
+    levelFile.seekg(start);
     
     //init levels
-    levels = new LD[cnt];
+    LD * levels = new LD[cnt];
     int idx = 0;
     
     //populate levels
@@ -80,16 +78,14 @@ int BScene::loadLevelDict(LD * levels)
     
     levelFile.close();
     
-    return cnt;
+    std::cout << idx << " levels loaded "<<std::endl;
+    
+    return levels;
 }
 
 void BScene::newLevel(const char* filepath)
 {
     Director::getInstance()->pause();
-    
-    //release the old level
-    if (levelLayer)
-        levelLayer->release();
     
     //load the new one
     levelLayer = new BLevel(filepath);
@@ -97,13 +93,18 @@ void BScene::newLevel(const char* filepath)
     // if it loaded
     if (levelLayer->isValid())
     {
-        removeAllChildren();
+        
         //replace the level
         playerLayer->setLevel(levelLayer);
 
         //kill the menu and show the level
-        addChild(levelLayer,1);
-        addChild(playerLayer,1);
+        addChild(backgroundLayer,1);
+        addChild(levelLayer,2);
+        addChild(playerLayer,3);
+        removeChild(menuLayer);
+        
+        levelLayer->release();
+        layerFocus = 2;
     }
     
     Director::getInstance()->resume();
@@ -112,11 +113,12 @@ void BScene::newLevel(const char* filepath)
 void BScene::handleEsc(Object* scene)
 {
     BScene* thisScene = (BScene*)scene;
+    std::cout << "handling esc" <<std::endl;
     
     switch (thisScene->getFocus())
     {
         case 0:
-            thisScene->exitGame(thisScene);
+            thisScene->exitGame();
             break;
         case 1:
             thisScene->showLevelMenu();
@@ -132,16 +134,24 @@ void BScene::handleEsc(Object* scene)
 
 void BScene::showLevelMenu()
 {
-    removeAllChildren();
+    addChild(menuLayer,1);
+    if(layerFocus!=0)
+    {
+        levelLayer->cleanup();
+        playerLayer->cleanup();
+        removeChild(levelLayer);
+        removeChild(backgroundLayer);
+        removeChild(playerLayer);
+    }
+    playerLayer->setKeyboardEnabled(false);
     
-    addChild(menuLayer);
+    layerFocus = 0;
 }
 
 void BScene::showPauseMenu()
 {
     //pause game and input
     Director::getInstance()->pause();
-    playerLayer->setTouchEnabled(false);
     playerLayer->setKeyboardEnabled(false);
     
     Size windowSize = Director::getInstance()->getWinSize();
@@ -188,7 +198,55 @@ void BScene::showPauseMenu()
                        origin.y + windowSize.height/2 - heightofitems/2);
     
     overlay->initWithColorMenu( Color4B(0,0,0,150), pMenu);
-    addChild(overlay);
+    addChild(overlay,4);
+    layerFocus = 1;
+    
+    overlay->release();
+}
+
+void BScene::resumeGame()
+{
+    layerFocus=2;
+    playerLayer->setKeyboardEnabled(true);
+}
+
+
+void BScene::resumeCB(Object* pSender)
+{
+    //release overlay and resume
+    //release pauseLayer and resume
+    OverLayer* overlay = (OverLayer*)((Node*)((Node*)pSender )->getParent() //MenuItemLabel->getParent()
+                                      )->getParent(); //Menu->getParent()
+    BScene * thisScene = (BScene*)(overlay->getParent());
+    
+    thisScene->removeChild(overlay);
+    thisScene->resumeGame();
+    
+    Director::getInstance()->resume();
+}
+
+void BScene::levelSelectCB(Object* pSender)
+{
+    //Return to level select
+    OverLayer* overlay = (OverLayer*)((Node*)((Node*)pSender )->getParent() //MenuItemLabel->getParent()
+                                      )->getParent(); //Menu->getParent()
+    BScene * thisScene = (BScene*)(overlay->getParent());
+    
+    thisScene->removeChild(overlay);
+    thisScene->showLevelMenu();
+    
+    Director::getInstance()->resume();
+    
+}
+
+void BScene::exitGameCB(Object* pSender)
+{
+    //remove all children and replace with homelayer
+    OverLayer* overlay = (OverLayer*)((Node*)((Node*)pSender )->getParent() //MenuItemLabel->getParent()
+                                      )->getParent(); //Menu->getParent()
+    BScene * thisScene = (BScene*)(overlay->getParent());
+    
+    thisScene->exitGame();
 }
 
 void BScene::loadLevel(Object * pSender)
@@ -206,13 +264,15 @@ void BScene::loadLevel(Object * pSender)
     thisScene->newLevel(menuL->getLevelPath(idx));
 }
 
-void BScene::exitGame(Object* scene)
+void BScene::exitGame()
 {
+    removeAllChildrenWithCleanup(true);
+    
     HomeLayer* layer = HomeLayer::create();
     
     Director::getInstance()->replaceScene(layer->scene());
    
-    scene->release();
+    layer->release();
 }
 
 void BScene::runThisGame(Object* pSender)

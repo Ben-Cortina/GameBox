@@ -10,10 +10,11 @@
 
 static Point s_tCurPos = Point::ZERO;
 
-BLevelMenu::BLevelMenu(std::function<void(Object*)> cb, LD * levels, int ldCount)
+BLevelMenu::BLevelMenu(std::function<void(Object*)> cb, LD levels[], int ldCount)
 : beginPos(Point::ZERO), callback(cb), levelCount(ldCount)
 {
     levelData = levels;
+    std::cout<<levels[0].level_name<<std::endl;
     Size visSize = Director::getInstance()->getVisibleSize();
     Point visOrigin = Director::getInstance()->getVisibleOrigin();
     visRect = Rect(visOrigin.x, visOrigin.y, visSize.width, visSize.height);

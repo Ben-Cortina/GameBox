@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="32" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="32" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="35" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="35" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_b_scene_1a9351cec96b21e50a7d1132feb4cb4e65" prot="private" static="no" mutable="no">
         <type><ref refid="class_b_player" kindref="compound">BPlayer</ref> *</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="33" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="33" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="36" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="36" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_b_scene_1a1dc8e3413c7d47423269274e18615278" prot="private" static="no" mutable="no">
         <type>LayerColor *</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="34" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="34" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="37" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="37" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_b_scene_1a2a1527b5a74b4734d50c7b27764b8d23" prot="private" static="no" mutable="no">
         <type><ref refid="class_b_level_menu" kindref="compound">BLevelMenu</ref> *</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="35" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="35" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="38" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_b_scene_1a8ff8ff84f4632bf9b153bdce4c719852" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="37" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="37" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="40" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_b_scene_1a309abd9a83ba6ec3fcf37bc685f1108a" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="38" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="38" bodyend="-1"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="41" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -95,16 +95,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="43" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="12" bodyend="39"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="46" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="12" bodyend="34"/>
       </memberdef>
-      <memberdef kind="function" id="class_b_scene_1a94e762ddd0893943d05d58eac2f6d641" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int BScene::loadLevelDict</definition>
-        <argsstring>(LD *levels)</argsstring>
+      <memberdef kind="function" id="class_b_scene_1a717840a63b4399bb70d420ba34cc324d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="struct_l_d" kindref="compound">LD</ref> *</type>
+        <definition>LD * BScene::loadLevelDict</definition>
+        <argsstring>(int &amp;cnt)</argsstring>
         <name>loadLevelDict</name>
         <param>
-          <type><ref refid="struct_l_d" kindref="compound">LD</ref> *</type>
-          <declname>levels</declname>
+          <type>int &amp;</type>
+          <declname>cnt</declname>
         </param>
         <briefdescription>
 <para>This will read all the levels from the level dictionary and populate &apos;levels&apos;. </para>        </briefdescription>
@@ -112,7 +112,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="46" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="41" bodyend="84"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="49" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="36" bodyend="84"/>
       </memberdef>
       <memberdef kind="function" id="class_b_scene_1ae8759c51e7bcd9888f3035cbcd9d675c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -125,7 +125,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="49" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="49" bodyend="49"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="52" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="52" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_scene_1a71869b30ce6256f90b7873a4ffa4fd12" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void BScene::setFocus</definition>
+        <argsstring>(const int f)</argsstring>
+        <name>setFocus</name>
+        <param>
+          <type>const int</type>
+          <declname>f</declname>
+        </param>
+        <briefdescription>
+<para>Sets the value for layerFocus. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="55" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="55" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="class_b_scene_1a79117c8d522c8907c474b8448b5e486b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -142,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="52" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="86" bodyend="110"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="58" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="86" bodyend="111"/>
       </memberdef>
       <memberdef kind="function" id="class_b_scene_1a98a3fdedfb94c433624c0ce664adb343" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -155,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="58" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="133" bodyend="138"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="64" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="135" bodyend="149"/>
       </memberdef>
       <memberdef kind="function" id="class_b_scene_1a2817197ebb69c55473bd50808a66a27f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -168,7 +185,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="61" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="140" bodyend="192"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="67" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="151" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_scene_1aa90fdc62093e8c1a8ad454b95015ee2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BScene::resumeGame</definition>
+        <argsstring>()</argsstring>
+        <name>resumeGame</name>
+        <briefdescription>
+<para>Resume the game. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="70" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="207" bodyend="211"/>
+      </memberdef>
+      <memberdef kind="function" id="class_b_scene_1a8c547547d6a90ab1e2ae5abc3805c3f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void BScene::exitGame</definition>
+        <argsstring>()</argsstring>
+        <name>exitGame</name>
+        <briefdescription>
+<para>Exits this game and returns to the Home Screen. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="83" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="267" bodyend="276"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -187,11 +230,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="55" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="112" bodyend="131"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="61" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="113" bodyend="133"/>
       </memberdef>
-      <memberdef kind="function" id="class_b_scene_1af600788366f63a8954b892fdc7934236" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_b_scene_1a25d15df90b25965d88b48c8630da9af3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void BScene::resumeCB</definition>
+        <definition>void BScene::resumeCB</definition>
         <argsstring>(Object *pSender)</argsstring>
         <name>resumeCB</name>
         <param>
@@ -204,11 +247,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="63"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="72" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="214" bodyend="226"/>
       </memberdef>
-      <memberdef kind="function" id="class_b_scene_1a21e02f1209ed73a1dfbcada5f153a3b4" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_b_scene_1a57bc71835cfbd1596d639f8ba949b795" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void BScene::levelSelectCB</definition>
+        <definition>void BScene::levelSelectCB</definition>
         <argsstring>(Object *pSender)</argsstring>
         <name>levelSelectCB</name>
         <param>
@@ -221,11 +264,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="64"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="73" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="228" bodyend="240"/>
       </memberdef>
-      <memberdef kind="function" id="class_b_scene_1a2cef71e8f1d699acc111ea43b872e050" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_b_scene_1a762573ed16243cbe4d6539fbfe36b0e3" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>static void BScene::exitGameCB</definition>
+        <definition>void BScene::exitGameCB</definition>
         <argsstring>(Object *pSender)</argsstring>
         <name>exitGameCB</name>
         <param>
@@ -238,7 +281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="65"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="74" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="242" bodyend="250"/>
       </memberdef>
       <memberdef kind="function" id="class_b_scene_1a43226267f8e0d11e0440d64db1814889" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -255,24 +298,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="71" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="194" bodyend="207"/>
-      </memberdef>
-      <memberdef kind="function" id="class_b_scene_1a9b647ad2b4ebc0289a3170009653c41d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void BScene::exitGame</definition>
-        <argsstring>(Object *scene)</argsstring>
-        <name>exitGame</name>
-        <param>
-          <type>Object *</type>
-          <declname>scene</declname>
-        </param>
-        <briefdescription>
-<para>Exits this game and returns to the Home Screen. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="74" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="209" bodyend="216"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="80" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="252" bodyend="265"/>
       </memberdef>
       <memberdef kind="function" id="class_b_scene_1a90db09771569a058108341368724efc9" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -289,32 +315,34 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="77" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="218" bodyend="234"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="86" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.cpp" bodystart="278" bodyend="294"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This is the Scene for Bound. It wll hold the layers that make up the Bound game. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="30" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="29" bodyend="78"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" line="33" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h" bodystart="32" bodyend="87"/>
     <listofallmembers>
       <member refid="class_b_scene_1a1dc8e3413c7d47423269274e18615278" prot="private" virt="non-virtual"><scope>BScene</scope><name>backgroundLayer</name></member>
       <member refid="class_b_scene_1a814659a27cecfe7e5aefc32081d0f3a5" prot="public" virt="non-virtual"><scope>BScene</scope><name>BScene</name></member>
       <member refid="class_b_scene_1a309abd9a83ba6ec3fcf37bc685f1108a" prot="private" virt="non-virtual"><scope>BScene</scope><name>curLevel</name></member>
-      <member refid="class_b_scene_1a9b647ad2b4ebc0289a3170009653c41d" prot="public" virt="non-virtual"><scope>BScene</scope><name>exitGame</name></member>
-      <member refid="class_b_scene_1a2cef71e8f1d699acc111ea43b872e050" prot="public" virt="non-virtual"><scope>BScene</scope><name>exitGameCB</name></member>
+      <member refid="class_b_scene_1a8c547547d6a90ab1e2ae5abc3805c3f2" prot="public" virt="non-virtual"><scope>BScene</scope><name>exitGame</name></member>
+      <member refid="class_b_scene_1a762573ed16243cbe4d6539fbfe36b0e3" prot="public" virt="non-virtual"><scope>BScene</scope><name>exitGameCB</name></member>
       <member refid="class_b_scene_1ae8759c51e7bcd9888f3035cbcd9d675c" prot="public" virt="non-virtual"><scope>BScene</scope><name>getFocus</name></member>
       <member refid="class_b_scene_1aa3e76c81d0eeadf1c6b6f7d9560c14cf" prot="public" virt="non-virtual"><scope>BScene</scope><name>handleEsc</name></member>
       <member refid="class_b_scene_1a8ff8ff84f4632bf9b153bdce4c719852" prot="private" virt="non-virtual"><scope>BScene</scope><name>layerFocus</name></member>
       <member refid="class_b_scene_1a6869d39e608c87ec85c6260d9ca25d81" prot="private" virt="non-virtual"><scope>BScene</scope><name>levelLayer</name></member>
-      <member refid="class_b_scene_1a21e02f1209ed73a1dfbcada5f153a3b4" prot="public" virt="non-virtual"><scope>BScene</scope><name>levelSelectCB</name></member>
+      <member refid="class_b_scene_1a57bc71835cfbd1596d639f8ba949b795" prot="public" virt="non-virtual"><scope>BScene</scope><name>levelSelectCB</name></member>
       <member refid="class_b_scene_1a43226267f8e0d11e0440d64db1814889" prot="public" virt="non-virtual"><scope>BScene</scope><name>loadLevel</name></member>
-      <member refid="class_b_scene_1a94e762ddd0893943d05d58eac2f6d641" prot="public" virt="non-virtual"><scope>BScene</scope><name>loadLevelDict</name></member>
+      <member refid="class_b_scene_1a717840a63b4399bb70d420ba34cc324d" prot="public" virt="non-virtual"><scope>BScene</scope><name>loadLevelDict</name></member>
       <member refid="class_b_scene_1a2a1527b5a74b4734d50c7b27764b8d23" prot="private" virt="non-virtual"><scope>BScene</scope><name>menuLayer</name></member>
       <member refid="class_b_scene_1a79117c8d522c8907c474b8448b5e486b" prot="public" virt="non-virtual"><scope>BScene</scope><name>newLevel</name></member>
       <member refid="class_b_scene_1a9351cec96b21e50a7d1132feb4cb4e65" prot="private" virt="non-virtual"><scope>BScene</scope><name>playerLayer</name></member>
-      <member refid="class_b_scene_1af600788366f63a8954b892fdc7934236" prot="public" virt="non-virtual"><scope>BScene</scope><name>resumeCB</name></member>
+      <member refid="class_b_scene_1a25d15df90b25965d88b48c8630da9af3" prot="public" virt="non-virtual"><scope>BScene</scope><name>resumeCB</name></member>
+      <member refid="class_b_scene_1aa90fdc62093e8c1a8ad454b95015ee2e" prot="public" virt="non-virtual"><scope>BScene</scope><name>resumeGame</name></member>
       <member refid="class_b_scene_1a90db09771569a058108341368724efc9" prot="public" virt="non-virtual"><scope>BScene</scope><name>runThisGame</name></member>
+      <member refid="class_b_scene_1a71869b30ce6256f90b7873a4ffa4fd12" prot="public" virt="non-virtual"><scope>BScene</scope><name>setFocus</name></member>
       <member refid="class_b_scene_1a98a3fdedfb94c433624c0ce664adb343" prot="public" virt="non-virtual"><scope>BScene</scope><name>showLevelMenu</name></member>
       <member refid="class_b_scene_1a2817197ebb69c55473bd50808a66a27f" prot="public" virt="non-virtual"><scope>BScene</scope><name>showPauseMenu</name></member>
     </listofallmembers>

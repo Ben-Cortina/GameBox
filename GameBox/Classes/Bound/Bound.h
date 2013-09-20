@@ -22,6 +22,9 @@
 #include "BoundPlayer.h"
 #include "BoundLevelMenu.h"
 
+//TODO:     Add Victory
+//          Add Keyboard handling layer
+         
 
 /**
  *  @brief  This is the Scene for Bound. It wll hold the layers that make up the Bound game.
@@ -43,10 +46,13 @@ public:
     BScene();
     
     /** @brief  This will read all the levels from the level dictionary and populate 'levels' */
-    int loadLevelDict(LD * levels);
+    LD* loadLevelDict(int & cnt);
     
     /** @brief  Returns the current focus of the game */
     int getFocus(){return layerFocus;};
+    
+    /** @brief  Sets the value for layerFocus   */
+    void setFocus(const int f){layerFocus = f;};
     
     /** @brief  This will load a new level */
     void newLevel(const char* filepath);
@@ -60,6 +66,9 @@ public:
     /** @brief  Show the Pause Menu */
     void showPauseMenu();
     
+    /** @brief  Resume the game */
+    void resumeGame();
+    
     static void resumeCB(Object* pSender);
     static void levelSelectCB(Object* pSender);
     static void exitGameCB(Object* pSender);
@@ -71,7 +80,7 @@ public:
     static void loadLevel(Object* pSender);
     
     /** @brief  Exits this game and returns to the Home Screen */
-    static void exitGame(Object * scene);
+    void exitGame();
     
     /** @brief  This method creates a new BScene and runs it */
     static void runThisGame(Object* pSender);

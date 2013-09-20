@@ -160,16 +160,13 @@
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>there&apos;s<sp/>no<sp/>&apos;id&apos;<sp/>in<sp/>cpp,<sp/>so<sp/>we<sp/>recommend<sp/>returning<sp/>the<sp/>class<sp/>instance<sp/>pointer</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/>Scene*<sp/><ref refid="class_home_layer_1abfa48630fcd7c04d077c92c673d419af" kindref="member">scene</ref>();</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>selector<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_home_layer_1a1fbee493222ccf67c70396025a0af2ec" kindref="member">menuCloseCallback</ref>(Object*<sp/>pSender);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>implement<sp/>the<sp/>&quot;static<sp/>create()&quot;<sp/>method</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_home_layer_1ad72b3afd71127c67721d1d04aea5ffe9" kindref="member">CREATE_FUNC</ref>(<ref refid="class_home_layer" kindref="compound">HomeLayer</ref>);</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>implement<sp/>the<sp/>&quot;static<sp/>create()&quot;<sp/>method</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_home_layer_1ad72b3afd71127c67721d1d04aea5ffe9" kindref="member">CREATE_FUNC</ref>(<ref refid="class_home_layer" kindref="compound">HomeLayer</ref>);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__HOME_SCENE_H__</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>__HOME_SCENE_H__</highlight></codeline>
     </programlisting>
     <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/HomeScene.h"/>
   </compounddef>

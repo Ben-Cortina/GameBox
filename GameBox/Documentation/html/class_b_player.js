@@ -7,7 +7,6 @@ var class_b_player =
     [ "handleCollisions", "class_b_player.html#a4c0f72ebb2a0b95eb35fab6598924992", null ],
     [ "keyPressed", "class_b_player.html#ae0aaaa33013fd5c0070cf51619abf12b", null ],
     [ "keyReleased", "class_b_player.html#a8210db4e8fac75ace4b71b3ded1df6bf", null ],
-    [ "setActive", "class_b_player.html#a2c7606b7353aa365048bcb4e6fe1fadc", null ],
     [ "setForce", "class_b_player.html#ae97ab8470903f7c595939f2331b6c6f4", null ],
     [ "setForceX", "class_b_player.html#af7ae69e5c1d7880a5ebf4bd38c1adabb", null ],
     [ "setForceY", "class_b_player.html#a94916a0f75042c2e6265fa7c9ec4db32", null ],

@@ -180,12 +180,13 @@ bool BLevel::parseFile(const char* file)
 {
     std::ifstream bdlfile;
     
+    std::cout << "Reading level from " << file << std::endl;
+    
     bdlfile.open(file);
     
-    if(!bdlfile.is_open())
+    if(!bdlfile)
     {
         std::cout << "ERROR opening file" <<std::endl;
-        bdlfile.close();
         return false;
     }
     

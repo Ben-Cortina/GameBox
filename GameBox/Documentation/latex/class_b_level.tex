@@ -19,14 +19,8 @@
 \begin{DoxyCompactList}\small\item\em returns the starting location \end{DoxyCompactList}\item 
 float \hyperlink{class_b_level_a8d02e52b25ff8c39bb68d0880c31771c}{get\-Tile\-Size} ()
 \begin{DoxyCompactList}\small\item\em returns the tile\-Size \end{DoxyCompactList}\item 
-bool \hyperlink{class_b_level_abb407d85aebcc0d6cded1ad13c2e2eed}{is\-Wall} (const \hyperlink{struct_coords}{\-Coords} loc)
-\begin{DoxyCompactList}\small\item\em \-Checks if the provided location is a wall. \end{DoxyCompactList}\item 
-bool \hyperlink{class_b_level_a7520cdd30191a75a7811c42ee1758e65}{is\-Wall} (const int x, const int y)
-\begin{DoxyCompactList}\small\item\em \-Checks if the provided location is a wall. \end{DoxyCompactList}\item 
-bool \hyperlink{class_b_level_adf39bb6a72e7780031a0806df92f9fc5}{is\-Explosion} (const \hyperlink{struct_coords}{\-Coords} loc)
-\begin{DoxyCompactList}\small\item\em \-Checks to see if there is an active explosion there. \end{DoxyCompactList}\item 
-bool \hyperlink{class_b_level_acf89db789ceb7f083221fab3fead042e}{is\-Explosion} (const int x, const int y)
-\begin{DoxyCompactList}\small\item\em \-Checks to see if there is an active explosion there. \end{DoxyCompactList}\item 
+bool \hyperlink{class_b_level_af5e69744df511186e383aa68936869dd}{in\-Exit} (const \-Rect bb)
+\begin{DoxyCompactList}\small\item\em \-Checks if the player is fully inside an exit. \end{DoxyCompactList}\item 
 bool \hyperlink{class_b_level_ad9a6d59f73f29c78a0b2e57997202eb5}{is\-Valid} ()
 \begin{DoxyCompactList}\small\item\em \-Did the level load. \end{DoxyCompactList}\item 
 bool \hyperlink{class_b_level_ae32bcaf31096afb8356391e8ad6552e1}{is\-Wall\-Collision} (\-Rect bb, \-Rect \&tile\-B\-B)
@@ -108,28 +102,16 @@ returns the starting location
 
 returns the tile\-Size 
 
-\hypertarget{class_b_level_adf39bb6a72e7780031a0806df92f9fc5}{\index{\-B\-Level@{\-B\-Level}!is\-Explosion@{is\-Explosion}}
-\index{is\-Explosion@{is\-Explosion}!BLevel@{\-B\-Level}}
-\subsubsection[{is\-Explosion}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Level\-::is\-Explosion} (
+\hypertarget{class_b_level_af5e69744df511186e383aa68936869dd}{\index{\-B\-Level@{\-B\-Level}!in\-Exit@{in\-Exit}}
+\index{in\-Exit@{in\-Exit}!BLevel@{\-B\-Level}}
+\subsubsection[{in\-Exit}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Level\-::in\-Exit} (
 \begin{DoxyParamCaption}
-\item[{const {\bf \-Coords}}]{loc}
+\item[{const \-Rect}]{bb}
 \end{DoxyParamCaption}
-)}}\label{class_b_level_adf39bb6a72e7780031a0806df92f9fc5}
+)}}\label{class_b_level_af5e69744df511186e383aa68936869dd}
 
 
-\-Checks to see if there is an active explosion there. 
-
-\hypertarget{class_b_level_acf89db789ceb7f083221fab3fead042e}{\index{\-B\-Level@{\-B\-Level}!is\-Explosion@{is\-Explosion}}
-\index{is\-Explosion@{is\-Explosion}!BLevel@{\-B\-Level}}
-\subsubsection[{is\-Explosion}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Level\-::is\-Explosion} (
-\begin{DoxyParamCaption}
-\item[{const int}]{x, }
-\item[{const int}]{y}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_level_acf89db789ceb7f083221fab3fead042e}
-
-
-\-Checks to see if there is an active explosion there. 
+\-Checks if the player is fully inside an exit. 
 
 \hypertarget{class_b_level_a432d3dde8efb542646792f9c5563a522}{\index{\-B\-Level@{\-B\-Level}!is\-Explosion\-Collision@{is\-Explosion\-Collision}}
 \index{is\-Explosion\-Collision@{is\-Explosion\-Collision}!BLevel@{\-B\-Level}}
@@ -163,29 +145,6 @@ returns the tile\-Size
 
 
 \-Did the level load. 
-
-\hypertarget{class_b_level_abb407d85aebcc0d6cded1ad13c2e2eed}{\index{\-B\-Level@{\-B\-Level}!is\-Wall@{is\-Wall}}
-\index{is\-Wall@{is\-Wall}!BLevel@{\-B\-Level}}
-\subsubsection[{is\-Wall}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Level\-::is\-Wall} (
-\begin{DoxyParamCaption}
-\item[{const {\bf \-Coords}}]{loc}
-\end{DoxyParamCaption}
-)}}\label{class_b_level_abb407d85aebcc0d6cded1ad13c2e2eed}
-
-
-\-Checks if the provided location is a wall. 
-
-\hypertarget{class_b_level_a7520cdd30191a75a7811c42ee1758e65}{\index{\-B\-Level@{\-B\-Level}!is\-Wall@{is\-Wall}}
-\index{is\-Wall@{is\-Wall}!BLevel@{\-B\-Level}}
-\subsubsection[{is\-Wall}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-B\-Level\-::is\-Wall} (
-\begin{DoxyParamCaption}
-\item[{const int}]{x, }
-\item[{const int}]{y}
-\end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_b_level_a7520cdd30191a75a7811c42ee1758e65}
-
-
-\-Checks if the provided location is a wall. 
 
 \hypertarget{class_b_level_ae32bcaf31096afb8356391e8ad6552e1}{\index{\-B\-Level@{\-B\-Level}!is\-Wall\-Collision@{is\-Wall\-Collision}}
 \index{is\-Wall\-Collision@{is\-Wall\-Collision}!BLevel@{\-B\-Level}}

@@ -19,6 +19,8 @@ var files =
     [ "GameBox/GameBox/Classes/Helpers/CustomCC.h", "_custom_c_c_8h.html", "_custom_c_c_8h" ],
     [ "GameBox/GameBox/Classes/Helpers/CustomTileGrid.cpp", "_custom_tile_grid_8cpp.html", null ],
     [ "GameBox/GameBox/Classes/Helpers/CustomTileGrid.h", "_custom_tile_grid_8h.html", null ],
+    [ "GameBox/GameBox/Classes/Helpers/KeyboardHandler.cpp", "_keyboard_handler_8cpp.html", null ],
+    [ "GameBox/GameBox/Classes/Helpers/KeyboardHandler.h", "_keyboard_handler_8h.html", "_keyboard_handler_8h" ],
     [ "GameBox/GameBox/Classes/Helpers/OverLayer.cpp", "_over_layer_8cpp.html", null ],
     [ "GameBox/GameBox/Classes/Helpers/OverLayer.h", "_over_layer_8h.html", "_over_layer_8h" ],
     [ "GameBox/GameBox/Classes/TheBox/PlayerSprite.cpp", "_player_sprite_8cpp.html", "_player_sprite_8cpp" ],

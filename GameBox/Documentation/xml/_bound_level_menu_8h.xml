@@ -6,68 +6,68 @@
     <includedby refid="_bound_8h" local="yes">GameBox/GameBox/Classes/Bound/Bound.h</includedby>
     <includedby refid="_bound_level_menu_8cpp" local="yes">GameBox/GameBox/Classes/Bound/BoundLevelMenu.cpp</includedby>
     <incdepgraph>
-      <node id="86">
+      <node id="89">
         <label>GameBox/GameBox/Classes/Bound/BoundLevelMenu.h</label>
         <link refid="BoundLevelMenu.h"/>
-        <childnode refid="87" relation="include">
+        <childnode refid="90" relation="include">
         </childnode>
       </node>
-      <node id="87">
+      <node id="90">
         <label>cocos2d.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="93">
+      <node id="96">
         <label>GameBox/GameBox/Classes/Bound/Bound.cpp</label>
         <link refid="_bound_8cpp"/>
       </node>
-      <node id="96">
+      <node id="99">
         <label>GameBox/GameBox/Classes/Bound/BoundLevelMenu.cpp</label>
         <link refid="_bound_level_menu_8cpp"/>
       </node>
-      <node id="90">
+      <node id="93">
         <label>GameBox/GameBox/Classes/GameList.h</label>
         <link refid="_game_list_8h"/>
-        <childnode refid="91" relation="include">
-        </childnode>
-      </node>
-      <node id="89">
-        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
-        <link refid="_bound_8h"/>
-        <childnode refid="90" relation="include">
-        </childnode>
-        <childnode refid="93" relation="include">
-        </childnode>
-      </node>
-      <node id="91">
-        <label>GameBox/GameBox/Classes/HomeScene.h</label>
-        <link refid="_home_scene_8h"/>
-        <childnode refid="92" relation="include">
-        </childnode>
-        <childnode refid="93" relation="include">
-        </childnode>
         <childnode refid="94" relation="include">
         </childnode>
-        <childnode refid="95" relation="include">
-        </childnode>
       </node>
-      <node id="88">
-        <label>GameBox/GameBox/Classes/Bound/BoundLevelMenu.h</label>
-        <link refid="BoundLevelMenu.h"/>
-        <childnode refid="89" relation="include">
+      <node id="92">
+        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
+        <link refid="_bound_8h"/>
+        <childnode refid="93" relation="include">
         </childnode>
         <childnode refid="96" relation="include">
         </childnode>
       </node>
       <node id="94">
+        <label>GameBox/GameBox/Classes/HomeScene.h</label>
+        <link refid="_home_scene_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+        <childnode refid="96" relation="include">
+        </childnode>
+        <childnode refid="97" relation="include">
+        </childnode>
+        <childnode refid="98" relation="include">
+        </childnode>
+      </node>
+      <node id="91">
+        <label>GameBox/GameBox/Classes/Bound/BoundLevelMenu.h</label>
+        <link refid="BoundLevelMenu.h"/>
+        <childnode refid="92" relation="include">
+        </childnode>
+        <childnode refid="99" relation="include">
+        </childnode>
+      </node>
+      <node id="97">
         <label>GameBox/GameBox/Classes/HomeScene.cpp</label>
         <link refid="_home_scene_8cpp"/>
       </node>
-      <node id="92">
+      <node id="95">
         <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
         <link refid="_app_delegate_8cpp"/>
       </node>
-      <node id="95">
+      <node id="98">
         <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
         <link refid="_the_box_8cpp"/>
       </node>
@@ -118,19 +118,21 @@
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/><ref refid="class_b_level_menu_1a38bfb874e8a2d32bb01f4a281032e84c" kindref="member" tooltip="Gets the path of the file at the given index.">getLevelPath</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx);</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_level_menu_1a3a7207f8b357ae3e82b26b3507137775" kindref="member" tooltip="Handles clicks/touches.">ccTouchesBegan</ref>(Set<sp/>*pTouches,<sp/>Event<sp/>*pEvent);</highlight></codeline>
+<codeline lineno="30" refid="class_b_level_menu_1aeb1f5dc532dab13120d309c8ca7a30b9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_b_level_menu_1aeb1f5dc532dab13120d309c8ca7a30b9" kindref="member" tooltip="Gets the number of levels avaliable.">getLevelCount</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>levelCount;<sp/>};</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_level_menu_1a14fc166131531c3c9ef271eb965bfd64" kindref="member" tooltip="Handles click/touch drags.">ccTouchesMoved</ref>(Set<sp/>*pTouches,<sp/>Event<sp/>*pEvent);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_level_menu_1a3a7207f8b357ae3e82b26b3507137775" kindref="member" tooltip="Handles clicks/touches.">ccTouchesBegan</ref>(Set<sp/>*pTouches,<sp/>Event<sp/>*pEvent);</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="35"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>Rect<sp/>visRect;</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>Point<sp/>beginPos;</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>Menu*<sp/>itemMenu;</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void(Object*)&gt;<sp/>callback;</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_l_d" kindref="compound">LD</ref><sp/>*levelData;</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>levelCount;</highlight></codeline>
-<codeline lineno="42"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__BoundLevelMenu__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_level_menu_1a14fc166131531c3c9ef271eb965bfd64" kindref="member" tooltip="Handles click/touch drags.">ccTouchesMoved</ref>(Set<sp/>*pTouches,<sp/>Event<sp/>*pEvent);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>Rect<sp/>visRect;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>Point<sp/>beginPos;</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>Menu*<sp/>itemMenu;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void(Object*)&gt;<sp/>callback;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_l_d" kindref="compound">LD</ref><sp/>*levelData;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>levelCount;</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__BoundLevelMenu__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevelMenu.h"/>
   </compounddef>

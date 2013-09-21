@@ -12,7 +12,8 @@
  * Eventually I hope to add procedural generation and/or a      *
  * level creator to this game                                   *
  *                                                              *
- * Features: Keyboard movement, BB collision detection          *
+ * Features: Keyboard movement, BB collision detection, Sound,  *
+ *           Scheduling and callbacks                           *
  *--------------------------------------------------------------*/
 
 #ifndef __GameBox__Bound__
@@ -21,17 +22,16 @@
 //#include "BoundLevel.h" BoundPlayer.h includes BoundLevel
 #include "BoundPlayer.h"
 #include "BoundLevelMenu.h"
+#include "KeyboardHandler.h"
 
-//TODO:     Add Victory
-//          Add Keyboard handling layer
-         
+//TODO: Use KeyboardHandler for playerLayer
+//      Sounds
 
-/**
- *  @brief  This is the Scene for Bound. It wll hold the layers that make up the Bound game.
- */
+/** @brief  This is the Scene for Bound. It wll hold the layers that make up the Bound game. */
 class BScene : public Scene
 {
 private:
+    KeyboardHandler* keyHandler;
     BLevel* levelLayer;
     BPlayer* playerLayer;
     LayerColor* backgroundLayer;
@@ -57,6 +57,12 @@ public:
     /** @brief  This will load a new level */
     void newLevel(const char* filepath);
     
+    /** @brief  This will load a level from the level menu */
+    void loadLevel(const int idx);
+    
+    /** @brief  This will load the next level from a current level */
+    void nextLevel();
+    
     /** @brief  This will handle EscPresses */
     static void handleEsc(Object * scene);
     
@@ -69,6 +75,10 @@ public:
     /** @brief  Resume the game */
     void resumeGame();
     
+    //win callback
+    static void winCB(Object* pSender);
+    
+    //menu callbacks
     static void resumeCB(Object* pSender);
     static void levelSelectCB(Object* pSender);
     static void exitGameCB(Object* pSender);
@@ -77,7 +87,7 @@ public:
      *  @brief  Loads the level stored in sender->levelname
      *          This is called from BLevelMenu
      */
-    static void loadLevel(Object* pSender);
+    static void runLoadLevel(Object* pSender);
     
     /** @brief  Exits this game and returns to the Home Screen */
     void exitGame();

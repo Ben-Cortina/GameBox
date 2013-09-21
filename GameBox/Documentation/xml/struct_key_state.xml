@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="struct_key_state" kind="struct" prot="public">
+    <compoundname>KeyState</compoundname>
+    <includes refid="_keyboard_handler_8h" local="no">KeyboardHandler.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_key_state_1a8240c9d70dd2e47832fe50e40e4adce9" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int KeyState::keyCode</definition>
+        <argsstring></argsstring>
+        <name>keyCode</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="18" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_key_state_1a8922b61cb789c21713c4baceca7ee9ae" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool KeyState::isDown</definition>
+        <argsstring></argsstring>
+        <name>isDown</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="19" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" bodystart="19" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="struct_key_state_1a8ef80ba42cfce46b743b194a891c9dd3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>KeyState::KeyState</definition>
+        <argsstring>(int kC, bool s)</argsstring>
+        <name>KeyState</name>
+        <param>
+          <type>int</type>
+          <declname>kC</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="21" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" bodystart="21" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Will hold the state of a key. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="17" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" bodystart="16" bodyend="22"/>
+    <listofallmembers>
+      <member refid="struct_key_state_1a8922b61cb789c21713c4baceca7ee9ae" prot="public" virt="non-virtual"><scope>KeyState</scope><name>isDown</name></member>
+      <member refid="struct_key_state_1a8240c9d70dd2e47832fe50e40e4adce9" prot="public" virt="non-virtual"><scope>KeyState</scope><name>keyCode</name></member>
+      <member refid="struct_key_state_1a8ef80ba42cfce46b743b194a891c9dd3" prot="public" virt="non-virtual"><scope>KeyState</scope><name>KeyState</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

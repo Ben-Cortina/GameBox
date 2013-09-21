@@ -98,20 +98,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <a href="_bound_8h.html">Go to the documentation of this file.</a><div class="fragment"><pre class="fragment"><a name="l00001"></a>00001 
-<a name="l00018"></a>00018 <span class="preprocessor">#ifndef __GameBox__Bound__</span>
-<a name="l00019"></a>00019 <span class="preprocessor"></span><span class="preprocessor">#define __GameBox__Bound__</span>
-<a name="l00020"></a>00020 <span class="preprocessor"></span>
-<a name="l00021"></a>00021 <span class="comment">//#include &quot;BoundLevel.h&quot; BoundPlayer.h includes BoundLevel</span>
-<a name="l00022"></a>00022 <span class="preprocessor">#include &quot;<a class="code" href="_bound_player_8h.html">BoundPlayer.h</a>&quot;</span>
-<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="_bound_level_menu_8h.html">BoundLevelMenu.h</a>&quot;</span>
-<a name="l00024"></a>00024 
-<a name="l00025"></a>00025 <span class="comment">//TODO:     Add Victory</span>
-<a name="l00026"></a>00026 <span class="comment">//          Add Keyboard handling layer</span>
-<a name="l00027"></a>00027          
-<a name="l00028"></a>00028 
-<a name="l00032"></a><a class="code" href="class_b_scene.html">00032</a> <span class="keyword">class </span><a class="code" href="class_b_scene.html" title="This is the Scene for Bound. It wll hold the layers that make up the Bound game.">BScene</a> : <span class="keyword">public</span> Scene
-<a name="l00033"></a>00033 {
-<a name="l00034"></a>00034 <span class="keyword">private</span>:
+<a name="l00019"></a>00019 <span class="preprocessor">#ifndef __GameBox__Bound__</span>
+<a name="l00020"></a>00020 <span class="preprocessor"></span><span class="preprocessor">#define __GameBox__Bound__</span>
+<a name="l00021"></a>00021 <span class="preprocessor"></span>
+<a name="l00022"></a>00022 <span class="comment">//#include &quot;BoundLevel.h&quot; BoundPlayer.h includes BoundLevel</span>
+<a name="l00023"></a>00023 <span class="preprocessor">#include &quot;<a class="code" href="_bound_player_8h.html">BoundPlayer.h</a>&quot;</span>
+<a name="l00024"></a>00024 <span class="preprocessor">#include &quot;<a class="code" href="_bound_level_menu_8h.html">BoundLevelMenu.h</a>&quot;</span>
+<a name="l00025"></a>00025 <span class="preprocessor">#include &quot;<a class="code" href="_keyboard_handler_8h.html">KeyboardHandler.h</a>&quot;</span>
+<a name="l00026"></a>00026 
+<a name="l00027"></a>00027 <span class="comment">//TODO: Use KeyboardHandler for playerLayer</span>
+<a name="l00028"></a>00028 <span class="comment">//      Sounds</span>
+<a name="l00029"></a>00029 
+<a name="l00031"></a><a class="code" href="class_b_scene.html">00031</a> <span class="keyword">class </span><a class="code" href="class_b_scene.html" title="This is the Scene for Bound. It wll hold the layers that make up the Bound game.">BScene</a> : <span class="keyword">public</span> Scene
+<a name="l00032"></a>00032 {
+<a name="l00033"></a>00033 <span class="keyword">private</span>:
+<a name="l00034"></a>00034     <a class="code" href="class_keyboard_handler.html" title="This is a class I can add to any game which will watch key events and call functions in response...">KeyboardHandler</a>* keyHandler;
 <a name="l00035"></a>00035     <a class="code" href="class_b_level.html" title="This will hold and draw the data for a level.">BLevel</a>* levelLayer;
 <a name="l00036"></a>00036     <a class="code" href="class_b_player.html" title="This will hold and draw the data for a Player. It will also handle player movement.">BPlayer</a>* playerLayer;
 <a name="l00037"></a>00037     LayerColor* backgroundLayer;
@@ -132,26 +133,34 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00056"></a>00056     
 <a name="l00058"></a>00058     <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a79117c8d522c8907c474b8448b5e486b" title="This will load a new level.">newLevel</a>(<span class="keyword">const</span> <span class="keywordtype">char</span>* filepath);
 <a name="l00059"></a>00059     
-<a name="l00061"></a>00061     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#aa3e76c81d0eeadf1c6b6f7d9560c14cf" title="This will handle EscPresses.">handleEsc</a>(Object * scene);
+<a name="l00061"></a>00061     <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a7256ae33cbfbda2999f33626a4fa93ac" title="This will load a level from the level menu.">loadLevel</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> idx);
 <a name="l00062"></a>00062     
-<a name="l00064"></a>00064     <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a98a3fdedfb94c433624c0ce664adb343" title="Show the level Menu.">showLevelMenu</a>();
+<a name="l00064"></a>00064     <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a41bf719fb615e92dc092a18dc47b919b" title="This will load the next level from a current level.">nextLevel</a>();
 <a name="l00065"></a>00065     
-<a name="l00067"></a>00067     <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a2817197ebb69c55473bd50808a66a27f" title="Show the Pause Menu.">showPauseMenu</a>();
+<a name="l00067"></a>00067     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#aa3e76c81d0eeadf1c6b6f7d9560c14cf" title="This will handle EscPresses.">handleEsc</a>(Object * scene);
 <a name="l00068"></a>00068     
-<a name="l00070"></a>00070     <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#aa90fdc62093e8c1a8ad454b95015ee2e" title="Resume the game.">resumeGame</a>();
+<a name="l00070"></a>00070     <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a98a3fdedfb94c433624c0ce664adb343" title="Show the level Menu.">showLevelMenu</a>();
 <a name="l00071"></a>00071     
-<a name="l00072"></a>00072     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a25d15df90b25965d88b48c8630da9af3">resumeCB</a>(Object* pSender);
-<a name="l00073"></a>00073     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a57bc71835cfbd1596d639f8ba949b795">levelSelectCB</a>(Object* pSender);
-<a name="l00074"></a>00074     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a762573ed16243cbe4d6539fbfe36b0e3">exitGameCB</a>(Object* pSender);
-<a name="l00075"></a>00075     
-<a name="l00080"></a>00080     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a43226267f8e0d11e0440d64db1814889" title="Loads the level stored in sender-&gt;levelname This is called from BLevelMenu.">loadLevel</a>(Object* pSender);
-<a name="l00081"></a>00081     
-<a name="l00083"></a>00083     <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a8c547547d6a90ab1e2ae5abc3805c3f2" title="Exits this game and returns to the Home Screen.">exitGame</a>();
-<a name="l00084"></a>00084     
-<a name="l00086"></a>00086     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a90db09771569a058108341368724efc9" title="This method creates a new BScene and runs it.">runThisGame</a>(Object* pSender);
-<a name="l00087"></a>00087 };
-<a name="l00088"></a>00088 
-<a name="l00089"></a>00089 <span class="preprocessor">#endif </span><span class="comment">/* defined(__GameBox__Bound__) */</span>
+<a name="l00073"></a>00073     <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a2817197ebb69c55473bd50808a66a27f" title="Show the Pause Menu.">showPauseMenu</a>();
+<a name="l00074"></a>00074     
+<a name="l00076"></a>00076     <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#aa90fdc62093e8c1a8ad454b95015ee2e" title="Resume the game.">resumeGame</a>();
+<a name="l00077"></a>00077     
+<a name="l00078"></a>00078     <span class="comment">//win callback</span>
+<a name="l00079"></a>00079     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a8f7e96a35d0d42d5bb57a066519d20d2">winCB</a>(Object* pSender);
+<a name="l00080"></a>00080     
+<a name="l00081"></a>00081     <span class="comment">//menu callbacks</span>
+<a name="l00082"></a>00082     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a25d15df90b25965d88b48c8630da9af3">resumeCB</a>(Object* pSender);
+<a name="l00083"></a>00083     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a57bc71835cfbd1596d639f8ba949b795">levelSelectCB</a>(Object* pSender);
+<a name="l00084"></a>00084     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a762573ed16243cbe4d6539fbfe36b0e3">exitGameCB</a>(Object* pSender);
+<a name="l00085"></a>00085     
+<a name="l00090"></a>00090     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a660fea77a245f644588277b863806105" title="Loads the level stored in sender-&gt;levelname This is called from BLevelMenu.">runLoadLevel</a>(Object* pSender);
+<a name="l00091"></a>00091     
+<a name="l00093"></a>00093     <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a8c547547d6a90ab1e2ae5abc3805c3f2" title="Exits this game and returns to the Home Screen.">exitGame</a>();
+<a name="l00094"></a>00094     
+<a name="l00096"></a>00096     <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_b_scene.html#a90db09771569a058108341368724efc9" title="This method creates a new BScene and runs it.">runThisGame</a>(Object* pSender);
+<a name="l00097"></a>00097 };
+<a name="l00098"></a>00098 
+<a name="l00099"></a>00099 <span class="preprocessor">#endif </span><span class="comment">/* defined(__GameBox__Bound__) */</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -172,7 +181,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_bound_8h.html">Bound.h</a>      </li>
 
-    <li class="footer">Generated on Fri Sep 20 2013 16:30:04 for GameBox by
+    <li class="footer">Generated on Sat Sep 21 2013 18:28:00 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

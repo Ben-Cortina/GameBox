@@ -15,22 +15,32 @@ BScene::BScene()
     layerFocus = 0;
     curLevel = 0;
     
+    //add the keyboard handler
+    keyHandler = new KeyboardHandler();
+    keyHandler->addKeyPress(53, BScene::handleEsc, this, true);
+    addChild(keyHandler);
+    //keyHandler->release();
+    
     //create background Layer
     backgroundLayer = new LayerColor();
     backgroundLayer->initWithColor(Color4B(150, 150, 150, 255));
+    addChild(backgroundLayer,1);
+    backgroundLayer->release();
     
     //create player Layer
-    playerLayer = new BPlayer("Pixel.png", BScene::handleEsc);
+    playerLayer = new BPlayer("Pixel.png", BScene::winCB);
     
     //load level Data
     int ldCount;
     LD * levellist = loadLevelDict(ldCount);
     
     //load menu
-    menuLayer = new BLevelMenu(BScene::loadLevel, levellist, ldCount);
+    menuLayer = new BLevelMenu(BScene::runLoadLevel, levellist, ldCount);
     
     //load the levelmenu
     showLevelMenu();
+    
+    keyHandler->setEnabled(true);
 }
 
 LD* BScene::loadLevelDict(int & cnt)
@@ -88,20 +98,19 @@ void BScene::newLevel(const char* filepath)
     Director::getInstance()->pause();
     
     //load the new one
+    std::cout << "curLevel " <<curLevel<< std::endl;
+    
     levelLayer = new BLevel(filepath);
     
     // if it loaded
     if (levelLayer->isValid())
     {
-        
         //replace the level
         playerLayer->setLevel(levelLayer);
 
         //kill the menu and show the level
-        addChild(backgroundLayer,1);
         addChild(levelLayer,2);
         addChild(playerLayer,3);
-        removeChild(menuLayer);
         
         levelLayer->release();
         layerFocus = 2;
@@ -110,10 +119,29 @@ void BScene::newLevel(const char* filepath)
     Director::getInstance()->resume();
 }
 
+void BScene::loadLevel(const int idx)
+{
+    removeChild(menuLayer);
+    curLevel = idx;
+    newLevel(menuLayer->getLevelPath(idx));
+}
+
+void BScene::nextLevel()
+{
+    removeChild(levelLayer);
+    removeChild(playerLayer);
+    curLevel++;
+    
+    if (curLevel < menuLayer->getLevelCount())  //if there are no more levels
+        newLevel(menuLayer->getLevelPath(curLevel));
+    else
+        addChild(menuLayer, 2);
+}
+
+
 void BScene::handleEsc(Object* scene)
 {
     BScene* thisScene = (BScene*)scene;
-    std::cout << "handling esc" <<std::endl;
     
     switch (thisScene->getFocus())
     {
@@ -140,7 +168,6 @@ void BScene::showLevelMenu()
         levelLayer->cleanup();
         playerLayer->cleanup();
         removeChild(levelLayer);
-        removeChild(backgroundLayer);
         removeChild(playerLayer);
     }
     playerLayer->setKeyboardEnabled(false);
@@ -210,6 +237,12 @@ void BScene::resumeGame()
     playerLayer->setKeyboardEnabled(true);
 }
 
+void BScene::winCB(Object* pSender)
+{
+    BScene* thisScene = (BScene*)( ((BPlayer*)pSender)->getParent());
+    
+    thisScene->nextLevel();
+}
 
 void BScene::resumeCB(Object* pSender)
 {
@@ -249,7 +282,7 @@ void BScene::exitGameCB(Object* pSender)
     thisScene->exitGame();
 }
 
-void BScene::loadLevel(Object * pSender)
+void BScene::runLoadLevel(Object * pSender)
 {
 	Director::getInstance()->purgeCachedData();
     
@@ -261,7 +294,7 @@ void BScene::loadLevel(Object * pSender)
     BScene* thisScene = (BScene*)(menuL->getParent());
     
     // replace the old level
-    thisScene->newLevel(menuL->getLevelPath(idx));
+    thisScene->loadLevel(idx);
 }
 
 void BScene::exitGame()

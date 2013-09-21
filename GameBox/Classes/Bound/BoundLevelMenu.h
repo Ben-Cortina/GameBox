@@ -26,6 +26,9 @@ public:
     /** @brief  Gets the path of the file at the given index */
     const char* getLevelPath(const int idx);
     
+    /** @brief  Gets the number of levels avaliable */
+    int getLevelCount() { return levelCount; };
+    
     /** @brief  Handles clicks/touches */
     virtual void ccTouchesBegan(Set *pTouches, Event *pEvent);
     

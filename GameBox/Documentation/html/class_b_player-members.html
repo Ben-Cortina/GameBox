@@ -100,13 +100,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 This is the complete list of members for <a class="el" href="class_b_player.html">BPlayer</a>, including all inherited members.<table>
-  <tr class="memlist"><td><a class="el" href="class_b_player.html#ab32977496976aff5421f2af0d277aaf8">BPlayer</a>(const char *image, std::function&lt; void(Object *)&gt; escF)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_player.html#af15d206fbe7550cf2fa15746f2a9a2f2">BPlayer</a>(const char *image, std::function&lt; void(Object *)&gt; winF)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_player.html#a5a46736f890786b465bfe51c9c4f8ff7">die</a>()</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_player.html#acbcd61303f7f7ccf57a70bbe7af5470f">downP</a>(Object *pThis)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_player.html#a7981065d2d5b4c581d84cb5b63a15d00">fall</a>()</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_player.html#a33b7d635e3aa3c7a4796eabc4205cc58">getForce</a>()</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_player.html#a4c0f72ebb2a0b95eb35fab6598924992">handleCollisions</a>(float x, float y)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_player.html#ae0aaaa33013fd5c0070cf51619abf12b">keyPressed</a>(int keyCode)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_player.html#a8210db4e8fac75ace4b71b3ded1df6bf">keyReleased</a>(int keyCode)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_player.html#aea6f08c0d171c16acdf4180356f33732">leftP</a>(Object *pThis)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_player.html#a715fb318e6a807cbf0822aa8b34e999b">rightP</a>(Object *pThis)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td><code> [static]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_player.html#ae97ab8470903f7c595939f2331b6c6f4">setForce</a>(const Vector pforce)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_player.html#af7ae69e5c1d7880a5ebf4bd38c1adabb">setForceX</a>(const float x)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td><code> [inline]</code></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_player.html#a94916a0f75042c2e6265fa7c9ec4db32">setForceY</a>(const float y)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td><code> [inline]</code></td></tr>
@@ -116,6 +119,8 @@ This is the complete list of members for <a class="el" href="class_b_player.html
   <tr class="memlist"><td><a class="el" href="class_b_player.html#a86f9b0c0d7b4c61ed475f0e70249be7f">update</a>(float dt)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_player.html#a709a36eb859dd8f9a4355e036eac8ac8">update</a>()</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td></td></tr>
   <tr class="memlist"><td><a class="el" href="class_b_player.html#aa0f9b22686ad0aeec30ea21beb3740f2">updateVelocity</a>()</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_player.html#ab01210df4dccd3ab9108bbffadad8243">upP</a>(Object *pThis)</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td><code> [static]</code></td></tr>
+  <tr class="memlist"><td><a class="el" href="class_b_player.html#a479665137e3aad56591b4e16d4cac380">win</a>()</td><td><a class="el" href="class_b_player.html">BPlayer</a></td><td></td></tr>
 </table></div><!-- contents -->
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
@@ -135,7 +140,7 @@ This is the complete list of members for <a class="el" href="class_b_player.html
   <div id="nav-path" class="navpath">
     <ul>
 
-    <li class="footer">Generated on Fri Sep 20 2013 16:30:05 for GameBox by
+    <li class="footer">Generated on Sat Sep 21 2013 18:28:00 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

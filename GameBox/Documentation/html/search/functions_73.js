@@ -4,6 +4,7 @@ var searchData=
   ['schedulefirstexplode',['scheduleFirstExplode',['../class_b_explosion_tile.html#a53e3eab8f3d8d1abfe6f611d0ecbe408',1,'BExplosionTile']]],
   ['selected',['selected',['../class_my_menu_item_image.html#afe0adf7ee40fbfd6443000f6ead06d6b',1,'MyMenuItemImage']]],
   ['setduration',['setDuration',['../class_b_explosion_tile.html#a85953e050b9d016fb182525f8d81294a',1,'BExplosionTile']]],
+  ['setenabled',['setEnabled',['../class_keyboard_handler.html#a6e2eb2b14a8ff7c320a3fac5ad8c5f33',1,'KeyboardHandler']]],
   ['setfocus',['setFocus',['../class_b_scene.html#a71869b30ce6256f90b7873a4ffa4fd12',1,'BScene']]],
   ['setforce',['setForce',['../class_b_player.html#ae97ab8470903f7c595939f2331b6c6f4',1,'BPlayer::setForce()'],['../class_player_sprite.html#a376df965770e619cee7c02f56355c8cb',1,'PlayerSprite::setForce()']]],
   ['setforcex',['setForceX',['../class_b_player.html#af7ae69e5c1d7880a5ebf4bd38c1adabb',1,'BPlayer::setForceX()'],['../class_player_sprite.html#a856c0c8d593bbb855aa2a979286f8ea6',1,'PlayerSprite::setForceX()']]],

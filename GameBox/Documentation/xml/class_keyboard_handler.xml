@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="class_keyboard_handler" kind="class" prot="public">
+    <compoundname>KeyboardHandler</compoundname>
+    <includes refid="_keyboard_handler_8h" local="no">KeyboardHandler.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_keyboard_handler_1a632f4bd88b71d0d61775a26d9cb81450" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_key_func" kindref="compound">KeyFunc</ref> * &gt;</type>
+        <definition>std::vector&lt;KeyFunc*&gt; KeyboardHandler::keyPresses</definition>
+        <argsstring></argsstring>
+        <name>keyPresses</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="64" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_keyboard_handler_1ab2dbc0db2709f765235c5310dea95b99" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_key_func" kindref="compound">KeyFunc</ref> * &gt;</type>
+        <definition>std::vector&lt;KeyFunc*&gt; KeyboardHandler::keyReleases</definition>
+        <argsstring></argsstring>
+        <name>keyReleases</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="65" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_keyboard_handler_1a39131fcdc203f43a990d2b74ef223501" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="struct_key_state" kindref="compound">KeyState</ref> * &gt;</type>
+        <definition>std::vector&lt;KeyState*&gt; KeyboardHandler::keyStates</definition>
+        <argsstring></argsstring>
+        <name>keyStates</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="66" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_keyboard_handler_1a3231b1f3ad96f40b7dccf4d095b79da4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>KeyboardHandler::KeyboardHandler</definition>
+        <argsstring>()</argsstring>
+        <name>KeyboardHandler</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="69" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" bodystart="69" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="class_keyboard_handler_1a6e2eb2b14a8ff7c320a3fac5ad8c5f33" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KeyboardHandler::setEnabled</definition>
+        <argsstring>(bool on)</argsstring>
+        <name>setEnabled</name>
+        <param>
+          <type>bool</type>
+          <declname>on</declname>
+        </param>
+        <briefdescription>
+<para>Turn on and off the keyboard listening. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="72" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" bodystart="72" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="class_keyboard_handler_1a770d2ae9b0801e0ede1e407e1fda644b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KeyboardHandler::addKeyPress</definition>
+        <argsstring>(const int keyCode, std::function&lt; void(Object *)&gt; func, Object *r, bool callOnce)</argsstring>
+        <name>addKeyPress</name>
+        <param>
+          <type>const int</type>
+          <declname>keyCode</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(Object *)&gt;</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>Object *</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>callOnce</declname>
+        </param>
+        <briefdescription>
+<para>Adds a function to call on keyPress. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="75" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_keyboard_handler_1a262ed855a0f0c11cc8c83aec352e0f50" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void KeyboardHandler::addKeyPress</definition>
+        <argsstring>(const int keyCode, std::function&lt; void(Object *)&gt; func, Object *r)</argsstring>
+        <name>addKeyPress</name>
+        <param>
+          <type>const int</type>
+          <declname>keyCode</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(Object *)&gt;</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>Object *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Adds a function to call on keyPress. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="78" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" bodystart="77" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="class_keyboard_handler_1a525e8ed1dbcf0a455f80183dcc29be7c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KeyboardHandler::addKeyRelease</definition>
+        <argsstring>(const int keyCode, std::function&lt; void(Object *)&gt; func, Object *r)</argsstring>
+        <name>addKeyRelease</name>
+        <param>
+          <type>const int</type>
+          <declname>keyCode</declname>
+        </param>
+        <param>
+          <type>std::function&lt; void(Object *)&gt;</type>
+          <declname>func</declname>
+        </param>
+        <param>
+          <type>Object *</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+<para>Adds a function to call on keyRelease. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="81" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_keyboard_handler_1abe4413daf337876abbd2163a2057bf01" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KeyboardHandler::keyPressed</definition>
+        <argsstring>(int keyCode)</argsstring>
+        <name>keyPressed</name>
+        <param>
+          <type>int</type>
+          <declname>keyCode</declname>
+        </param>
+        <briefdescription>
+<para>Handles keyPresses. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="86" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.cpp" bodystart="20" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="function" id="class_keyboard_handler_1ab48a90caf8d0759a8a1090a46c1728c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void KeyboardHandler::keyReleased</definition>
+        <argsstring>(int keyCode)</argsstring>
+        <name>keyReleased</name>
+        <param>
+          <type>int</type>
+          <declname>keyCode</declname>
+        </param>
+        <briefdescription>
+<para>Handles keyReleases. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="89" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.cpp" bodystart="48" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This is a class I can add to any game which will watch key events and call functions in response. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="62" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" bodystart="61" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_keyboard_handler_1a770d2ae9b0801e0ede1e407e1fda644b" prot="public" virt="non-virtual"><scope>KeyboardHandler</scope><name>addKeyPress</name></member>
+      <member refid="class_keyboard_handler_1a262ed855a0f0c11cc8c83aec352e0f50" prot="public" virt="non-virtual"><scope>KeyboardHandler</scope><name>addKeyPress</name></member>
+      <member refid="class_keyboard_handler_1a525e8ed1dbcf0a455f80183dcc29be7c" prot="public" virt="non-virtual"><scope>KeyboardHandler</scope><name>addKeyRelease</name></member>
+      <member refid="class_keyboard_handler_1a3231b1f3ad96f40b7dccf4d095b79da4" prot="public" virt="non-virtual"><scope>KeyboardHandler</scope><name>KeyboardHandler</name></member>
+      <member refid="class_keyboard_handler_1abe4413daf337876abbd2163a2057bf01" prot="public" virt="non-virtual"><scope>KeyboardHandler</scope><name>keyPressed</name></member>
+      <member refid="class_keyboard_handler_1a632f4bd88b71d0d61775a26d9cb81450" prot="private" virt="non-virtual"><scope>KeyboardHandler</scope><name>keyPresses</name></member>
+      <member refid="class_keyboard_handler_1ab48a90caf8d0759a8a1090a46c1728c7" prot="public" virt="non-virtual"><scope>KeyboardHandler</scope><name>keyReleased</name></member>
+      <member refid="class_keyboard_handler_1ab2dbc0db2709f765235c5310dea95b99" prot="private" virt="non-virtual"><scope>KeyboardHandler</scope><name>keyReleases</name></member>
+      <member refid="class_keyboard_handler_1a39131fcdc203f43a990d2b74ef223501" prot="private" virt="non-virtual"><scope>KeyboardHandler</scope><name>keyStates</name></member>
+      <member refid="class_keyboard_handler_1a6e2eb2b14a8ff7c320a3fac5ad8c5f33" prot="public" virt="non-virtual"><scope>KeyboardHandler</scope><name>setEnabled</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

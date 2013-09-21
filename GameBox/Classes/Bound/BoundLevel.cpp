@@ -11,13 +11,13 @@
 #include <vector>
 #include <sstream>
 
-bool RectIntersectsRect(const Rect r1, const Rect r2)
+bool rectIntersectsRect(const Rect r1, const Rect r2)
 {
     //if they intersect
-    if ( (r1.getMinX() < r2.getMaxX() &&
-          r2.getMinX() < r1.getMaxX() )  &&
-         (r1.getMinY() < r2.getMaxY() &&
-          r2.getMinY() < r1.getMaxY() )  )
+    if ( r1.getMinX() < r2.getMaxX() &&
+         r2.getMinX() < r1.getMaxX() &&
+         r1.getMinY() < r2.getMaxY() &&
+         r2.getMinY() < r1.getMaxY() )
         return true;
     return false;
 }
@@ -61,28 +61,26 @@ void BLevel::setupTiles()
     }
 }
 
-bool BLevel::isWall(const Coords loc)
+bool rectInsideRect(Rect bigRect, Rect smallRect)
 {
-    for (int i = 0; i < wTileCount; i++)
+    if ( bigRect.getMinX() < smallRect.getMinX() &&
+         bigRect.getMaxX() > smallRect.getMaxX() &&
+         bigRect.getMinY() < smallRect.getMinY() &&
+         bigRect.getMaxY() > smallRect.getMaxY() )
+        return true;
+    return false;
+}
+
+bool BLevel::inExit(const Rect bb)
+{
+    for (int i = 0; i < endCount; i++)
     {
-        //This is where I would check if on
-        //Check to see if this is the tile in that spot
-        if(wTiles[i]->getLocation() == loc)
+        if ( rectInsideRect(getTileBB(end[i]), bb) )
             return true;
     }
     return false;
 }
 
-bool BLevel::isExplosion(const Coords loc)
-{
-    for (int i = 0; i < eTileCount; i++)
-    {
-        //check if it is active and in that spot
-        if(eTiles[i]->isOn() && eTiles[i]->getLocation() == loc)
-            return true;
-    }
-    return false;
-}
 
 bool BLevel::isOnFloor(Rect bb)
 {
@@ -92,7 +90,7 @@ bool BLevel::isOnFloor(Rect bb)
     //check every one. Because Y.O.L.O.
     for ( int i = 0; i < fTileCount; i++)
         //would check On here
-        if (RectIntersectsRect(bb, fTiles[i]->getBoundingBox()))
+        if (rectIntersectsRect(bb, fTiles[i]->getBoundingBox()))
             return true;
     return false;
 }
@@ -107,7 +105,7 @@ bool BLevel::isWallCollision(Rect bb, Rect& tileBB)
     {
         tileBB = wTiles[i]->getBoundingBox();
         //would check On here
-        if (RectIntersectsRect(bb, tileBB))
+        if (rectIntersectsRect(bb, tileBB))
             return true;
     }
     return false;
@@ -122,7 +120,7 @@ bool BLevel::checkExplosions(Rect bb)
     for ( int i = 0; i < eTileCount; i++)
     {
         //if it has exploded and the player was touching it...
-        if (eTiles[i]->hasExploded() && RectIntersectsRect(bb, eTiles[i]->getBoundingBox()))
+        if (eTiles[i]->hasExploded() && rectIntersectsRect(bb, eTiles[i]->getBoundingBox()))
             hit = true;
     }
     
@@ -136,7 +134,7 @@ bool BLevel::isExplosionCollision(Rect bb)
     
     //check every one. Because Y.O.L.O.
     for ( int i = 0; i < eTileCount; i++)
-        if (eTiles[i]->isOn() && RectIntersectsRect(bb, eTiles[i]->getBoundingBox()))
+        if (eTiles[i]->isOn() && rectIntersectsRect(bb, eTiles[i]->getBoundingBox()))
             return true;
     return false;
 }
@@ -429,6 +427,7 @@ bool BLevel::parseFile(const char* file)
     //create tile arrays
     wTiles = new BWallTile*[wTileCount];
     fTiles = new BFloorTile*[fTileCount];
+    end = new Coords[endCount];
     
     //get the start point
     Rect startbb = getTileBB(startloc);
@@ -439,6 +438,7 @@ bool BLevel::parseFile(const char* file)
     //create the tiles
     int wItt = 0;
     int fItt = 0;
+    int endItt = 0;
     for (int i = 0; i < levelLines.size(); i++)
     {
         for (int j = 0; j < levelLines[i].size(); j++)
@@ -446,9 +446,12 @@ bool BLevel::parseFile(const char* file)
             if (levelLines[i][j] == floorChar || levelLines[i][j] == 'E' || levelLines[i][j] == 'S')
             {
                 if ( levelLines[i][j] == 'E')
+                {
                     fTiles[fItt] = BFloorTile::createWithFileColorLoc("Pixel.png",
                                                                       Color3B(255, 250, 210),
                                                                       Coords(j, levelLines.size() - i - 1));
+                    end[endItt] = Coords(j, levelLines.size() - i - 1);
+                }
                 else
                     fTiles[fItt] = BFloorTile::createWithFileColorLoc("Pixel.png",
                                                                       (((i+j)%2 == 0) ? floorColor1 : floorColor2),

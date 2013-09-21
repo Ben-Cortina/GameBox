@@ -122,6 +122,10 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Sets the value for layerFocus.  <a href="#a71869b30ce6256f90b7873a4ffa4fd12"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#a79117c8d522c8907c474b8448b5e486b">newLevel</a> (const char *filepath)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will load a new level.  <a href="#a79117c8d522c8907c474b8448b5e486b"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#a7256ae33cbfbda2999f33626a4fa93ac">loadLevel</a> (const int idx)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will load a level from the level menu.  <a href="#a7256ae33cbfbda2999f33626a4fa93ac"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#a41bf719fb615e92dc092a18dc47b919b">nextLevel</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will load the next level from a current level.  <a href="#a41bf719fb615e92dc092a18dc47b919b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#a98a3fdedfb94c433624c0ce664adb343">showLevelMenu</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Show the level Menu.  <a href="#a98a3fdedfb94c433624c0ce664adb343"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#a2817197ebb69c55473bd50808a66a27f">showPauseMenu</a> ()</td></tr>
@@ -134,11 +138,12 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#aa3e76c81d0eeadf1c6b6f7d9560c14cf">handleEsc</a> (Object *scene)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This will handle EscPresses.  <a href="#aa3e76c81d0eeadf1c6b6f7d9560c14cf"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#a8f7e96a35d0d42d5bb57a066519d20d2">winCB</a> (Object *pSender)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#a25d15df90b25965d88b48c8630da9af3">resumeCB</a> (Object *pSender)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#a57bc71835cfbd1596d639f8ba949b795">levelSelectCB</a> (Object *pSender)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#a762573ed16243cbe4d6539fbfe36b0e3">exitGameCB</a> (Object *pSender)</td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#a43226267f8e0d11e0440d64db1814889">loadLevel</a> (Object *pSender)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the level stored in sender-&gt;levelname This is called from <a class="el" href="class_b_level_menu.html">BLevelMenu</a>.  <a href="#a43226267f8e0d11e0440d64db1814889"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#a660fea77a245f644588277b863806105">runLoadLevel</a> (Object *pSender)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Loads the level stored in sender-&gt;levelname This is called from <a class="el" href="class_b_level_menu.html">BLevelMenu</a>.  <a href="#a660fea77a245f644588277b863806105"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_scene.html#a90db09771569a058108341368724efc9">runThisGame</a> (Object *pSender)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">This method creates a new <a class="el" href="class_b_scene.html" title="This is the Scene for Bound. It wll hold the layers that make up the Bound game.">BScene</a> and runs it.  <a href="#a90db09771569a058108341368724efc9"></a><br/></td></tr>
 </table>
@@ -253,22 +258,22 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a43226267f8e0d11e0440d64db1814889"></a><!-- doxytag: member="BScene::loadLevel" ref="a43226267f8e0d11e0440d64db1814889" args="(Object *pSender)" -->
+<a class="anchor" id="a7256ae33cbfbda2999f33626a4fa93ac"></a><!-- doxytag: member="BScene::loadLevel" ref="a7256ae33cbfbda2999f33626a4fa93ac" args="(const int idx)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void <a class="el" href="class_b_scene.html#a43226267f8e0d11e0440d64db1814889">BScene::loadLevel</a> </td>
+          <td class="memname">void <a class="el" href="class_b_scene.html#a7256ae33cbfbda2999f33626a4fa93ac">BScene::loadLevel</a> </td>
           <td>(</td>
-          <td class="paramtype">Object *&#160;</td>
-          <td class="paramname"><em>pSender</em></td><td>)</td>
-          <td><code> [static]</code></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>idx</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Loads the level stored in sender-&gt;levelname This is called from <a class="el" href="class_b_level_menu.html">BLevelMenu</a>. </p>
+<p>This will load a level from the level menu. </p>
 
 </div>
 </div>
@@ -310,6 +315,24 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a41bf719fb615e92dc092a18dc47b919b"></a><!-- doxytag: member="BScene::nextLevel" ref="a41bf719fb615e92dc092a18dc47b919b" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_scene.html#a41bf719fb615e92dc092a18dc47b919b">BScene::nextLevel</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>This will load the next level from a current level. </p>
+
+</div>
+</div>
 <a class="anchor" id="a25d15df90b25965d88b48c8630da9af3"></a><!-- doxytag: member="BScene::resumeCB" ref="a25d15df90b25965d88b48c8630da9af3" args="(Object *pSender)" -->
 <div class="memitem">
 <div class="memproto">
@@ -342,6 +365,25 @@ Static Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Resume the game. </p>
+
+</div>
+</div>
+<a class="anchor" id="a660fea77a245f644588277b863806105"></a><!-- doxytag: member="BScene::runLoadLevel" ref="a660fea77a245f644588277b863806105" args="(Object *pSender)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_scene.html#a660fea77a245f644588277b863806105">BScene::runLoadLevel</a> </td>
+          <td>(</td>
+          <td class="paramtype">Object *&#160;</td>
+          <td class="paramname"><em>pSender</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Loads the level stored in sender-&gt;levelname This is called from <a class="el" href="class_b_level_menu.html">BLevelMenu</a>. </p>
 
 </div>
 </div>
@@ -419,6 +461,23 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a8f7e96a35d0d42d5bb57a066519d20d2"></a><!-- doxytag: member="BScene::winCB" ref="a8f7e96a35d0d42d5bb57a066519d20d2" args="(Object *pSender)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_scene.html#a8f7e96a35d0d42d5bb57a066519d20d2">BScene::winCB</a> </td>
+          <td>(</td>
+          <td class="paramtype">Object *&#160;</td>
+          <td class="paramname"><em>pSender</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>GameBox/GameBox/Classes/Bound/<a class="el" href="_bound_8h_source.html">Bound.h</a></li>
 <li>GameBox/GameBox/Classes/Bound/<a class="el" href="_bound_8cpp.html">Bound.cpp</a></li>
@@ -443,7 +502,7 @@ Static Public Member Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="class_b_scene.html">BScene</a>      </li>
 
-    <li class="footer">Generated on Fri Sep 20 2013 16:30:05 for GameBox by
+    <li class="footer">Generated on Sat Sep 21 2013 18:28:00 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

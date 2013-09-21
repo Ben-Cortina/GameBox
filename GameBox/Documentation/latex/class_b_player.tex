@@ -13,7 +13,7 @@
 \subsection*{\-Public \-Member \-Functions}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_b_player_ab32977496976aff5421f2af0d277aaf8}{\-B\-Player} (const char $\ast$\hyperlink{_game_list_8h_ac745ab21f82aa96829863dcfc37ef5a8}{image}, std\-::function$<$ void(\-Object $\ast$)$>$ esc\-F)
+\hyperlink{class_b_player_af15d206fbe7550cf2fa15746f2a9a2f2}{\-B\-Player} (const char $\ast$\hyperlink{_game_list_8h_ac745ab21f82aa96829863dcfc37ef5a8}{image}, std\-::function$<$ void(\-Object $\ast$)$>$ win\-F)
 \item 
 void \hyperlink{class_b_player_a03add0a9a55d81912897518d94daf52f}{set\-Level} (\hyperlink{class_b_level}{\-B\-Level} $\ast$new\-Level)
 \begin{DoxyCompactList}\small\item\em \-Set the level to check collision on. \end{DoxyCompactList}\item 
@@ -31,6 +31,8 @@ void \hyperlink{class_b_player_a7981065d2d5b4c581d84cb5b63a15d00}{fall} ()
 \begin{DoxyCompactList}\small\item\em runs the actions needed to represent a falling player \end{DoxyCompactList}\item 
 void \hyperlink{class_b_player_a5a46736f890786b465bfe51c9c4f8ff7}{die} ()
 \begin{DoxyCompactList}\small\item\em runs the actions needed to represent a dying player \end{DoxyCompactList}\item 
+void \hyperlink{class_b_player_a479665137e3aad56591b4e16d4cac380}{win} ()
+\begin{DoxyCompactList}\small\item\em runs the actions needed to represent a win \end{DoxyCompactList}\item 
 void \hyperlink{class_b_player_a1f66cceac56c4252237f6e30003efa4d}{spawn} (float dt)
 \begin{DoxyCompactList}\small\item\em \-Spawns the player at the start tile. \end{DoxyCompactList}\item 
 void \hyperlink{class_b_player_aa0f9b22686ad0aeec30ea21beb3740f2}{update\-Velocity} ()
@@ -45,20 +47,31 @@ void \hyperlink{class_b_player_ae0aaaa33013fd5c0070cf51619abf12b}{key\-Pressed} 
 \begin{DoxyCompactList}\small\item\em \-Handles key\-Presses. \end{DoxyCompactList}\item 
 void \hyperlink{class_b_player_a8210db4e8fac75ace4b71b3ded1df6bf}{key\-Released} (int key\-Code)
 \begin{DoxyCompactList}\small\item\em \-Handles key\-Releases. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{\-Static \-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \hyperlink{class_b_player_ab01210df4dccd3ab9108bbffadad8243}{up\-P} (\-Object $\ast$p\-This)
+\begin{DoxyCompactList}\small\item\em \-Called when up is pressed. \end{DoxyCompactList}\item 
+static void \hyperlink{class_b_player_acbcd61303f7f7ccf57a70bbe7af5470f}{down\-P} (\-Object $\ast$p\-This)
+\begin{DoxyCompactList}\small\item\em \-Called when down is pressed. \end{DoxyCompactList}\item 
+static void \hyperlink{class_b_player_aea6f08c0d171c16acdf4180356f33732}{left\-P} (\-Object $\ast$p\-This)
+\begin{DoxyCompactList}\small\item\em \-Called when left is pressed. \end{DoxyCompactList}\item 
+static void \hyperlink{class_b_player_a715fb318e6a807cbf0822aa8b34e999b}{right\-P} (\-Object $\ast$p\-This)
+\begin{DoxyCompactList}\small\item\em \-Called when right is pressed. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{\-Detailed \-Description}
 \-This will hold and draw the data for a \-Player. \-It will also handle player movement. 
 
 \subsection{\-Constructor \& \-Destructor \-Documentation}
-\hypertarget{class_b_player_ab32977496976aff5421f2af0d277aaf8}{\index{\-B\-Player@{\-B\-Player}!\-B\-Player@{\-B\-Player}}
+\hypertarget{class_b_player_af15d206fbe7550cf2fa15746f2a9a2f2}{\index{\-B\-Player@{\-B\-Player}!\-B\-Player@{\-B\-Player}}
 \index{\-B\-Player@{\-B\-Player}!BPlayer@{\-B\-Player}}
 \subsubsection[{\-B\-Player}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-B\-Player\-::\-B\-Player} (
 \begin{DoxyParamCaption}
 \item[{const char $\ast$}]{image, }
-\item[{std\-::function$<$ void(\-Object $\ast$)$>$}]{esc\-F}
+\item[{std\-::function$<$ void(\-Object $\ast$)$>$}]{win\-F}
 \end{DoxyParamCaption}
-)}}\label{class_b_player_ab32977496976aff5421f2af0d277aaf8}
+)}}\label{class_b_player_af15d206fbe7550cf2fa15746f2a9a2f2}
 
 
 \subsection{\-Member \-Function \-Documentation}
@@ -72,6 +85,17 @@ void \hyperlink{class_b_player_a8210db4e8fac75ace4b71b3ded1df6bf}{key\-Released}
 
 
 runs the actions needed to represent a dying player 
+
+\hypertarget{class_b_player_acbcd61303f7f7ccf57a70bbe7af5470f}{\index{\-B\-Player@{\-B\-Player}!down\-P@{down\-P}}
+\index{down\-P@{down\-P}!BPlayer@{\-B\-Player}}
+\subsubsection[{down\-P}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-B\-Player\-::down\-P} (
+\begin{DoxyParamCaption}
+\item[{\-Object $\ast$}]{p\-This}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_b_player_acbcd61303f7f7ccf57a70bbe7af5470f}
+
+
+\-Called when down is pressed. 
 
 \hypertarget{class_b_player_a7981065d2d5b4c581d84cb5b63a15d00}{\index{\-B\-Player@{\-B\-Player}!fall@{fall}}
 \index{fall@{fall}!BPlayer@{\-B\-Player}}
@@ -131,6 +155,28 @@ runs the actions needed to represent a falling player
 
 
 \-Handles key\-Releases. 
+
+\hypertarget{class_b_player_aea6f08c0d171c16acdf4180356f33732}{\index{\-B\-Player@{\-B\-Player}!left\-P@{left\-P}}
+\index{left\-P@{left\-P}!BPlayer@{\-B\-Player}}
+\subsubsection[{left\-P}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-B\-Player\-::left\-P} (
+\begin{DoxyParamCaption}
+\item[{\-Object $\ast$}]{p\-This}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_b_player_aea6f08c0d171c16acdf4180356f33732}
+
+
+\-Called when left is pressed. 
+
+\hypertarget{class_b_player_a715fb318e6a807cbf0822aa8b34e999b}{\index{\-B\-Player@{\-B\-Player}!right\-P@{right\-P}}
+\index{right\-P@{right\-P}!BPlayer@{\-B\-Player}}
+\subsubsection[{right\-P}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-B\-Player\-::right\-P} (
+\begin{DoxyParamCaption}
+\item[{\-Object $\ast$}]{p\-This}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_b_player_a715fb318e6a807cbf0822aa8b34e999b}
+
+
+\-Called when right is pressed. 
 
 \hypertarget{class_b_player_ae97ab8470903f7c595939f2331b6c6f4}{\index{\-B\-Player@{\-B\-Player}!set\-Force@{set\-Force}}
 \index{set\-Force@{set\-Force}!BPlayer@{\-B\-Player}}
@@ -223,6 +269,28 @@ runs the actions needed to represent a falling player
 
 
 \-Updates the current velocity based on the force being applied. 
+
+\hypertarget{class_b_player_ab01210df4dccd3ab9108bbffadad8243}{\index{\-B\-Player@{\-B\-Player}!up\-P@{up\-P}}
+\index{up\-P@{up\-P}!BPlayer@{\-B\-Player}}
+\subsubsection[{up\-P}]{\setlength{\rightskip}{0pt plus 5cm}static void {\bf \-B\-Player\-::up\-P} (
+\begin{DoxyParamCaption}
+\item[{\-Object $\ast$}]{p\-This}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_b_player_ab01210df4dccd3ab9108bbffadad8243}
+
+
+\-Called when up is pressed. 
+
+\hypertarget{class_b_player_a479665137e3aad56591b4e16d4cac380}{\index{\-B\-Player@{\-B\-Player}!win@{win}}
+\index{win@{win}!BPlayer@{\-B\-Player}}
+\subsubsection[{win}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Player\-::win} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_b_player_a479665137e3aad56591b4e16d4cac380}
+
+
+runs the actions needed to represent a win 
 
 
 

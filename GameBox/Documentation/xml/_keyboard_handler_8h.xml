@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.7.6.1">
+  <compounddef id="_keyboard_handler_8h" kind="file">
+    <compoundname>KeyboardHandler.h</compoundname>
+    <includes local="yes">cocos2d.h</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="_bound_8h" local="yes">GameBox/GameBox/Classes/Bound/Bound.h</includedby>
+    <includedby refid="_keyboard_handler_8cpp" local="yes">GameBox/GameBox/Classes/Helpers/KeyboardHandler.cpp</includedby>
+    <incdepgraph>
+      <node id="208">
+        <label>GameBox/GameBox/Classes/Helpers/KeyboardHandler.h</label>
+        <link refid="KeyboardHandler.h"/>
+        <childnode refid="209" relation="include">
+        </childnode>
+        <childnode refid="210" relation="include">
+        </childnode>
+      </node>
+      <node id="210">
+        <label>vector</label>
+      </node>
+      <node id="209">
+        <label>cocos2d.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="216">
+        <label>GameBox/GameBox/Classes/Bound/Bound.cpp</label>
+        <link refid="_bound_8cpp"/>
+      </node>
+      <node id="213">
+        <label>GameBox/GameBox/Classes/GameList.h</label>
+        <link refid="_game_list_8h"/>
+        <childnode refid="214" relation="include">
+        </childnode>
+      </node>
+      <node id="219">
+        <label>GameBox/GameBox/Classes/Helpers/KeyboardHandler.cpp</label>
+        <link refid="_keyboard_handler_8cpp"/>
+      </node>
+      <node id="212">
+        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
+        <link refid="_bound_8h"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+      </node>
+      <node id="214">
+        <label>GameBox/GameBox/Classes/HomeScene.h</label>
+        <link refid="_home_scene_8h"/>
+        <childnode refid="215" relation="include">
+        </childnode>
+        <childnode refid="216" relation="include">
+        </childnode>
+        <childnode refid="217" relation="include">
+        </childnode>
+        <childnode refid="218" relation="include">
+        </childnode>
+      </node>
+      <node id="211">
+        <label>GameBox/GameBox/Classes/Helpers/KeyboardHandler.h</label>
+        <link refid="KeyboardHandler.h"/>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="219" relation="include">
+        </childnode>
+      </node>
+      <node id="217">
+        <label>GameBox/GameBox/Classes/HomeScene.cpp</label>
+        <link refid="_home_scene_8cpp"/>
+      </node>
+      <node id="215">
+        <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
+        <link refid="_app_delegate_8cpp"/>
+      </node>
+      <node id="218">
+        <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
+        <link refid="_the_box_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_key_state" prot="public">KeyState</innerclass>
+    <innerclass refid="struct_key_func" prot="public">KeyFunc</innerclass>
+    <innerclass refid="class_keyboard_handler" prot="public">KeyboardHandler</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="_keyboard_handler_8h_1ac10da2fd6444e5c9f74c64c543c0d747" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>USING_NS_CC</definition>
+        <argsstring></argsstring>
+        <name>USING_NS_CC</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" line="13" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Ben Cortina </para></simplesect>
+<simplesect kind="date"><para>9/21/13. </para></simplesect>
+</para>    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="7"><highlight class="preprocessor">#ifndef<sp/>__GameBox__KeyHandler__</highlight></codeline>
+<codeline lineno="8"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__GameBox__KeyHandler__</highlight></codeline>
+<codeline lineno="9"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;cocos2d.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="_keyboard_handler_8h_1ac10da2fd6444e5c9f74c64c543c0d747" refkind="member"><highlight class="normal"><ref refid="_app_delegate_8cpp_1ac10da2fd6444e5c9f74c64c543c0d747" kindref="member">USING_NS_CC</ref>;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16" refid="struct_key_state" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_key_state" kindref="compound" tooltip="Will hold the state of a key.">KeyState</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18" refid="struct_key_state_1a8240c9d70dd2e47832fe50e40e4adce9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_key_state_1a8240c9d70dd2e47832fe50e40e4adce9" kindref="member">keyCode</ref>;</highlight></codeline>
+<codeline lineno="19" refid="struct_key_state_1a8922b61cb789c21713c4baceca7ee9ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_key_state_1a8922b61cb789c21713c4baceca7ee9ae" kindref="member">isDown</ref>;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="21" refid="struct_key_state_1a8ef80ba42cfce46b743b194a891c9dd3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_key_state_1a8ef80ba42cfce46b743b194a891c9dd3" kindref="member">KeyState</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kC,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>s):<sp/><ref refid="struct_key_state_1a8240c9d70dd2e47832fe50e40e4adce9" kindref="member">keyCode</ref>(kC),<sp/><ref refid="struct_key_state_1a8922b61cb789c21713c4baceca7ee9ae" kindref="member">isDown</ref>(s){};</highlight></codeline>
+<codeline lineno="22"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="struct_key_func" refkind="compound"><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_key_func" kindref="compound" tooltip="This holds the information needed to handle a key press.">KeyFunc</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="32" refid="struct_key_func_1a8683decc234b65cee973ca74b2257a99" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="struct_key_func_1a8683decc234b65cee973ca74b2257a99" kindref="member" tooltip="The keyCode that will call the func.">keyCode</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="37" refid="struct_key_func_1ad68d4ddeedf266bd9819f5495a159ea0" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::function&lt;void(Object*)&gt;<sp/><ref refid="struct_key_func_1ad68d4ddeedf266bd9819f5495a159ea0" kindref="member" tooltip="The function that will be called on keyCode event.">func</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="42" refid="struct_key_func_1addf45cdc46b86985f56783f52cd45c6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>Object*<sp/><ref refid="struct_key_func_1addf45cdc46b86985f56783f52cd45c6f" kindref="member" tooltip="The Object pointer that will be passed to the func.">receiver</ref>;</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47" refid="struct_key_func_1a258ee11a628c97256f59e59e5175a509" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="struct_key_func_1a258ee11a628c97256f59e59e5175a509" kindref="member" tooltip="Whether or not the function should be called multiple times on one press.">callOnce</ref>;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49" refid="struct_key_func_1a92e1a52bd64330f81aa24e4d0c695dd2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_key_func_1a92e1a52bd64330f81aa24e4d0c695dd2" kindref="member">KeyFunc</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kC,<sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(Object*)&gt;<sp/>f,<sp/>Object*<sp/>r):</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="struct_key_func_1a8683decc234b65cee973ca74b2257a99" kindref="member" tooltip="The keyCode that will call the func.">keyCode</ref>(kC),<sp/><ref refid="struct_key_func_1ad68d4ddeedf266bd9819f5495a159ea0" kindref="member" tooltip="The function that will be called on keyCode event.">func</ref>(f),<sp/><ref refid="struct_key_func_1addf45cdc46b86985f56783f52cd45c6f" kindref="member" tooltip="The Object pointer that will be passed to the func.">receiver</ref>(r),<sp/><ref refid="struct_key_func_1a258ee11a628c97256f59e59e5175a509" kindref="member" tooltip="Whether or not the function should be called multiple times on one press.">callOnce</ref>(false){};</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="52" refid="struct_key_func_1a57c47c5b2259da22995ab3ed77e0ca5c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_key_func_1a92e1a52bd64330f81aa24e4d0c695dd2" kindref="member">KeyFunc</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>kC,<sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(Object*)&gt;<sp/>f,<sp/>Object*<sp/>r,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>cO):</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_key_func_1a8683decc234b65cee973ca74b2257a99" kindref="member" tooltip="The keyCode that will call the func.">keyCode</ref>(kC),<sp/><ref refid="struct_key_func_1ad68d4ddeedf266bd9819f5495a159ea0" kindref="member" tooltip="The function that will be called on keyCode event.">func</ref>(f),<sp/><ref refid="struct_key_func_1addf45cdc46b86985f56783f52cd45c6f" kindref="member" tooltip="The Object pointer that will be passed to the func.">receiver</ref>(r),<sp/><ref refid="struct_key_func_1a258ee11a628c97256f59e59e5175a509" kindref="member" tooltip="Whether or not the function should be called multiple times on one press.">callOnce</ref>(cO){};</highlight></codeline>
+<codeline lineno="54"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61" refid="class_keyboard_handler" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_keyboard_handler" kindref="compound" tooltip="This is a class I can add to any game which will watch key events and call functions in response...">KeyboardHandler</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Layer</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;KeyFunc*&gt;<sp/>keyPresses;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;KeyFunc*&gt;<sp/>keyReleases;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;KeyState*&gt;<sp/>keyStates;</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="69" refid="class_keyboard_handler_1a3231b1f3ad96f40b7dccf4d095b79da4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_keyboard_handler_1a3231b1f3ad96f40b7dccf4d095b79da4" kindref="member">KeyboardHandler</ref>()<sp/>{<sp/>setVisible(</highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/>};<sp/></highlight><highlight class="comment">//we<sp/>dont<sp/>want<sp/>any<sp/>draw<sp/>calls<sp/>for<sp/>this<sp/></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="class_keyboard_handler_1a6e2eb2b14a8ff7c320a3fac5ad8c5f33" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_keyboard_handler_1a6e2eb2b14a8ff7c320a3fac5ad8c5f33" kindref="member" tooltip="Turn on and off the keyboard listening.">setEnabled</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>on)<sp/>{<sp/>setKeyboardEnabled(on);<sp/>};</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_keyboard_handler_1a770d2ae9b0801e0ede1e407e1fda644b" kindref="member" tooltip="Adds a function to call on keyPress.">addKeyPress</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keyCode,<sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(Object*)&gt;<sp/>func,<sp/>Object*<sp/>r,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>callOnce);</highlight></codeline>
+<codeline lineno="77" refid="class_keyboard_handler_1a262ed855a0f0c11cc8c83aec352e0f50" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_keyboard_handler_1a770d2ae9b0801e0ede1e407e1fda644b" kindref="member" tooltip="Adds a function to call on keyPress.">addKeyPress</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keyCode,<sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(Object*)&gt;<sp/>func,<sp/>Object*<sp/>r)</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><ref refid="class_keyboard_handler_1a262ed855a0f0c11cc8c83aec352e0f50" kindref="member" tooltip="Adds a function to call on keyPress.">addKeyPress</ref>(keyCode,<sp/>func,<sp/>r,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">);<sp/>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_keyboard_handler_1a525e8ed1dbcf0a455f80183dcc29be7c" kindref="member" tooltip="Adds a function to call on keyRelease.">addKeyRelease</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keyCode,<sp/>std::function&lt;</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">(Object*)&gt;<sp/>func,<sp/>Object*<sp/>r);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_keyboard_handler_1abe4413daf337876abbd2163a2057bf01" kindref="member" tooltip="Handles keyPresses.">keyPressed</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keyCode);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_keyboard_handler_1ab48a90caf8d0759a8a1090a46c1728c7" kindref="member" tooltip="Handles keyReleases.">keyReleased</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>keyCode);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__KeyHandler__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Helpers/KeyboardHandler.h"/>
+  </compounddef>
+</doxygen>

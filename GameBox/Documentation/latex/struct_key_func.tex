@@ -1,0 +1,91 @@
+\hypertarget{struct_key_func}{\section{\-Key\-Func \-Struct \-Reference}
+\label{struct_key_func}\index{\-Key\-Func@{\-Key\-Func}}
+}
+
+
+\-This holds the information needed to handle a key press.  
+
+
+
+
+{\ttfamily \#include $<$\-Keyboard\-Handler.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{struct_key_func_a92e1a52bd64330f81aa24e4d0c695dd2}{\-Key\-Func} (int k\-C, std\-::function$<$ void(\-Object $\ast$)$>$ f, \-Object $\ast$r)
+\item 
+\hyperlink{struct_key_func_a57c47c5b2259da22995ab3ed77e0ca5c}{\-Key\-Func} (int k\-C, std\-::function$<$ void(\-Object $\ast$)$>$ f, \-Object $\ast$r, bool c\-O)
+\end{DoxyCompactItemize}
+\subsection*{\-Public \-Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{struct_key_func_a8683decc234b65cee973ca74b2257a99}{key\-Code}
+\begin{DoxyCompactList}\small\item\em \-The key\-Code that will call the func. \end{DoxyCompactList}\item 
+std\-::function$<$ void(\-Object $\ast$) \hyperlink{struct_key_func_ad68d4ddeedf266bd9819f5495a159ea0}{func} )
+\begin{DoxyCompactList}\small\item\em \-The function that will be called on key\-Code event. \end{DoxyCompactList}\item 
+\-Object $\ast$ \hyperlink{struct_key_func_addf45cdc46b86985f56783f52cd45c6f}{receiver}
+\begin{DoxyCompactList}\small\item\em \-The \-Object pointer that will be passed to the func. \end{DoxyCompactList}\item 
+bool \hyperlink{struct_key_func_a258ee11a628c97256f59e59e5175a509}{call\-Once}
+\begin{DoxyCompactList}\small\item\em \-Whether or not the function should be called multiple times on one press. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This holds the information needed to handle a key press. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{struct_key_func_a92e1a52bd64330f81aa24e4d0c695dd2}{\index{\-Key\-Func@{\-Key\-Func}!\-Key\-Func@{\-Key\-Func}}
+\index{\-Key\-Func@{\-Key\-Func}!KeyFunc@{\-Key\-Func}}
+\subsubsection[{\-Key\-Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Key\-Func\-::\-Key\-Func} (
+\begin{DoxyParamCaption}
+\item[{int}]{k\-C, }
+\item[{std\-::function$<$ void(\-Object $\ast$)$>$}]{f, }
+\item[{\-Object $\ast$}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_key_func_a92e1a52bd64330f81aa24e4d0c695dd2}
+\hypertarget{struct_key_func_a57c47c5b2259da22995ab3ed77e0ca5c}{\index{\-Key\-Func@{\-Key\-Func}!\-Key\-Func@{\-Key\-Func}}
+\index{\-Key\-Func@{\-Key\-Func}!KeyFunc@{\-Key\-Func}}
+\subsubsection[{\-Key\-Func}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Key\-Func\-::\-Key\-Func} (
+\begin{DoxyParamCaption}
+\item[{int}]{k\-C, }
+\item[{std\-::function$<$ void(\-Object $\ast$)$>$}]{f, }
+\item[{\-Object $\ast$}]{r, }
+\item[{bool}]{c\-O}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{struct_key_func_a57c47c5b2259da22995ab3ed77e0ca5c}
+
+
+\subsection{\-Member \-Data \-Documentation}
+\hypertarget{struct_key_func_a258ee11a628c97256f59e59e5175a509}{\index{\-Key\-Func@{\-Key\-Func}!call\-Once@{call\-Once}}
+\index{call\-Once@{call\-Once}!KeyFunc@{\-Key\-Func}}
+\subsubsection[{call\-Once}]{\setlength{\rightskip}{0pt plus 5cm}bool {\bf \-Key\-Func\-::call\-Once}}}\label{struct_key_func_a258ee11a628c97256f59e59e5175a509}
+
+
+\-Whether or not the function should be called multiple times on one press. 
+
+\hypertarget{struct_key_func_ad68d4ddeedf266bd9819f5495a159ea0}{\index{\-Key\-Func@{\-Key\-Func}!func@{func}}
+\index{func@{func}!KeyFunc@{\-Key\-Func}}
+\subsubsection[{func}]{\setlength{\rightskip}{0pt plus 5cm}std\-::function$<$ void(\-Object $\ast$)$>$ {\bf \-Key\-Func\-::func}}}\label{struct_key_func_ad68d4ddeedf266bd9819f5495a159ea0}
+
+
+\-The function that will be called on key\-Code event. 
+
+\hypertarget{struct_key_func_a8683decc234b65cee973ca74b2257a99}{\index{\-Key\-Func@{\-Key\-Func}!key\-Code@{key\-Code}}
+\index{key\-Code@{key\-Code}!KeyFunc@{\-Key\-Func}}
+\subsubsection[{key\-Code}]{\setlength{\rightskip}{0pt plus 5cm}int {\bf \-Key\-Func\-::key\-Code}}}\label{struct_key_func_a8683decc234b65cee973ca74b2257a99}
+
+
+\-The key\-Code that will call the func. 
+
+\hypertarget{struct_key_func_addf45cdc46b86985f56783f52cd45c6f}{\index{\-Key\-Func@{\-Key\-Func}!receiver@{receiver}}
+\index{receiver@{receiver}!KeyFunc@{\-Key\-Func}}
+\subsubsection[{receiver}]{\setlength{\rightskip}{0pt plus 5cm}\-Object $\ast$ {\bf \-Key\-Func\-::receiver}}}\label{struct_key_func_addf45cdc46b86985f56783f52cd45c6f}
+
+
+\-The \-Object pointer that will be passed to the func. 
+
+
+
+\-The documentation for this struct was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-Helpers/\hyperlink{_keyboard_handler_8h}{\-Keyboard\-Handler.\-h}\end{DoxyCompactItemize}

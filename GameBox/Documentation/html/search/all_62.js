@@ -14,7 +14,7 @@ var searchData=
   ['boundplayer_2eh',['BoundPlayer.h',['../_bound_player_8h.html',1,'']]],
   ['boundtiles_2ecpp',['BoundTiles.cpp',['../_bound_tiles_8cpp.html',1,'']]],
   ['boundtiles_2eh',['BoundTiles.h',['../_bound_tiles_8h.html',1,'']]],
-  ['bplayer',['BPlayer',['../class_b_player.html',1,'BPlayer'],['../class_b_player.html#ab32977496976aff5421f2af0d277aaf8',1,'BPlayer::BPlayer()']]],
+  ['bplayer',['BPlayer',['../class_b_player.html',1,'BPlayer'],['../class_b_player.html#af15d206fbe7550cf2fa15746f2a9a2f2',1,'BPlayer::BPlayer()']]],
   ['bscene',['BScene',['../class_b_scene.html',1,'BScene'],['../class_b_scene.html#a814659a27cecfe7e5aefc32081d0f3a5',1,'BScene::BScene()']]],
   ['btile',['BTile',['../class_b_tile.html',1,'BTile'],['../class_b_tile.html#a7646b89b701a776494e16405b9d90871',1,'BTile::BTile()'],['../class_b_tile.html#aac430c52b468db1167d715cc867e617e',1,'BTile::BTile(const Color3B c, const Coords position)']]],
   ['bwalltile',['BWallTile',['../class_b_wall_tile.html',1,'']]]

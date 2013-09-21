@@ -117,14 +117,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the starting location  <a href="#ad4f4a9f5658ac8ed21917df61678f4b2"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a8d02e52b25ff8c39bb68d0880c31771c">getTileSize</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">returns the tileSize  <a href="#a8d02e52b25ff8c39bb68d0880c31771c"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#abb407d85aebcc0d6cded1ad13c2e2eed">isWall</a> (const <a class="el" href="struct_coords.html">Coords</a> loc)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided location is a wall.  <a href="#abb407d85aebcc0d6cded1ad13c2e2eed"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#a7520cdd30191a75a7811c42ee1758e65">isWall</a> (const int x, const int y)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the provided location is a wall.  <a href="#a7520cdd30191a75a7811c42ee1758e65"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#adf39bb6a72e7780031a0806df92f9fc5">isExplosion</a> (const <a class="el" href="struct_coords.html">Coords</a> loc)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if there is an active explosion there.  <a href="#adf39bb6a72e7780031a0806df92f9fc5"></a><br/></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#acf89db789ceb7f083221fab3fead042e">isExplosion</a> (const int x, const int y)</td></tr>
-<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks to see if there is an active explosion there.  <a href="#acf89db789ceb7f083221fab3fead042e"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#af5e69744df511186e383aa68936869dd">inExit</a> (const Rect bb)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if the player is fully inside an exit.  <a href="#af5e69744df511186e383aa68936869dd"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#ad9a6d59f73f29c78a0b2e57997202eb5">isValid</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Did the level load.  <a href="#ad9a6d59f73f29c78a0b2e57997202eb5"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_level.html#ae32bcaf31096afb8356391e8ad6552e1">isWallCollision</a> (Rect bb, Rect &amp;tileBB)</td></tr>
@@ -250,51 +244,22 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="adf39bb6a72e7780031a0806df92f9fc5"></a><!-- doxytag: member="BLevel::isExplosion" ref="adf39bb6a72e7780031a0806df92f9fc5" args="(const Coords loc)" -->
+<a class="anchor" id="af5e69744df511186e383aa68936869dd"></a><!-- doxytag: member="BLevel::inExit" ref="af5e69744df511186e383aa68936869dd" args="(const Rect bb)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="class_b_level.html#adf39bb6a72e7780031a0806df92f9fc5">BLevel::isExplosion</a> </td>
+          <td class="memname">bool <a class="el" href="class_b_level.html#af5e69744df511186e383aa68936869dd">BLevel::inExit</a> </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_coords.html">Coords</a>&#160;</td>
-          <td class="paramname"><em>loc</em></td><td>)</td>
+          <td class="paramtype">const Rect&#160;</td>
+          <td class="paramname"><em>bb</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div>
 <div class="memdoc">
 
-<p>Checks to see if there is an active explosion there. </p>
-
-</div>
-</div>
-<a class="anchor" id="acf89db789ceb7f083221fab3fead042e"></a><!-- doxytag: member="BLevel::isExplosion" ref="acf89db789ceb7f083221fab3fead042e" args="(const int x, const int y)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="class_b_level.html#adf39bb6a72e7780031a0806df92f9fc5">BLevel::isExplosion</a> </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Checks to see if there is an active explosion there. </p>
+<p>Checks if the player is fully inside an exit. </p>
 
 </div>
 </div>
@@ -354,54 +319,6 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="abb407d85aebcc0d6cded1ad13c2e2eed"></a><!-- doxytag: member="BLevel::isWall" ref="abb407d85aebcc0d6cded1ad13c2e2eed" args="(const Coords loc)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="class_b_level.html#abb407d85aebcc0d6cded1ad13c2e2eed">BLevel::isWall</a> </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="struct_coords.html">Coords</a>&#160;</td>
-          <td class="paramname"><em>loc</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Checks if the provided location is a wall. </p>
-
-</div>
-</div>
-<a class="anchor" id="a7520cdd30191a75a7811c42ee1758e65"></a><!-- doxytag: member="BLevel::isWall" ref="a7520cdd30191a75a7811c42ee1758e65" args="(const int x, const int y)" -->
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool <a class="el" href="class_b_level.html#abb407d85aebcc0d6cded1ad13c2e2eed">BLevel::isWall</a> </td>
-          <td>(</td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>x</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>y</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td><code> [inline]</code></td>
-        </tr>
-      </table>
-</div>
-<div class="memdoc">
-
-<p>Checks if the provided location is a wall. </p>
-
-</div>
-</div>
 <a class="anchor" id="ae32bcaf31096afb8356391e8ad6552e1"></a><!-- doxytag: member="BLevel::isWallCollision" ref="ae32bcaf31096afb8356391e8ad6552e1" args="(Rect bb, Rect &amp;tileBB)" -->
 <div class="memitem">
 <div class="memproto">
@@ -456,7 +373,7 @@ Public Member Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="class_b_level.html">BLevel</a>      </li>
 
-    <li class="footer">Generated on Fri Sep 20 2013 16:30:05 for GameBox by
+    <li class="footer">Generated on Sat Sep 21 2013 18:28:00 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

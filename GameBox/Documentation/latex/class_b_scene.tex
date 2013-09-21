@@ -23,6 +23,10 @@ void \hyperlink{class_b_scene_a71869b30ce6256f90b7873a4ffa4fd12}{set\-Focus} (co
 \begin{DoxyCompactList}\small\item\em \-Sets the value for layer\-Focus. \end{DoxyCompactList}\item 
 void \hyperlink{class_b_scene_a79117c8d522c8907c474b8448b5e486b}{new\-Level} (const char $\ast$filepath)
 \begin{DoxyCompactList}\small\item\em \-This will load a new level. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_scene_a7256ae33cbfbda2999f33626a4fa93ac}{load\-Level} (const int idx)
+\begin{DoxyCompactList}\small\item\em \-This will load a level from the level menu. \end{DoxyCompactList}\item 
+void \hyperlink{class_b_scene_a41bf719fb615e92dc092a18dc47b919b}{next\-Level} ()
+\begin{DoxyCompactList}\small\item\em \-This will load the next level from a current level. \end{DoxyCompactList}\item 
 void \hyperlink{class_b_scene_a98a3fdedfb94c433624c0ce664adb343}{show\-Level\-Menu} ()
 \begin{DoxyCompactList}\small\item\em \-Show the level \-Menu. \end{DoxyCompactList}\item 
 void \hyperlink{class_b_scene_a2817197ebb69c55473bd50808a66a27f}{show\-Pause\-Menu} ()
@@ -36,13 +40,15 @@ void \hyperlink{class_b_scene_a8c547547d6a90ab1e2ae5abc3805c3f2}{exit\-Game} ()
 \item 
 static void \hyperlink{class_b_scene_aa3e76c81d0eeadf1c6b6f7d9560c14cf}{handle\-Esc} (\-Object $\ast$scene)
 \begin{DoxyCompactList}\small\item\em \-This will handle \-Esc\-Presses. \end{DoxyCompactList}\item 
+static void \hyperlink{class_b_scene_a8f7e96a35d0d42d5bb57a066519d20d2}{win\-C\-B} (\-Object $\ast$p\-Sender)
+\item 
 static void \hyperlink{class_b_scene_a25d15df90b25965d88b48c8630da9af3}{resume\-C\-B} (\-Object $\ast$p\-Sender)
 \item 
 static void \hyperlink{class_b_scene_a57bc71835cfbd1596d639f8ba949b795}{level\-Select\-C\-B} (\-Object $\ast$p\-Sender)
 \item 
 static void \hyperlink{class_b_scene_a762573ed16243cbe4d6539fbfe36b0e3}{exit\-Game\-C\-B} (\-Object $\ast$p\-Sender)
 \item 
-static void \hyperlink{class_b_scene_a43226267f8e0d11e0440d64db1814889}{load\-Level} (\-Object $\ast$p\-Sender)
+static void \hyperlink{class_b_scene_a660fea77a245f644588277b863806105}{run\-Load\-Level} (\-Object $\ast$p\-Sender)
 \begin{DoxyCompactList}\small\item\em \-Loads the level stored in sender-\/$>$levelname \-This is called from \hyperlink{class_b_level_menu}{\-B\-Level\-Menu}. \end{DoxyCompactList}\item 
 static void \hyperlink{class_b_scene_a90db09771569a058108341368724efc9}{run\-This\-Game} (\-Object $\ast$p\-Sender)
 \begin{DoxyCompactList}\small\item\em \-This method creates a new \hyperlink{class_b_scene}{\-B\-Scene} and runs it. \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -113,16 +119,16 @@ static void \hyperlink{class_b_scene_a90db09771569a058108341368724efc9}{run\-Thi
 \item[{\-Object $\ast$}]{p\-Sender}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_b_scene_a57bc71835cfbd1596d639f8ba949b795}
-\hypertarget{class_b_scene_a43226267f8e0d11e0440d64db1814889}{\index{\-B\-Scene@{\-B\-Scene}!load\-Level@{load\-Level}}
+\hypertarget{class_b_scene_a7256ae33cbfbda2999f33626a4fa93ac}{\index{\-B\-Scene@{\-B\-Scene}!load\-Level@{load\-Level}}
 \index{load\-Level@{load\-Level}!BScene@{\-B\-Scene}}
 \subsubsection[{load\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Scene\-::load\-Level} (
 \begin{DoxyParamCaption}
-\item[{\-Object $\ast$}]{p\-Sender}
+\item[{const int}]{idx}
 \end{DoxyParamCaption}
-)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_b_scene_a43226267f8e0d11e0440d64db1814889}
+)}}\label{class_b_scene_a7256ae33cbfbda2999f33626a4fa93ac}
 
 
-\-Loads the level stored in sender-\/$>$levelname \-This is called from \hyperlink{class_b_level_menu}{\-B\-Level\-Menu}. 
+\-This will load a level from the level menu. 
 
 \hypertarget{class_b_scene_a717840a63b4399bb70d420ba34cc324d}{\index{\-B\-Scene@{\-B\-Scene}!load\-Level\-Dict@{load\-Level\-Dict}}
 \index{load\-Level\-Dict@{load\-Level\-Dict}!BScene@{\-B\-Scene}}
@@ -146,6 +152,17 @@ static void \hyperlink{class_b_scene_a90db09771569a058108341368724efc9}{run\-Thi
 
 \-This will load a new level. 
 
+\hypertarget{class_b_scene_a41bf719fb615e92dc092a18dc47b919b}{\index{\-B\-Scene@{\-B\-Scene}!next\-Level@{next\-Level}}
+\index{next\-Level@{next\-Level}!BScene@{\-B\-Scene}}
+\subsubsection[{next\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Scene\-::next\-Level} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_b_scene_a41bf719fb615e92dc092a18dc47b919b}
+
+
+\-This will load the next level from a current level. 
+
 \hypertarget{class_b_scene_a25d15df90b25965d88b48c8630da9af3}{\index{\-B\-Scene@{\-B\-Scene}!resume\-C\-B@{resume\-C\-B}}
 \index{resume\-C\-B@{resume\-C\-B}!BScene@{\-B\-Scene}}
 \subsubsection[{resume\-C\-B}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Scene\-::resume\-C\-B} (
@@ -163,6 +180,17 @@ static void \hyperlink{class_b_scene_a90db09771569a058108341368724efc9}{run\-Thi
 
 
 \-Resume the game. 
+
+\hypertarget{class_b_scene_a660fea77a245f644588277b863806105}{\index{\-B\-Scene@{\-B\-Scene}!run\-Load\-Level@{run\-Load\-Level}}
+\index{run\-Load\-Level@{run\-Load\-Level}!BScene@{\-B\-Scene}}
+\subsubsection[{run\-Load\-Level}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Scene\-::run\-Load\-Level} (
+\begin{DoxyParamCaption}
+\item[{\-Object $\ast$}]{p\-Sender}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_b_scene_a660fea77a245f644588277b863806105}
+
+
+\-Loads the level stored in sender-\/$>$levelname \-This is called from \hyperlink{class_b_level_menu}{\-B\-Level\-Menu}. 
 
 \hypertarget{class_b_scene_a90db09771569a058108341368724efc9}{\index{\-B\-Scene@{\-B\-Scene}!run\-This\-Game@{run\-This\-Game}}
 \index{run\-This\-Game@{run\-This\-Game}!BScene@{\-B\-Scene}}
@@ -208,6 +236,13 @@ static void \hyperlink{class_b_scene_a90db09771569a058108341368724efc9}{run\-Thi
 
 \-Show the \-Pause \-Menu. 
 
+\hypertarget{class_b_scene_a8f7e96a35d0d42d5bb57a066519d20d2}{\index{\-B\-Scene@{\-B\-Scene}!win\-C\-B@{win\-C\-B}}
+\index{win\-C\-B@{win\-C\-B}!BScene@{\-B\-Scene}}
+\subsubsection[{win\-C\-B}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-B\-Scene\-::win\-C\-B} (
+\begin{DoxyParamCaption}
+\item[{\-Object $\ast$}]{p\-Sender}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}static\mbox{]}}}}\label{class_b_scene_a8f7e96a35d0d42d5bb57a066519d20d2}
 
 
 \-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}

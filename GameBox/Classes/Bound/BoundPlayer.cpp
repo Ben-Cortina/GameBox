@@ -6,9 +6,9 @@
 
 #include "BoundPlayer.h"
 
-BPlayer::BPlayer(const char* image, std::function<void(Object*)> escF)
+BPlayer::BPlayer(const char* image, std::function<void(Object*)> winF)
 {
-    escFunc = escF;
+    winFunc = winF;
     force.x = 0;
     force.y = 0;
     velocity.x = 0;
@@ -33,7 +33,6 @@ void BPlayer::setLevel(BLevel* newLevel)
 
 void BPlayer::spawn(float dt)
 {
-    std::cout << "spawn" << std::endl;
     isDying = false;
     player->setPosition( level->getStart() );
     player->setScale((int)(level->getTileSize()/10));
@@ -63,6 +62,18 @@ void BPlayer::die()
     //fade to black
     player->runAction( FadeOut::create(1.0f) );
     
+}
+
+void BPlayer::win()
+{
+    setKeyboardEnabled(false);
+    force.x = 0;
+    force.y = 0;
+    velocity.x = 0;
+    velocity.y = 0;
+    maxSpeed = 0;
+    keyState.up = keyState.down = keyState.left = keyState.right = false;
+    winFunc(this);
 }
 
 void BPlayer::updateVelocity()
@@ -109,6 +120,9 @@ void BPlayer::update(float dt)
         die();
     
     handleCollisions(velocity.x * dt, velocity.y * dt);
+    
+    if (level->inExit(player->getBoundingBox()) && !isDying)
+        win();
     
 }
 
@@ -250,11 +264,6 @@ void BPlayer::keyPressed(int keyCode)
     
     switch(keyCode)
     {
-            // exitLoc
-        case 53: //Esc
-            escFunc(getParent());
-            break;
-            
             // Player Up
         case 126: // Up Arrow
         case 13:  // W

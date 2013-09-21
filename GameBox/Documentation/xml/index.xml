@@ -41,7 +41,7 @@
     <member refid="class_b_level_1aa95d39b724327298f6669280a36a7f64" kind="variable"><name>wTileCount</name></member>
     <member refid="class_b_level_1a11c0243e34fa173fbcee54f338faa136" kind="variable"><name>eTileCount</name></member>
     <member refid="class_b_level_1a2bbf5b3cdf1689e9a98c48189f9a0ab9" kind="variable"><name>start</name></member>
-    <member refid="class_b_level_1a4845fd99df61f85f905cc596794d234f" kind="variable"><name>end</name></member>
+    <member refid="class_b_level_1a8b8ddf0b25eb2499e57052f8f0adb6d3" kind="variable"><name>end</name></member>
     <member refid="class_b_level_1ade96d7cedbf6a2e1719ed6eec9c463c9" kind="variable"><name>endCount</name></member>
     <member refid="class_b_level_1a70ff8d684d97dda624a74a8f84c25e4c" kind="variable"><name>valid</name></member>
     <member refid="class_b_level_1a8cac4d9b9f748167b2f871460a650756" kind="function"><name>parseFile</name></member>
@@ -49,10 +49,7 @@
     <member refid="class_b_level_1a8e48d62f02a21d2a57c682dc7737396f" kind="function"><name>BLevel</name></member>
     <member refid="class_b_level_1ad4f4a9f5658ac8ed21917df61678f4b2" kind="function"><name>getStart</name></member>
     <member refid="class_b_level_1a8d02e52b25ff8c39bb68d0880c31771c" kind="function"><name>getTileSize</name></member>
-    <member refid="class_b_level_1abb407d85aebcc0d6cded1ad13c2e2eed" kind="function"><name>isWall</name></member>
-    <member refid="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" kind="function"><name>isWall</name></member>
-    <member refid="class_b_level_1adf39bb6a72e7780031a0806df92f9fc5" kind="function"><name>isExplosion</name></member>
-    <member refid="class_b_level_1acf89db789ceb7f083221fab3fead042e" kind="function"><name>isExplosion</name></member>
+    <member refid="class_b_level_1af5e69744df511186e383aa68936869dd" kind="function"><name>inExit</name></member>
     <member refid="class_b_level_1ad9a6d59f73f29c78a0b2e57997202eb5" kind="function"><name>isValid</name></member>
     <member refid="class_b_level_1ae32bcaf31096afb8356391e8ad6552e1" kind="function"><name>isWallCollision</name></member>
     <member refid="class_b_level_1a432d3dde8efb542646792f9c5563a522" kind="function"><name>isExplosionCollision</name></member>
@@ -71,6 +68,7 @@
     <member refid="class_b_level_menu_1a0d27ff3c8303ab37a5db7e3afb99847e" kind="function"><name>BLevelMenu</name></member>
     <member refid="class_b_level_menu_1a4646279f37990d842a77eb2e071a3919" kind="function"><name>~BLevelMenu</name></member>
     <member refid="class_b_level_menu_1a38bfb874e8a2d32bb01f4a281032e84c" kind="function"><name>getLevelPath</name></member>
+    <member refid="class_b_level_menu_1aeb1f5dc532dab13120d309c8ca7a30b9" kind="function"><name>getLevelCount</name></member>
     <member refid="class_b_level_menu_1a3a7207f8b357ae3e82b26b3507137775" kind="function"><name>ccTouchesBegan</name></member>
     <member refid="class_b_level_menu_1a14fc166131531c3c9ef271eb965bfd64" kind="function"><name>ccTouchesMoved</name></member>
   </compound>
@@ -85,8 +83,8 @@
     <member refid="class_b_player_1aeba7acd97b65228677bd9fe2d0ca1e86" kind="variable"><name>velocity</name></member>
     <member refid="class_b_player_1a3152beb08679dfa9538bca632cde3624" kind="variable"><name>keyState</name></member>
     <member refid="class_b_player_1ad0d73285c5ebdc088f0626d40c5db555" kind="variable"><name>isDying</name></member>
-    <member refid="class_b_player_1aea1798277d5db2f597276108953c2aa2" kind="variable"><name>escFunc</name></member>
-    <member refid="class_b_player_1ab32977496976aff5421f2af0d277aaf8" kind="function"><name>BPlayer</name></member>
+    <member refid="class_b_player_1a5893c9529cf32688c1036ea28480cf8f" kind="variable"><name>winFunc</name></member>
+    <member refid="class_b_player_1af15d206fbe7550cf2fa15746f2a9a2f2" kind="function"><name>BPlayer</name></member>
     <member refid="class_b_player_1a03add0a9a55d81912897518d94daf52f" kind="function"><name>setLevel</name></member>
     <member refid="class_b_player_1ace0ec1b13a62c932950a86a469d0263f" kind="function"><name>setMaxSpeed</name></member>
     <member refid="class_b_player_1a33b7d635e3aa3c7a4796eabc4205cc58" kind="function"><name>getForce</name></member>
@@ -95,6 +93,7 @@
     <member refid="class_b_player_1a94916a0f75042c2e6265fa7c9ec4db32" kind="function"><name>setForceY</name></member>
     <member refid="class_b_player_1a7981065d2d5b4c581d84cb5b63a15d00" kind="function"><name>fall</name></member>
     <member refid="class_b_player_1a5a46736f890786b465bfe51c9c4f8ff7" kind="function"><name>die</name></member>
+    <member refid="class_b_player_1a479665137e3aad56591b4e16d4cac380" kind="function"><name>win</name></member>
     <member refid="class_b_player_1a1f66cceac56c4252237f6e30003efa4d" kind="function"><name>spawn</name></member>
     <member refid="class_b_player_1aa0f9b22686ad0aeec30ea21beb3740f2" kind="function"><name>updateVelocity</name></member>
     <member refid="class_b_player_1a86f9b0c0d7b4c61ed475f0e70249be7f" kind="function"><name>update</name></member>
@@ -102,8 +101,13 @@
     <member refid="class_b_player_1a4c0f72ebb2a0b95eb35fab6598924992" kind="function"><name>handleCollisions</name></member>
     <member refid="class_b_player_1ae0aaaa33013fd5c0070cf51619abf12b" kind="function"><name>keyPressed</name></member>
     <member refid="class_b_player_1a8210db4e8fac75ace4b71b3ded1df6bf" kind="function"><name>keyReleased</name></member>
+    <member refid="class_b_player_1ab01210df4dccd3ab9108bbffadad8243" kind="function"><name>upP</name></member>
+    <member refid="class_b_player_1acbcd61303f7f7ccf57a70bbe7af5470f" kind="function"><name>downP</name></member>
+    <member refid="class_b_player_1aea6f08c0d171c16acdf4180356f33732" kind="function"><name>leftP</name></member>
+    <member refid="class_b_player_1a715fb318e6a807cbf0822aa8b34e999b" kind="function"><name>rightP</name></member>
   </compound>
   <compound refid="class_b_scene" kind="class"><name>BScene</name>
+    <member refid="class_b_scene_1abc062cba51352396a901af0442e0e5a1" kind="variable"><name>keyHandler</name></member>
     <member refid="class_b_scene_1a6869d39e608c87ec85c6260d9ca25d81" kind="variable"><name>levelLayer</name></member>
     <member refid="class_b_scene_1a9351cec96b21e50a7d1132feb4cb4e65" kind="variable"><name>playerLayer</name></member>
     <member refid="class_b_scene_1a1dc8e3413c7d47423269274e18615278" kind="variable"><name>backgroundLayer</name></member>
@@ -115,15 +119,18 @@
     <member refid="class_b_scene_1ae8759c51e7bcd9888f3035cbcd9d675c" kind="function"><name>getFocus</name></member>
     <member refid="class_b_scene_1a71869b30ce6256f90b7873a4ffa4fd12" kind="function"><name>setFocus</name></member>
     <member refid="class_b_scene_1a79117c8d522c8907c474b8448b5e486b" kind="function"><name>newLevel</name></member>
+    <member refid="class_b_scene_1a7256ae33cbfbda2999f33626a4fa93ac" kind="function"><name>loadLevel</name></member>
+    <member refid="class_b_scene_1a41bf719fb615e92dc092a18dc47b919b" kind="function"><name>nextLevel</name></member>
     <member refid="class_b_scene_1a98a3fdedfb94c433624c0ce664adb343" kind="function"><name>showLevelMenu</name></member>
     <member refid="class_b_scene_1a2817197ebb69c55473bd50808a66a27f" kind="function"><name>showPauseMenu</name></member>
     <member refid="class_b_scene_1aa90fdc62093e8c1a8ad454b95015ee2e" kind="function"><name>resumeGame</name></member>
     <member refid="class_b_scene_1a8c547547d6a90ab1e2ae5abc3805c3f2" kind="function"><name>exitGame</name></member>
     <member refid="class_b_scene_1aa3e76c81d0eeadf1c6b6f7d9560c14cf" kind="function"><name>handleEsc</name></member>
+    <member refid="class_b_scene_1a8f7e96a35d0d42d5bb57a066519d20d2" kind="function"><name>winCB</name></member>
     <member refid="class_b_scene_1a25d15df90b25965d88b48c8630da9af3" kind="function"><name>resumeCB</name></member>
     <member refid="class_b_scene_1a57bc71835cfbd1596d639f8ba949b795" kind="function"><name>levelSelectCB</name></member>
     <member refid="class_b_scene_1a762573ed16243cbe4d6539fbfe36b0e3" kind="function"><name>exitGameCB</name></member>
-    <member refid="class_b_scene_1a43226267f8e0d11e0440d64db1814889" kind="function"><name>loadLevel</name></member>
+    <member refid="class_b_scene_1a660fea77a245f644588277b863806105" kind="function"><name>runLoadLevel</name></member>
     <member refid="class_b_scene_1a90db09771569a058108341368724efc9" kind="function"><name>runThisGame</name></member>
   </compound>
   <compound refid="class_b_tile" kind="class"><name>BTile</name>
@@ -169,6 +176,31 @@
     <member refid="class_home_layer_1a7b39d554c7e3089a0855b471496ea0b6" kind="function"><name>init</name></member>
     <member refid="class_home_layer_1ad72b3afd71127c67721d1d04aea5ffe9" kind="function"><name>CREATE_FUNC</name></member>
     <member refid="class_home_layer_1abfa48630fcd7c04d077c92c673d419af" kind="function"><name>scene</name></member>
+  </compound>
+  <compound refid="class_keyboard_handler" kind="class"><name>KeyboardHandler</name>
+    <member refid="class_keyboard_handler_1a632f4bd88b71d0d61775a26d9cb81450" kind="variable"><name>keyPresses</name></member>
+    <member refid="class_keyboard_handler_1ab2dbc0db2709f765235c5310dea95b99" kind="variable"><name>keyReleases</name></member>
+    <member refid="class_keyboard_handler_1a39131fcdc203f43a990d2b74ef223501" kind="variable"><name>keyStates</name></member>
+    <member refid="class_keyboard_handler_1a3231b1f3ad96f40b7dccf4d095b79da4" kind="function"><name>KeyboardHandler</name></member>
+    <member refid="class_keyboard_handler_1a6e2eb2b14a8ff7c320a3fac5ad8c5f33" kind="function"><name>setEnabled</name></member>
+    <member refid="class_keyboard_handler_1a770d2ae9b0801e0ede1e407e1fda644b" kind="function"><name>addKeyPress</name></member>
+    <member refid="class_keyboard_handler_1a262ed855a0f0c11cc8c83aec352e0f50" kind="function"><name>addKeyPress</name></member>
+    <member refid="class_keyboard_handler_1a525e8ed1dbcf0a455f80183dcc29be7c" kind="function"><name>addKeyRelease</name></member>
+    <member refid="class_keyboard_handler_1abe4413daf337876abbd2163a2057bf01" kind="function"><name>keyPressed</name></member>
+    <member refid="class_keyboard_handler_1ab48a90caf8d0759a8a1090a46c1728c7" kind="function"><name>keyReleased</name></member>
+  </compound>
+  <compound refid="struct_key_func" kind="struct"><name>KeyFunc</name>
+    <member refid="struct_key_func_1a8683decc234b65cee973ca74b2257a99" kind="variable"><name>keyCode</name></member>
+    <member refid="struct_key_func_1ad68d4ddeedf266bd9819f5495a159ea0" kind="variable"><name>func</name></member>
+    <member refid="struct_key_func_1addf45cdc46b86985f56783f52cd45c6f" kind="variable"><name>receiver</name></member>
+    <member refid="struct_key_func_1a258ee11a628c97256f59e59e5175a509" kind="variable"><name>callOnce</name></member>
+    <member refid="struct_key_func_1a92e1a52bd64330f81aa24e4d0c695dd2" kind="function"><name>KeyFunc</name></member>
+    <member refid="struct_key_func_1a57c47c5b2259da22995ab3ed77e0ca5c" kind="function"><name>KeyFunc</name></member>
+  </compound>
+  <compound refid="struct_key_state" kind="struct"><name>KeyState</name>
+    <member refid="struct_key_state_1a8240c9d70dd2e47832fe50e40e4adce9" kind="variable"><name>keyCode</name></member>
+    <member refid="struct_key_state_1a8922b61cb789c21713c4baceca7ee9ae" kind="variable"><name>isDown</name></member>
+    <member refid="struct_key_state_1a8ef80ba42cfce46b743b194a891c9dd3" kind="function"><name>KeyState</name></member>
   </compound>
   <compound refid="struct_key_state_struct" kind="struct"><name>KeyStateStruct</name>
     <member refid="struct_key_state_struct_1a3d388e2382b981fef46bd0ac827f9a41" kind="variable"><name>up</name></member>
@@ -278,7 +310,8 @@
   <compound refid="_bound_8h" kind="file"><name>Bound.h</name>
   </compound>
   <compound refid="_bound_level_8cpp" kind="file"><name>BoundLevel.cpp</name>
-    <member refid="_bound_level_8cpp_1a8fcf5a6b80bd04214c28b45971355035" kind="function"><name>RectIntersectsRect</name></member>
+    <member refid="_bound_level_8cpp_1ae100a4f8de47ecba9caf9f99800aa502" kind="function"><name>rectIntersectsRect</name></member>
+    <member refid="_bound_level_8cpp_1ad4743ca1e55a2859a36e63e924620808" kind="function"><name>rectInsideRect</name></member>
     <member refid="_bound_level_8cpp_1ab19f808cab369ddd9a2c621d5e693f62" kind="function"><name>skipComments</name></member>
   </compound>
   <compound refid="_bound_level_8h" kind="file"><name>BoundLevel.h</name>
@@ -316,6 +349,11 @@
   <compound refid="_custom_tile_grid_8cpp" kind="file"><name>CustomTileGrid.cpp</name>
   </compound>
   <compound refid="_custom_tile_grid_8h" kind="file"><name>CustomTileGrid.h</name>
+  </compound>
+  <compound refid="_keyboard_handler_8cpp" kind="file"><name>KeyboardHandler.cpp</name>
+  </compound>
+  <compound refid="_keyboard_handler_8h" kind="file"><name>KeyboardHandler.h</name>
+    <member refid="_keyboard_handler_8h_1ac10da2fd6444e5c9f74c64c543c0d747" kind="variable"><name>USING_NS_CC</name></member>
   </compound>
   <compound refid="_over_layer_8cpp" kind="file"><name>OverLayer.cpp</name>
   </compound>

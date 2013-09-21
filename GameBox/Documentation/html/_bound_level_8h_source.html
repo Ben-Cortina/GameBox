@@ -130,7 +130,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00046"></a>00046     <span class="keywordtype">int</span> eTileCount;
 <a name="l00047"></a>00047     
 <a name="l00048"></a>00048     Point start;
-<a name="l00049"></a>00049     <a class="code" href="struct_coords.html">Coords</a>** end;
+<a name="l00049"></a>00049     <a class="code" href="struct_coords.html">Coords</a>* end;
 <a name="l00050"></a>00050     <span class="keywordtype">int</span> endCount;
 <a name="l00051"></a>00051     <span class="keywordtype">bool</span> valid;
 <a name="l00052"></a>00052     
@@ -146,31 +146,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a name="l00070"></a>00070     
 <a name="l00072"></a><a class="code" href="class_b_level.html#a8d02e52b25ff8c39bb68d0880c31771c">00072</a>     <span class="keywordtype">float</span> <a class="code" href="class_b_level.html#a8d02e52b25ff8c39bb68d0880c31771c" title="returns the tileSize">getTileSize</a>() { <span class="keywordflow">return</span> tileSize; };
 <a name="l00073"></a>00073     
-<a name="l00075"></a>00075     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#abb407d85aebcc0d6cded1ad13c2e2eed" title="Checks if the provided location is a wall.">isWall</a>(<span class="keyword">const</span> <a class="code" href="struct_coords.html">Coords</a> loc);
-<a name="l00077"></a><a class="code" href="class_b_level.html#a7520cdd30191a75a7811c42ee1758e65">00077</a>     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#a7520cdd30191a75a7811c42ee1758e65" title="Checks if the provided location is a wall.">isWall</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y) { <span class="keywordflow">return</span> <a class="code" href="class_b_level.html#a7520cdd30191a75a7811c42ee1758e65" title="Checks if the provided location is a wall.">isWall</a>( <a class="code" href="struct_coords.html">Coords</a>(x, y) ); };
-<a name="l00078"></a>00078     
-<a name="l00080"></a>00080     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#adf39bb6a72e7780031a0806df92f9fc5" title="Checks to see if there is an active explosion there.">isExplosion</a>(<span class="keyword">const</span> <a class="code" href="struct_coords.html">Coords</a> loc);
-<a name="l00082"></a><a class="code" href="class_b_level.html#acf89db789ceb7f083221fab3fead042e">00082</a>     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#acf89db789ceb7f083221fab3fead042e" title="Checks to see if there is an active explosion there.">isExplosion</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> x, <span class="keyword">const</span> <span class="keywordtype">int</span> y) { <span class="keywordflow">return</span> <a class="code" href="class_b_level.html#acf89db789ceb7f083221fab3fead042e" title="Checks to see if there is an active explosion there.">isExplosion</a>( <a class="code" href="struct_coords.html">Coords</a>(x, y) ); };
-<a name="l00083"></a>00083     
-<a name="l00085"></a><a class="code" href="class_b_level.html#ad9a6d59f73f29c78a0b2e57997202eb5">00085</a>     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#ad9a6d59f73f29c78a0b2e57997202eb5" title="Did the level load.">isValid</a>(){ <span class="keywordflow">return</span> valid; };
-<a name="l00086"></a>00086     
-<a name="l00091"></a>00091     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#ae32bcaf31096afb8356391e8ad6552e1" title="Checks if a rectangle collides with any Wall tiles.">isWallCollision</a>(Rect bb, Rect&amp; tileBB);
-<a name="l00092"></a>00092     
-<a name="l00096"></a>00096     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#a432d3dde8efb542646792f9c5563a522" title="Checks if a rectangle collides with any Active Explosions tiles. If the player does, it dies.">isExplosionCollision</a>(Rect bb);
-<a name="l00097"></a>00097     
-<a name="l00101"></a>00101     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#a6526db006b1f862697b1f9f89eb0a968" title="This checks if any explosions have gone off on top of the player.">checkExplosions</a>(Rect bb);
+<a name="l00075"></a>00075     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#af5e69744df511186e383aa68936869dd" title="Checks if the player is fully inside an exit.">inExit</a>(<span class="keyword">const</span> Rect bb);
+<a name="l00076"></a>00076     
+<a name="l00078"></a><a class="code" href="class_b_level.html#ad9a6d59f73f29c78a0b2e57997202eb5">00078</a>     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#ad9a6d59f73f29c78a0b2e57997202eb5" title="Did the level load.">isValid</a>(){ <span class="keywordflow">return</span> valid; };
+<a name="l00079"></a>00079     
+<a name="l00084"></a>00084     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#ae32bcaf31096afb8356391e8ad6552e1" title="Checks if a rectangle collides with any Wall tiles.">isWallCollision</a>(Rect bb, Rect&amp; tileBB);
+<a name="l00085"></a>00085     
+<a name="l00089"></a>00089     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#a432d3dde8efb542646792f9c5563a522" title="Checks if a rectangle collides with any Active Explosions tiles. If the player does, it dies.">isExplosionCollision</a>(Rect bb);
+<a name="l00090"></a>00090     
+<a name="l00094"></a>00094     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#a6526db006b1f862697b1f9f89eb0a968" title="This checks if any explosions have gone off on top of the player.">checkExplosions</a>(Rect bb);
+<a name="l00095"></a>00095     
+<a name="l00101"></a>00101     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#ab79289460372842f15ca0fe13311d7c9" title="Checks if the passed rectangle touches any floor. If the player does not intersect any of the floor t...">isOnFloor</a>(Rect bb);
 <a name="l00102"></a>00102     
-<a name="l00108"></a>00108     <span class="keywordtype">bool</span> <a class="code" href="class_b_level.html#ab79289460372842f15ca0fe13311d7c9" title="Checks if the passed rectangle touches any floor. If the player does not intersect any of the floor t...">isOnFloor</a>(Rect bb);
-<a name="l00109"></a>00109     
-<a name="l00110"></a><a class="code" href="class_b_level.html#a6bb41eebd07bf260b42168183bdd37c1">00110</a>     <a class="code" href="struct_coords.html">Coords</a> <a class="code" href="class_b_level.html#a6bb41eebd07bf260b42168183bdd37c1">getTile</a>(Point pt) { pt = pt - getPosition(); <span class="keywordflow">return</span> <a class="code" href="struct_coords.html">Coords</a>((<span class="keywordtype">int</span>)(pt.x / tileSize),
-<a name="l00111"></a>00111                                                                       (<span class="keywordtype">int</span>)(pt.y / tileSize)); };
-<a name="l00112"></a>00112     
-<a name="l00113"></a>00113     Rect <a class="code" href="class_b_level.html#a9adc000ce6523936febd5a4d20d52eb8">getTileBB</a>(<a class="code" href="struct_coords.html">Coords</a> loc);
-<a name="l00114"></a>00114     
-<a name="l00115"></a>00115     
-<a name="l00116"></a>00116 };
-<a name="l00117"></a>00117 
-<a name="l00118"></a>00118 <span class="preprocessor">#endif </span><span class="comment">/* defined(__GameBox__BoundLevel__) */</span>
+<a name="l00103"></a><a class="code" href="class_b_level.html#a6bb41eebd07bf260b42168183bdd37c1">00103</a>     <a class="code" href="struct_coords.html">Coords</a> <a class="code" href="class_b_level.html#a6bb41eebd07bf260b42168183bdd37c1">getTile</a>(Point pt) { pt = pt - getPosition(); <span class="keywordflow">return</span> <a class="code" href="struct_coords.html">Coords</a>((<span class="keywordtype">int</span>)(pt.x / tileSize),
+<a name="l00104"></a>00104                                                                       (<span class="keywordtype">int</span>)(pt.y / tileSize)); };
+<a name="l00105"></a>00105     
+<a name="l00106"></a>00106     Rect <a class="code" href="class_b_level.html#a9adc000ce6523936febd5a4d20d52eb8">getTileBB</a>(<a class="code" href="struct_coords.html">Coords</a> loc);
+<a name="l00107"></a>00107     
+<a name="l00108"></a>00108     
+<a name="l00109"></a>00109 };
+<a name="l00110"></a>00110 
+<a name="l00111"></a>00111 <span class="preprocessor">#endif </span><span class="comment">/* defined(__GameBox__BoundLevel__) */</span>
 </pre></div></div><!-- contents -->
 </div>
 <!-- window showing the filter options -->
@@ -191,7 +187,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
     <ul>
       <li class="navelem"><a class="el" href="_bound_level_8h.html">BoundLevel.h</a>      </li>
 
-    <li class="footer">Generated on Fri Sep 20 2013 16:30:04 for GameBox by
+    <li class="footer">Generated on Sat Sep 21 2013 18:28:00 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

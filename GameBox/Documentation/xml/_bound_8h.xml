@@ -4,103 +4,114 @@
     <compoundname>Bound.h</compoundname>
     <includes refid="_bound_player_8h" local="yes">BoundPlayer.h</includes>
     <includes refid="_bound_level_menu_8h" local="yes">BoundLevelMenu.h</includes>
+    <includes refid="_keyboard_handler_8h" local="yes">KeyboardHandler.h</includes>
     <includedby refid="_game_list_8h" local="yes">GameBox/GameBox/Classes/GameList.h</includedby>
     <includedby refid="_bound_8cpp" local="yes">GameBox/GameBox/Classes/Bound/Bound.cpp</includedby>
     <incdepgraph>
-      <node id="39">
+      <node id="41">
         <label>BoundPlayer.h</label>
         <link refid="_bound_player_8h"/>
-        <childnode refid="40" relation="include">
-        </childnode>
-        <childnode refid="41" relation="include">
-        </childnode>
-      </node>
-      <node id="38">
-        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
-        <link refid="Bound.h"/>
-        <childnode refid="39" relation="include">
-        </childnode>
-        <childnode refid="46" relation="include">
-        </childnode>
-      </node>
-      <node id="42">
-        <label>BoundTiles.h</label>
-        <link refid="_bound_tiles_8h"/>
-        <childnode refid="40" relation="include">
+        <childnode refid="42" relation="include">
         </childnode>
         <childnode refid="43" relation="include">
         </childnode>
       </node>
-      <node id="46">
-        <label>BoundLevelMenu.h</label>
-        <link refid="_bound_level_menu_8h"/>
-        <childnode refid="40" relation="include">
+      <node id="40">
+        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
+        <link refid="Bound.h"/>
+        <childnode refid="41" relation="include">
+        </childnode>
+        <childnode refid="48" relation="include">
+        </childnode>
+        <childnode refid="49" relation="include">
         </childnode>
       </node>
-      <node id="45">
-        <label>vector</label>
-      </node>
       <node id="44">
-        <label>iostream</label>
-      </node>
-      <node id="41">
-        <label>BoundLevel.h</label>
-        <link refid="_bound_level_8h"/>
+        <label>BoundTiles.h</label>
+        <link refid="_bound_tiles_8h"/>
         <childnode refid="42" relation="include">
         </childnode>
         <childnode refid="45" relation="include">
         </childnode>
       </node>
-      <node id="43">
-        <label>CustomTileGrid.h</label>
-        <link refid="_custom_tile_grid_8h"/>
-        <childnode refid="44" relation="include">
+      <node id="48">
+        <label>BoundLevelMenu.h</label>
+        <link refid="_bound_level_menu_8h"/>
+        <childnode refid="42" relation="include">
         </childnode>
       </node>
-      <node id="40">
+      <node id="49">
+        <label>KeyboardHandler.h</label>
+        <link refid="_keyboard_handler_8h"/>
+        <childnode refid="42" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="47">
+        <label>vector</label>
+      </node>
+      <node id="46">
+        <label>iostream</label>
+      </node>
+      <node id="43">
+        <label>BoundLevel.h</label>
+        <link refid="_bound_level_8h"/>
+        <childnode refid="44" relation="include">
+        </childnode>
+        <childnode refid="47" relation="include">
+        </childnode>
+      </node>
+      <node id="45">
+        <label>CustomTileGrid.h</label>
+        <link refid="_custom_tile_grid_8h"/>
+        <childnode refid="46" relation="include">
+        </childnode>
+      </node>
+      <node id="42">
         <label>cocos2d.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="51">
+      <node id="54">
         <label>GameBox/GameBox/Classes/Bound/Bound.cpp</label>
         <link refid="_bound_8cpp"/>
       </node>
-      <node id="48">
+      <node id="51">
         <label>GameBox/GameBox/Classes/GameList.h</label>
         <link refid="_game_list_8h"/>
-        <childnode refid="49" relation="include">
-        </childnode>
-      </node>
-      <node id="47">
-        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
-        <link refid="Bound.h"/>
-        <childnode refid="48" relation="include">
-        </childnode>
-        <childnode refid="51" relation="include">
-        </childnode>
-      </node>
-      <node id="49">
-        <label>GameBox/GameBox/Classes/HomeScene.h</label>
-        <link refid="_home_scene_8h"/>
-        <childnode refid="50" relation="include">
-        </childnode>
-        <childnode refid="51" relation="include">
-        </childnode>
         <childnode refid="52" relation="include">
         </childnode>
-        <childnode refid="53" relation="include">
+      </node>
+      <node id="50">
+        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
+        <link refid="Bound.h"/>
+        <childnode refid="51" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
         </childnode>
       </node>
       <node id="52">
+        <label>GameBox/GameBox/Classes/HomeScene.h</label>
+        <link refid="_home_scene_8h"/>
+        <childnode refid="53" relation="include">
+        </childnode>
+        <childnode refid="54" relation="include">
+        </childnode>
+        <childnode refid="55" relation="include">
+        </childnode>
+        <childnode refid="56" relation="include">
+        </childnode>
+      </node>
+      <node id="55">
         <label>GameBox/GameBox/Classes/HomeScene.cpp</label>
         <link refid="_home_scene_8cpp"/>
       </node>
-      <node id="50">
+      <node id="53">
         <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
         <link refid="_app_delegate_8cpp"/>
       </node>
-      <node id="53">
+      <node id="56">
         <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
         <link refid="_the_box_8cpp"/>
       </node>
@@ -110,26 +121,27 @@
     </briefdescription>
     <detaileddescription>
 <para>-------------------------------------------------------------* * <simplesect kind="author"><para>Ben Cortina * </para></simplesect>
-<simplesect kind="date"><para>8/29/13. * * This is a cocos2d-x rendition of a popular Starcraft: Brood * War game mode. The objective is to get to the end of the * level without being caught in an &quot;explosion.&quot; For accuracy * and simplicity, these explosions with be represented by a * flash in the tile. * * Eventually I hope to add procedural generation and/or a * level creator to this game * * Features: Keyboard movement, BB collision detection * --------------------------------------------------------------</para></simplesect>
+<simplesect kind="date"><para>8/29/13. * * This is a cocos2d-x rendition of a popular Starcraft: Brood * War game mode. The objective is to get to the end of the * level without being caught in an &quot;explosion.&quot; For accuracy * and simplicity, these explosions with be represented by a * flash in the tile. * * Eventually I hope to add procedural generation and/or a * level creator to this game * * Features: Keyboard movement, BB collision detection, Sound, * Scheduling and callbacks * --------------------------------------------------------------</para></simplesect>
 -------------------------------------------------------------* * <simplesect kind="author"><para>Ben Cortina * </para></simplesect>
 <simplesect kind="date"><para>8/30/13. * * This holds the various types of Tiles that will be used in * The Bound Game. * * Currently: Wall, Floor, Explosion Tiles * -------------------------------------------------------------- </para></simplesect>
 </para>    </detaileddescription>
     <programlisting>
 <codeline lineno="1"></codeline>
-<codeline lineno="18"><highlight class="preprocessor">#ifndef<sp/>__GameBox__Bound__</highlight></codeline>
-<codeline lineno="19"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__GameBox__Bound__</highlight></codeline>
-<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;BoundLevel.h&quot;<sp/>BoundPlayer.h<sp/>includes<sp/>BoundLevel</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bound_player_8h" kindref="compound">BoundPlayer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bound_level_menu_8h" kindref="compound">BoundLevelMenu.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/><sp/><sp/><sp/><sp/>Add<sp/>Victory</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Add<sp/>Keyboard<sp/>handling<sp/>layer</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32" refid="class_b_scene" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_b_scene" kindref="compound" tooltip="This is the Scene for Bound. It wll hold the layers that make up the Bound game.">BScene</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Scene</highlight></codeline>
-<codeline lineno="33"><highlight class="normal">{</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19"><highlight class="preprocessor">#ifndef<sp/>__GameBox__Bound__</highlight></codeline>
+<codeline lineno="20"><highlight class="preprocessor"></highlight><highlight class="preprocessor">#define<sp/>__GameBox__Bound__</highlight></codeline>
+<codeline lineno="21"><highlight class="preprocessor"></highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="comment">//#include<sp/>&quot;BoundLevel.h&quot;<sp/>BoundPlayer.h<sp/>includes<sp/>BoundLevel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bound_player_8h" kindref="compound">BoundPlayer.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bound_level_menu_8h" kindref="compound">BoundLevelMenu.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_keyboard_handler_8h" kindref="compound">KeyboardHandler.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//TODO:<sp/>Use<sp/>KeyboardHandler<sp/>for<sp/>playerLayer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/><sp/><sp/>Sounds</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="class_b_scene" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_b_scene" kindref="compound" tooltip="This is the Scene for Bound. It wll hold the layers that make up the Bound game.">BScene</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/>Scene</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_keyboard_handler" kindref="compound" tooltip="This is a class I can add to any game which will watch key events and call functions in response...">KeyboardHandler</ref>*<sp/>keyHandler;</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_level" kindref="compound" tooltip="This will hold and draw the data for a level.">BLevel</ref>*<sp/>levelLayer;</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_b_player" kindref="compound" tooltip="This will hold and draw the data for a Player. It will also handle player movement.">BPlayer</ref>*<sp/>playerLayer;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>LayerColor*<sp/>backgroundLayer;</highlight></codeline>
@@ -150,26 +162,34 @@
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a79117c8d522c8907c474b8448b5e486b" kindref="member" tooltip="This will load a new level.">newLevel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal">*<sp/>filepath);</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1aa3e76c81d0eeadf1c6b6f7d9560c14cf" kindref="member" tooltip="This will handle EscPresses.">handleEsc</ref>(Object<sp/>*<sp/>scene);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a7256ae33cbfbda2999f33626a4fa93ac" kindref="member" tooltip="This will load a level from the level menu.">loadLevel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx);</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a98a3fdedfb94c433624c0ce664adb343" kindref="member" tooltip="Show the level Menu.">showLevelMenu</ref>();</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a41bf719fb615e92dc092a18dc47b919b" kindref="member" tooltip="This will load the next level from a current level.">nextLevel</ref>();</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a2817197ebb69c55473bd50808a66a27f" kindref="member" tooltip="Show the Pause Menu.">showPauseMenu</ref>();</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1aa3e76c81d0eeadf1c6b6f7d9560c14cf" kindref="member" tooltip="This will handle EscPresses.">handleEsc</ref>(Object<sp/>*<sp/>scene);</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1aa90fdc62093e8c1a8ad454b95015ee2e" kindref="member" tooltip="Resume the game.">resumeGame</ref>();</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a98a3fdedfb94c433624c0ce664adb343" kindref="member" tooltip="Show the level Menu.">showLevelMenu</ref>();</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a25d15df90b25965d88b48c8630da9af3" kindref="member">resumeCB</ref>(Object*<sp/>pSender);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a57bc71835cfbd1596d639f8ba949b795" kindref="member">levelSelectCB</ref>(Object*<sp/>pSender);</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a762573ed16243cbe4d6539fbfe36b0e3" kindref="member">exitGameCB</ref>(Object*<sp/>pSender);</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a43226267f8e0d11e0440d64db1814889" kindref="member" tooltip="Loads the level stored in sender-&amp;gt;levelname This is called from BLevelMenu.">loadLevel</ref>(Object*<sp/>pSender);</highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a8c547547d6a90ab1e2ae5abc3805c3f2" kindref="member" tooltip="Exits this game and returns to the Home Screen.">exitGame</ref>();</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a90db09771569a058108341368724efc9" kindref="member" tooltip="This method creates a new BScene and runs it.">runThisGame</ref>(Object*<sp/>pSender);</highlight></codeline>
-<codeline lineno="87"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__Bound__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a2817197ebb69c55473bd50808a66a27f" kindref="member" tooltip="Show the Pause Menu.">showPauseMenu</ref>();</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1aa90fdc62093e8c1a8ad454b95015ee2e" kindref="member" tooltip="Resume the game.">resumeGame</ref>();</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//win<sp/>callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a8f7e96a35d0d42d5bb57a066519d20d2" kindref="member">winCB</ref>(Object*<sp/>pSender);</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//menu<sp/>callbacks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a25d15df90b25965d88b48c8630da9af3" kindref="member">resumeCB</ref>(Object*<sp/>pSender);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a57bc71835cfbd1596d639f8ba949b795" kindref="member">levelSelectCB</ref>(Object*<sp/>pSender);</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a762573ed16243cbe4d6539fbfe36b0e3" kindref="member">exitGameCB</ref>(Object*<sp/>pSender);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a660fea77a245f644588277b863806105" kindref="member" tooltip="Loads the level stored in sender-&amp;gt;levelname This is called from BLevelMenu.">runLoadLevel</ref>(Object*<sp/>pSender);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a8c547547d6a90ab1e2ae5abc3805c3f2" kindref="member" tooltip="Exits this game and returns to the Home Screen.">exitGame</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_b_scene_1a90db09771569a058108341368724efc9" kindref="member" tooltip="This method creates a new BScene and runs it.">runThisGame</ref>(Object*<sp/>pSender);</highlight></codeline>
+<codeline lineno="97"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__Bound__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/Bound.h"/>
   </compounddef>

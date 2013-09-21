@@ -1,0 +1,124 @@
+\hypertarget{class_keyboard_handler}{\section{\-Keyboard\-Handler \-Class \-Reference}
+\label{class_keyboard_handler}\index{\-Keyboard\-Handler@{\-Keyboard\-Handler}}
+}
+
+
+\-This is a class \-I can add to any game which will watch key events and call functions in response.  
+
+
+
+
+{\ttfamily \#include $<$\-Keyboard\-Handler.\-h$>$}
+
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_keyboard_handler_a3231b1f3ad96f40b7dccf4d095b79da4}{\-Keyboard\-Handler} ()
+\item 
+void \hyperlink{class_keyboard_handler_a6e2eb2b14a8ff7c320a3fac5ad8c5f33}{set\-Enabled} (bool on)
+\begin{DoxyCompactList}\small\item\em \-Turn on and off the keyboard listening. \end{DoxyCompactList}\item 
+void \hyperlink{class_keyboard_handler_a770d2ae9b0801e0ede1e407e1fda644b}{add\-Key\-Press} (const int key\-Code, std\-::function$<$ void(\-Object $\ast$)$>$ func, \-Object $\ast$r, bool call\-Once)
+\begin{DoxyCompactList}\small\item\em \-Adds a function to call on key\-Press. \end{DoxyCompactList}\item 
+void \hyperlink{class_keyboard_handler_a262ed855a0f0c11cc8c83aec352e0f50}{add\-Key\-Press} (const int key\-Code, std\-::function$<$ void(\-Object $\ast$)$>$ func, \-Object $\ast$r)
+\begin{DoxyCompactList}\small\item\em \-Adds a function to call on key\-Press. \end{DoxyCompactList}\item 
+void \hyperlink{class_keyboard_handler_a525e8ed1dbcf0a455f80183dcc29be7c}{add\-Key\-Release} (const int key\-Code, std\-::function$<$ void(\-Object $\ast$)$>$ func, \-Object $\ast$r)
+\begin{DoxyCompactList}\small\item\em \-Adds a function to call on key\-Release. \end{DoxyCompactList}\item 
+void \hyperlink{class_keyboard_handler_abe4413daf337876abbd2163a2057bf01}{key\-Pressed} (int key\-Code)
+\begin{DoxyCompactList}\small\item\em \-Handles key\-Presses. \end{DoxyCompactList}\item 
+void \hyperlink{class_keyboard_handler_ab48a90caf8d0759a8a1090a46c1728c7}{key\-Released} (int key\-Code)
+\begin{DoxyCompactList}\small\item\em \-Handles key\-Releases. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{\-Detailed \-Description}
+\-This is a class \-I can add to any game which will watch key events and call functions in response. 
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{class_keyboard_handler_a3231b1f3ad96f40b7dccf4d095b79da4}{\index{\-Keyboard\-Handler@{\-Keyboard\-Handler}!\-Keyboard\-Handler@{\-Keyboard\-Handler}}
+\index{\-Keyboard\-Handler@{\-Keyboard\-Handler}!KeyboardHandler@{\-Keyboard\-Handler}}
+\subsubsection[{\-Keyboard\-Handler}]{\setlength{\rightskip}{0pt plus 5cm}{\bf \-Keyboard\-Handler\-::\-Keyboard\-Handler} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_keyboard_handler_a3231b1f3ad96f40b7dccf4d095b79da4}
+
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{class_keyboard_handler_a770d2ae9b0801e0ede1e407e1fda644b}{\index{\-Keyboard\-Handler@{\-Keyboard\-Handler}!add\-Key\-Press@{add\-Key\-Press}}
+\index{add\-Key\-Press@{add\-Key\-Press}!KeyboardHandler@{\-Keyboard\-Handler}}
+\subsubsection[{add\-Key\-Press}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Keyboard\-Handler\-::add\-Key\-Press} (
+\begin{DoxyParamCaption}
+\item[{const int}]{key\-Code, }
+\item[{std\-::function$<$ void(\-Object $\ast$)$>$}]{func, }
+\item[{\-Object $\ast$}]{r, }
+\item[{bool}]{call\-Once}
+\end{DoxyParamCaption}
+)}}\label{class_keyboard_handler_a770d2ae9b0801e0ede1e407e1fda644b}
+
+
+\-Adds a function to call on key\-Press. 
+
+\hypertarget{class_keyboard_handler_a262ed855a0f0c11cc8c83aec352e0f50}{\index{\-Keyboard\-Handler@{\-Keyboard\-Handler}!add\-Key\-Press@{add\-Key\-Press}}
+\index{add\-Key\-Press@{add\-Key\-Press}!KeyboardHandler@{\-Keyboard\-Handler}}
+\subsubsection[{add\-Key\-Press}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Keyboard\-Handler\-::add\-Key\-Press} (
+\begin{DoxyParamCaption}
+\item[{const int}]{key\-Code, }
+\item[{std\-::function$<$ void(\-Object $\ast$)$>$}]{func, }
+\item[{\-Object $\ast$}]{r}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_keyboard_handler_a262ed855a0f0c11cc8c83aec352e0f50}
+
+
+\-Adds a function to call on key\-Press. 
+
+\hypertarget{class_keyboard_handler_a525e8ed1dbcf0a455f80183dcc29be7c}{\index{\-Keyboard\-Handler@{\-Keyboard\-Handler}!add\-Key\-Release@{add\-Key\-Release}}
+\index{add\-Key\-Release@{add\-Key\-Release}!KeyboardHandler@{\-Keyboard\-Handler}}
+\subsubsection[{add\-Key\-Release}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Keyboard\-Handler\-::add\-Key\-Release} (
+\begin{DoxyParamCaption}
+\item[{const int}]{key\-Code, }
+\item[{std\-::function$<$ void(\-Object $\ast$)$>$}]{func, }
+\item[{\-Object $\ast$}]{r}
+\end{DoxyParamCaption}
+)}}\label{class_keyboard_handler_a525e8ed1dbcf0a455f80183dcc29be7c}
+
+
+\-Adds a function to call on key\-Release. 
+
+\hypertarget{class_keyboard_handler_abe4413daf337876abbd2163a2057bf01}{\index{\-Keyboard\-Handler@{\-Keyboard\-Handler}!key\-Pressed@{key\-Pressed}}
+\index{key\-Pressed@{key\-Pressed}!KeyboardHandler@{\-Keyboard\-Handler}}
+\subsubsection[{key\-Pressed}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Keyboard\-Handler\-::key\-Pressed} (
+\begin{DoxyParamCaption}
+\item[{int}]{key\-Code}
+\end{DoxyParamCaption}
+)}}\label{class_keyboard_handler_abe4413daf337876abbd2163a2057bf01}
+
+
+\-Handles key\-Presses. 
+
+\hypertarget{class_keyboard_handler_ab48a90caf8d0759a8a1090a46c1728c7}{\index{\-Keyboard\-Handler@{\-Keyboard\-Handler}!key\-Released@{key\-Released}}
+\index{key\-Released@{key\-Released}!KeyboardHandler@{\-Keyboard\-Handler}}
+\subsubsection[{key\-Released}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Keyboard\-Handler\-::key\-Released} (
+\begin{DoxyParamCaption}
+\item[{int}]{key\-Code}
+\end{DoxyParamCaption}
+)}}\label{class_keyboard_handler_ab48a90caf8d0759a8a1090a46c1728c7}
+
+
+\-Handles key\-Releases. 
+
+\hypertarget{class_keyboard_handler_a6e2eb2b14a8ff7c320a3fac5ad8c5f33}{\index{\-Keyboard\-Handler@{\-Keyboard\-Handler}!set\-Enabled@{set\-Enabled}}
+\index{set\-Enabled@{set\-Enabled}!KeyboardHandler@{\-Keyboard\-Handler}}
+\subsubsection[{set\-Enabled}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf \-Keyboard\-Handler\-::set\-Enabled} (
+\begin{DoxyParamCaption}
+\item[{bool}]{on}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily  \mbox{[}inline\mbox{]}}}}\label{class_keyboard_handler_a6e2eb2b14a8ff7c320a3fac5ad8c5f33}
+
+
+\-Turn on and off the keyboard listening. 
+
+
+
+\-The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-Helpers/\hyperlink{_keyboard_handler_8h}{\-Keyboard\-Handler.\-h}\item 
+\-Game\-Box/\-Game\-Box/\-Classes/\-Helpers/\hyperlink{_keyboard_handler_8cpp}{\-Keyboard\-Handler.\-cpp}\end{DoxyCompactItemize}

@@ -36,14 +36,14 @@
     <detaileddescription>
     </detaileddescription>
     <collaborationgraph>
-      <node id="48">
+      <node id="54">
         <label>PlayerData</label>
         <link refid="struct_player_data"/>
-        <childnode refid="49" relation="usage">
+        <childnode refid="55" relation="usage">
           <edgelabel>loc</edgelabel>
         </childnode>
       </node>
-      <node id="49">
+      <node id="55">
         <label>Coords</label>
         <link refid="struct_coords"/>
       </node>

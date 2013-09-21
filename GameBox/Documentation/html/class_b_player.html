@@ -96,7 +96,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div id="doc-content">
 <div class="header">
   <div class="summary">
-<a href="#pub-methods">Public Member Functions</a>  </div>
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a>  </div>
   <div class="headertitle">
 <div class="title">BPlayer Class Reference</div>  </div>
 </div><!--header-->
@@ -111,7 +112,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr><td colspan="2"><h2><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#ab32977496976aff5421f2af0d277aaf8">BPlayer</a> (const char *<a class="el" href="_game_list_8h.html#ac745ab21f82aa96829863dcfc37ef5a8">image</a>, std::function&lt; void(Object *)&gt; escF)</td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#af15d206fbe7550cf2fa15746f2a9a2f2">BPlayer</a> (const char *<a class="el" href="_game_list_8h.html#ac745ab21f82aa96829863dcfc37ef5a8">image</a>, std::function&lt; void(Object *)&gt; winF)</td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a03add0a9a55d81912897518d94daf52f">setLevel</a> (<a class="el" href="class_b_level.html">BLevel</a> *newLevel)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the level to check collision on.  <a href="#a03add0a9a55d81912897518d94daf52f"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#ace0ec1b13a62c932950a86a469d0263f">setMaxSpeed</a> (const float speed)</td></tr>
@@ -125,6 +126,8 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">runs the actions needed to represent a falling player  <a href="#a7981065d2d5b4c581d84cb5b63a15d00"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a5a46736f890786b465bfe51c9c4f8ff7">die</a> ()</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">runs the actions needed to represent a dying player  <a href="#a5a46736f890786b465bfe51c9c4f8ff7"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a479665137e3aad56591b4e16d4cac380">win</a> ()</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">runs the actions needed to represent a win  <a href="#a479665137e3aad56591b4e16d4cac380"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a1f66cceac56c4252237f6e30003efa4d">spawn</a> (float dt)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Spawns the player at the start tile.  <a href="#a1f66cceac56c4252237f6e30003efa4d"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#aa0f9b22686ad0aeec30ea21beb3740f2">updateVelocity</a> ()</td></tr>
@@ -139,16 +142,26 @@ Public Member Functions</h2></td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles keyPresses.  <a href="#ae0aaaa33013fd5c0070cf51619abf12b"></a><br/></td></tr>
 <tr><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a8210db4e8fac75ace4b71b3ded1df6bf">keyReleased</a> (int keyCode)</td></tr>
 <tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Handles keyReleases.  <a href="#a8210db4e8fac75ace4b71b3ded1df6bf"></a><br/></td></tr>
+<tr><td colspan="2"><h2><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#ab01210df4dccd3ab9108bbffadad8243">upP</a> (Object *pThis)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when up is pressed.  <a href="#ab01210df4dccd3ab9108bbffadad8243"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#acbcd61303f7f7ccf57a70bbe7af5470f">downP</a> (Object *pThis)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when down is pressed.  <a href="#acbcd61303f7f7ccf57a70bbe7af5470f"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#aea6f08c0d171c16acdf4180356f33732">leftP</a> (Object *pThis)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when left is pressed.  <a href="#aea6f08c0d171c16acdf4180356f33732"></a><br/></td></tr>
+<tr><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_b_player.html#a715fb318e6a807cbf0822aa8b34e999b">rightP</a> (Object *pThis)</td></tr>
+<tr><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when right is pressed.  <a href="#a715fb318e6a807cbf0822aa8b34e999b"></a><br/></td></tr>
 </table>
 <hr/><a name="details" id="details"></a><h2>Detailed Description</h2>
 <div class="textblock"><p>This will hold and draw the data for a Player. It will also handle player movement. </p>
 </div><hr/><h2>Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="ab32977496976aff5421f2af0d277aaf8"></a><!-- doxytag: member="BPlayer::BPlayer" ref="ab32977496976aff5421f2af0d277aaf8" args="(const char *image, std::function&lt; void(Object *)&gt; escF)" -->
+<a class="anchor" id="af15d206fbe7550cf2fa15746f2a9a2f2"></a><!-- doxytag: member="BPlayer::BPlayer" ref="af15d206fbe7550cf2fa15746f2a9a2f2" args="(const char *image, std::function&lt; void(Object *)&gt; winF)" -->
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_b_player.html#ab32977496976aff5421f2af0d277aaf8">BPlayer::BPlayer</a> </td>
+          <td class="memname"><a class="el" href="class_b_player.html#af15d206fbe7550cf2fa15746f2a9a2f2">BPlayer::BPlayer</a> </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
           <td class="paramname"><em>image</em>, </td>
@@ -157,7 +170,7 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::function&lt; void(Object *)&gt;&#160;</td>
-          <td class="paramname"><em>escF</em>&#160;</td>
+          <td class="paramname"><em>winF</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -186,6 +199,25 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>runs the actions needed to represent a dying player </p>
+
+</div>
+</div>
+<a class="anchor" id="acbcd61303f7f7ccf57a70bbe7af5470f"></a><!-- doxytag: member="BPlayer::downP" ref="acbcd61303f7f7ccf57a70bbe7af5470f" args="(Object *pThis)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="class_b_player.html#acbcd61303f7f7ccf57a70bbe7af5470f">BPlayer::downP</a> </td>
+          <td>(</td>
+          <td class="paramtype">Object *&#160;</td>
+          <td class="paramname"><em>pThis</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Called when down is pressed. </p>
 
 </div>
 </div>
@@ -290,6 +322,44 @@ Public Member Functions</h2></td></tr>
 <div class="memdoc">
 
 <p>Handles keyReleases. </p>
+
+</div>
+</div>
+<a class="anchor" id="aea6f08c0d171c16acdf4180356f33732"></a><!-- doxytag: member="BPlayer::leftP" ref="aea6f08c0d171c16acdf4180356f33732" args="(Object *pThis)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="class_b_player.html#aea6f08c0d171c16acdf4180356f33732">BPlayer::leftP</a> </td>
+          <td>(</td>
+          <td class="paramtype">Object *&#160;</td>
+          <td class="paramname"><em>pThis</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Called when left is pressed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a715fb318e6a807cbf0822aa8b34e999b"></a><!-- doxytag: member="BPlayer::rightP" ref="a715fb318e6a807cbf0822aa8b34e999b" args="(Object *pThis)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="class_b_player.html#a715fb318e6a807cbf0822aa8b34e999b">BPlayer::rightP</a> </td>
+          <td>(</td>
+          <td class="paramtype">Object *&#160;</td>
+          <td class="paramname"><em>pThis</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Called when right is pressed. </p>
 
 </div>
 </div>
@@ -462,6 +532,43 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab01210df4dccd3ab9108bbffadad8243"></a><!-- doxytag: member="BPlayer::upP" ref="ab01210df4dccd3ab9108bbffadad8243" args="(Object *pThis)" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void <a class="el" href="class_b_player.html#ab01210df4dccd3ab9108bbffadad8243">BPlayer::upP</a> </td>
+          <td>(</td>
+          <td class="paramtype">Object *&#160;</td>
+          <td class="paramname"><em>pThis</em></td><td>)</td>
+          <td><code> [static]</code></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>Called when up is pressed. </p>
+
+</div>
+</div>
+<a class="anchor" id="a479665137e3aad56591b4e16d4cac380"></a><!-- doxytag: member="BPlayer::win" ref="a479665137e3aad56591b4e16d4cac380" args="()" -->
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="class_b_player.html#a479665137e3aad56591b4e16d4cac380">BPlayer::win</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div>
+<div class="memdoc">
+
+<p>runs the actions needed to represent a win </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>GameBox/GameBox/Classes/Bound/<a class="el" href="_bound_player_8h_source.html">BoundPlayer.h</a></li>
 <li>GameBox/GameBox/Classes/Bound/<a class="el" href="_bound_player_8cpp.html">BoundPlayer.cpp</a></li>
@@ -486,7 +593,7 @@ Public Member Functions</h2></td></tr>
     <ul>
       <li class="navelem"><a class="el" href="class_b_player.html">BPlayer</a>      </li>
 
-    <li class="footer">Generated on Fri Sep 20 2013 16:30:05 for GameBox by
+    <li class="footer">Generated on Sat Sep 21 2013 18:28:00 for GameBox by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.7.6.1 </li>
    </ul>

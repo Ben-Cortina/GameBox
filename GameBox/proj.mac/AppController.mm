@@ -58,7 +58,7 @@
 		// set window parameters
 		[window becomeFirstResponder];
 		[window setContentView:glView];
-		[window setTitle:@"HelloCpp"];
+		[window setTitle:@"GameBox"];
 		[window makeKeyAndOrderFront:self];
 		[window setAcceptsMouseMovedEvents:NO];
 

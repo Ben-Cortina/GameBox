@@ -160,9 +160,9 @@
         </inbodydescription>
         <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="48" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="48" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="class_b_level_1a4845fd99df61f85f905cc596794d234f" prot="private" static="no" mutable="no">
-        <type><ref refid="struct_coords" kindref="compound">Coords</ref> **</type>
-        <definition>Coords** BLevel::end</definition>
+      <memberdef kind="variable" id="class_b_level_1a8b8ddf0b25eb2499e57052f8f0adb6d3" prot="private" static="no" mutable="no">
+        <type><ref refid="struct_coords" kindref="compound">Coords</ref> *</type>
+        <definition>Coords* BLevel::end</definition>
         <argsstring></argsstring>
         <name>end</name>
         <briefdescription>
@@ -216,7 +216,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="56" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="179" bodyend="672"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="56" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="177" bodyend="675"/>
       </memberdef>
       <memberdef kind="function" id="class_b_level_1ab523ea2f79df9335906edea71cd3fbbc" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -276,81 +276,22 @@
         </inbodydescription>
         <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="72" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="72" bodyend="72"/>
       </memberdef>
-      <memberdef kind="function" id="class_b_level_1abb407d85aebcc0d6cded1ad13c2e2eed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="class_b_level_1af5e69744df511186e383aa68936869dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
-        <definition>bool BLevel::isWall</definition>
-        <argsstring>(const Coords loc)</argsstring>
-        <name>isWall</name>
+        <definition>bool BLevel::inExit</definition>
+        <argsstring>(const Rect bb)</argsstring>
+        <name>inExit</name>
         <param>
-          <type>const <ref refid="struct_coords" kindref="compound">Coords</ref></type>
-          <declname>loc</declname>
+          <type>const Rect</type>
+          <declname>bb</declname>
         </param>
         <briefdescription>
-<para>Checks if the provided location is a wall. </para>        </briefdescription>
+<para>Checks if the player is fully inside an exit. </para>        </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="75" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="64" bodyend="74"/>
-      </memberdef>
-      <memberdef kind="function" id="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool BLevel::isWall</definition>
-        <argsstring>(const int x, const int y)</argsstring>
-        <name>isWall</name>
-        <param>
-          <type>const int</type>
-          <declname>x</declname>
-        </param>
-        <param>
-          <type>const int</type>
-          <declname>y</declname>
-        </param>
-        <briefdescription>
-<para>Checks if the provided location is a wall. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="77" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="77" bodyend="77"/>
-      </memberdef>
-      <memberdef kind="function" id="class_b_level_1adf39bb6a72e7780031a0806df92f9fc5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool BLevel::isExplosion</definition>
-        <argsstring>(const Coords loc)</argsstring>
-        <name>isExplosion</name>
-        <param>
-          <type>const <ref refid="struct_coords" kindref="compound">Coords</ref></type>
-          <declname>loc</declname>
-        </param>
-        <briefdescription>
-<para>Checks to see if there is an active explosion there. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="80" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="76" bodyend="85"/>
-      </memberdef>
-      <memberdef kind="function" id="class_b_level_1acf89db789ceb7f083221fab3fead042e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool BLevel::isExplosion</definition>
-        <argsstring>(const int x, const int y)</argsstring>
-        <name>isExplosion</name>
-        <param>
-          <type>const int</type>
-          <declname>x</declname>
-        </param>
-        <param>
-          <type>const int</type>
-          <declname>y</declname>
-        </param>
-        <briefdescription>
-<para>Checks to see if there is an active explosion there. </para>        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="82" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="82" bodyend="82"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="75" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="74" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="class_b_level_1ad9a6d59f73f29c78a0b2e57997202eb5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -363,7 +304,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="85" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="85" bodyend="85"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="78" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="78" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="class_b_level_1ae32bcaf31096afb8356391e8ad6552e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -385,7 +326,7 @@
 </para>        </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="91" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="100" bodyend="114"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="84" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="98" bodyend="112"/>
       </memberdef>
       <memberdef kind="function" id="class_b_level_1a432d3dde8efb542646792f9c5563a522" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -402,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="96" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="132" bodyend="142"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="89" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="130" bodyend="140"/>
       </memberdef>
       <memberdef kind="function" id="class_b_level_1a6526db006b1f862697b1f9f89eb0a968" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -419,7 +360,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="101" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="117" bodyend="130"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="94" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="115" bodyend="128"/>
       </memberdef>
       <memberdef kind="function" id="class_b_level_1ab79289460372842f15ca0fe13311d7c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -436,7 +377,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="108" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="87" bodyend="98"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="101" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="85" bodyend="96"/>
       </memberdef>
       <memberdef kind="function" id="class_b_level_1a6bb41eebd07bf260b42168183bdd37c1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="struct_coords" kindref="compound">Coords</ref></type>
@@ -453,7 +394,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="110" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="110" bodyend="111"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="103" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="103" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="class_b_level_1a9adc000ce6523936febd5a4d20d52eb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>Rect</type>
@@ -470,18 +411,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="113" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="144" bodyend="153"/>
+        <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="106" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.cpp" bodystart="142" bodyend="151"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>This will hold and draw the data for a level. </para>    </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="34" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="33" bodyend="116"/>
+    <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" line="34" bodyfile="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h" bodystart="33" bodyend="109"/>
     <listofallmembers>
       <member refid="class_b_level_1a8e48d62f02a21d2a57c682dc7737396f" prot="public" virt="non-virtual"><scope>BLevel</scope><name>BLevel</name></member>
       <member refid="class_b_level_1a6526db006b1f862697b1f9f89eb0a968" prot="public" virt="non-virtual"><scope>BLevel</scope><name>checkExplosions</name></member>
-      <member refid="class_b_level_1a4845fd99df61f85f905cc596794d234f" prot="private" virt="non-virtual"><scope>BLevel</scope><name>end</name></member>
+      <member refid="class_b_level_1a8b8ddf0b25eb2499e57052f8f0adb6d3" prot="private" virt="non-virtual"><scope>BLevel</scope><name>end</name></member>
       <member refid="class_b_level_1ade96d7cedbf6a2e1719ed6eec9c463c9" prot="private" virt="non-virtual"><scope>BLevel</scope><name>endCount</name></member>
       <member refid="class_b_level_1a11c0243e34fa173fbcee54f338faa136" prot="private" virt="non-virtual"><scope>BLevel</scope><name>eTileCount</name></member>
       <member refid="class_b_level_1adf3d46368cfe19ed1e73a0b7d5539fba" prot="private" virt="non-virtual"><scope>BLevel</scope><name>eTiles</name></member>
@@ -493,13 +434,10 @@
       <member refid="class_b_level_1a9adc000ce6523936febd5a4d20d52eb8" prot="public" virt="non-virtual"><scope>BLevel</scope><name>getTileBB</name></member>
       <member refid="class_b_level_1a8d02e52b25ff8c39bb68d0880c31771c" prot="public" virt="non-virtual"><scope>BLevel</scope><name>getTileSize</name></member>
       <member refid="class_b_level_1abb0c14ba020af30d1d1f1bfa69dfea00" prot="private" virt="non-virtual"><scope>BLevel</scope><name>height</name></member>
-      <member refid="class_b_level_1adf39bb6a72e7780031a0806df92f9fc5" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isExplosion</name></member>
-      <member refid="class_b_level_1acf89db789ceb7f083221fab3fead042e" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isExplosion</name></member>
+      <member refid="class_b_level_1af5e69744df511186e383aa68936869dd" prot="public" virt="non-virtual"><scope>BLevel</scope><name>inExit</name></member>
       <member refid="class_b_level_1a432d3dde8efb542646792f9c5563a522" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isExplosionCollision</name></member>
       <member refid="class_b_level_1ab79289460372842f15ca0fe13311d7c9" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isOnFloor</name></member>
       <member refid="class_b_level_1ad9a6d59f73f29c78a0b2e57997202eb5" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isValid</name></member>
-      <member refid="class_b_level_1abb407d85aebcc0d6cded1ad13c2e2eed" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isWall</name></member>
-      <member refid="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isWall</name></member>
       <member refid="class_b_level_1ae32bcaf31096afb8356391e8ad6552e1" prot="public" virt="non-virtual"><scope>BLevel</scope><name>isWallCollision</name></member>
       <member refid="class_b_level_1a8cac4d9b9f748167b2f871460a650756" prot="private" virt="non-virtual"><scope>BLevel</scope><name>parseFile</name></member>
       <member refid="class_b_level_1afa98ebe59a2fc12acdf81e360a0c2cae" prot="private" virt="non-virtual"><scope>BLevel</scope><name>playerSprite</name></member>

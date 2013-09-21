@@ -46,7 +46,7 @@ private:
     int eTileCount;
     
     Point start;
-    Coords** end;
+    Coords* end;
     int endCount;
     bool valid;
     
@@ -71,15 +71,8 @@ public:
     /** @brief returns the tileSize */
     float getTileSize() { return tileSize; };
     
-    /** @brief  Checks if the provided location is a wall */
-    bool isWall(const Coords loc);
-    /** @brief  Checks if the provided location is a wall */
-    bool isWall(const int x, const int y) { return isWall( Coords(x, y) ); };
-    
-    /** @brief  Checks to see if there is an active explosion there */
-    bool isExplosion(const Coords loc);
-    /** @brief  Checks to see if there is an active explosion there */
-    bool isExplosion(const int x, const int y) { return isExplosion( Coords(x, y) ); };
+    /** @brief  Checks if the player is fully inside an exit */
+    bool inExit(const Rect bb);
     
     /** @brief  Did the level load */
     bool isValid(){ return valid; };

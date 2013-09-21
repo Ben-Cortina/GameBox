@@ -4,6 +4,7 @@ var searchData=
   ['getfocus',['getFocus',['../class_b_scene.html#ae8759c51e7bcd9888f3035cbcd9d675c',1,'BScene']]],
   ['getforce',['getForce',['../class_b_player.html#a33b7d635e3aa3c7a4796eabc4205cc58',1,'BPlayer::getForce()'],['../class_player_sprite.html#a261319de832d01b1e64601887cbf2a2c',1,'PlayerSprite::getForce()']]],
   ['getinterval',['getInterval',['../class_b_explosion_tile.html#ab6a40589c3a728c8700f1f20a2fd7275',1,'BExplosionTile']]],
+  ['getlevelcount',['getLevelCount',['../class_b_level_menu.html#aeb1f5dc532dab13120d309c8ca7a30b9',1,'BLevelMenu']]],
   ['getlevelpath',['getLevelPath',['../class_b_level_menu.html#a38bfb874e8a2d32bb01f4a281032e84c',1,'BLevelMenu']]],
   ['getlocation',['getLocation',['../class_b_tile.html#af0e20c14792be231f3b490eb1ec10a73',1,'BTile']]],
   ['getmaxspeed',['getMaxSpeed',['../class_player_sprite.html#ae322a0adbdbc74ddca22e7deb1db9f46',1,'PlayerSprite']]],

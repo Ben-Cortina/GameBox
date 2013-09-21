@@ -50,11 +50,10 @@ private:
     KeyStateStruct keyState;
     bool isDying;
 
-    
-    std::function<void(Object*)> escFunc; //this is the function to call when esc is pressed
+    std::function<void(Object*)> winFunc; //this is the function to call when the player wins
     
 public:
-    BPlayer(const char* image, std::function<void(Object*)> escF);
+    BPlayer(const char* image, std::function<void(Object*)> winF);
     
     /**
      *  @brief  Set the level to check collision on
@@ -75,27 +74,20 @@ public:
     void setForceY(const float y) { force.y = y; updateVelocity(); };
     
     
-    /**
-     *  @brief  runs the actions needed to represent a falling player
-     */
+    /** @brief  runs the actions needed to represent a falling player   */
     void fall();
     
-    /**
-     *  @brief  runs the actions needed to represent a dying player
-     */
+    /** @brief  runs the actions needed to represent a dying player */
     void die();
     
-    //void gotToEnd();
+    /** @brief  runs the actions needed to represent a win */
+    void win();
     
-    /**
-     *  @brief  Spawns the player at the start tile
-     */
+    /** @brief  Spawns the player at the start tile */
     void spawn(float dt);
     
     
-    /**
-     *  @brief  Updates the current velocity based on the force being applied
-     */
+    /** @brief  Updates the current velocity based on the force being applied */
     void updateVelocity();
     
     /**
@@ -112,10 +104,20 @@ public:
      */
     void update();
     
-    /**
-     *  @brief  Handles the collision and movement of the player
-     */
+    /** @brief  Handles the collision and movement of the player */
     void handleCollisions(float x, float y);
+    
+    /** @brief  Called when up is pressed */
+    static void upP(Object* pThis);
+    
+    /** @brief  Called when down is pressed */
+    static void downP(Object* pThis);
+    
+    /** @brief  Called when left is pressed */
+    static void leftP(Object* pThis);
+    
+    /** @brief  Called when right is pressed */
+    static void rightP(Object* pThis);
     
     /**
      *  @brief  Handles keyPresses
@@ -123,9 +125,7 @@ public:
      */
     void keyPressed(int keyCode);
     
-    /**
-     *  @brief  Handles keyReleases
-     */
+    /** @brief  Handles keyReleases */
     void keyReleased(int keyCode);
 };
 

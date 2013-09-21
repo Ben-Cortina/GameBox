@@ -7,103 +7,103 @@
     <includedby refid="_bound_player_8h" local="yes">GameBox/GameBox/Classes/Bound/BoundPlayer.h</includedby>
     <includedby refid="_bound_level_8cpp" local="yes">GameBox/GameBox/Classes/Bound/BoundLevel.cpp</includedby>
     <incdepgraph>
-      <node id="66">
+      <node id="69">
         <label>BoundTiles.h</label>
         <link refid="_bound_tiles_8h"/>
-        <childnode refid="67" relation="include">
+        <childnode refid="70" relation="include">
         </childnode>
-        <childnode refid="68" relation="include">
+        <childnode refid="71" relation="include">
+        </childnode>
+      </node>
+      <node id="73">
+        <label>vector</label>
+      </node>
+      <node id="72">
+        <label>iostream</label>
+      </node>
+      <node id="68">
+        <label>GameBox/GameBox/Classes/Bound/BoundLevel.h</label>
+        <link refid="BoundLevel.h"/>
+        <childnode refid="69" relation="include">
+        </childnode>
+        <childnode refid="73" relation="include">
+        </childnode>
+      </node>
+      <node id="71">
+        <label>CustomTileGrid.h</label>
+        <link refid="_custom_tile_grid_8h"/>
+        <childnode refid="72" relation="include">
         </childnode>
       </node>
       <node id="70">
-        <label>vector</label>
-      </node>
-      <node id="69">
-        <label>iostream</label>
-      </node>
-      <node id="65">
-        <label>GameBox/GameBox/Classes/Bound/BoundLevel.h</label>
-        <link refid="BoundLevel.h"/>
-        <childnode refid="66" relation="include">
-        </childnode>
-        <childnode refid="70" relation="include">
-        </childnode>
-      </node>
-      <node id="68">
-        <label>CustomTileGrid.h</label>
-        <link refid="_custom_tile_grid_8h"/>
-        <childnode refid="69" relation="include">
-        </childnode>
-      </node>
-      <node id="67">
         <label>cocos2d.h</label>
       </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="72">
+      <node id="75">
         <label>GameBox/GameBox/Classes/Bound/BoundPlayer.h</label>
         <link refid="_bound_player_8h"/>
-        <childnode refid="73" relation="include">
+        <childnode refid="76" relation="include">
+        </childnode>
+        <childnode refid="83" relation="include">
+        </childnode>
+      </node>
+      <node id="80">
+        <label>GameBox/GameBox/Classes/Bound/Bound.cpp</label>
+        <link refid="_bound_8cpp"/>
+      </node>
+      <node id="83">
+        <label>GameBox/GameBox/Classes/Bound/BoundPlayer.cpp</label>
+        <link refid="_bound_player_8cpp"/>
+      </node>
+      <node id="77">
+        <label>GameBox/GameBox/Classes/GameList.h</label>
+        <link refid="_game_list_8h"/>
+        <childnode refid="78" relation="include">
+        </childnode>
+      </node>
+      <node id="76">
+        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
+        <link refid="_bound_8h"/>
+        <childnode refid="77" relation="include">
         </childnode>
         <childnode refid="80" relation="include">
         </childnode>
       </node>
-      <node id="77">
-        <label>GameBox/GameBox/Classes/Bound/Bound.cpp</label>
-        <link refid="_bound_8cpp"/>
-      </node>
-      <node id="80">
-        <label>GameBox/GameBox/Classes/Bound/BoundPlayer.cpp</label>
-        <link refid="_bound_player_8cpp"/>
-      </node>
-      <node id="74">
-        <label>GameBox/GameBox/Classes/GameList.h</label>
-        <link refid="_game_list_8h"/>
-        <childnode refid="75" relation="include">
-        </childnode>
-      </node>
-      <node id="73">
-        <label>GameBox/GameBox/Classes/Bound/Bound.h</label>
-        <link refid="_bound_8h"/>
-        <childnode refid="74" relation="include">
-        </childnode>
-        <childnode refid="77" relation="include">
-        </childnode>
-      </node>
-      <node id="75">
+      <node id="78">
         <label>GameBox/GameBox/Classes/HomeScene.h</label>
         <link refid="_home_scene_8h"/>
-        <childnode refid="76" relation="include">
-        </childnode>
-        <childnode refid="77" relation="include">
-        </childnode>
-        <childnode refid="78" relation="include">
-        </childnode>
         <childnode refid="79" relation="include">
         </childnode>
+        <childnode refid="80" relation="include">
+        </childnode>
+        <childnode refid="81" relation="include">
+        </childnode>
+        <childnode refid="82" relation="include">
+        </childnode>
       </node>
-      <node id="78">
+      <node id="81">
         <label>GameBox/GameBox/Classes/HomeScene.cpp</label>
         <link refid="_home_scene_8cpp"/>
       </node>
-      <node id="76">
+      <node id="79">
         <label>GameBox/GameBox/Classes/AppDelegate.cpp</label>
         <link refid="_app_delegate_8cpp"/>
       </node>
-      <node id="81">
+      <node id="84">
         <label>GameBox/GameBox/Classes/Bound/BoundLevel.cpp</label>
         <link refid="_bound_level_8cpp"/>
       </node>
-      <node id="79">
+      <node id="82">
         <label>GameBox/GameBox/Classes/TheBox/TheBox.cpp</label>
         <link refid="_the_box_8cpp"/>
       </node>
-      <node id="71">
+      <node id="74">
         <label>GameBox/GameBox/Classes/Bound/BoundLevel.h</label>
         <link refid="BoundLevel.h"/>
-        <childnode refid="72" relation="include">
+        <childnode refid="75" relation="include">
         </childnode>
-        <childnode refid="81" relation="include">
+        <childnode refid="84" relation="include">
         </childnode>
       </node>
     </invincdepgraph>
@@ -164,7 +164,7 @@
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>eTileCount;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>Point<sp/>start;</highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_coords" kindref="compound">Coords</ref>**<sp/>end;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_coords" kindref="compound">Coords</ref>*<sp/>end;</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>endCount;</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>valid;</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -180,31 +180,27 @@
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="72" refid="class_b_level_1a8d02e52b25ff8c39bb68d0880c31771c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1a8d02e52b25ff8c39bb68d0880c31771c" kindref="member" tooltip="returns the tileSize">getTileSize</ref>()<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>tileSize;<sp/>};</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1abb407d85aebcc0d6cded1ad13c2e2eed" kindref="member" tooltip="Checks if the provided location is a wall.">isWall</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_coords" kindref="compound">Coords</ref><sp/>loc);</highlight></codeline>
-<codeline lineno="77" refid="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" kindref="member" tooltip="Checks if the provided location is a wall.">isWall</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1a7520cdd30191a75a7811c42ee1758e65" kindref="member" tooltip="Checks if the provided location is a wall.">isWall</ref>(<sp/><ref refid="struct_coords" kindref="compound">Coords</ref>(x,<sp/>y)<sp/>);<sp/>};</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1adf39bb6a72e7780031a0806df92f9fc5" kindref="member" tooltip="Checks to see if there is an active explosion there.">isExplosion</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_coords" kindref="compound">Coords</ref><sp/>loc);</highlight></codeline>
-<codeline lineno="82" refid="class_b_level_1acf89db789ceb7f083221fab3fead042e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1acf89db789ceb7f083221fab3fead042e" kindref="member" tooltip="Checks to see if there is an active explosion there.">isExplosion</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y)<sp/>{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1acf89db789ceb7f083221fab3fead042e" kindref="member" tooltip="Checks to see if there is an active explosion there.">isExplosion</ref>(<sp/><ref refid="struct_coords" kindref="compound">Coords</ref>(x,<sp/>y)<sp/>);<sp/>};</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="85" refid="class_b_level_1ad9a6d59f73f29c78a0b2e57997202eb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1ad9a6d59f73f29c78a0b2e57997202eb5" kindref="member" tooltip="Did the level load.">isValid</ref>(){<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>valid;<sp/>};</highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1ae32bcaf31096afb8356391e8ad6552e1" kindref="member" tooltip="Checks if a rectangle collides with any Wall tiles.">isWallCollision</ref>(Rect<sp/>bb,<sp/>Rect&amp;<sp/>tileBB);</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1a432d3dde8efb542646792f9c5563a522" kindref="member" tooltip="Checks if a rectangle collides with any Active Explosions tiles. If the player does, it dies.">isExplosionCollision</ref>(Rect<sp/>bb);</highlight></codeline>
-<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1a6526db006b1f862697b1f9f89eb0a968" kindref="member" tooltip="This checks if any explosions have gone off on top of the player.">checkExplosions</ref>(Rect<sp/>bb);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1af5e69744df511186e383aa68936869dd" kindref="member" tooltip="Checks if the player is fully inside an exit.">inExit</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>Rect<sp/>bb);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78" refid="class_b_level_1ad9a6d59f73f29c78a0b2e57997202eb5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1ad9a6d59f73f29c78a0b2e57997202eb5" kindref="member" tooltip="Did the level load.">isValid</ref>(){<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>valid;<sp/>};</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1ae32bcaf31096afb8356391e8ad6552e1" kindref="member" tooltip="Checks if a rectangle collides with any Wall tiles.">isWallCollision</ref>(Rect<sp/>bb,<sp/>Rect&amp;<sp/>tileBB);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1a432d3dde8efb542646792f9c5563a522" kindref="member" tooltip="Checks if a rectangle collides with any Active Explosions tiles. If the player does, it dies.">isExplosionCollision</ref>(Rect<sp/>bb);</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1a6526db006b1f862697b1f9f89eb0a968" kindref="member" tooltip="This checks if any explosions have gone off on top of the player.">checkExplosions</ref>(Rect<sp/>bb);</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1ab79289460372842f15ca0fe13311d7c9" kindref="member" tooltip="Checks if the passed rectangle touches any floor. If the player does not intersect any of the floor t...">isOnFloor</ref>(Rect<sp/>bb);</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_b_level_1ab79289460372842f15ca0fe13311d7c9" kindref="member" tooltip="Checks if the passed rectangle touches any floor. If the player does not intersect any of the floor t...">isOnFloor</ref>(Rect<sp/>bb);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="110" refid="class_b_level_1a6bb41eebd07bf260b42168183bdd37c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_coords" kindref="compound">Coords</ref><sp/><ref refid="class_b_level_1a6bb41eebd07bf260b42168183bdd37c1" kindref="member">getTile</ref>(Point<sp/>pt)<sp/>{<sp/>pt<sp/>=<sp/>pt<sp/>-<sp/>getPosition();<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_coords" kindref="compound">Coords</ref>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(pt.x<sp/>/<sp/>tileSize),</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(pt.y<sp/>/<sp/>tileSize));<sp/>};</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>Rect<sp/><ref refid="class_b_level_1a9adc000ce6523936febd5a4d20d52eb8" kindref="member">getTileBB</ref>(<ref refid="struct_coords" kindref="compound">Coords</ref><sp/>loc);</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="116"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__BoundLevel__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="103" refid="class_b_level_1a6bb41eebd07bf260b42168183bdd37c1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_coords" kindref="compound">Coords</ref><sp/><ref refid="class_b_level_1a6bb41eebd07bf260b42168183bdd37c1" kindref="member">getTile</ref>(Point<sp/>pt)<sp/>{<sp/>pt<sp/>=<sp/>pt<sp/>-<sp/>getPosition();<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="struct_coords" kindref="compound">Coords</ref>((</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(pt.x<sp/>/<sp/>tileSize),</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal">)(pt.y<sp/>/<sp/>tileSize));<sp/>};</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>Rect<sp/><ref refid="class_b_level_1a9adc000ce6523936febd5a4d20d52eb8" kindref="member">getTileBB</ref>(<ref refid="struct_coords" kindref="compound">Coords</ref><sp/>loc);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="109"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>defined(__GameBox__BoundLevel__)<sp/>*/</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="/Users/blaeeap/Desktop/projects/GameBox/GameBox/Classes/Bound/BoundLevel.h"/>
   </compounddef>

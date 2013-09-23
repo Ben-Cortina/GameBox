@@ -41,16 +41,21 @@ struct KeyFunc
      */
     Object* receiver;
     
+    /** @var    bool enabled
+     *  @brief  Whether or not the function will be called on keypress
+     */
+    bool enabled;
+    
     /** @var    bool callOnce
      *  @brief  Whether or not the function should be called multiple times on one press
      */
     bool callOnce;
     
     KeyFunc(int kC, std::function<void(Object*)> f, Object* r):
-        keyCode(kC), func(f), receiver(r), callOnce(false){};
+        keyCode(kC), func(f), receiver(r), callOnce(false), enabled(true){};
     
     KeyFunc(int kC, std::function<void(Object*)> f, Object* r, bool cO):
-    keyCode(kC), func(f), receiver(r), callOnce(cO){};
+    keyCode(kC), func(f), receiver(r), callOnce(cO), enabled(true){};
 };
 
 /**
@@ -66,7 +71,8 @@ private:
     std::vector<KeyState*> keyStates;
     
 public:
-    KeyboardHandler() { setVisible(false); }; //we dont want any draw calls for this 
+    KeyboardHandler() { setVisible(false); }; //we dont want any draw calls for this
+    ~KeyboardHandler() { setKeyboardEnabled(false);};
     
     /** @brief  Turn on and off the keyboard listening */
     void setEnabled(bool on) { setKeyboardEnabled(on); };
@@ -79,6 +85,11 @@ public:
     
     /** @brief  Adds a function to call on keyRelease */
     void addKeyRelease(const int keyCode, std::function<void(Object*)> func, Object* r);
+    
+    /** @brief Disables all keyFuncs with the passed reciever */
+    void enableByReceiver(Object* r);
+    /** @brief Disables all keyFuncs with the passed reciever */
+    void disableByReceiver(Object* r);
     
     /**
      *  @brief  Handles keyPresses

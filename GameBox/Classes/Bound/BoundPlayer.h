@@ -83,6 +83,9 @@ public:
     /** @brief  runs the actions needed to represent a win */
     void win();
     
+    /** @brief  pauses all movement commands */
+    void stopMovement();
+    
     /** @brief  Spawns the player at the start tile */
     void spawn(float dt);
     
@@ -107,26 +110,22 @@ public:
     /** @brief  Handles the collision and movement of the player */
     void handleCollisions(float x, float y);
     
-    /** @brief  Called when up is pressed */
-    static void upP(Object* pThis);
+    /** Press and release handling */
+    static void upPCB(Object* pThis) { BPlayer* t = (BPlayer*)pThis; t->up(true);};
+    static void downPCB(Object* pThis) { BPlayer* t = (BPlayer*)pThis; t->down(true);};
+    static void leftPCB(Object* pThis) { BPlayer* t = (BPlayer*)pThis; t->left(true);};
+    static void rightPCB(Object* pThis) { BPlayer* t = (BPlayer*)pThis; t->right(true);};
+    static void upRCB(Object* pThis) { BPlayer* t = (BPlayer*)pThis; t->up(false);};
+    static void downRCB(Object* pThis) { BPlayer* t = (BPlayer*)pThis; t->down(false);};
+    static void leftRCB(Object* pThis) { BPlayer* t = (BPlayer*)pThis; t->left(false);};
+    static void rightRCB(Object* pThis) { BPlayer* t = (BPlayer*)pThis; t->right(false);};
     
-    /** @brief  Called when down is pressed */
-    static void downP(Object* pThis);
-    
-    /** @brief  Called when left is pressed */
-    static void leftP(Object* pThis);
-    
-    /** @brief  Called when right is pressed */
-    static void rightP(Object* pThis);
-    
-    /**
-     *  @brief  Handles keyPresses
-     *  @note   This will be digital movement. You either go max speed or full stop with a keyboard
-     */
-    void keyPressed(int keyCode);
-    
-    /** @brief  Handles keyReleases */
-    void keyReleased(int keyCode);
+    /** @brief  For keyboards, this is digital movement, full speed of 0 */
+    void up(bool down);
+    void down(bool down);
+    void left(bool down);
+    void right(bool down);
+
 };
 
 #endif /* defined(__GameBox__BoundPlayer__) */

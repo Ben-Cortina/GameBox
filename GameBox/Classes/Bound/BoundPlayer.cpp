@@ -28,7 +28,6 @@ void BPlayer::setLevel(BLevel* newLevel)
     player->setScale((int)(level->getTileSize() / 10));
     spawn(0);
     scheduleUpdate();
-    setKeyboardEnabled(true);
 };
 
 void BPlayer::spawn(float dt)
@@ -66,14 +65,18 @@ void BPlayer::die()
 
 void BPlayer::win()
 {
-    setKeyboardEnabled(false);
+    stopMovement();
+    Director::getInstance()->pause();
+    winFunc(this);
+}
+
+void BPlayer::stopMovement()
+{
     force.x = 0;
     force.y = 0;
     velocity.x = 0;
     velocity.y = 0;
-    maxSpeed = 0;
     keyState.up = keyState.down = keyState.left = keyState.right = false;
-    winFunc(this);
 }
 
 void BPlayer::updateVelocity()
@@ -255,108 +258,80 @@ void BPlayer::handleCollisions(float x, float y)
     }
 }
 
-void BPlayer::keyPressed(int keyCode)
+void BPlayer::up(bool down)
 {
-    
-    //the change as a result of the keypress
-    int x = 0;
-    int y = 0;
-    
-    switch(keyCode)
+    int y = 2;
+    if (down && !keyState.up)
     {
-            // Player Up
-        case 126: // Up Arrow
-        case 13:  // W
-            if (!keyState.up)
-            {
-                keyState.up = true;
-                y = 1;
-            }
-            break;
-            
-            // Player Left
-        case 123: // Left Arrow
-        case 0:  // A
-            if (!keyState.left)
-            {
-                keyState.left = true;
-                x = -1;
-            }
-            break;
-            
-            // Player Down
-        case 125: // Down Arrow
-        case 1: // S
-            if (!keyState.down)
-            {
-                keyState.down = true;
-                y = -1;
-            }
-            break;
-            
-            // Player Right
-        case 124: // Right Arrow
-        case 2: // D
-            if (!keyState.right)
-            {
-                keyState.right = true;
-                x = 1;
-            }
-            break;
-            
-        default:
-            break;
+        y = 1;
     }
-    
-    //do nothing if it is paused
-    if (Director::getInstance()->isPaused())
-        return;
-    
-    if( x != 0 )
-        setForceX(x);
-    if( y != 0)
+    if (!down)
+    {
+        if (keyState.down)
+            y = -1;
+        else
+            y = 0;
+    }
+    if (y != 2 && !Director::getInstance()->isPaused())
         setForceY(y);
+    keyState.up = down;
 }
 
-void BPlayer::keyReleased(int keyCode)
+void BPlayer::down(bool down)
 {
-    
-    switch(keyCode)
+    int y = 2;
+    if (down && !keyState.down)
     {
-            // Player Up
-        case 126: // Up Arrow
-        case 13:  // W
-            keyState.up = false;
-            break;
-            
-            // Player Left
-        case 123: // Left Arrow
-        case 0:  // A
-            keyState.left = false;
-            break;
-            
-            // Player Down
-        case 125: // Down Arrow
-        case 1: // S
-            keyState.down = false;
-            break;
-            
-            // Player Right
-        case 124: // Right Arrow
-        case 2: // D
-            keyState.right = false;
-            break;
-            
-        default:
-            break;
+        y = -1;
+    }
+    if (!down)
+    {
+        if (keyState.up)
+            y = 1;
+        else
+            y = 0;
     }
     
-    //do nothing if it is paused
-    if (Director::getInstance()->isPaused())
-        return;
+    if (y != 2 && !Director::getInstance()->isPaused())
+        setForceY(y);
     
-    if( !keyState.left && !keyState.right )
-        setForceX(0);
-    if( !keyState.up && !keyState.down )
-        setForceY(0);
+    keyState.down = down;
+}
+
+void BPlayer::left(bool down)
+{
+    int x = 2;
+    if (down && !keyState.left)
+    {
+        x = -1;
+    }
+    if (!down)
+    {
+        if (keyState.right)
+            x = 1;
+        else
+            x = 0;
+    }
+    if (x != 2 && !Director::getInstance()->isPaused())
+        setForceX(x);
+    keyState.left = down;
+}
+
+void BPlayer::right(bool down)
+{
+    int x = 2;
+    if (down && !keyState.right)
+    {
+        x = 1;
+    }
+    if (!down)
+    {
+        if (keyState.left)
+            x = -1;
+        else
+            x = 0;
+    }
+    if (x != 2 && !Director::getInstance()->isPaused())
+        setForceX(x);
+    keyState.right = down;
 }

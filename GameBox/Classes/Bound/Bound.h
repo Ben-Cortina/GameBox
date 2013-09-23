@@ -1,7 +1,7 @@
 /**-------------------------------------------------------------*
- * @file    Bound.h                                             *
- * @author  Ben Cortina                                         *
- * @date    8/29/13.                                            *
+ *  @file   Bound.h                                             *
+ *  @author Ben Cortina                                         *
+ *  @date   8/29/13.                                            *
  *                                                              *
  * This is a cocos2d-x rendition of a popular Starcraft: Brood  *
  * War game mode. The objective is to get to the end of the     *
@@ -11,6 +11,9 @@
  *                                                              *
  * Eventually I hope to add procedural generation and/or a      *
  * level creator to this game                                   *
+ * In the meantime, if you want to make levels refer to         *
+ * LevelMaking.bdl on how to create a level then add it to the  *
+ * list in BoundLevels.txt                                      *
  *                                                              *
  * Features: Keyboard movement, BB collision detection, Sound,  *
  *           Scheduling and callbacks                           *
@@ -23,9 +26,7 @@
 #include "BoundPlayer.h"
 #include "BoundLevelMenu.h"
 #include "KeyboardHandler.h"
-
-//TODO: Use KeyboardHandler for playerLayer
-//      Sounds
+#include "OverLayer.h"
 
 /** @brief  This is the Scene for Bound. It wll hold the layers that make up the Bound game. */
 class BScene : public Scene
@@ -36,6 +37,7 @@ private:
     BPlayer* playerLayer;
     LayerColor* backgroundLayer;
     BLevelMenu* menuLayer;
+    OverLayer* overlay;
     
     int layerFocus; //0 = level, 1 = pause, 2 = game
     int curLevel;

@@ -6,6 +6,7 @@
 
 
 #include "BoundTiles.h"
+#include "SimpleAudioEngine.h"
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 /*=======================================      BTile      =======================================*/
@@ -87,6 +88,7 @@ void BExplosionTile::firstFade(float dt)
 
 void BExplosionTile::explode(float dt)
 {
+    CocosDenshion::SimpleAudioEngine::getInstance()->playEffect("boom.wav");
     exploded = true;
     setOn(true);
 }

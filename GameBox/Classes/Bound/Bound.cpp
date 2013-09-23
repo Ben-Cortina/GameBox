@@ -17,9 +17,7 @@ BScene::BScene()
     
     //add the keyboard handler
     keyHandler = new KeyboardHandler();
-    keyHandler->addKeyPress(53, BScene::handleEsc, this, true);
-    addChild(keyHandler);
-    //keyHandler->release();
+    keyHandler->addKeyPress(53, BScene::handleEsc, this);
     
     //create background Layer
     backgroundLayer = new LayerColor();
@@ -29,6 +27,29 @@ BScene::BScene()
     
     //create player Layer
     playerLayer = new BPlayer("Pixel.png", BScene::winCB);
+    
+    //add player keyboard events
+    keyHandler->addKeyPress(126, BPlayer::upPCB, playerLayer, true);
+    keyHandler->addKeyPress(13, BPlayer::upPCB, playerLayer, true);
+    keyHandler->addKeyRelease(126, BPlayer::upRCB, playerLayer);
+    keyHandler->addKeyRelease(13, BPlayer::upRCB, playerLayer);
+    
+    keyHandler->addKeyPress(125, BPlayer::downPCB, playerLayer, true);
+    keyHandler->addKeyPress(1, BPlayer::downPCB, playerLayer, true);
+    keyHandler->addKeyRelease(125, BPlayer::downRCB, playerLayer);
+    keyHandler->addKeyRelease(1, BPlayer::downRCB, playerLayer);
+    
+    keyHandler->addKeyPress(123, BPlayer::leftPCB, playerLayer, true);
+    keyHandler->addKeyPress(0, BPlayer::leftPCB, playerLayer, true);
+    keyHandler->addKeyRelease(123, BPlayer::leftRCB, playerLayer);
+    keyHandler->addKeyRelease(0, BPlayer::leftRCB, playerLayer);
+    
+    keyHandler->addKeyPress(124, BPlayer::rightPCB, playerLayer, true);
+    keyHandler->addKeyPress(2, BPlayer::rightPCB, playerLayer, true);
+    keyHandler->addKeyRelease(124, BPlayer::rightRCB, playerLayer);
+    keyHandler->addKeyRelease(2, BPlayer::rightRCB, playerLayer);
+    //disable playercontrols
+    keyHandler->disableByReceiver(playerLayer);
     
     //load level Data
     int ldCount;
@@ -41,6 +62,7 @@ BScene::BScene()
     showLevelMenu();
     
     keyHandler->setEnabled(true);
+    addChild(keyHandler);
 }
 
 LD* BScene::loadLevelDict(int & cnt)
@@ -98,8 +120,6 @@ void BScene::newLevel(const char* filepath)
     Director::getInstance()->pause();
     
     //load the new one
-    std::cout << "curLevel " <<curLevel<< std::endl;
-    
     levelLayer = new BLevel(filepath);
     
     // if it loaded
@@ -111,6 +131,9 @@ void BScene::newLevel(const char* filepath)
         //kill the menu and show the level
         addChild(levelLayer,2);
         addChild(playerLayer,3);
+        
+        //renable player controls
+        keyHandler->enableByReceiver(playerLayer);
         
         levelLayer->release();
         layerFocus = 2;
@@ -163,8 +186,11 @@ void BScene::handleEsc(Object* scene)
 void BScene::showLevelMenu()
 {
     addChild(menuLayer,1);
+    if(layerFocus == 1)
+        removeChild(overlay);
     if(layerFocus!=0)
     {
+        keyHandler->disableByReceiver(playerLayer);
         levelLayer->cleanup();
         playerLayer->cleanup();
         removeChild(levelLayer);
@@ -179,11 +205,12 @@ void BScene::showPauseMenu()
 {
     //pause game and input
     Director::getInstance()->pause();
-    playerLayer->setKeyboardEnabled(false);
+    playerLayer->stopMovement();
+    keyHandler->disableByReceiver(playerLayer);
     
     Size windowSize = Director::getInstance()->getWinSize();
     
-    OverLayer* overlay = new OverLayer();
+    overlay = new OverLayer();
     
     //create menu
     Menu* pMenu = Menu::create();
@@ -233,8 +260,8 @@ void BScene::showPauseMenu()
 
 void BScene::resumeGame()
 {
-    layerFocus=2;
-    playerLayer->setKeyboardEnabled(true);
+    layerFocus = 2;
+    keyHandler->enableByReceiver(playerLayer);
 }
 
 void BScene::winCB(Object* pSender)
@@ -299,6 +326,7 @@ void BScene::runLoadLevel(Object * pSender)
 
 void BScene::exitGame()
 {
+    keyHandler->setEnabled(false);
     removeAllChildrenWithCleanup(true);
     
     HomeLayer* layer = HomeLayer::create();

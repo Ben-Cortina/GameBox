@@ -44,6 +44,10 @@
 		E1A92C7717EE38E400601F09 /* KeyboardHandler.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1A92C7517EE38E400601F09 /* KeyboardHandler.cpp */; };
 		E1B371A617CFD6F9002F1401 /* Bound.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1B371A417CFD6F9002F1401 /* Bound.cpp */; };
 		E1B911E017CBD447009CF148 /* BoxMenu.png in Resources */ = {isa = PBXBuildFile; fileRef = E1B911DF17CBD447009CF148 /* BoxMenu.png */; };
+		E1B972CC17EF8D78006CAE02 /* boom.wav in Resources */ = {isa = PBXBuildFile; fileRef = E1B972CB17EF8D78006CAE02 /* boom.wav */; };
+		E1B972D917EFBB03006CAE02 /* Level02.bdl in Resources */ = {isa = PBXBuildFile; fileRef = E1B972D817EFBB03006CAE02 /* Level02.bdl */; };
+		E1B972DB17EFBBA5006CAE02 /* Level03.bdl in Resources */ = {isa = PBXBuildFile; fileRef = E1B972DA17EFBBA5006CAE02 /* Level03.bdl */; };
+		E1B972DD17EFBC8C006CAE02 /* Level04.bdl in Resources */ = {isa = PBXBuildFile; fileRef = E1B972DC17EFBC8C006CAE02 /* Level04.bdl */; };
 		E1F1639F17D5359800B11618 /* BoundPlayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E1F1639D17D5359800B11618 /* BoundPlayer.cpp */; };
 		E1F5F96E17ECC7EC000400CC /* LevelMaking.bdl in Resources */ = {isa = PBXBuildFile; fileRef = E1F5F96D17ECC7EC000400CC /* LevelMaking.bdl */; };
 /* End PBXBuildFile section */
@@ -228,12 +232,16 @@
 		E1871E9617BAE07200753932 /* Pixel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pixel.png; sourceTree = "<group>"; };
 		E18B11D717CE520B00A54C8C /* OverLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = OverLayer.cpp; sourceTree = "<group>"; };
 		E18B11D817CE520B00A54C8C /* OverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverLayer.h; sourceTree = "<group>"; };
-		E1A92C6517EE285400601F09 /* Level01.bdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Level01.bdl; path = Level01.bdl; sourceTree = "<group>"; };
-		E1A92C7517EE38E400601F09 /* KeyboardHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = KeyboardHandler.cpp; path = KeyboardHandler.cpp; sourceTree = "<group>"; };
-		E1A92C7617EE38E400601F09 /* KeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = KeyboardHandler.h; path = KeyboardHandler.h; sourceTree = "<group>"; };
+		E1A92C6517EE285400601F09 /* Level01.bdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Level01.bdl; sourceTree = "<group>"; };
+		E1A92C7517EE38E400601F09 /* KeyboardHandler.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = KeyboardHandler.cpp; sourceTree = "<group>"; };
+		E1A92C7617EE38E400601F09 /* KeyboardHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardHandler.h; sourceTree = "<group>"; };
 		E1B371A417CFD6F9002F1401 /* Bound.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Bound.cpp; sourceTree = "<group>"; };
 		E1B371A517CFD6F9002F1401 /* Bound.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bound.h; sourceTree = "<group>"; };
 		E1B911DF17CBD447009CF148 /* BoxMenu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BoxMenu.png; sourceTree = "<group>"; };
+		E1B972CB17EF8D78006CAE02 /* boom.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = boom.wav; path = boom.wav; sourceTree = "<group>"; };
+		E1B972D817EFBB03006CAE02 /* Level02.bdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Level02.bdl; path = Level02.bdl; sourceTree = "<group>"; };
+		E1B972DA17EFBBA5006CAE02 /* Level03.bdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Level03.bdl; path = Level03.bdl; sourceTree = "<group>"; };
+		E1B972DC17EFBC8C006CAE02 /* Level04.bdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = Level04.bdl; path = Level04.bdl; sourceTree = "<group>"; };
 		E1F1639D17D5359800B11618 /* BoundPlayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoundPlayer.cpp; sourceTree = "<group>"; };
 		E1F1639E17D5359800B11618 /* BoundPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoundPlayer.h; sourceTree = "<group>"; };
 		E1F5F96D17ECC7EC000400CC /* LevelMaking.bdl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LevelMaking.bdl; sourceTree = "<group>"; };
@@ -397,6 +405,7 @@
 				E1F5F96C17ECC7EC000400CC /* Levels */,
 				E111D26A17EBA27A0002F4EB /* BoundLevels.txt */,
 				E10C74B017E4E9DD006AFB97 /* BoundMenu.png */,
+				E1B972CB17EF8D78006CAE02 /* boom.wav */,
 			);
 			path = Bound;
 			sourceTree = "<group>";
@@ -447,6 +456,9 @@
 			children = (
 				E1F5F96D17ECC7EC000400CC /* LevelMaking.bdl */,
 				E1A92C6517EE285400601F09 /* Level01.bdl */,
+				E1B972D817EFBB03006CAE02 /* Level02.bdl */,
+				E1B972DA17EFBBA5006CAE02 /* Level03.bdl */,
+				E1B972DC17EFBC8C006CAE02 /* Level04.bdl */,
 			);
 			path = Levels;
 			sourceTree = "<group>";
@@ -619,11 +631,15 @@
 				41BC70E515BF81A5006A0A6C /* InfoPlist.strings in Resources */,
 				41BC70E615BF81A5006A0A6C /* MainMenu.xib in Resources */,
 				E111D26B17EBA27A0002F4EB /* BoundLevels.txt in Resources */,
+				E1B972CC17EF8D78006CAE02 /* boom.wav in Resources */,
 				41BC70E715BF81A5006A0A6C /* Icon.icns in Resources */,
+				E1B972DD17EFBC8C006CAE02 /* Level04.bdl in Resources */,
 				E1A92C6617EE285400601F09 /* Level01.bdl in Resources */,
 				E134B88F17A30AE400EBC6B2 /* Marker Felt.ttf in Resources */,
 				E1871E9817BAE07200753932 /* Pixel.png in Resources */,
 				E1B911E017CBD447009CF148 /* BoxMenu.png in Resources */,
+				E1B972DB17EFBBA5006CAE02 /* Level03.bdl in Resources */,
+				E1B972D917EFBB03006CAE02 /* Level02.bdl in Resources */,
 				E10C74B117E4E9DD006AFB97 /* BoundMenu.png in Resources */,
 				E1F5F96E17ECC7EC000400CC /* LevelMaking.bdl in Resources */,
 			);
